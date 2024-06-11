@@ -1,0 +1,215 @@
+[
+    {
+        "id": "sd_IT5uMFW8Iv7Hndga",
+        "type": "tab",
+        "createdDate": "2024-05-20T06:51:39.591Z",
+        "label": "menu_dialog",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "menu_dialogComponent"
+    },
+    {
+        "id": "sd_yDtI8wADmqQYd7bC",
+        "type": "OnInit",
+        "z": "sd_IT5uMFW8Iv7Hndga",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
+        "functionName": "sd_yDtI8wADmqQYd7bC",
+        "category": "Lifecycle Events",
+        "x": 65,
+        "y": 80,
+        "wires": [
+            [
+                "sd_IjkRraFAD0Sv8TWO"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "menu_dialogComponent"
+    },
+    {
+        "id": "sd_ZYEDXz2gPozUwVVc",
+        "type": "PageVariables",
+        "z": "sd_IT5uMFW8Iv7Hndga",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "data",
+                "typedIpValue": {
+                    "type": "bh.local",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "menuOptions",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "menuOptions"
+                }
+            }
+        ],
+        "functionName": "sd_ZYEDXz2gPozUwVVc",
+        "category": "Function",
+        "x": 265,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "menu_dialogComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_VMBMMKRxK1PC5QNh",
+        "type": "GetDialogData",
+        "z": "sd_IT5uMFW8Iv7Hndga",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "dialogDataMapping": "bh.local.data",
+        "functionName": "sd_VMBMMKRxK1PC5QNh",
+        "category": "Dialog",
+        "x": 465,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "dialogDataMapping": {
+                "type": "bh.local",
+                "value": "data",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "menu_dialogComponent"
+    },
+    {
+        "id": "sd_ZBiixtqqaXYCDuvp",
+        "type": "Script",
+        "z": "sd_IT5uMFW8Iv7Hndga",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"The data sent from the parent page is:\",bh.local.data);",
+        "functionName": "sd_ZBiixtqqaXYCDuvp",
+        "category": "Function",
+        "x": 565,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "menu_dialogComponent"
+    },
+    {
+        "id": "sd_pqfXIyO5SBEE126m",
+        "type": "PageStart",
+        "z": "sd_IT5uMFW8Iv7Hndga",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "close dialog",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "closeDialog",
+        "category": "General",
+        "x": 65,
+        "y": 220,
+        "wires": [
+            [
+                "sd_J3ilFtiHSeU4O52u"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "menu_dialogComponent"
+    },
+    {
+        "id": "sd_J3ilFtiHSeU4O52u",
+        "type": "Script",
+        "z": "sd_IT5uMFW8Iv7Hndga",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.data = {message:'This is the data sent from the dialog window to the parent page'}",
+        "functionName": "sd_J3ilFtiHSeU4O52u",
+        "category": "Function",
+        "x": 165,
+        "y": 220,
+        "wires": [
+            [
+                "sd_qWmam6OxZDo2XITs"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "menu_dialogComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qWmam6OxZDo2XITs",
+        "type": "CloseDialog",
+        "z": "sd_IT5uMFW8Iv7Hndga",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "data": "bh.local.data",
+        "functionName": "sd_qWmam6OxZDo2XITs",
+        "category": "Dialog",
+        "x": 260,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "bh.local",
+                "value": "data",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "menu_dialogComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_IjkRraFAD0Sv8TWO",
+        "type": "Script",
+        "z": "sd_IT5uMFW8Iv7Hndga",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.menuOptions = [\n    { label: 'Pay', image: \"/Web/Images/menu-pay.PNG\", route: '/login' },\n    { label: 'Product Shop', image: \"/Web/Images/menu-product.PNG\", route: '/login' },\n    { label: 'Buy', image: \"/Web/Images/menu-buy.PNG\", route: '/login' },\n    { label: 'Forex', image: \"/Web/Images/menu-forex.PNG\", route: '/login' },\n    { label: 'eBucks', image: \"/Web/Images/menu-ebucks.PNG\", route: '/login' },\n    { label: 'Connect', image: \"/Web/Images/menu-connect.PNG\", route: '/login' },\n    { label: 'Connect Us', image: \"/Web/Images/menu-connect-us.PNG\", route: '/login' },\n    { label: 'Invest', image: \"/Web/Images/menu-invest.PNG\", route: '/login' },\n    { label: 'nav>>igate life', image: \"/Web/Images/menu-navigate.PNG\", route: '/login' },\n    { label: 'eWallet', image: \"/Web/Images/menu-ewallet.PNG\", route: '/login' },\n    { label: 'Insure', image: \"/Web/Images/menu-insure.PNG\", route: '/login' },\n    { label: 'Information', image: \"/Web/Images/menu-info.PNG\", route: '/login' },\n    { label: 'Business Solutions', image: \"/Web/Images/menu-business2.PNG\", route: '/login' },\n    { label: 'Timeline', image: \"/Web/Images/menu-timeline.PNG\", route: '/login' },\n    { label: '', image: \"\", route: '/login' },\n\n  ]\n\n",
+        "functionName": "sd_IjkRraFAD0Sv8TWO",
+        "category": "Function",
+        "x": 165,
+        "y": 80,
+        "wires": [
+            [
+                "sd_ZYEDXz2gPozUwVVc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "menu_dialogComponent",
+        "generated": true
+    }
+]

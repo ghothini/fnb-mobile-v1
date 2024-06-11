@@ -1,0 +1,177 @@
+[
+    {
+        "id": "sd_AOv9kIt72QmNixpa",
+        "type": "tab",
+        "createdDate": "2024-05-15T07:30:19.634Z",
+        "label": "qr_code_reader",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "qr_code_readerComponent"
+    },
+    {
+        "id": "sd_CNBBqa9xYYQzraID",
+        "type": "OnInit",
+        "z": "sd_AOv9kIt72QmNixpa",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_CNBBqa9xYYQzraID",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_tS4QeW0tWbtwlwf1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "qr_code_readerComponent"
+    },
+    {
+        "id": "sd_tS4QeW0tWbtwlwf1",
+        "type": "PageVariables",
+        "z": "sd_AOv9kIt72QmNixpa",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_tS4QeW0tWbtwlwf1",
+        "category": "Function",
+        "x": 145,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "qr_code_readerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_IaPEY5gAM9QL2Zh4",
+        "type": "PageStart",
+        "z": "sd_AOv9kIt72QmNixpa",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go back",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goBack",
+        "category": "General",
+        "x": 85,
+        "y": 160,
+        "wires": [
+            [
+                "sd_6FAeldNSGa6Uql2w"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "qr_code_readerComponent"
+    },
+    {
+        "id": "sd_wkoF8gW7CdJX16if",
+        "type": "Script",
+        "z": "sd_AOv9kIt72QmNixpa",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.location.back()\n",
+        "functionName": "sd_wkoF8gW7CdJX16if",
+        "category": "Function",
+        "x": 340,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "qr_code_readerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_6FAeldNSGa6Uql2w",
+        "type": "UseDependency",
+        "z": "sd_AOv9kIt72QmNixpa",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Location",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "location"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/common",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_6FAeldNSGa6Uql2w",
+        "category": "Function",
+        "x": 205,
+        "y": 160,
+        "wires": [
+            [
+                "sd_wkoF8gW7CdJX16if"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "qr_code_readerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_XdZkRUacWzIDiQhi",
+        "type": "UseDependency",
+        "z": "sd_AOv9kIt72QmNixpa",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "NgxScannerQrcodeModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "ngx-scanner-qrcode",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_XdZkRUacWzIDiQhi",
+        "category": "Function",
+        "x": 245,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "qr_code_readerComponent"
+    }
+]

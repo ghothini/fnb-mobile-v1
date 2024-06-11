@@ -1,0 +1,178 @@
+[
+    {
+        "id": "sd_qZ45hTZbEWoSgzLO",
+        "type": "tab",
+        "createdDate": "2024-05-14T11:20:03.239Z",
+        "label": "personal_info",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "personal_infoComponent"
+    },
+    {
+        "id": "sd_dPgL9CGW7b1kChu2",
+        "type": "OnInit",
+        "z": "sd_qZ45hTZbEWoSgzLO",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_dPgL9CGW7b1kChu2",
+        "category": "Lifecycle Events",
+        "x": 65,
+        "y": 80,
+        "wires": [
+            [
+                "sd_ikzzmdpAVXbHii6E"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "personal_infoComponent"
+    },
+    {
+        "id": "sd_rQOfEXAMOUzol1j5",
+        "type": "PageVariables",
+        "z": "sd_qZ45hTZbEWoSgzLO",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_rQOfEXAMOUzol1j5",
+        "category": "Function",
+        "x": 345,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "personal_infoComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_eLulLQhTtxuL910b",
+        "type": "PageStart",
+        "z": "sd_qZ45hTZbEWoSgzLO",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Go Back",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goBack",
+        "category": "General",
+        "x": 65,
+        "y": 200,
+        "wires": [
+            [
+                "sd_1deJkRZi3CK7d4MQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "personal_infoComponent"
+    },
+    {
+        "id": "sd_1deJkRZi3CK7d4MQ",
+        "type": "PageCallService",
+        "z": "sd_qZ45hTZbEWoSgzLO",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_O7BgeFkazhosv8N2",
+            "type": "tab",
+            "createdDate": "2024-05-14T08:16:55.985Z",
+            "label": "common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_jJRXnjTcMQmcijs6",
+            "flowName": "goBack"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/common",
+        "startName": "goBack",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_1deJkRZi3CK7d4MQ",
+        "category": "General",
+        "x": 170,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "personal_infoComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ikzzmdpAVXbHii6E",
+        "type": "Storage",
+        "z": "sd_qZ45hTZbEWoSgzLO",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "userDetails"
+        },
+        "functionName": "sd_ikzzmdpAVXbHii6E",
+        "category": "Storage",
+        "x": 165,
+        "y": 80,
+        "wires": [
+            [
+                "sd_a8YTzAlyRhKPCUhO"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "personal_infoComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_a8YTzAlyRhKPCUhO",
+        "type": "Script",
+        "z": "sd_qZ45hTZbEWoSgzLO",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log(page.userDetails)",
+        "functionName": "sd_a8YTzAlyRhKPCUhO",
+        "category": "Function",
+        "x": 245,
+        "y": 80,
+        "wires": [
+            [
+                "sd_rQOfEXAMOUzol1j5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "personal_infoComponent",
+        "generated": true
+    }
+]

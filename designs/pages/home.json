@@ -1,0 +1,93 @@
+[
+    {
+        "id": "sd_WYT8Hivn6E01YBpO",
+        "type": "tab",
+        "createdDate": "2024-05-14T07:37:39.838Z",
+        "label": "home",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_gH5WfDthUdGcHb7c",
+        "type": "OnInit",
+        "z": "sd_WYT8Hivn6E01YBpO",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_gH5WfDthUdGcHb7c",
+        "category": "Lifecycle Events",
+        "x": 65,
+        "y": 80,
+        "wires": [
+            [
+                "sd_RN0Fcj9LXAhFI8bC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_pF2ZSp3hIF8bjLzf",
+        "type": "PageVariables",
+        "z": "sd_WYT8Hivn6E01YBpO",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "landingOptions",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "landingOptions"
+                }
+            },
+            {
+                "textIp": "term",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_pF2ZSp3hIF8bjLzf",
+        "category": "Function",
+        "x": 285,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_RN0Fcj9LXAhFI8bC",
+        "type": "Script",
+        "z": "sd_WYT8Hivn6E01YBpO",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.landingOptions = [\n    { label: 'Message', image: \"/Web/Images/message.PNG\", route: '/coming-soon' },\n    { label: 'Contact Us', image: \"/Web/Images/contact-us.PNG\", route: '/coming-soon' },\n    { label: 'My Offers', image: \"/Web/Images/my-offers.PNG\", route: '/coming-soon' },\n    { label: 'Product Shop', image: \"/Web/Images/product-shop.PNG\", route: '/coming-soon' },\n    { label: 'Pay', image: \"/Web/Images/pay.PNG\", route: '/pay' },\n    { label: 'Buy', image: \"/Web/Images/buy.PNG\", route: '/buy' },\n    { label: 'Transfer', image: \"/Web/Images/transfer.PNG\", route: '/pay' },\n    { label: 'Forex', image: \"/Web/Images/forex.PNG\", route: '/coming-soon' },\n    { label: 'Insure', image: \"/Web/Images/insure.PNG\", route: '/coming-soon' },\n    { label: 'Invest', image: \"/Web/Images/invest.PNG\", route: '/coming-soon' },\n    { label: 'nav>>Energy', image: \"/Web/Images/nav-energy.PNG\", route: '/coming-soon' },\n    { label: 'nav-igate life', image: \"/Web/Images/navigate.PNG\", route: '/coming-soon' },\n    { label: 'eBucks', image: \"/Web/Images/ebucks.PNG\", route: '/coming-soon' },\n    { label: 'Secure chat', image: \"/Web/Images/secure.PNG\", route: '/coming-soon' },\n    { label: 'Cards', image: \"/Web/Images/cards.PNG\", route: '/coming-soon' },\n    { label: 'GuardMe', image: \"/Web/Images/guard.PNG\", route: '/coming-soon' },\n    { label: 'Security centre', image: \"/Web/Images/security.PNG\", route: '/coming-soon' },\n    // { label: 'Manage my debt', image: \"/Web/Images/manage-debt.PNG\", route: '/login' },\n    // { label: '', image: \"/Web/Images/add.PNG\", route: '/login' },\n    // { label: '', image: \"\", route: '/home' },\n  ]",
+        "functionName": "sd_RN0Fcj9LXAhFI8bC",
+        "category": "Function",
+        "x": 165,
+        "y": 80,
+        "wires": [
+            [
+                "sd_pF2ZSp3hIF8bjLzf"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    }
+]

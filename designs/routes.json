@@ -1,0 +1,142 @@
+{
+    "routes": [
+        {
+            "path": "bank",
+            "component": "bankComponent"
+        },
+        {
+            "path": "view-transactions",
+            "component": "view_transactionsComponent"
+        },
+        {
+            "path": "qr-code-reader",
+            "component": "qr_code_readerComponent"
+        },
+        {
+            "path": "search",
+            "component": "searchComponent"
+        },
+        {
+            "path": "airtime",
+            "component": "buy_airtimeComponent"
+        },
+        {
+            "path": "electricity",
+            "component": "buy_electricityComponent"
+        },
+        {
+            "path": "eWallet",
+            "component": "ewalletComponent"
+        },
+        {
+            "path": "pay",
+            "component": "payComponent"
+        },
+        {
+            "path": "cards",
+            "component": "cardComponent"
+        },
+        {
+            "path": "landing",
+            "component": "landingComponent"
+        },
+        {
+            "path": "home",
+            "component": "homeComponent"
+        },
+        {
+            "path": "message",
+            "component": "messageComponent"
+        },
+        {
+            "path": "profile",
+            "component": "profileComponent"
+        },
+        {
+            "component": "personal_infoComponent",
+            "path": "personal-info"
+        },
+        {
+            "path": "settings",
+            "component": "settingsComponent"
+        },
+        {
+            "path": "add-profile-pic",
+            "component": "add_profile_picComponent"
+        },
+        {
+            "path": "id-documents",
+            "component": "id_documentsComponent"
+        },
+        {
+            "path": "username",
+            "component": "usernameComponent"
+        },
+        {
+            "path": "change-password",
+            "component": "change_passwordComponent"
+        },
+        {
+            "path": "limits",
+            "component": "limitsComponent"
+        },
+        {
+            "path": "login",
+            "component": "loginComponent"
+        },
+        {
+            "path": "deposit",
+            "component": "deposit_ownComponent"
+        },
+        {
+            "component": "confirm_limitsComponent",
+            "path": "confirm-limits"
+        },
+        {
+            "path": "menu-dialog",
+            "component": "menu_dialogComponent"
+        },
+        {
+            "path": "forgot-password",
+            "component": "forgot_passwordComponent"
+        },
+        {
+            "path": "verify-code",
+            "component": "verify_codeComponent"
+        },
+        {
+            "path": "coming-soon",
+            "component": "coming_soonComponent"
+        },
+        {
+            "path": "change-password2",
+            "component": "change_password2Component"
+        },
+        {
+            "path": "qr-code-manual",
+            "component": "qr_code_readerComponent"
+        },
+        {
+            "path": "airtime-details",
+            "component": "airtime_detailsComponent"
+        },
+        {
+            "path": "airtimeAnother-details",
+            "component": "airtimeAnother_detailsComponent"
+        },
+        {
+            "path": "migrate",
+            "component": "migrateComponent"
+        },
+        {
+            "path": "''",
+            "redirectTo": "landing",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}

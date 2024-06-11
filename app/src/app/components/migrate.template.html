@@ -1,0 +1,46 @@
+<div fxLayout="column wrap" class="migrate add-profile-pic-ff-roboto bank-full-width" fxLayoutAlign="start center" [fxShow]="true">
+  <form [formGroup]="page.migrateForm" style="margin-top: 3em; height: 100%" class="my-profile-width-90-only">
+    <div fxLayout="column wrap" class="bank-full-height bank-full-width" fxLayoutAlign="start center" [fxShow]="true"><img imgSrc="Web/Images/fnb-logo2.webp" style="width: 42%; height: 10%;"><label class="bank-margin-top-10px bank-full-width">
+        Email address</label>
+      <div style="height: 7%" class="bank-full-width">
+        <input required formControlName="email" type="text" style="width: 94%; height:70% ; border: 2px solid gray;
+    border-radius: 15px; font-size: 20px; padding-left: 10px" readonly>
+      </div><label class="bank-full-width bank-margin-top-10px">
+        Name</label>
+      <div style="height:7%" class="bank-full-width">
+        <input required formControlName="name" type="text" style="width: 94%; height:70% ; border: 2px solid gray;
+    border-radius: 15px; font-size: 20px; padding-left: 10px" readonly>
+      </div><label class="bank-margin-top-10px bank-full-width">
+        Surname</label>
+      <div style="height:7%" class="bank-full-width">
+        <input required formControlName="surname" type="text" style="width: 94%; height:70% ; border: 2px solid gray;
+    border-radius: 15px; font-size: 20px; padding-left: 10px" readonly>
+      </div><label class="bank-margin-top-10px bank-full-width">
+        ID Number:</label>
+      <div style="height:7%" class="bank-full-width">
+        <input required formControlName="idNum" type="text" style="width: 94%; height:70% ; border: 2px solid gray;
+    border-radius: 15px; font-size: 20px; padding-left: 10px" readonly>
+      </div><label class="bank-margin-top-10px bank-full-width">
+        Account Number:</label>
+      <div style="height:7%" class="bank-full-width">
+        <input required formControlName="accountNumber" type="text" style="width: 94%; height:70% ; border: 2px solid gray;
+    border-radius: 15px; font-size: 20px; padding-left: 10px" readonly>
+      </div><label class="bank-margin-top-10px bank-full-width">
+        Cellphone Number:</label>
+      <div style="height:7%" class="bank-full-width">
+        <input required formControlName="cellPhoneNumber" type="text" style="width: 94%; height:70% ; border: 2px solid gray;
+    border-radius: 15px; font-size: 20px; padding-left: 10px" readonly>
+      </div><label class="bank-margin-top-10px bank-full-width">
+        Balance:</label>
+      <div style="height:7%" class="bank-full-width">
+        <input required formControlName="balance" type="text" style="width: 94%; height:70% ; border: 2px solid gray;
+    border-radius: 15px; font-size: 20px; padding-left: 10px" readonly>
+      </div><label class="bank-margin-top-10px bank-full-width">
+        Remote Pin:</label>
+      <div style="height:7%" class="bank-full-width">
+        <input required formControlName="remotePin" type="text" style="width: 94%; height:70% ; border: 2px solid gray;
+    border-radius: 15px; font-size: 20px; padding-left: 10px">
+      </div><button mat-raised-button style="margin-top: 1em; height: 5% !important" class="login-green-bg bank-full-width login-btn message-fz-18" (click)="submit()">Migrate</button>
+    </div>
+  </form>
+</div>

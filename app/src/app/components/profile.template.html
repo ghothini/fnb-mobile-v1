@@ -1,0 +1,71 @@
+<div fxLayout="column wrap" class="landing-full-width my-profile" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
+                <span class="material-symbols-outlined ">
+                arrow_back
+            </span></span></div><label class="message-fz-21 message-margin-left-1em">
+      My profile</label><span class="message-flex-1">
+                </span>
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true"><span>
+                <span class="material-symbols-outlined">
+                search
+                </span></span></div>
+  </div>
+  <div fxLayout="column wrap" class="my-profile-middle" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" class="my-profile-width-90-only landing-full-height" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" class="my-profile-margin-top-1em my-profile-row" fxLayoutAlign="space-between center" [fxShow]="true" [routerLink]="[&apos;/personal-info&apos;]">
+        <div fxLayout="row wrap" class="my-profile-margin-10 my-profile-round my-profile-row1" fxLayoutAlign="center center" [fxShow]="true">
+          <div>
+            <span class="material-symbols-outlined my-profile-fz-30 my-profile-green-text">account_box</span>
+          </div>
+        </div>
+        <div fxLayout="column wrap" class="my-profile-row2" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" class="landing-full-width my-profile-row2-top" fxLayoutAlign="start end" [fxShow]="true"><label class="message-fz-18">
+              My profile</label></div>
+          <div fxLayout="row wrap" class="landing-full-width my-profile-row2-bottom" fxLayoutAlign="start stretch" [fxShow]="true"><label class="profile-gray-text message-fz-18">
+              Update your details safely</label></div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="my-profile-row" fxLayoutAlign="space-between center" [fxShow]="true" [routerLink]="[&apos;/settings&apos;]">
+        <div fxLayout="row wrap" class="my-profile-margin-10 my-profile-round my-profile-row1" fxLayoutAlign="center center" [fxShow]="true">
+          <div>
+            <span class="material-symbols-outlined my-profile-fz-30 my-profile-green-text">settings</span>
+          </div>
+        </div>
+        <div fxLayout="column wrap" class="my-profile-row2" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" class="landing-full-width my-profile-row2-top" fxLayoutAlign="start end" [fxShow]="true"><label class="message-fz-18">
+              Settings</label></div>
+          <div fxLayout="row wrap" class="landing-full-width my-profile-row2-bottom" fxLayoutAlign="start stretch" [fxShow]="true"><label class="profile-gray-text message-fz-18">
+              Personalise your app, your way!</label></div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="my-profile-row" fxLayoutAlign="space-between center" [fxShow]="true" [routerLink]="[&apos;/migrate&apos;]">
+        <div fxLayout="row wrap" class="my-profile-margin-10 my-profile-round my-profile-row1" fxLayoutAlign="center center" [fxShow]="true">
+          <div>
+            <span class="material-symbols-outlined my-profile-fz-30 my-profile-green-text">
+transfer_within_a_station
+</span>
+          </div>
+        </div>
+        <div fxLayout="column wrap" class="my-profile-row2" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" class="landing-full-width my-profile-row2-top" fxLayoutAlign="start end" [fxShow]="true"><label class="message-fz-18">
+              Migrate</label></div>
+          <div fxLayout="row wrap" class="landing-full-width my-profile-row2-bottom" fxLayoutAlign="start stretch" [fxShow]="true"><label class="profile-gray-text message-fz-18">
+              Transfer from FNB to Capitec</label></div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="my-profile-row" fxLayoutAlign="space-between center" [fxShow]="true" [routerLink]="[&apos;/landing&apos;]" (click)="logout()">
+        <div fxLayout="row wrap" class="my-profile-margin-10 my-profile-round my-profile-row1" fxLayoutAlign="center center" [fxShow]="true">
+          <div>
+            <span class="material-symbols-outlined my-profile-fz-30 message-text-orange">logout</span>
+          </div>
+        </div>
+        <div fxLayout="column wrap" class="my-profile-row2" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="row wrap" class="landing-full-width my-profile-row2-top" fxLayoutAlign="start center" [fxShow]="true"><label class="message-fz-18">
+              Log off</label></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><bh-footer></bh-footer></div>
+</div>

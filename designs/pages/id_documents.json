@@ -1,0 +1,123 @@
+[
+    {
+        "id": "sd_xfAYrjvxzgNVKOOl",
+        "type": "tab",
+        "createdDate": "2024-05-15T10:53:57.626Z",
+        "label": "id_documents",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "id_documentsComponent"
+    },
+    {
+        "id": "sd_8HAnKWmL390dCSBr",
+        "type": "OnInit",
+        "z": "sd_xfAYrjvxzgNVKOOl",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_8HAnKWmL390dCSBr",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_iK1BVDdlr1pslLxJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "id_documentsComponent"
+    },
+    {
+        "id": "sd_iK1BVDdlr1pslLxJ",
+        "type": "PageVariables",
+        "z": "sd_xfAYrjvxzgNVKOOl",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_iK1BVDdlr1pslLxJ",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "id_documentsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_mm29zJYjsirD8AGn",
+        "type": "PageStart",
+        "z": "sd_xfAYrjvxzgNVKOOl",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Go Back",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goBack",
+        "category": "General",
+        "x": 45,
+        "y": 220,
+        "wires": [
+            [
+                "sd_AerN6PFNNeJ3HHvM"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "id_documentsComponent"
+    },
+    {
+        "id": "sd_AerN6PFNNeJ3HHvM",
+        "type": "PageCallService",
+        "z": "sd_xfAYrjvxzgNVKOOl",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_O7BgeFkazhosv8N2",
+            "type": "tab",
+            "createdDate": "2024-05-14T08:16:55.985Z",
+            "label": "common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_jJRXnjTcMQmcijs6",
+            "flowName": "goBack"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/common",
+        "startName": "goBack",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_AerN6PFNNeJ3HHvM",
+        "category": "General",
+        "x": 185,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "id_documentsComponent",
+        "generated": true
+    }
+]

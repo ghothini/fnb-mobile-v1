@@ -1,0 +1,579 @@
+[
+    {
+        "id": "sd_pJX4oN0ELFcPypn0",
+        "type": "tab",
+        "createdDate": "2024-05-21T06:37:38.423Z",
+        "label": "deposit_own",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "deposit_ownComponent"
+    },
+    {
+        "id": "sd_sxuSmmggwJhNkaMJ",
+        "type": "OnInit",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_sxuSmmggwJhNkaMJ",
+        "category": "Lifecycle Events",
+        "x": 125,
+        "y": 120,
+        "wires": [
+            [
+                "sd_50nnJusge0WlEeKa"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "deposit_ownComponent"
+    },
+    {
+        "id": "sd_6dRBPgiYAUEsVX8G",
+        "type": "PageStart",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Go Back",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goBack",
+        "category": "General",
+        "x": 145,
+        "y": 220,
+        "wires": [
+            [
+                "sd_iAwLBsP1GTw129bJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "deposit_ownComponent"
+    },
+    {
+        "id": "sd_iAwLBsP1GTw129bJ",
+        "type": "PageCallService",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_O7BgeFkazhosv8N2",
+            "type": "tab",
+            "createdDate": "2024-05-14T08:16:55.985Z",
+            "label": "common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_jJRXnjTcMQmcijs6",
+            "flowName": "goBack"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/common",
+        "startName": "goBack",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_iAwLBsP1GTw129bJ",
+        "category": "General",
+        "x": 265,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_fwxLkqzq3xDQqn6O",
+        "type": "PageVariables",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "depositForm",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "quote",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_fwxLkqzq3xDQqn6O",
+        "category": "Function",
+        "x": 365,
+        "y": 100,
+        "wires": [
+            [
+                "sd_OaQEDxEmVHx3C3g1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_F4KXyA8KsxeWXj4H",
+        "type": "Navigation",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/bank",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_F4KXyA8KsxeWXj4H",
+        "category": "Navigation",
+        "x": 365,
+        "y": 460,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "deposit_ownComponent"
+    },
+    {
+        "id": "sd_n1swxNd5XPSBN52k",
+        "type": "Script",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\npage.depositForm = new FormGroup({\n    accountNumber: new FormControl(page.loggedInUser._id),\n    depositAmount: new FormControl('')\n})\npage.loggedInUser.balance = ''\nconsole.log('page', page)",
+        "functionName": "sd_SCwW4nHklebIcI9W",
+        "category": "Function",
+        "x": 565,
+        "y": 100,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_50nnJusge0WlEeKa",
+        "type": "UseDependency",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_50nnJusge0WlEeKa",
+        "category": "Function",
+        "x": 265,
+        "y": 100,
+        "wires": [
+            [
+                "sd_fwxLkqzq3xDQqn6O"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_OaQEDxEmVHx3C3g1",
+        "type": "Storage",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "loggedInUser"
+        },
+        "functionName": "sd_OaQEDxEmVHx3C3g1",
+        "category": "Storage",
+        "x": 465,
+        "y": 100,
+        "wires": [
+            [
+                "sd_n1swxNd5XPSBN52k"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_rCwW2FYOhzByj19y",
+        "type": "PageStart",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "deposit",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "deposit",
+        "category": "General",
+        "x": 110,
+        "y": 400,
+        "wires": [
+            [
+                "sd_1WWXSPwsvBm2czQv"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "deposit_ownComponent"
+    },
+    {
+        "id": "sd_1WWXSPwsvBm2czQv",
+        "type": "PageCallService",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_O7BgeFkazhosv8N2",
+            "type": "tab",
+            "createdDate": "2024-05-14T08:16:55.985Z",
+            "label": "common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_vO7ZpSwQ0nvvbLo3",
+            "flowName": "update"
+        },
+        "inputVariables": [
+            {
+                "key": "newQuote",
+                "map": true,
+                "valueType": "this.page",
+                "value": "quote"
+            }
+        ],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/common",
+        "startName": "update",
+        "inputParams": [
+            "this.page.quote"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_1WWXSPwsvBm2czQv",
+        "category": "General",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "sd_nI18BeqqDSJEhPi2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_D4TSF2KvJlb00H4k",
+        "type": "Navigation",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/bank",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": {
+            "type": "this.page",
+            "value": "loggedInUser"
+        },
+        "functionName": "sd_D4TSF2KvJlb00H4k",
+        "category": "Navigation",
+        "x": 765,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_nI18BeqqDSJEhPi2",
+        "type": "Environment",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_nI18BeqqDSJEhPi2",
+        "category": "General",
+        "x": 285,
+        "y": 300,
+        "wires": [
+            [
+                "sd_KjA1mPc8d0LZLJFC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_KjA1mPc8d0LZLJFC",
+        "type": "Script",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = page.ssdUrl + 'update'\nbh.url2 = page.ssdUrl + `get-user/${page.loggedInUser.email}`\npage.loggedInUser.balance = page.quote \npage.loggedInUser.collection = 'users'\n\n\n\nconsole.log('bh', bh)\nconsole.log('page', page)",
+        "functionName": "sd_KjA1mPc8d0LZLJFC",
+        "category": "Function",
+        "x": 385,
+        "y": 320,
+        "wires": [
+            [
+                "sd_Z1kgiWyXkMK4cKNl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Z1kgiWyXkMK4cKNl",
+        "type": "HttpRequest",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "put",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.loggedInUser",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "loggedInUser"
+        },
+        "resultMapping": "this.page.loggedInUser",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "loggedInUser"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_Z1kgiWyXkMK4cKNl",
+        "category": "HTTP",
+        "x": 485,
+        "y": 320,
+        "wires": [
+            [
+                "sd_Gp3SXjhwB91r12WX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_9vr6cKjC0YU5tOu6",
+        "type": "Storage",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {
+            "type": "this.page",
+            "value": "result"
+        },
+        "resultMapping": {},
+        "functionName": "sd_9vr6cKjC0YU5tOu6",
+        "category": "Storage",
+        "x": 665,
+        "y": 320,
+        "wires": [
+            [
+                "sd_D4TSF2KvJlb00H4k"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Gp3SXjhwB91r12WX",
+        "type": "HttpRequest",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url2",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url2"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.loggedInUser.collection",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "loggedInUser.collection"
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_Gp3SXjhwB91r12WX",
+        "category": "HTTP",
+        "x": 565,
+        "y": 320,
+        "wires": [
+            [
+                "sd_9vr6cKjC0YU5tOu6"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    }
+]

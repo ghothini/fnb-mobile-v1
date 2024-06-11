@@ -1,0 +1,92 @@
+<div fxLayout="column wrap" class="bank-full-width bank-padding-10px" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div>
+            <span class="material-symbols-outlined bank-pointer" (click)="goBack()">
+                arrow_back
+            </span>
+          </div>
+        </div>
+        <div fxLayout="column wrap" class="bank-no-margin" fxLayoutAlign="center center" [fxShow]="true">
+          <p>
+            Accounts</p>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div>
+            <span class="material-symbols-outlined" [routerLink]="[&apos;/coming-soon&apos;]">
+                search
+            </span>
+          </div>
+        </div>
+        <div fxLayout="column wrap" class="bank-no-margin" fxLayoutAlign="center center" [fxShow]="true">
+          <div>
+            <span class="material-symbols-outlined pointer" (click)="goBack()">
+                close
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true"><mat-tab-group mat-align-tabs="start" class="bank-full-width"><mat-tab label="Transaction History">
+        <div fxLayout="column wrap" class="bank-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <p class="bank-margin-top-10px bank-primary bank-no-margin">
+              Older</p>
+          </div><mat-card *ngFor="let item of page.newArr" class="bank-padding-5px bank-margin-left-1px bank-margin-right-1px bank-border-radius-10px">
+            <mat-card-content>
+              <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+                <div fxLayout="column wrap" fxLayoutAlign="center start" [fxShow]="true">
+                  <p class="bank-no-margin">
+                    {{item.description}}
+                  </p>
+                  <p class="bank-no-margin">
+                    {{item.transactionDate}}
+                  </p>
+                </div>
+                <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+                  <p>
+                    -R{{item.amount}}</p>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </mat-tab><mat-tab label="Account Options">
+        <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" class="bank-margin-top-10px" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="Web/Images/card.png" class="bank-height-100px"></div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <p class="bank-margin-bottom-10px bank-margin-top-10px bank-no-margin">
+              <strong>Easy Zero</strong>
+            </p>
+          </div>
+          <div fxLayout="row wrap" class="bank-light-grey-bg" fxLayoutAlign="space-between stretch" [fxShow]="true">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <p class="bank-dark-grey bank-no-margin">
+                Account Number</p>
+              <p class="bank-dark-grey bank-no-margin">
+                Balance</p>
+              <p class="bank-dark-grey bank-no-margin">
+                Available</p>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="start end" [fxShow]="true">
+              <p class="bank-dark-grey bank-no-margin">
+                {{page.loggedInUser.accountNumber}}
+              </p>
+              <p class="bank-dark-grey bank-no-margin">
+                {{page.loggedInUser.balance}}
+              </p>
+              <p class="bank-dark-grey bank-no-margin">
+                {{page.loggedInUser.balance}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </mat-tab></mat-tab-group></div>
+</div>

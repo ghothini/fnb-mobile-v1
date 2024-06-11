@@ -1,0 +1,356 @@
+[
+    {
+        "id": "sd_x5uEL2JD4q9uIj2k",
+        "type": "tab",
+        "createdDate": "2024-06-05T09:11:44.235Z",
+        "label": "migrate",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "migrateComponent"
+    },
+    {
+        "id": "sd_dpTYOoU9RpV0DTcD",
+        "type": "OnInit",
+        "z": "sd_x5uEL2JD4q9uIj2k",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_dpTYOoU9RpV0DTcD",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_doJ6zvSar9t0OFZu"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "migrateComponent"
+    },
+    {
+        "id": "sd_Px5jP0udVU5GQNmE",
+        "type": "PageVariables",
+        "z": "sd_x5uEL2JD4q9uIj2k",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "migrateForm",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_Px5jP0udVU5GQNmE",
+        "category": "Function",
+        "x": 225,
+        "y": 40,
+        "wires": [
+            [
+                "sd_FI5pWCX8AXF6Mqkh"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "migrateComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_0aOMDwFg1VkdnHJU",
+        "type": "Script",
+        "z": "sd_x5uEL2JD4q9uIj2k",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.password = 'password';\n\n\npage.migrateForm = new FormGroup({\n    email: new FormControl(page.loggedInUser.email, Validators.required),\n    idNum: new FormControl(page.loggedInUser.idNum, Validators.required),\n    cellPhoneNumber: new FormControl(page.loggedInUser.cell, Validators.required),\n    balance: new FormControl(page.loggedInUser.balance, Validators.required),\n    accountNumber: new FormControl(page.loggedInUser.accountNumber, Validators.required),\n    name: new FormControl(page.loggedInUser.name, Validators.required),\n    surname: new FormControl(page.loggedInUser.surname, Validators.required),\n    remotePin: new FormControl('', Validators.required),\n\n}) \n\n// console.log(page.loginForm.value)\n",
+        "functionName": "sd_0aOMDwFg1VkdnHJU",
+        "category": "Function",
+        "x": 445,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "migrateComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_doJ6zvSar9t0OFZu",
+        "type": "UseDependency",
+        "z": "sd_x5uEL2JD4q9uIj2k",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_doJ6zvSar9t0OFZu",
+        "category": "Function",
+        "x": 125,
+        "y": 40,
+        "wires": [
+            [
+                "sd_Px5jP0udVU5GQNmE"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "migrateComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_FI5pWCX8AXF6Mqkh",
+        "type": "Storage",
+        "z": "sd_x5uEL2JD4q9uIj2k",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "loggedInUser"
+        },
+        "functionName": "sd_FI5pWCX8AXF6Mqkh",
+        "category": "Storage",
+        "x": 325,
+        "y": 40,
+        "wires": [
+            [
+                "sd_0aOMDwFg1VkdnHJU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "migrateComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lhwfvQLNys0t62Ac",
+        "type": "PageStart",
+        "z": "sd_x5uEL2JD4q9uIj2k",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "submit",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "submit",
+        "category": "General",
+        "x": 85,
+        "y": 180,
+        "wires": [
+            [
+                "sd_d1i9RMFQRl4YCaZQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "migrateComponent"
+    },
+    {
+        "id": "sd_d1i9RMFQRl4YCaZQ",
+        "type": "Script",
+        "z": "sd_x5uEL2JD4q9uIj2k",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log('submitted page', page)\nbh.body = page.migrateForm.value",
+        "functionName": "sd_d1i9RMFQRl4YCaZQ",
+        "category": "Function",
+        "x": 185,
+        "y": 180,
+        "wires": [
+            [
+                "sd_X6p0JfB1gGINZhCh"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "migrateComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_X6p0JfB1gGINZhCh",
+        "type": "Environment",
+        "z": "sd_x5uEL2JD4q9uIj2k",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_X6p0JfB1gGINZhCh",
+        "category": "General",
+        "x": 305,
+        "y": 180,
+        "wires": [
+            [
+                "sd_4ea6CJ6HspJDAa6e"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "migrateComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_B1cv4ZZaboP97qFx",
+        "type": "HttpRequest",
+        "z": "sd_x5uEL2JD4q9uIj2k",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.body",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "body"
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_B1cv4ZZaboP97qFx",
+        "category": "HTTP",
+        "x": 525,
+        "y": 140,
+        "wires": [
+            [
+                "sd_qoU1BJfg9M5STpCb"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "migrateComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_4ea6CJ6HspJDAa6e",
+        "type": "Script",
+        "z": "sd_x5uEL2JD4q9uIj2k",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/registration`\nconsole.log('updated bh', bh)",
+        "functionName": "sd_4ea6CJ6HspJDAa6e",
+        "category": "Function",
+        "x": 405,
+        "y": 180,
+        "wires": [
+            [
+                "sd_B1cv4ZZaboP97qFx"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "migrateComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qoU1BJfg9M5STpCb",
+        "type": "Navigation",
+        "z": "sd_x5uEL2JD4q9uIj2k",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/login",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_qoU1BJfg9M5STpCb",
+        "category": "Navigation",
+        "x": 725,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "migrateComponent",
+        "generated": true
+    }
+]

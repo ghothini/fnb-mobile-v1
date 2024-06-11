@@ -1,0 +1,18 @@
+<div fxLayout="column wrap" class="add-profile-pic-ff-roboto bank-full-width login" fxLayoutAlign="start center" [fxShow]="true">
+  <form [formGroup]="page.depositForm" class="my-profile-width-90-only login-middle">
+    <div fxLayout="column wrap" class="bank-full-height bank-full-width" fxLayoutAlign="start center" [fxShow]="true"><img imgSrc="Web/Images/fnb-logo2.webp" style="width: 42%; height: 15%;"><label class="limits-fz-16 my-profile-margin-top-1em my-profile-green-text">
+        <b>Please enter the amount you would like to deposit into your account</b></label>
+      <div class="bank-margin-top-10px bank-full-width">
+        Amount:</div>
+      <div style="height: 10%; margin-top: 10px" class="bank-full-width">
+        <input placeholder="eg : 4000" required [(ngModel)]="page.quote" formControlName="depositAmount" type="number" style="width: 98%; height:70% ; border: 2px solid gray;
+    border-radius: 15px; font-size: 20px; padding-left: 10px">
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p *ngIf="(page.depositForm.controls.depositAmount?.touched) &amp;&amp; (page.depositForm.controls.depositAmount?.errors?.required)" style="color:red;" class="message-no-margin">
+          <small><b>Deposit Amount is required</b></small>
+        </p>
+      </div><button mat-raised-button style="margin-top: 1em" class="login-green-bg bank-full-width login-btn message-fz-18" (click)="deposit()" [disabled]="page.depositForm.invalid">Deposit</button>
+    </div>
+  </form>
+</div>

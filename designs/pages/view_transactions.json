@@ -1,0 +1,519 @@
+[
+    {
+        "id": "sd_kp9oBTcqwP8tLzjP",
+        "type": "tab",
+        "createdDate": "2024-05-14T06:52:49.881Z",
+        "label": "view_transactions",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "view_transactionsComponent"
+    },
+    {
+        "id": "sd_K5NHmbmLJZLJQmKr",
+        "type": "OnInit",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_K5NHmbmLJZLJQmKr",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_3oH2r6rOuBE5VSlL"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "view_transactionsComponent"
+    },
+    {
+        "id": "sd_3oH2r6rOuBE5VSlL",
+        "type": "PageVariables",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_3oH2r6rOuBE5VSlL",
+        "category": "Function",
+        "x": 125,
+        "y": 40,
+        "wires": [
+            [
+                "sd_GFUVMLwhBkIKvPjv"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Sr7vn4Z7hXrVNx77",
+        "type": "PageStart",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go back",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goBack",
+        "category": "General",
+        "x": 105,
+        "y": 180,
+        "wires": [
+            [
+                "sd_3WsT5cgxjILzgAEg"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "view_transactionsComponent"
+    },
+    {
+        "id": "sd_DnMTqbMgscweVaTf",
+        "type": "Script",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.location.back()",
+        "functionName": "sd_DnMTqbMgscweVaTf",
+        "category": "Function",
+        "x": 360,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_3WsT5cgxjILzgAEg",
+        "type": "UseDependency",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Location",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "location"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/common",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_3WsT5cgxjILzgAEg",
+        "category": "Function",
+        "x": 225,
+        "y": 180,
+        "wires": [
+            [
+                "sd_DnMTqbMgscweVaTf"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qgs1V0XSdLd3smGC",
+        "type": "PageStart",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to search",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToSearch",
+        "category": "General",
+        "x": 145,
+        "y": 320,
+        "wires": [
+            [
+                "sd_OiIEySJfDIqsnu5f"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "view_transactionsComponent"
+    },
+    {
+        "id": "sd_OiIEySJfDIqsnu5f",
+        "type": "Navigation",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/search",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_OiIEySJfDIqsnu5f",
+        "category": "Navigation",
+        "x": 285,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_NO1swfx7Djl88TaU",
+        "type": "HttpRequest",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": ""
+        },
+        "resultMapping": "this.page.airtime",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "airtime"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_NO1swfx7Djl88TaU",
+        "category": "HTTP",
+        "x": 505,
+        "y": 40,
+        "wires": [
+            [
+                "sd_ywShD8cOBT5apeHm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_GFUVMLwhBkIKvPjv",
+        "type": "Environment",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_GFUVMLwhBkIKvPjv",
+        "category": "General",
+        "x": 225,
+        "y": 40,
+        "wires": [
+            [
+                "sd_6Ihta6dFH2WqedTq"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_UtIdsMpnbEzdy33G",
+        "type": "Script",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url =`https://111e-169-239-176-9.ngrok-free.app/api/get-airtime/${page.loggedInUser.email}`\nbh.url2 =`https://111e-169-239-176-9.ngrok-free.app/api/get-electricity/${page.loggedInUser.email}`\nbh.url3 =`https://111e-169-239-176-9.ngrok-free.app/api/get-ewallet/${page.loggedInUser.email}`\nbh.url4 =`https://111e-169-239-176-9.ngrok-free.app/api/get-pay/${page.loggedInUser.email}`\n\n\n",
+        "functionName": "sd_UtIdsMpnbEzdy33G",
+        "category": "Function",
+        "x": 405,
+        "y": 40,
+        "wires": [
+            [
+                "sd_NO1swfx7Djl88TaU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ywShD8cOBT5apeHm",
+        "type": "HttpRequest",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url2",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url2"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": ""
+        },
+        "resultMapping": "this.page.electricity",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "electricity"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_ywShD8cOBT5apeHm",
+        "category": "HTTP",
+        "x": 605,
+        "y": 40,
+        "wires": [
+            [
+                "sd_lNXTuv9JhUg8NEh8"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lNXTuv9JhUg8NEh8",
+        "type": "HttpRequest",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url3",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url3"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": ""
+        },
+        "resultMapping": "this.page.ewallet",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "ewallet"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_lNXTuv9JhUg8NEh8",
+        "category": "HTTP",
+        "x": 705,
+        "y": 40,
+        "wires": [
+            [
+                "sd_Yu8yEAuVIKQrq9PN"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Yu8yEAuVIKQrq9PN",
+        "type": "HttpRequest",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url4",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url4"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": ""
+        },
+        "resultMapping": "this.page.pay",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "pay"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_Yu8yEAuVIKQrq9PN",
+        "category": "HTTP",
+        "x": 805,
+        "y": 40,
+        "wires": [
+            [
+                "sd_QXMibve5VdwFRL9r"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_6Ihta6dFH2WqedTq",
+        "type": "Storage",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "loggedInUser"
+        },
+        "functionName": "sd_6Ihta6dFH2WqedTq",
+        "category": "Storage",
+        "x": 320,
+        "y": 40,
+        "wires": [
+            [
+                "sd_UtIdsMpnbEzdy33G"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_QXMibve5VdwFRL9r",
+        "type": "Script",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.transctions = [...page.airtime, ...page.electricity, ...page.ewallet, ...page.pay]\n\nconst newArray = page.transctions.map(transaction => {\n    let description;\n    if (transaction.bundleType) {\n        description = `Airtime purchase for ${transaction.cell} on ${transaction.networkProvider}`;\n    } else if (transaction.meterNumber) {\n        description = `Electricity purchase for meter number ${transaction.meterNumber}`;\n    } else if (transaction.cellNumber) {\n        description = `Transaction for cell number ${transaction.cellNumber}`;\n    } else if (transaction.cardNumber) {\n        description = `Money sent to ${transaction.recipientName} with reference ${transaction.ownRef}`;\n    }\n\n    return {\n        transactionDate: transaction.transactionDate,\n        amount: transaction.amount,\n        description: description\n    };\n});\nnewArray.sort((a, b) => {\n     page.dateA = new Date(a.transactionDate);\n    page.dateB = new Date(b.transactionDate);\n    return page.dateB - page.dateA;\n});\n\npage.newArr = newArray\nconsole.log('newArray', page.newArr);",
+        "functionName": "sd_QXMibve5VdwFRL9r",
+        "category": "Function",
+        "x": 920,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    }
+]

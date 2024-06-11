@@ -1,0 +1,643 @@
+[
+    {
+        "id": "sd_lgtChNQJf2qX02UG",
+        "type": "tab",
+        "createdDate": "2024-05-16T18:08:30.413Z",
+        "label": "ewallet",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "ewalletComponent"
+    },
+    {
+        "id": "sd_RN7hllGaoHFIGKfZ",
+        "type": "OnInit",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_RN7hllGaoHFIGKfZ",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 60,
+        "wires": [
+            [
+                "sd_kTNhpdwIUiB5YW4A"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ewalletComponent"
+    },
+    {
+        "id": "sd_1phC2MwaB28CR0D4",
+        "type": "PageStart",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go back",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goBack",
+        "category": "General",
+        "x": 225,
+        "y": 180,
+        "wires": [
+            [
+                "sd_YtZwxNvBGKIYKDPj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ewalletComponent"
+    },
+    {
+        "id": "sd_TqH897bC0nz3OEUT",
+        "type": "Script",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.location.back()\n",
+        "functionName": "sd_TqH897bC0nz3OEUT",
+        "category": "Function",
+        "x": 480,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_YtZwxNvBGKIYKDPj",
+        "type": "UseDependency",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Location",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "location"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/common",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_YtZwxNvBGKIYKDPj",
+        "category": "Function",
+        "x": 345,
+        "y": 180,
+        "wires": [
+            [
+                "sd_TqH897bC0nz3OEUT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_yH9RhqdKZgTlfLF9",
+        "type": "PageStart",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "send",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "send",
+        "category": "General",
+        "x": 65,
+        "y": 300,
+        "wires": [
+            [
+                "sd_KpidmSIY6Y1p6PJ3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ewalletComponent"
+    },
+    {
+        "id": "sd_Jm45EC1HjOc0Til9",
+        "type": "Script",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log('ewallet', page.ewalletForm.value)\n\npage.loggedInUser.balance = page.loggedInUser.balance - page.ewalletForm.value.amount;\n\nconsole.log('page', page)",
+        "functionName": "sd_Jm45EC1HjOc0Til9",
+        "category": "Function",
+        "x": 225,
+        "y": 300,
+        "wires": [
+            [
+                "sd_o88uOmbvijx6Wy63"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_o88uOmbvijx6Wy63",
+        "type": "Storage",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {
+            "type": "this.page",
+            "value": "loggedInUser"
+        },
+        "resultMapping": {},
+        "functionName": "sd_o88uOmbvijx6Wy63",
+        "category": "Storage",
+        "x": 325,
+        "y": 300,
+        "wires": [
+            [
+                "sd_r8tm4SfEpQZwMiOP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_wBaHh0763j38xP64",
+        "type": "Navigation",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/bank",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_wBaHh0763j38xP64",
+        "category": "Navigation",
+        "x": 845,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_r8tm4SfEpQZwMiOP",
+        "type": "Environment",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_r8tm4SfEpQZwMiOP",
+        "category": "General",
+        "x": 425,
+        "y": 300,
+        "wires": [
+            [
+                "sd_X4wo6MWSDt6k4TJ9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lnBzQH0qh2i6tbcJ",
+        "type": "HttpRequest",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.body",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "body"
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_lnBzQH0qh2i6tbcJ",
+        "category": "HTTP",
+        "x": 605,
+        "y": 300,
+        "wires": [
+            [
+                "sd_3JoUcgHKLhQQMcnP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_X4wo6MWSDt6k4TJ9",
+        "type": "Script",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/ewallet`\nbh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/update`\n\nbh.body = page.ewalletForm.value\n\nbh.body2 = {\n    email: page.loggedInUser.email,\n    collection: 'users',\n    balance: page.loggedInUser.balance\n}",
+        "functionName": "sd_X4wo6MWSDt6k4TJ9",
+        "category": "Function",
+        "x": 525,
+        "y": 300,
+        "wires": [
+            [
+                "sd_lnBzQH0qh2i6tbcJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_3JoUcgHKLhQQMcnP",
+        "type": "HttpRequest",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "put",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url2",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url2"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.body2",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "body2"
+        },
+        "resultMapping": "this.page.update",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "update"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_3JoUcgHKLhQQMcnP",
+        "category": "HTTP",
+        "x": 685,
+        "y": 300,
+        "wires": [
+            [
+                "sd_lkytglxcN3IN0Nrp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lkytglxcN3IN0Nrp",
+        "type": "SnackBar",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Purchase Successful"
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_lkytglxcN3IN0Nrp",
+        "category": "General",
+        "x": 765,
+        "y": 300,
+        "wires": [
+            [
+                "sd_wBaHh0763j38xP64"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_8gRcQKgo7rGWCf8f",
+        "type": "PageVariables",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_8gRcQKgo7rGWCf8f",
+        "category": "Function",
+        "x": 245,
+        "y": 60,
+        "wires": [
+            [
+                "sd_kZgzC8EObqLtlnGU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ejUFnfZNlysDod57",
+        "type": "Script",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\npage.currentQuote = page.loggedInUser.balance;\n\n// if (bh.currentQuote) {\n//     console.log('value');\n//     page.currentQuote = bh.currentQuote.input.newQuote;\n//     console.log(\"new bh :\", bh.currentQuote.input.newQuote);\n// } else {\n//     console.log('no value');\n// }\n\nconst date = new Date();\n\nconst day = date.getDate();\nconst month = date.toLocaleString('default', { month: 'long' });\nconst year = date.getFullYear();\nconst hours = String(date.getHours()).padStart(2, '0');\nconst minutes = String(date.getMinutes()).padStart(2, '0');\n\npage.formattedDate = `${day} ${month} ${year} ${hours}:${minutes}`;\n\nconsole.log('page', page)\n\npage.ewalletForm = new FormGroup({\n    firstName:  new FormControl(page.loggedInUser.name),\n    email:  new FormControl(page.loggedInUser.email),\n    amount: new FormControl(''),\n    cellNumber: new FormControl(''),\n    transactionDate: new FormControl(page.formattedDate)\n})\n",
+        "functionName": "sd_ejUFnfZNlysDod57",
+        "category": "Function",
+        "x": 465,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_kZgzC8EObqLtlnGU",
+        "type": "Storage",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "loggedInUser"
+        },
+        "functionName": "sd_kZgzC8EObqLtlnGU",
+        "category": "Storage",
+        "x": 345,
+        "y": 60,
+        "wires": [
+            [
+                "sd_ejUFnfZNlysDod57"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_kTNhpdwIUiB5YW4A",
+        "type": "UseDependency",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_kTNhpdwIUiB5YW4A",
+        "category": "Function",
+        "x": 165,
+        "y": 60,
+        "wires": [
+            [
+                "sd_8gRcQKgo7rGWCf8f"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_y8NPVOYtgWYXmVH1",
+        "type": "SnackBar",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Insufficent funds"
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_y8NPVOYtgWYXmVH1",
+        "category": "General",
+        "x": 145,
+        "y": 400,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_KpidmSIY6Y1p6PJ3",
+        "type": "PageSwitch",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "loggedInUser.balance",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.loggedInUser.balance",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "ewalletForm.value.amount",
+                "vt": "this.page",
+                "gv": "this.page.ewalletForm.value.amount"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_KpidmSIY6Y1p6PJ3",
+        "category": "Function",
+        "x": 145,
+        "y": 300,
+        "wires": [
+            [
+                "sd_Jm45EC1HjOc0Til9"
+            ],
+            [
+                "sd_y8NPVOYtgWYXmVH1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    }
+]

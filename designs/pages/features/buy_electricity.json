@@ -1,0 +1,702 @@
+[
+    {
+        "id": "sd_zfSgx6DaziJIt7ws",
+        "type": "tab",
+        "createdDate": "2024-05-16T06:14:36.802Z",
+        "label": "buy_electricity",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "buy_electricityComponent"
+    },
+    {
+        "id": "sd_ZwPp3oGDVg1iIWd4",
+        "type": "OnInit",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_ZwPp3oGDVg1iIWd4",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_IfSSwRERBH4XQxJH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "buy_electricityComponent"
+    },
+    {
+        "id": "sd_WflFAq94qqVyQOV6",
+        "type": "PageVariables",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "quote",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_WflFAq94qqVyQOV6",
+        "category": "Function",
+        "x": 245,
+        "y": 40,
+        "wires": [
+            [
+                "sd_mHUWSZ76nH2kyQwZ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_wTwI5KXp8W9baa6R",
+        "type": "PageStart",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go back",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goBack",
+        "category": "General",
+        "x": 45,
+        "y": 340,
+        "wires": [
+            [
+                "sd_PWsTbDR05jXbzKTy"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "buy_electricityComponent"
+    },
+    {
+        "id": "sd_YWfVfFZvLk9wAyQu",
+        "type": "Script",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.location.back()\n",
+        "functionName": "sd_YWfVfFZvLk9wAyQu",
+        "category": "Function",
+        "x": 285,
+        "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_PWsTbDR05jXbzKTy",
+        "type": "UseDependency",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Location",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "location"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/common",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_PWsTbDR05jXbzKTy",
+        "category": "Function",
+        "x": 145,
+        "y": 340,
+        "wires": [
+            [
+                "sd_YWfVfFZvLk9wAyQu"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_QJljhIzH0nQatkB8",
+        "type": "PageStart",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "submit",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "submit",
+        "category": "General",
+        "x": 45,
+        "y": 160,
+        "wires": [
+            [
+                "sd_7cVyguTzWL9kbtS0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "buy_electricityComponent"
+    },
+    {
+        "id": "sd_eXX8BsfxhmCCZceN",
+        "type": "PageCallService",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_O7BgeFkazhosv8N2",
+            "type": "tab",
+            "createdDate": "2024-05-14T08:16:55.985Z",
+            "label": "common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_vO7ZpSwQ0nvvbLo3",
+            "flowName": "update"
+        },
+        "inputVariables": [
+            {
+                "key": "newQuote",
+                "map": true,
+                "valueType": "this.page",
+                "value": "quote"
+            }
+        ],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/common",
+        "startName": "update",
+        "inputParams": [
+            "this.page.quote"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_eXX8BsfxhmCCZceN",
+        "category": "General",
+        "x": 565,
+        "y": 380,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "buy_electricityComponent"
+    },
+    {
+        "id": "sd_zz43ZgH2Icyxac5u",
+        "type": "Script",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\npage.currentQuote = page.loggedInUser.balance;\n\n// if (bh.currentQuote) {\n//     console.log('value');\n//     page.currentQuote = bh.currentQuote.input.newQuote;\n//     console.log(\"new bh :\", bh.currentQuote.input.newQuote);\n// } else {\n//     console.log('no value');\n// }\n\nconst date = new Date();\n\nconst day = date.getDate();\nconst month = date.toLocaleString('default', { month: 'long' });\nconst year = date.getFullYear();\nconst hours = String(date.getHours()).padStart(2, '0');\nconst minutes = String(date.getMinutes()).padStart(2, '0');\n\npage.formattedDate = `${day} ${month} ${year} ${hours}:${minutes}`;\n\nconsole.log('page', page)\n\npage.electricityForm = new FormGroup({\n    customer:  new FormControl(page.loggedInUser.name),\n    meterNumber: new FormControl(''),\n    amount: new FormControl(''),\n    cellphone: new FormControl(''),\n    transactionDate: new FormControl(page.formattedDate)\n})\n",
+        "functionName": "sd_zz43ZgH2Icyxac5u",
+        "category": "Function",
+        "x": 465,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_mHUWSZ76nH2kyQwZ",
+        "type": "Storage",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "loggedInUser"
+        },
+        "functionName": "sd_mHUWSZ76nH2kyQwZ",
+        "category": "Storage",
+        "x": 345,
+        "y": 40,
+        "wires": [
+            [
+                "sd_zz43ZgH2Icyxac5u"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_IfSSwRERBH4XQxJH",
+        "type": "UseDependency",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_IfSSwRERBH4XQxJH",
+        "category": "Function",
+        "x": 165,
+        "y": 40,
+        "wires": [
+            [
+                "sd_WflFAq94qqVyQOV6"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_uuViWYba2ueOJw37",
+        "type": "Script",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log('electricityForm', page.electricityForm.value)\n\npage.loggedInUser.balance = page.loggedInUser.balance - page.electricityForm.value.amount;\n\nconsole.log('page', page)",
+        "functionName": "sd_uuViWYba2ueOJw37",
+        "category": "Function",
+        "x": 245,
+        "y": 160,
+        "wires": [
+            [
+                "sd_ZNL962tT5IeCTqBZ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ZNL962tT5IeCTqBZ",
+        "type": "Storage",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {
+            "type": "this.page",
+            "value": "loggedInUser"
+        },
+        "resultMapping": {},
+        "functionName": "sd_ZNL962tT5IeCTqBZ",
+        "category": "Storage",
+        "x": 345,
+        "y": 160,
+        "wires": [
+            [
+                "sd_OXfSViGaz0gjW5Jn"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_21gHL2xhMj3IYVca",
+        "type": "Navigation",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/bank",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_21gHL2xhMj3IYVca",
+        "category": "Navigation",
+        "x": 865,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_OXfSViGaz0gjW5Jn",
+        "type": "Environment",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_OXfSViGaz0gjW5Jn",
+        "category": "General",
+        "x": 445,
+        "y": 160,
+        "wires": [
+            [
+                "sd_Vy7Re1ff3VKGjGux"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_cfsMwgXg1D8NTyNt",
+        "type": "HttpRequest",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.body",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "body"
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_cfsMwgXg1D8NTyNt",
+        "category": "HTTP",
+        "x": 625,
+        "y": 160,
+        "wires": [
+            [
+                "sd_lk2FRezJkeUEMuOc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Vy7Re1ff3VKGjGux",
+        "type": "Script",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/buy-electricity`\nbh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/update`\n\nbh.body = page.electricityForm.value\n\nbh.body2 = {\n    email: page.loggedInUser.email,\n    collection: 'users',\n    balance: page.loggedInUser.balance\n}",
+        "functionName": "sd_Vy7Re1ff3VKGjGux",
+        "category": "Function",
+        "x": 545,
+        "y": 160,
+        "wires": [
+            [
+                "sd_cfsMwgXg1D8NTyNt"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lk2FRezJkeUEMuOc",
+        "type": "HttpRequest",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "put",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url2",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url2"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.body2",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "body2"
+        },
+        "resultMapping": "this.page.update",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "update"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_lk2FRezJkeUEMuOc",
+        "category": "HTTP",
+        "x": 705,
+        "y": 160,
+        "wires": [
+            [
+                "sd_86j6RevOd8e3ZKkO"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_86j6RevOd8e3ZKkO",
+        "type": "SnackBar",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Purchase Successful"
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_86j6RevOd8e3ZKkO",
+        "category": "General",
+        "x": 785,
+        "y": 160,
+        "wires": [
+            [
+                "sd_21gHL2xhMj3IYVca"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lmOQOnE9gGW0Jqxz",
+        "type": "SnackBar",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Insufficent funds"
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_lmOQOnE9gGW0Jqxz",
+        "category": "General",
+        "x": 145,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_7cVyguTzWL9kbtS0",
+        "type": "PageSwitch",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "loggedInUser.balance",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.loggedInUser.balance",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "electricityForm.value.amount",
+                "vt": "this.page",
+                "gv": "this.page.electricityForm.value.amount"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_7cVyguTzWL9kbtS0",
+        "category": "Function",
+        "x": 145,
+        "y": 160,
+        "wires": [
+            [
+                "sd_uuViWYba2ueOJw37"
+            ],
+            [
+                "sd_lmOQOnE9gGW0Jqxz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    }
+]

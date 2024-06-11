@@ -1,0 +1,191 @@
+[
+    {
+        "id": "sd_xJRr9NC70d5u5q1e",
+        "type": "tab",
+        "createdDate": "2024-05-15T10:46:13.611Z",
+        "label": "search",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "searchComponent"
+    },
+    {
+        "id": "sd_DTvrWz57bEJDLY6e",
+        "type": "OnInit",
+        "z": "sd_xJRr9NC70d5u5q1e",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_DTvrWz57bEJDLY6e",
+        "category": "Lifecycle Events",
+        "x": 25,
+        "y": 40,
+        "wires": [
+            [
+                "sd_8SWG1mUj5QFRduiJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "searchComponent"
+    },
+    {
+        "id": "sd_8SWG1mUj5QFRduiJ",
+        "type": "PageVariables",
+        "z": "sd_xJRr9NC70d5u5q1e",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_8SWG1mUj5QFRduiJ",
+        "category": "Function",
+        "x": 125,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_zOZ3GO2QbQk3WdRZ",
+        "type": "PageStart",
+        "z": "sd_xJRr9NC70d5u5q1e",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go back",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goBack",
+        "category": "General",
+        "x": 85,
+        "y": 180,
+        "wires": [
+            [
+                "sd_6JxufpbuAJpEWcAR"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "searchComponent"
+    },
+    {
+        "id": "sd_4rSe9bf3ZAu826qz",
+        "type": "Script",
+        "z": "sd_xJRr9NC70d5u5q1e",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.location.back()",
+        "functionName": "sd_4rSe9bf3ZAu826qz",
+        "category": "Function",
+        "x": 340,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_6JxufpbuAJpEWcAR",
+        "type": "UseDependency",
+        "z": "sd_xJRr9NC70d5u5q1e",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Location",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "location"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/common",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_6JxufpbuAJpEWcAR",
+        "category": "Function",
+        "x": 205,
+        "y": 180,
+        "wires": [
+            [
+                "sd_4rSe9bf3ZAu826qz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_HFz5PyX0RSXzUykb",
+        "type": "PageStart",
+        "z": "sd_xJRr9NC70d5u5q1e",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to ewallet",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToEwallet",
+        "category": "General",
+        "x": 120,
+        "y": 360,
+        "wires": [
+            [
+                "sd_KCeErSltVHx68fou"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "searchComponent"
+    },
+    {
+        "id": "sd_KCeErSltVHx68fou",
+        "type": "Navigation",
+        "z": "sd_xJRr9NC70d5u5q1e",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/eWallet",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_KCeErSltVHx68fou",
+        "category": "Navigation",
+        "x": 245,
+        "y": 360,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchComponent",
+        "generated": true
+    }
+]

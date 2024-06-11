@@ -1,0 +1,13 @@
+{
+    "displayName": "fnb-mobile",
+    "appName": "fnb-mobile",
+    "description": "Replica of fnb-mobile",
+    "lastModified": "2024-05-13T11:37:35.479Z",
+    "imgSourcePath": "appIcon-1715600254678.jfif",
+    "version": "1.0.0",
+    "appType": "uiOnly",
+    "templateName": "blank",
+    "createDate": "2024-05-13T11:37:34.674Z",
+    "analyticsId": "0bb05a81-df91-c3ee-e2f5-7946d890f2cb",
+    "createdStudioVersion": "9.2.1"
+}

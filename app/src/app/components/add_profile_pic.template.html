@@ -1,0 +1,40 @@
+<div fxLayout="column wrap" class="landing-full-width add-profile-pic" fxLayoutAlign="start center" [fxShow]="true">
+  <div fxLayout="row wrap" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
+                <span class="material-symbols-outlined ">
+                arrow_back
+            </span></span></div><label class="message-fz-21 message-margin-left-1em">
+      Personal info</label><span class="message-flex-1">
+                </span>
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true"><span>
+                <span class="material-symbols-outlined">
+                search
+                </span></span></div>
+  </div>
+  <div fxLayout="column wrap" class="add-profile-pic-bottom" fxLayoutAlign="space-between stretch" [fxShow]="true">
+    <h1 class="add-profile-pic-ff-roboto landing-fw-500 message-no-margin landing-text-center">
+      Profile Picture</h1>
+    <h6 class="add-profile-pic-ff-roboto landing-fw-500 message-fz-18 message-no-margin landing-text-center">
+      Please select an upload option</h6>
+    <div fxLayout="column wrap" class="landing-full-width add-profile-pic-row" fxLayoutAlign="space-between stretch" [fxShow]="true">
+      <div fxLayout="row wrap" class="add-profile-pic-row1" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+        <div fxLayout="row wrap" class="add-profile-pic-pointer landing-full-height add-profile-pic-tab" fxLayoutAlign="center center" [fxShow]="true"><span>
+                <span class="material-symbols-outlined my-profile-green-text add-profile-pic-fz-45">
+photo_camera
+</span></span></div>
+        <div fxLayout="row wrap" class="landing-full-height add-profile-pic-tab" fxLayoutAlign="center center" [fxShow]="true"><span>
+                <span class="material-symbols-outlined my-profile-green-text add-profile-pic-fz-45">
+mobile_friendly
+</span></span></div>
+      </div>
+      <div fxLayout="row wrap" class="landing-full-width add-profile-pic-row2" fxLayoutGap="0.6em" fxLayoutAlign="center center" [fxShow]="true">
+        <div fxLayout="row wrap" style="width: 41%; " class="landing-full-height" fxLayoutAlign="center center" [fxShow]="true"><label class="add-profile-pic-ff-roboto landing-text-center">
+            Take a photo </label></div>
+        <div fxLayout="row wrap" style="    width: 41%;" class="landing-full-height" fxLayoutAlign="center center" [fxShow]="true"><label class="add-profile-pic-ff-roboto landing-text-center">
+            Choose image </label></div>
+      </div>
+    </div><label style="font-size: 17px" class="add-profile-pic-ff-roboto message-no-margin landing-text-center">
+      Valid formats: PNG, TIFF, TIF, JPG and GIF <br>
+      Upload should not exceed 8 MB</label>
+  </div>
+</div>

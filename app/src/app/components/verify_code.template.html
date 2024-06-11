@@ -1,0 +1,46 @@
+<div fxLayout="column wrap" class="add-profile-pic-ff-roboto bank-full-width login" fxLayoutAlign="start center" [fxShow]="true">
+  <div fxLayout="row wrap" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
+                <span class="material-symbols-outlined ">
+                arrow_back
+            </span></span></div><label class="message-fz-21 message-margin-left-1em">
+      Verification Code</label><span class="message-flex-1">
+                </span>
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true"><span>
+                <span class="material-symbols-outlined">
+                close
+                </span></span></div>
+  </div>
+  <form #VerifyCodeForm="ngForm" style="    height: 80%;" class="my-profile-width-90-only">
+    <div fxLayout="column wrap" style="width: 100%; height: 100%" fxLayoutAlign="start center" [fxShow]="true"><img imgSrc="Web/Images/fnb-logo2.webp" style="width: 42%; height: 16%;"><label style="margin-top: 2em" class="message-fz-18 my-profile-green-text">
+        <b>Please enter the verification code you got from your email.</b></label>
+      <div fxLayout="column wrap" style="height: 30%; margin-top: 15px; " class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="row wrap" class="bank-full-width verify-code-row1" fxLayoutAlign="space-around center" [fxShow]="true">
+          <div fxLayout="column wrap" class="verify-code-input" fxLayoutAlign="center center" [fxShow]="true">
+            <div class="bank-full-height bank-full-width">
+              <input required [(ngModel)]="page.codeObject.a" (input)="goToNextInput(&apos;b&apos;)" id="a" name="a" type="number" maxlength="1" placeholder="-" style="height: 100%; width: 100%; border-radius: 8px; border:  2px solid gray; font-size: 18px;" class="landing-text-center">
+            </div>
+          </div>
+          <div fxLayout="column wrap" class="verify-code-input" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div class="landing-text-center bank-full-height bank-full-width">
+              <input required [(ngModel)]="page.codeObject.b" (input)="goToNextInput(&apos;c&apos;)" id="b" name="b" type="tel" maxlength="1" placeholder="-" style="height: 100%; width: 100%; border-radius: 8px; border:  2px solid gray; font-size: 18px;" class="landing-text-center">
+            </div>
+          </div>
+          <div fxLayout="column wrap" class="verify-code-input" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div class="bank-full-height bank-full-width">
+              <input required [(ngModel)]="page.codeObject.c" (input)="goToNextInput(&apos;d&apos;)" id="c" name="c" type="tel" maxlength="1" placeholder="-" style="height: 100%; width: 100%; border-radius: 8px; border:  2px solid gray; font-size: 18px;" class="landing-text-center">
+            </div>
+          </div>
+          <div fxLayout="column wrap" class="verify-code-input" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div class="bank-full-height bank-full-width">
+              <input required [(ngModel)]="page.codeObject.d" id="d" name="d" type="tel" maxlength="1" placeholder="-" style="height: 100%; width: 100%; border-radius: 8px; border:  2px solid gray; font-size: 18px;" class="landing-text-center">
+            </div>
+          </div>
+        </div>
+        <div fxLayout="column wrap" class="message-fz-18 verify-code-row1 bank-full-width" fxLayoutAlign="center center" [fxShow]="true"><label>
+            Didn&apos;t receive an OTP?</label><label (click)="resendCode()" style="text-decoration: underline">
+            <span>Resend code <span></span></span></label></div>
+      </div><button mat-raised-button class="login-green-bg verify-btn bank-full-width message-fz-18" (click)="submit(VerifyCodeForm)" [disabled]="VerifyCodeForm?.invalid">Submit</button>
+    </div>
+  </form>
+</div>

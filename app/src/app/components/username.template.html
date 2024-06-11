@@ -1,0 +1,46 @@
+<div fxLayout="column wrap" class="add-profile-pic-ff-roboto landing-full-width username" fxLayoutAlign="start center" [fxShow]="true">
+  <div fxLayout="row wrap" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
+                <span class="material-symbols-outlined ">
+                arrow_back
+            </span></span></div><label class="message-fz-21 message-margin-left-1em">
+      My Username</label><span class="message-flex-1">
+                </span>
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true"><span>
+                <span class="material-symbols-outlined">
+                search
+                </span></span></div>
+  </div>
+  <form [formGroup]="page.usernameForm" class="username-bottom">
+    <div fxLayout="column wrap" class="bank-full-height bank-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+      <h1 class="landing-fw-500 message-no-margin">
+        Username details</h1>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-fz-18 profile-gray-text">
+          Current username</label><label *ngIf="page.usernameForm.valid" class="message-fz-18">
+          {{page.userDetails.username}}
+          <!-- {{page.usernameForm.controls.newUsername.value}} --></label></div>
+      <div fxLayout="column wrap" style="height: 20%; " fxLayoutAlign="start stretch" [fxShow]="true"><label class="profile-gray-text message-margin-top-6px message-fz-18">
+          New username</label>
+        <div style="background-color: #80808014; height: 35%" class="message-margin-top-6px">
+          <input [pattern]="page.usernamePattern" formControlName="username" type="text" style="width: 98%; height:100% ; border: 2px solid gray;
+    border-radius: 20px; font-size: 18px; background-color: #80808014; padding-left: 6px">
+        </div><label *ngIf="(page.usernameForm.controls.newUsername?.touched) &amp;&amp; (page.usernameForm.controls.newUsername?.errors?.required)" style="color: red; " class="my-profile-margin-top-1em">
+          New user name is required</label>
+        <div *ngIf="(page.usernameForm.controls.newUsername?.touched) &amp;&amp; (page.usernameForm.controls.newUsername?.errors?.pattern)" style="color: red" class="my-profile-margin-top-1em">
+          Please provide a valid username</div>
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-fz-18">
+          Your username must be between 8 - 30 characters long. It must contain:
+          <ul>
+            <li>Numbers (0 - 9)</li>
+            <li>Lower case (a - z)</li>
+            <li>Upper case (A - Z)</li>
+            <li>Special characters (@)</li>
+          </ul>
+
+          You cannot use an ID number as a username.
+        </label></div>
+    </div>
+    <div fxLayout="row wrap" style="left: 0" class="landing-full-width limits-footer-btn" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="limits-btn" (click)="changeUsername(page.usernameForm)" [disabled]="false">Change</button></div>
+  </form>
+</div>

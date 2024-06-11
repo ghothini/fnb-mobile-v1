@@ -1,0 +1,33 @@
+<div fxLayout="column wrap" class="add-profile-pic-ff-roboto bank-full-width login" fxLayoutAlign="start center" [fxShow]="true">
+  <div fxLayout="row wrap" style="    position: fixed;" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
+                <span class="material-symbols-outlined ">
+                arrow_back
+            </span></span></div><label class="message-fz-21 message-margin-left-1em">
+      FNB</label><span class="message-flex-1">
+                </span>
+  </div>
+  <form [formGroup]="page.loginForm" class="my-profile-width-90-only login-middle">
+    <div fxLayout="column wrap" class="bank-full-height bank-full-width" fxLayoutAlign="start center" [fxShow]="true"><img imgSrc="Web/Images/fnb-logo2.webp" style="width: 42%; height: 15%;"><label class="limits-fz-16 my-profile-margin-top-1em my-profile-green-text">
+        <b>Please enter your linked email address and your FNB App password to login</b></label>
+      <div class="bank-margin-top-10px bank-full-width">
+        Email address</div>
+      <div style="height: 10%" class="bank-full-width">
+        <input required pattern="page.emailPattern" formControlName="email" type="text" style="width: 94%; height:70% ; border: 2px solid gray;
+    border-radius: 15px; font-size: 20px; padding-left: 10px">
+      </div><label *ngIf="(page.loginForm.controls.email?.touched) &amp;&amp; (page.loginForm.controls.email?.errors?.required)" style="color: red">
+        Email is <b>required</b></label>
+      <div *ngIf="(page.loginForm.controls.email?.touched) &amp;&amp; (page.loginForm.controls.email?.errors?.email)" style="color: red">
+        <b>Please provide a valid email</b>
+      </div>
+      <div class="bank-margin-top-10px bank-full-width">
+        Password</div>
+      <div fxLayout="row wrap" style="height: 10%; " class="bank-full-width" fxLayoutAlign="center start" [fxShow]="true">
+        <div style="width: 80%" class="bank-full-height">
+          <input required formControlName="password" [type]="page.password" style="width: 98%; height:70% ; border: 2px solid gray;
+    border-radius: 15px 0px 0px 16px; font-size: 20px; padding-left: 10px">
+        </div><button mat-button style="height: 80%; width: 20%; background: black; color: white; border-radius: 0 15px 16px 0;" id="btn" (click)="showPassword()">Show</button>
+      </div><button mat-raised-button style="margin-top: 2em" class="login-green-bg bank-full-width login-btn message-fz-18" (click)="login(page.loginForm)">Login</button><button mat-raised-button routerLink="/forgot-password" class="my-profile-margin-top-1em login-forgot-btn bank-full-width message-fz-18">Forgot password</button>
+    </div>
+  </form>
+</div>

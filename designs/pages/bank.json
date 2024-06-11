@@ -1,0 +1,587 @@
+[
+    {
+        "id": "sd_OnCLyxjiMYoKcuBV",
+        "type": "tab",
+        "createdDate": "2024-05-13T12:21:41.136Z",
+        "label": "bank",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_EgdyPsf05vhDko23",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go To Transactions",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToTransactions",
+        "category": "General",
+        "x": 345,
+        "y": 340,
+        "wires": [
+            [
+                "sd_lzbhoAkaARC0iBfx"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_lzbhoAkaARC0iBfx",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/view-transactions",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_lzbhoAkaARC0iBfx",
+        "category": "Navigation",
+        "x": 465,
+        "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_FiIUdNr6qFB4fMbg",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "open scanner",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "openScanner",
+        "category": "General",
+        "x": 105,
+        "y": 400,
+        "wires": [
+            [
+                "sd_oGYWxWUU8emMzYxX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_oGYWxWUU8emMzYxX",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/qr-code-reader",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_oGYWxWUU8emMzYxX",
+        "category": "Navigation",
+        "x": 245,
+        "y": 400,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_wRGirzdWOtJZPnPH",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to search",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToSearch",
+        "category": "General",
+        "x": 105,
+        "y": 240,
+        "wires": [
+            [
+                "sd_yGgH5FkjrZJOiZ8Q"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_yGgH5FkjrZJOiZ8Q",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/search",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_yGgH5FkjrZJOiZ8Q",
+        "category": "Navigation",
+        "x": 245,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_z29Tapg2rpzkM1mJ",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to airtime",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToAirtime",
+        "category": "General",
+        "x": 105,
+        "y": 320,
+        "wires": [
+            [
+                "sd_kGLL3bXWMEQMJJhl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_kGLL3bXWMEQMJJhl",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/airtime",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_kGLL3bXWMEQMJJhl",
+        "category": "Navigation",
+        "x": 245,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_6jIFi34pkIioCrQV",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to electricity",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToElectricity",
+        "category": "General",
+        "x": 345,
+        "y": 240,
+        "wires": [
+            [
+                "sd_xpqupbZrQoVdJQAu"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_xpqupbZrQoVdJQAu",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/electricity",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_xpqupbZrQoVdJQAu",
+        "category": "Navigation",
+        "x": 465,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_aVvo7DBqeWCgk6Oy",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to ewallet",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToEwallet",
+        "category": "General",
+        "x": 105,
+        "y": 500,
+        "wires": [
+            [
+                "sd_SgsNGx1cZnLcpg5l"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_SgsNGx1cZnLcpg5l",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/eWallet",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_SgsNGx1cZnLcpg5l",
+        "category": "Navigation",
+        "x": 245,
+        "y": 500,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Yo8FSaXAR6ou4ZLB",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to pay",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToPay",
+        "category": "General",
+        "x": 345,
+        "y": 440,
+        "wires": [
+            [
+                "sd_tDYSVNbUXDNJl3OU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_tDYSVNbUXDNJl3OU",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/pay",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_tDYSVNbUXDNJl3OU",
+        "category": "Navigation",
+        "x": 465,
+        "y": 440,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_wX3DmtKIglUiskZF",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to card",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToCard",
+        "category": "General",
+        "x": 105,
+        "y": 600,
+        "wires": [
+            [
+                "sd_4gY2NKIDRROAm3qN"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_4gY2NKIDRROAm3qN",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/cards",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_4gY2NKIDRROAm3qN",
+        "category": "Navigation",
+        "x": 245,
+        "y": 600,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_K89ydCREuQk6JRCc",
+        "type": "OnInit",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_K89ydCREuQk6JRCc",
+        "category": "Lifecycle Events",
+        "x": 85,
+        "y": 80,
+        "wires": [
+            [
+                "sd_3313vsjK8WDNBsFI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_3313vsjK8WDNBsFI",
+        "type": "PageVariables",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "currentQuote",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_3313vsjK8WDNBsFI",
+        "category": "Function",
+        "x": 185,
+        "y": 80,
+        "wires": [
+            [
+                "sd_9bDRCvGWsSYHLJOr"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_9bDRCvGWsSYHLJOr",
+        "type": "PageServiceVariables",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "get",
+        "globalVariables": [
+            {
+                "textIp": "currentQuote",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "currentQuote"
+                }
+            }
+        ],
+        "functionName": "sd_9bDRCvGWsSYHLJOr",
+        "service": {
+            "id": "sd_O7BgeFkazhosv8N2",
+            "type": "tab",
+            "createdDate": "2024-05-14T08:16:55.985Z",
+            "label": "common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client",
+            "generateNext": true,
+            "serviceName": "common",
+            "relativeParentPath": "",
+            "_def": {
+                "defaults": {
+                    "label": {
+                        "value": ""
+                    },
+                    "disabled": {
+                        "value": false
+                    },
+                    "info": {
+                        "value": ""
+                    }
+                }
+            }
+        },
+        "serviceImportPath": "app/sd-services/common",
+        "category": "Function",
+        "x": 305,
+        "y": 80,
+        "wires": [
+            [
+                "sd_27vHPFM3aNGZbRyw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_n4nRrKPEshmLxTLw",
+        "type": "Script",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\n// page.currentQuote = page.logged.balance;\n\n// if (bh.currentQuote) {\n//     console.log('value');\n//     page.currentQuote = bh.currentQuote.input.newQuote;\n//     console.log(\"new bh :\", bh.currentQuote.input.newQuote);\n// } else {\n//     console.log('no value');\n// }\n\nconsole.log('page', page)\nconsole.log('bh', bh)\n",
+        "functionName": "sd_n4nRrKPEshmLxTLw",
+        "category": "Function",
+        "x": 605,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_27vHPFM3aNGZbRyw",
+        "type": "Storage",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "loggedInUser"
+        },
+        "functionName": "sd_27vHPFM3aNGZbRyw",
+        "category": "Storage",
+        "x": 445,
+        "y": 80,
+        "wires": [
+            [
+                "sd_n4nRrKPEshmLxTLw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    }
+]

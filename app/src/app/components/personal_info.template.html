@@ -1,0 +1,85 @@
+<div fxLayout="column wrap" class="landing-full-width personal-info" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
+                <span class="material-symbols-outlined ">
+                arrow_back
+            </span></span></div><label class="message-fz-21 message-margin-left-1em">
+      Personal info</label><span class="message-flex-1">
+                </span>
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true"><span>
+                <span class="material-symbols-outlined">
+                close
+                </span></span></div>
+  </div>
+  <div fxLayout="column wrap" class="landing-full-height personal-info-bottom" fxLayoutGap="0.5em" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="column wrap" class="landing-full-width personal-info-middle-top-row" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" class="landing-full-width personal-info-middle-top-row1" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+        <div fxLayout="row wrap" class="personal-info-middle-top-row1-left" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="Web/Images/default-user.jpg" class="personal-info-img-round landing-full-height landing-full-width"></div>
+        <div fxLayout="column wrap" class="personal-info-middle-top-row1-right" fxLayoutAlign="center stretch" [fxShow]="true"><label class="message-fz-20">
+            {{page.userDetails.name}} {{page.userDetails.surname}}</label><label style="color: #919397" class="message-fz-20">
+            {{page.userDetails.idNum}}</label></div>
+      </div>
+      <div fxLayout="row wrap" class="personal-info-middle-top-row2" fxLayoutAlign="center start" [fxShow]="true"><button mat-raised-button routerLink="/add-profile-pic" class="message-fz-18 personal-info-update-picture" [disabled]="true">Update profile picture</button></div>
+    </div>
+    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/coming-soon&apos;]">
+      <div fxLayout="row wrap" class="personal-info-icon-round message-height-90 personal-middle-row-left" fxLayoutAlign="center center" [fxShow]="true">
+        <div style="display: flex; align-items: center; justify-content: center" class="my-profile-green-text">
+          <span class="material-symbols-outlined personal-info-fz-28">
+id_card
+</span>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="message-height-90 personal-middle-row-right" fxLayoutAlign="start center" [fxShow]="true"><label class="message-fz-20">
+          ID details
+        </label></div>
+    </div>
+    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/coming-soon&apos;]">
+      <div fxLayout="row wrap" class="personal-info-icon-round message-height-90 personal-middle-row-left" fxLayoutAlign="center center" [fxShow]="true">
+        <div style="display: flex; align-items: center; justify-content: center" class="my-profile-green-text">
+          <span class="material-symbols-outlined personal-info-fz-28">
+person
+</span>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="message-height-90 personal-middle-row-right" fxLayoutAlign="start center" [fxShow]="true"><label class="message-fz-20">
+          Additional details
+        </label></div>
+    </div>
+    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/coming-soon&apos;]">
+      <div fxLayout="row wrap" class="personal-info-icon-round message-height-90 personal-middle-row-left" fxLayoutAlign="center center" [fxShow]="true">
+        <div style="display: flex; align-items: center; justify-content: center" class="my-profile-green-text">
+          <span class="material-symbols-outlined personal-info-fz-28">
+contact_mail
+</span>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="message-height-90 personal-middle-row-right" fxLayoutAlign="start center" [fxShow]="true"><label class="message-fz-20">
+          Contact details
+        </label></div>
+    </div>
+    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/coming-soon&apos;]">
+      <div fxLayout="row wrap" class="personal-info-icon-round message-height-90 personal-middle-row-left" fxLayoutAlign="center center" [fxShow]="true">
+        <div style="display: flex; align-items: center; justify-content: center" class="my-profile-green-text">
+          <span class="material-symbols-outlined personal-info-fz-28">
+two_pager
+</span>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="message-height-90 personal-middle-row-right" fxLayoutAlign="start center" [fxShow]="true"><label class="message-fz-20">
+          Address book
+        </label></div>
+    </div>
+    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/coming-soon&apos;]">
+      <div fxLayout="row wrap" class="personal-info-icon-round message-height-90 personal-middle-row-left" fxLayoutAlign="center center" [fxShow]="true">
+        <div style="display: flex; align-items: center; justify-content: center" class="my-profile-green-text">
+          <span class="material-symbols-outlined personal-info-fz-28">
+emoji_language
+</span>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="message-height-90 personal-middle-row-right" fxLayoutAlign="start center" [fxShow]="true"><label class="message-fz-20">
+          Citizenship details
+        </label></div>
+    </div>
+  </div>
+</div>

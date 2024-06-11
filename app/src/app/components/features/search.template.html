@@ -1,0 +1,64 @@
+<div fxLayout="column wrap" class="bank-full-width bank-padding-10px" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div>
+            <span class="material-symbols-outlined bank-pointer" (click)="goBack()">
+                arrow_back
+            </span>
+          </div>
+        </div>
+        <div fxLayout="column wrap" class="bank-no-margin" fxLayoutAlign="center center" [fxShow]="true">
+          <p>
+            Search Results</p>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="bank-no-margin" fxLayoutAlign="center center" [fxShow]="true">
+          <div>
+            <span class="material-symbols-outlined pointer" (click)="goBack()">
+                close
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" class="bank-relative bank-full-width" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-icon class="bank-left-40px bank-absolute">search</mat-icon></div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+      <div>
+        <input type="text" class="bank-padding-left-33px bank-border-box bank-no-margin bank-search bank-border-radius-10px" placeholder="How can we help you">
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <h4 class="bank-no-margin bank-primary">
+      History</h4>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <h4 class="bank-no-margin bank-primary">
+      Popular</h4>
+  </div>
+  <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true"><mat-card (click)="goToEwallet()" class="bank-border-box bank-flex bank-center-center bank-border-radius-10px bank-pointer bank-card">
+      <mat-card-content><span>
+                <span class="material-symbols-outlined bank-icons">
+                account_balance_wallet
+                </span></span></mat-card-content>
+
+      <mat-card-title-group>
+        <mat-card-title>Title</mat-card-title>
+        <mat-card-subtitle>Subtitle</mat-card-subtitle>
+        <img mat-card-sm-image>
+      </mat-card-title-group>
+    </mat-card>
+    <p>
+      eWallet</p>
+  </div>
+  <div>
+    <mat-divider></mat-divider>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div fxLayout="row wrap" class="dialog bank-full-width add-profile-pic-ff-roboto" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column wrap" class="dialog-tab" fxLayoutAlign="space-between stretch" [fxShow]="true" *ngFor="let item of page.menuOptions ; let i = index;">
+    <div fxLayout="row wrap" class="dialog-top" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="{{item.image}}" class="landing-full-width bank-full-width"></div>
+    <div fxLayout="row wrap" class="dialog-bottom" fxLayoutAlign="center start" [fxShow]="true"><label class="message-fz-14 bank-full-width landing-text-center">
+        {{item.label}}</label></div>
+  </div>
+</div>

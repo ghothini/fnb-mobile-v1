@@ -1,0 +1,92 @@
+<div fxLayout="column wrap" class="bank-padding-5px bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="bank-padding-5px" fxLayoutAlign="space-between center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true"><span class="bank-no-margin">
+                <span class="material-symbols-outlined pointer" (click)="goBack()">
+                arrow_back
+            </span></span>
+        <p>
+          Electricity</p>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div>
+        <span class="material-symbols-outlined pointer" (click)="goBack()">
+                close
+            </span>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <p>
+      <strong>From</strong>
+    </p>
+  </div><mat-card class="bank-padding-10px bank-border-box bank-full-width bank-border-radius-10px">
+    <mat-card-content>
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="Web/Images/card.png" class="bank-image"></div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div>
+            <p class="bank-no-margin">Easy Zero</p>
+            <p class="bank-no-margin"><strong>{{page.loggedInUser.balance}}</strong></p>
+            <p class="bank-no-margin"><small>Available</small></p>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <p>
+      <strong>Type</strong>
+    </p>
+  </div><mat-card class="bank-padding-10px bank-border-box bank-full-width bank-border-radius-10px">
+    <mat-card-content>
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div class="bank-flex bank-center-center bank-image2">
+            <span class="material-symbols-outlined">
+                lightbulb
+            </span>
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div>
+            <p class="bank-no-margin">Flexi Amount</p>
+            <p class="bank-no-margin"><strong>R20-R9999</strong></p>
+            <p class="bank-no-margin"><small>Voucher</small></p>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <form [formGroup]="page.electricityForm">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Meter Number</p>
+        <div class="bank-full-width">
+          <input type="text" formControlName="meterNumber" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" maxlength="11">
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Recharge Amount</p>
+        <div class="bank-full-width">
+          <input type="number" formControlName="amount" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px">
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Cellphone Number</p>
+        <div class="bank-full-width">
+          <input type="number" formControlName="cellphone" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px">
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="bank-top-40px bank-purchase bank-relative" (click)="submit()">Purchase</button></div>
+  </form>
+</div>

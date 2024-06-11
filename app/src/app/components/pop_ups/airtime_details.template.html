@@ -1,0 +1,81 @@
+<div fxLayout="column wrap" class="bank-padding-5px bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="bank-padding-5px" fxLayoutAlign="space-between center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true"><span class="bank-no-margin">
+                <span class="material-symbols-outlined pointer" (click)="goBack()">
+                arrow_back
+            </span></span>
+        <p>
+          Purchase Details</p>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div>
+        <span class="material-symbols-outlined pointer" (click)="goBackToBank()">
+                close
+            </span>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <h2 class="bank-no-margin">
+      Purchase details</h2>
+  </div>
+  <form [formGroup]="page.airtimeForm">
+    <div fxLayout="column wrap" class="bank-margin-top-10px" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+          <p class="bank-margin-top-10px bank-no-margin">
+            Cellphone number</p>
+          <p class="bank-no-margin">
+            {{page.loggedInUser.cell}}
+          </p>
+        </div>
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+          <p class="bank-no-margin">
+            Mobile network</p>
+          <div class="bank-full-width">
+            <select formControlName="networkProvider" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px">
+              <option value="Vodacom">Vodacom</option>
+              <option value="MTN">MTN</option>
+              <option value="Telkom">Telkom</option>
+              <option value="Cell-C">Cell-C</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+          <p class="bank-no-margin">
+            Bundle type</p>
+          <div class="bank-full-width">
+            <input type="text" formControlName="bundleType" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" readonly>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+          <p class="bank-no-margin">
+            Amount
+          </p>
+          <div class="bank-full-width">
+            <input type="number" formControlName="amount" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px">
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+          <p class="bank-no-margin">
+            From Account
+          </p>
+          <div style="color:black;" class="bank-full-width">
+            <input type="text" formControlName="fromAccount" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" readonly>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="bank-top-240px bank-purchase bank-relative" (click)="buy()">Buy</button></div>
+  </form>
+</div>

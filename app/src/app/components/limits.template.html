@@ -1,0 +1,103 @@
+<div fxLayout="column wrap" class="landing-full-width limits" fxLayoutAlign="start center" [fxShow]="true">
+  <div fxLayout="row wrap" style="position: fixed; z-index: 2" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
+                <span class="material-symbols-outlined ">
+                arrow_back
+            </span></span></div><label class="message-fz-21 message-margin-left-1em">
+      Limits</label><span class="message-flex-1">
+                </span>
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true"><span>
+                <span class="material-symbols-outlined">
+                search
+                </span></span></div>
+  </div>
+  <div fxLayout="row wrap" class="landing-full-width limits-tab" fxLayoutAlign="center stretch" [fxShow]="true"><mat-tab-group mat-align-tabs="start" class="limits-tabs"><mat-tab style="width: 50%; " label="Set limits">
+        <form [formGroup]="page.changeLimitsForm" style="width: 100%; height: 100%">
+          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;" fxLayoutGap="0.5em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-fz-18">
+              The limits below are for your Banking App profile. If you transact via any of the Digital channels (i.e Online Banking, Cellphone Banking and App), your remaining available limit across these channels will be adjusted accordingly. </label><label class="message-fz-18">
+              Please note: Below are the channel limits that are applied only if you have accounts that are transactional</label></div>
+          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;  height: 10%" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
+              Transfers</label>
+            <div style="height: 45%" class="landing-full-width">
+              <input required formControlName="transfers" type="number" style="width: 98%; height:100% ; border: 2px solid gray;
+    border-radius: 20px; font-size: 20px; padding-left: 12px">
+            </div><label class="limits-fz-16 limits-j-end message-margin-top-6px">
+              Max Unlimited</label>
+          </div>
+          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;  height: 10%" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
+              Payments:</label>
+            <div style="height: 45%" class="landing-full-width">
+              <input [value]="page.payments" required formControlName="payments" type="number" style="width: 98%; height:100% ; border: 2px solid gray;
+    border-radius: 20px; font-size: 20px; padding-left: 12px">
+            </div><label class="limits-fz-16 limits-j-end message-margin-top-6px">
+              Max R1, 000, 000</label>
+          </div>
+          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px; height: 10%" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
+              Pay and Clear(forms part of your payment limit)</label>
+            <div style="height: 45%" class="landing-full-width">
+              <input [value]="page.payAndClear" required formControlName="payAndClear" type="number" style="width: 98%; height:100% ; border: 2px solid gray;
+    border-radius: 20px; font-size: 20px; padding-left: 12px">
+            </div><label class="limits-fz-16 limits-j-end message-margin-top-6px">
+              Max R35, 000</label>
+          </div>
+          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;   height: 10%" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
+              Prepaid</label>
+            <div style="height: 45%" class="landing-full-width">
+              <input [value]="page.prepaid" required formControlName="prepaid" type="number" style="width: 98%; height:100% ; border: 2px solid gray;
+    border-radius: 20px; font-size: 20px; padding-left: 12px">
+            </div><label class="limits-fz-16 limits-j-end message-margin-top-6px">
+              Max R10, 000</label>
+          </div>
+          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;   height: 10%" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
+              Send money:</label>
+            <div style="height: 45%" class="landing-full-width">
+              <input [value]="page.sendMoney" required formControlName="sendMoney" type="number" style="width: 98%; height:100% ; border: 2px solid gray;
+    border-radius: 20px; font-size: 20px; padding-left: 12px">
+            </div><label class="limits-fz-16 limits-j-end message-margin-top-6px">
+              Max R5, 000</label>
+          </div>
+          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;   height: 10%" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-margin-top-6px message-fz-18">
+              Vouchers</label>
+            <div style="height: 45%" class="landing-full-width">
+              <input [value]="page.vouchers" required formControlName="vouchers" type="number" style="width: 98%; height:100% ; border: 2px solid gray;
+    border-radius: 20px; font-size: 20px; padding-left: 12px">
+            </div><label class="limits-fz-16 limits-j-end message-margin-top-6px">
+              Max R5, 000</label>
+          </div>
+          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;  height: 10%" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
+              Cardless cash withdrawls</label>
+            <div style="height: 45%" class="landing-full-width">
+              <input [value]="page.cardlessCashWithdrawal" required formControlName="cardlessCashWithdrawal" type="number" style="width: 98%; height:100% ; border: 2px solid gray;
+    border-radius: 20px; font-size: 20px; padding-left: 12px">
+            </div><label class="limits-j-end message-margin-top-6px">
+              Max R3, 000</label>
+          </div>
+          <div fxLayout="row wrap" class="landing-full-width limits-footer-btn" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="limits-btn" (click)="changeLimits(page.changeLimitsForm)">Next</button></div>
+        </form>
+      </mat-tab><mat-tab style="width: 50%;" label="View remaining">
+        <div fxLayout="column wrap" style="gap: 0.5em;padding-left: 7px; padding-right: 7px;" fxLayoutGap="0.5em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-fz-18">
+            Below are your remaining Banking App limits for the day. <br></label><label class="message-fz-18">
+            NOTE: Your remaining limits are refreshed daily at 07h00</label></div>
+        <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;" class="limits-fz-16 bank-margin-top-10px limits-row-right" fxLayoutAlign="start stretch" [fxShow]="true"><label class="bank-dark-grey">
+            Payments</label><label class="bank-margin-bottom-10px">
+            R350, 000</label></div>
+        <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;" class="limits-fz-16 bank-margin-top-10px limits-row-right" fxLayoutAlign="start stretch" [fxShow]="true"><label class="bank-dark-grey">
+            Transfers</label><label class="bank-margin-bottom-10px">
+            R350, 000</label></div>
+        <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;" class="limits-fz-16 bank-margin-top-10px limits-row-right" fxLayoutAlign="start stretch" [fxShow]="true"><label class="bank-dark-grey">
+            Pay and Clear (forms part of your payment limit)</label><label class="bank-margin-bottom-10px">
+            R350, 000</label></div>
+        <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;" class="limits-fz-16 bank-margin-top-10px limits-row-right" fxLayoutAlign="start stretch" [fxShow]="true"><label class="bank-dark-grey">
+            Prepaid</label><label class="bank-margin-bottom-10px">
+            R350, 000</label></div>
+        <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;" class="limits-fz-16 bank-margin-top-10px limits-row-right" fxLayoutAlign="start stretch" [fxShow]="true"><label class="bank-dark-grey">
+            Send Money</label><label class="bank-margin-bottom-10px">
+            R350, 000</label></div>
+        <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;" class="limits-fz-16 bank-margin-top-10px limits-row-right" fxLayoutAlign="start stretch" [fxShow]="true"><label class="bank-dark-grey">
+            Vouchers</label><label class="bank-margin-bottom-10px">
+            R350, 000</label></div>
+        <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;" class="limits-fz-16 bank-margin-top-10px limits-row-right" fxLayoutAlign="start stretch" [fxShow]="true"><label class="bank-dark-grey">
+            Cardless cash withdrawal</label><label class="bank-margin-bottom-10px">
+            R350, 000</label></div>
+      </mat-tab></mat-tab-group></div>
+</div>

@@ -1,0 +1,115 @@
+<div fxLayout="column wrap" class="bank-padding-10px bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="row wrap" class="bank-padding-5px" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true"><span class="bank-no-margin">
+                <span class="material-symbols-outlined pointer" (click)="goBack()">
+                arrow_back
+            </span></span>
+        <p>
+          Pay</p>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div>
+        <span class="material-symbols-outlined pointer" (click)="goBack()">
+                close
+            </span>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <p>
+      <strong>From</strong>
+    </p>
+  </div><mat-card class="bank-padding-10px bank-border-box bank-full-width bank-border-radius-10px">
+    <mat-card-content>
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="Web/Images/card.png" class="bank-image"></div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div>
+            <p class="bank-no-margin">Easy Zero</p>
+            <p class="bank-no-margin"><strong>{{page.loggedInUser.balance}}</strong></p>
+            <p class="bank-no-margin"><small>Available</small></p>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <p>
+      <strong>To</strong>
+    </p>
+  </div><mat-card class="bank-padding-10px bank-border-box bank-full-width bank-border-radius-10px">
+    <mat-card-content>
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div class="bank-flex bank-center-center bank-image2">
+            <span class="material-symbols-outlined">
+                boy
+            </span>
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div>
+            <p class="bank-no-margin"><small>New Card</small></p>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <form [formGroup]="page.payForm">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Recipient name</p>
+        <div class="bank-full-width">
+          <input type="text" formControlName="recipientName" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px">
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Card Number</p>
+        <div class="bank-full-width">
+          <input type="text" formControlName="cardNumber" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" readonly>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Amount</p>
+        <div class="bank-full-width">
+          <input type="number" formControlName="amount" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px">
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Own ref</p>
+        <div class="bank-full-width">
+          <input type="text" formControlName="ownRef" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px">
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Recipient ref</p>
+        <div class="bank-full-width">
+          <input type="text" formControlName="recipientRef" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px">
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+      <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+        <p>
+          Send proof of payment?</p>
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-checkbox [required]="false" formControlName="sendProof"></mat-checkbox></div>
+    </div>
+  </form>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="bank-purchase bank-relative" (click)="submit()">Continue</button></div>
+</div>

@@ -1,0 +1,53 @@
+<div fxLayout="column wrap" class="bank-padding-10px bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="bank-padding-5px" fxLayoutAlign="space-between center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true"><span class="bank-no-margin">
+                <span class="material-symbols-outlined pointer" (click)="goBack()">
+                arrow_back
+            </span></span>
+        <p>
+          Cards</p>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div [routerLink]="[&apos;/coming-soon&apos;]">
+          <span class="material-symbols-outlined pointer">
+                qr_code
+            </span>
+        </div>
+        <div [routerLink]="[&apos;/coming-soon&apos;]">
+          <span class="material-symbols-outlined pointer">
+                search
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon>add_circle</mat-icon></div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <p>
+        Add Cards</p>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <p>
+      <strong>Easy Zero</strong>
+    </p>
+  </div>
+  <div fxLayout="row wrap" class="bank-border-box bank-padding-5px" fxLayoutAlign="start stretch" [fxShow]="true"><mat-card class="bank-padding-10px bank-border-box bank-full-width bank-border-radius-10px">
+      <mat-card-content>
+        <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="Web/Images/card.png" class="bank-image"></div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              <p class="bank-no-margin"><strong>{{page.loggedInUser.name}} {{page.loggedInUser.surname}}</strong></p>
+              <p class="bank-no-margin">Easy Zero Debit</p>
+              <p class="bank-no-margin">429302******3566</p>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card></div>
+</div>

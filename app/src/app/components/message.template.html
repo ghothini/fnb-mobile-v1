@@ -1,0 +1,44 @@
+<div fxLayout="column wrap" class="landing-full-width message" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
+                <span class="material-symbols-outlined ">
+                arrow_back
+            </span></span></div><label class="message-fz-21 message-margin-left-1em">
+      Message</label><span class="message-flex-1">
+                </span>
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true"><span>
+                <span class="material-symbols-outlined">
+                search
+                </span></span></div>
+  </div>
+  <div fxLayout="column wrap" class="landing-full-width message-middle" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" class="message-margin-top-6px message-message-row" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="row wrap" class="message-height-90 message-middle-left" fxLayoutAlign="center center" [fxShow]="true">
+        <div>
+          <span class="material-symbols-outlined message-fz-42">boy</span>
+        </div>
+      </div>
+      <div fxLayout="column wrap" class="message-middle-middle message-height-90" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="row wrap" class="landing-full-width message-a-center message-middle-top1" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-fw-500 message-fz-18">
+            Just for you</label></div>
+        <div fxLayout="row wrap" class="landing-full-width message-middle-top2" fxLayoutAlign="start stretch" [fxShow]="true">
+          <p class="message-fz-13 message-no-margin">
+            FNB Payment Notification: <br>
+            ZAR300.00 from *I SEE AFRICA (PTY)</p>
+        </div>
+      </div>
+      <div fxLayout="column wrap" class="message-height-90 message-middle-right" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="row wrap" class="landing-full-width message-middle-top1" fxLayoutAlign="start stretch" [fxShow]="true"><span>
+                <small class="message-fz-14">09 May 2024</small>
+</span></div>
+        <div fxLayout="row wrap" class="landing-full-width message-middle-top2" fxLayoutAlign="end center" [fxShow]="true">
+          <div>
+            <span class="material-symbols-outlined ">arrow_back_ios_new </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" class="message-open-chat" fxLayoutAlign="end center" [fxShow]="true"><mat-icon class="message-plus-icon message-fz-54 message-text-orange">add_circle</mat-icon></div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><bh-footer></bh-footer></div>
+</div>

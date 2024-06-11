@@ -1,0 +1,483 @@
+[
+    {
+        "id": "sd_bMbO2PhrGXVJB4Gr",
+        "type": "tab",
+        "createdDate": "2024-05-16T06:09:40.788Z",
+        "label": "buy_airtime",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "buy_airtimeComponent"
+    },
+    {
+        "id": "sd_ZZCCD4XQxjJfthGg",
+        "type": "OnInit",
+        "z": "sd_bMbO2PhrGXVJB4Gr",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_ZZCCD4XQxjJfthGg",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_4NC0TDgF3SEBdfuA"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "buy_airtimeComponent"
+    },
+    {
+        "id": "sd_4NC0TDgF3SEBdfuA",
+        "type": "PageVariables",
+        "z": "sd_bMbO2PhrGXVJB4Gr",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_4NC0TDgF3SEBdfuA",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_24vDLIgEl1Ye1BkQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_airtimeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_UPPt3rtyuEHaLwqM",
+        "type": "PageStart",
+        "z": "sd_bMbO2PhrGXVJB4Gr",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go back2",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goBack2",
+        "category": "General",
+        "x": 180,
+        "y": 200,
+        "wires": [
+            [
+                "sd_rnwzf7GG4GtwMenu"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "buy_airtimeComponent"
+    },
+    {
+        "id": "sd_rnwzf7GG4GtwMenu",
+        "type": "PageCallService",
+        "z": "sd_bMbO2PhrGXVJB4Gr",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_O7BgeFkazhosv8N2",
+            "type": "tab",
+            "createdDate": "2024-05-14T08:16:55.985Z",
+            "label": "common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_jJRXnjTcMQmcijs6",
+            "flowName": "goBack"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/common",
+        "startName": "goBack",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_rnwzf7GG4GtwMenu",
+        "category": "General",
+        "x": 320,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_airtimeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ciLgyBpsargQvb9r",
+        "type": "PageStart",
+        "z": "sd_bMbO2PhrGXVJB4Gr",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "open airtime details",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "openAirtimeDetails",
+        "category": "General",
+        "x": 65,
+        "y": 340,
+        "wires": [
+            [
+                "sd_6zQvR1COL7ks0Uhe"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "buy_airtimeComponent"
+    },
+    {
+        "id": "sd_stFMWyUY6j4iOeG3",
+        "type": "OpenDialog",
+        "z": "sd_bMbO2PhrGXVJB4Gr",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_TlkVNy86ZClZeJu1",
+            "label": "confirm_airtime"
+        },
+        "relativePath": "app/components/pop_ups/confirm_airtime",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "bh.input.buy",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "bh.buy",
+        "functionName": "sd_stFMWyUY6j4iOeG3",
+        "category": "Dialog",
+        "x": 505,
+        "y": 340,
+        "wires": [
+            [],
+            [
+                "sd_e9WMzGpbjtHkeeOG"
+            ],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "bh.input",
+                "value": "buy",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "bh",
+                "value": "buy",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "buy_airtimeComponent"
+    },
+    {
+        "id": "sd_e9WMzGpbjtHkeeOG",
+        "type": "Log",
+        "z": "sd_bMbO2PhrGXVJB4Gr",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "bh",
+        "functionName": "sd_e9WMzGpbjtHkeeOG",
+        "category": "General",
+        "x": 720,
+        "y": 340,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "bh",
+                "value": "",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "buy_airtimeComponent"
+    },
+    {
+        "id": "sd_mbLdPnCgk3mxjDEP",
+        "type": "Script",
+        "z": "sd_bMbO2PhrGXVJB4Gr",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.buy = {message:'This is the data sent from the dialog window to the parent page'}",
+        "functionName": "sd_mbLdPnCgk3mxjDEP",
+        "category": "Function",
+        "x": 405,
+        "y": 340,
+        "wires": [
+            [
+                "sd_stFMWyUY6j4iOeG3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "buy_airtimeComponent"
+    },
+    {
+        "id": "sd_6zQvR1COL7ks0Uhe",
+        "type": "Navigation",
+        "z": "sd_bMbO2PhrGXVJB4Gr",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/airtime-details",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_6zQvR1COL7ks0Uhe",
+        "category": "Navigation",
+        "x": 180,
+        "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_airtimeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_AuwZwELVV5ja31MS",
+        "type": "PageStart",
+        "z": "sd_bMbO2PhrGXVJB4Gr",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "open airtime another details",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "openAirtimeAnotherDetails",
+        "category": "General",
+        "x": 45,
+        "y": 440,
+        "wires": [
+            [
+                "sd_vPRi09XZbOaMOagK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "buy_airtimeComponent"
+    },
+    {
+        "id": "sd_vPRi09XZbOaMOagK",
+        "type": "Navigation",
+        "z": "sd_bMbO2PhrGXVJB4Gr",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/airtimeAnother-details",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_vPRi09XZbOaMOagK",
+        "category": "Navigation",
+        "x": 160,
+        "y": 440,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_airtimeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_AYvdSXjUTKDz7u6s",
+        "type": "Script",
+        "z": "sd_bMbO2PhrGXVJB4Gr",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\npage.currentQuote = page.loggedInUser.balance;\n\n// if (bh.currentQuote) {\n//     console.log('value');\n//     page.currentQuote = bh.currentQuote.input.newQuote;\n//     console.log(\"new bh :\", bh.currentQuote.input.newQuote);\n// } else {\n//     console.log('no value');\n// }\n\nconsole.log('page', page)\nconsole.log('bh', bh)\n",
+        "functionName": "sd_AYvdSXjUTKDz7u6s",
+        "category": "Function",
+        "x": 485,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_airtimeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_24vDLIgEl1Ye1BkQ",
+        "type": "Storage",
+        "z": "sd_bMbO2PhrGXVJB4Gr",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "loggedInUser"
+        },
+        "functionName": "sd_24vDLIgEl1Ye1BkQ",
+        "category": "Storage",
+        "x": 325,
+        "y": 40,
+        "wires": [
+            [
+                "sd_AYvdSXjUTKDz7u6s"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_airtimeComponent",
+        "generated": true
+    }
+]

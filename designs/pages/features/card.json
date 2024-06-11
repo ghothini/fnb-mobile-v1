@@ -1,0 +1,224 @@
+[
+    {
+        "id": "sd_vfyfaZUquOcdXWt1",
+        "type": "tab",
+        "createdDate": "2024-05-17T06:50:02.882Z",
+        "label": "card",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "cardComponent"
+    },
+    {
+        "id": "sd_mBSexFGppPzhHIKz",
+        "type": "OnInit",
+        "z": "sd_vfyfaZUquOcdXWt1",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_mBSexFGppPzhHIKz",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_HLdYTEAFr0krmd5a"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "cardComponent"
+    },
+    {
+        "id": "sd_HLdYTEAFr0krmd5a",
+        "type": "PageVariables",
+        "z": "sd_vfyfaZUquOcdXWt1",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_HLdYTEAFr0krmd5a",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_Ej8lIcjd5rnLva0T"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "cardComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_wUs9U3CcvBpO3bt7",
+        "type": "PageStart",
+        "z": "sd_vfyfaZUquOcdXWt1",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go back",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goBack",
+        "category": "General",
+        "x": 125,
+        "y": 220,
+        "wires": [
+            [
+                "sd_0jyXwyKjWcmHkS2P"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "cardComponent"
+    },
+    {
+        "id": "sd_eNKwox5CTGR08gcB",
+        "type": "Script",
+        "z": "sd_vfyfaZUquOcdXWt1",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.location.back()\n",
+        "functionName": "sd_eNKwox5CTGR08gcB",
+        "category": "Function",
+        "x": 345,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "cardComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_0jyXwyKjWcmHkS2P",
+        "type": "UseDependency",
+        "z": "sd_vfyfaZUquOcdXWt1",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Location",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "location"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/common",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_0jyXwyKjWcmHkS2P",
+        "category": "Function",
+        "x": 245,
+        "y": 220,
+        "wires": [
+            [
+                "sd_eNKwox5CTGR08gcB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "cardComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_IK1CkF0IHzFSFJhb",
+        "type": "PageStart",
+        "z": "sd_vfyfaZUquOcdXWt1",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "open scan to pay",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "openScanToPay",
+        "category": "General",
+        "x": 100,
+        "y": 140,
+        "wires": [
+            [
+                "sd_f3tkITNIYIIognCe"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "cardComponent"
+    },
+    {
+        "id": "sd_f3tkITNIYIIognCe",
+        "type": "Navigation",
+        "z": "sd_vfyfaZUquOcdXWt1",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/qr-code-reader",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_f3tkITNIYIIognCe",
+        "category": "Navigation",
+        "x": 220,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "cardComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Ej8lIcjd5rnLva0T",
+        "type": "Storage",
+        "z": "sd_vfyfaZUquOcdXWt1",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "loggedInUser"
+        },
+        "functionName": "sd_Ej8lIcjd5rnLva0T",
+        "category": "Storage",
+        "x": 320,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "cardComponent",
+        "generated": true
+    }
+]

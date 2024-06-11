@@ -1,0 +1,64 @@
+<div fxLayout="column wrap" class="bank-padding-10px bank-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="bank-padding-5px" fxLayoutAlign="space-between center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true"><span class="bank-no-margin">
+                <span class="material-symbols-outlined pointer" (click)="goBack2()">
+                arrow_back
+            </span></span>
+        <p>
+          Airtime &amp; Bundles</p>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div>
+        <span class="material-symbols-outlined pointer" (click)="goBack2()">
+                close
+            </span>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <p class="bank-no-margin bank-primary">
+      <strong>For me</strong>
+    </p>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div>
+        Kgothatso Theko</div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" (click)="openAirtimeDetails()">
+      <div class="bank-amount-btn2 bank-flex bank-center-center">
+        {{page.loggedInUser.cell}}
+      </div>
+    </div>
+  </div>
+  <div>
+    <mat-divider></mat-divider>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <p class="bank-no-margin bank-primary">
+      <strong>For someonle else</strong>
+    </p>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <p>
+        Buy for someonle else</p>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button class="bank-amount" (click)="openAirtimeAnotherDetails()">Buy</button></div>
+  </div>
+  <div>
+    <mat-divider></mat-divider>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <p class="bank-no-margin bank-primary">
+      <strong>Last purchased</strong>
+    </p>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="center start" [fxShow]="true">
+    <p class="bank-light-grey bank-no-margin">
+      <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit repellendus ducimus aliquam accusantium eum laudantium veritatis facilis quisquam maiores? Eveniet inventore officiis vitae </small>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,252 @@
+<div fxLayout="column wrap" style="padding-top: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 60px;" class="bank-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="bank-full-width" fxLayoutAlign="space-between stretch" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <h4 class="bank-no-margin">
+        FNB</h4>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [routerLink]="[&apos;/coming-soon&apos;]">
+          <div>
+            <span class="material-symbols-outlined">
+search
+</span>
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [routerLink]="[&apos;/coming-soon&apos;]">
+          <div>
+            <span class="material-symbols-outlined">
+                qr_code
+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><mat-card class="bank-gap-05em bank-border-radius-10px">
+    <mat-card-content>
+      <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <h4 class="bank-no-margin">
+            Easy Zero</h4>
+          <p class="bank-no-margin">
+            {{page.loggedInUser.accountNumber}}
+          </p>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div (click)="goToTransactions()" class="bank-amount bank-flex bank-center-center">
+            R{{page.loggedInUser.balance}}</div>
+        </div>
+      </div>
+    </mat-card-content>
+
+    <mat-card-content>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><span>
+                <mat-divider></mat-divider></span></div>
+    </mat-card-content>
+
+    <mat-card-content>
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card (click)="goToCard()" class="bank-pointer bank-border-radius-10px">
+            <mat-card-content><span>
+                <span class="material-symbols-outlined bank-icons">
+    credit_card
+</span></span></mat-card-content>
+          </mat-card>
+          <p>
+            My cards</p>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card class="bank-border-radius-10px">
+            <mat-card-content><span>
+                <span class="material-symbols-outlined bank-disabled">
+    description
+</span></span></mat-card-content>
+          </mat-card>
+          <p>
+            Statements</p>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card (click)="goToTransactions()" class="bank-pointer bank-border-radius-10px">
+            <mat-card-content><span>
+                <span class="material-symbols-outlined bank-icons">
+    more_horiz
+</span></span></mat-card-content>
+          </mat-card>
+          <p>
+            More</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <div fxLayout="row wrap" class="bank-full-width" fxLayoutAlign="center center" [fxShow]="true"><mat-card class="bank-no-box-shadow bank-no-padding bank-card-slider bank-full-width bank-contents">
+      <mat-card-content>
+        <div class="bank-card-slider">
+          <div class="bank-gap-1em bank-slides">
+            <div>
+              <img imgSrc="Web/Images/happy-woman-using-mobile.jpg" alt="Slide 1" class="bank-img"><!-- <img src="../../assets/Web/Images//happy-woman-using-mobile.jpg" alt="Slide 1" class="bank-img"> -->
+              <div class="bank-author-info bank-padding-5px">
+                <strong>Savings Account</strong>
+                <p class="bank-no-margin">Light up your world and Buy electricity on the App!</p><br>
+                <div class="bank-end-center bank-flex">
+                  <button mat-flat-button class="bank-apply" [routerLink]="[&apos;/coming-soon&apos;]">Apply</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img imgSrc="Web/Images/light.webp" alt="Slide 2" class="bank-img">
+              <div class="bank-author-info bank-padding-5px">
+                <strong>Prepaid Electricity</strong>
+                <p class="bank-no-margin">Light up your world and Buy electricity on the App!</p><br>
+                <div class="bank-end-center bank-flex">
+                  <button mat-flat-button class="bank-apply" [routerLink]="[&apos;/coming-soon&apos;]">Apply</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img imgSrc="Web/Images/couple.jpg" alt="Slide 3" class="bank-img">
+              <div class="bank-author-info bank-padding-5px">
+                <strong>Savings Goal</strong>
+                <p class="bank-no-margin">Light up your world and Buy electricity on the App!</p><br>
+                <div class="bank-end-center bank-flex">
+                  <button mat-flat-button class="bank-apply" [routerLink]="[&apos;/coming-soon&apos;]">Apply</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img imgSrc="Web/Images/happy-woman-using-mobile.jpg" alt="Slide 4" class="bank-img">
+              <div class="bank-author-info bank-padding-5px">
+                <strong>Prepaired Airtime</strong>
+                <p class="bank-no-margin">Light up your world and Buy electricity on the App!</p><br>
+                <div class="bank-end-center bank-flex">
+                  <button mat-flat-button class="bank-apply" [routerLink]="[&apos;/coming-soon&apos;]">Apply</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img imgSrc="Web/Images/happy-woman-using-mobile.jpg" alt="Slide 5" class="bank-img">
+              <div class="bank-author-info bank-padding-5px">
+                <strong>Voucher</strong>
+                <p class="bank-no-margin">Light up your world and Buy electricity on the App!</p><br>
+                <div class="bank-end-center bank-flex">
+                  <button mat-flat-button class="bank-apply" [routerLink]="[&apos;/coming-soon&apos;]">Apply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card></div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <h4>
+      Buy</h4>
+  </div>
+  <div fxLayout="row " class="bank-full-width" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card (click)="goToAirtime()" class="bank-border-box bank-flex bank-center-center bank-border-radius-10px bank-pointer bank-card">
+        <mat-card-content><span>
+                <span class="material-symbols-outlined bank-icons">
+                phone_android
+</span></span></mat-card-content>
+      </mat-card>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Airtime+ </p>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card (click)="goToElectricity()" class="bank-border-box bank-center-center bank-flex bank-border-radius-10px bank-card bank-pointer">
+        <mat-card-content><span>
+                <span class="material-symbols-outlined bank-icons">
+                lightbulb
+</span></span></mat-card-content>
+      </mat-card>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Electricity</p>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card class="bank-border-box bank-flex bank-center-center bank-card bank-pointer bank-border-radius-10px">
+        <mat-card-content><span>
+                <span class="material-symbols-outlined bank-disabled">
+            casino
+            </span></span></mat-card-content>
+      </mat-card>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Lotto</p>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card class="bank-border-box bank-center-center bank-flex bank-pointer bank-border-radius-10px bank-card">
+        <mat-card-content><span>
+                <span class="material-symbols-outlined bank-disabled">
+            more_vert
+            </span></span></mat-card-content>
+      </mat-card>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          More</p>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true"><mat-card class="bank-full-width bank-border-radius-10px">
+      <mat-card-content>
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <p class="bank-no-margin">
+              <strong>Rewards</strong>
+            </p>
+            <p class="bank-no-margin">
+              Just for you</p>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button routerLink="/coming-soon" class="bank-view">View</button></div>
+        </div>
+      </mat-card-content>
+    </mat-card></div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <h4>
+      Banking</h4>
+  </div>
+  <div fxLayout="row " class="bank-full-width" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card (click)="goToEwallet()" class="bank-border-box bank-flex bank-center-center bank-border-radius-10px bank-pointer bank-card">
+        <mat-card-content><span>
+                <span class="material-symbols-outlined bank-icons">
+                account_balance_wallet
+                </span></span></mat-card-content>
+      </mat-card>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          eWallet</p>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card class="bank-border-box bank-center-center bank-flex bank-border-radius-10px bank-card">
+        <mat-card-content><span>
+                <span class="material-symbols-outlined bank-disabled">
+                bolt
+                </span></span></mat-card-content>
+      </mat-card>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Transfer</p>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card class="bank-border-box bank-flex bank-center-center bank-card bank-border-radius-10px">
+        <mat-card-content><span>
+                <span class="material-symbols-outlined bank-disabled">
+            compare_arrows
+            </span></span></mat-card-content>
+      </mat-card>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Once-off</p>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card (click)="goToPay()" class="bank-border-box bank-center-center bank-flex bank-pointer bank-border-radius-10px bank-card">
+        <mat-card-content><span>
+                <span class="material-symbols-outlined bank-icons">
+            soap
+            </span></span></mat-card-content>
+      </mat-card>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Pay</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div fxLayout="row wrap" style="position: fixed; bottom: 0" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true"><bh-footer></bh-footer></div>

@@ -1,0 +1,32 @@
+<div fxLayout="column wrap" class="bank-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="bank-padding-5px" fxLayoutAlign="space-between center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <p>
+        QR Code Reader</p>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div>
+        <span class="material-symbols-outlined pointer" (click)="goBack()">
+                close
+            </span>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column " class="bank-height-500px bank-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div>
+      <ngx-scanner-qrcode #action="scanner"></ngx-scanner-qrcode>
+    </div>
+    <div class="bank-full-width">
+      <button mat-raised-button (click)="action.isStart ? action.stop() : action.start()" class="bank-full-width">{{action.isStart ?
+        &apos;Stop&apos; : &apos;Start&apos;}}</button>
+    </div>
+    <div class="bank-center-center bank-flex">
+      <!-- data  -->
+      <span>{{ action.data.value | json }}</span><!-- value -->
+      <span>{{ action.data | async | json }}</span><!-- async -->
+
+      <!-- Loading -->
+      <p *ngIf="action.isLoading">&#x231B; Loading...</p>
+    </div>
+  </div>
+</div>

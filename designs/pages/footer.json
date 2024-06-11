@@ -1,0 +1,310 @@
+[
+    {
+        "id": "sd_8wT6eeWtqANSsuWR",
+        "type": "tab",
+        "createdDate": "2024-05-14T06:49:08.772Z",
+        "label": "footer",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "footerComponent"
+    },
+    {
+        "id": "sd_uxFh8suVjjtt5uuB",
+        "type": "OnInit",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
+        "functionName": "sd_uxFh8suVjjtt5uuB",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 80,
+        "wires": [
+            [
+                "sd_uG476h0mGQexMXjY"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "footerComponent"
+    },
+    {
+        "id": "sd_jF8y0IaE8zFwZjJz",
+        "type": "PageVariables",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "footerOptions",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "footerOptions"
+                }
+            }
+        ],
+        "functionName": "sd_jF8y0IaE8zFwZjJz",
+        "category": "Function",
+        "x": 265,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "footerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_uG476h0mGQexMXjY",
+        "type": "Script",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.footerOptions = [\n    { label: 'Home', image: \"\", route: '/login' },\n    { label: 'Message', image: \"/Web/Images/message.PNG\", route: '/login' },\n    { label: 'Contact Us', image: \"/Web/Images/contact-us.PNG\", route: '/login' },\n    { label: 'My Offers', image: \"/Web/Images/my-offers.PNG\", route: '/login' } \n    ]",
+        "functionName": "sd_uG476h0mGQexMXjY",
+        "category": "Function",
+        "x": 145,
+        "y": 80,
+        "wires": [
+            [
+                "sd_jF8y0IaE8zFwZjJz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "footerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_rWbfo4SPd6lqltWs",
+        "type": "PageStart",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "open the dialog",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "data",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "response",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "flow_type": "sync",
+        "functionName": "openTheDialog",
+        "category": "General",
+        "x": 45,
+        "y": 220,
+        "wires": [
+            [
+                "sd_bad57GFHDwVmTSqh"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "footerComponent"
+    },
+    {
+        "id": "sd_bad57GFHDwVmTSqh",
+        "type": "Script",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.data = {\n    name: \"This is a sample dialog window\"\n}",
+        "functionName": "sd_bad57GFHDwVmTSqh",
+        "category": "Function",
+        "x": 145,
+        "y": 220,
+        "wires": [
+            [
+                "sd_owqwWGEntlJElkW9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "footerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_owqwWGEntlJElkW9",
+        "type": "OpenDialog",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_IT5uMFW8Iv7Hndga",
+            "label": "menu_dialog"
+        },
+        "relativePath": "app/components/menu_dialog",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_owqwWGEntlJElkW9",
+        "category": "Dialog",
+        "x": 240,
+        "y": 220,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "footerComponent",
+        "generated": true
+    }
+]

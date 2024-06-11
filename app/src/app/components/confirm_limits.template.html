@@ -1,0 +1,21 @@
+<div fxLayout="column wrap" class="add-profile-pic-ff-roboto bank-gap-05em bank-full-width message" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
+                <span class="material-symbols-outlined ">
+                arrow_back
+            </span></span></div><label class="message-fz-21 message-margin-left-1em">
+      Daily Limits</label><span class="message-flex-1">
+                </span>
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/home&apos;]"><span>
+                <span class="material-symbols-outlined">
+                close
+                </span></span></div>
+  </div><label style="padding-left: 10px" class="message-fz-18 my-profile-green-text">
+    <b>YOU ARE ABOUT TO</b></label>
+  <div style="padding-left: 10px" class="message-fz-18">
+    <b>Change</b> your Daily Limits
+  </div>
+  <div style="padding-left: 10px" class="message-fz-18">
+    Please <b>confirm</b></div>
+  <div fxLayout="row wrap" class="landing-full-width limits-footer-btn" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="limits-btn">Confirm</button></div>
+</div>
