@@ -226,10 +226,8 @@ export class change_password2Component {
   sd_2sOjTebfZo93E0Dj(bh) {
     try {
       const page = this.page;
-      bh.input.body = {
-        email: page.userDetails.email,
-        newPassword: bh.input.form.controls.password.value,
-      };
+      page.userDetails.password = bh.input.form.controls.password.value;
+      page.userDetails.firstTimeLogin = false;
 
       bh.url = page.ssdUrl + 'reset-password';
       bh.url2 = page.ssdUrl + `get-user/${page.userDetails.email}`;
@@ -250,7 +248,7 @@ export class change_password2Component {
         responseType: 'json',
         headers: {},
         params: {},
-        body: bh.input.body,
+        body: this.page.userDetails,
       };
       bh.result = await this.sdService.nHttpRequest(requestOptions);
       bh = this.sd_L3eStlk9GE2XLhky(bh);
@@ -293,12 +291,14 @@ export class change_password2Component {
 
   sd_xrMJ1S7dOnh6EyuI(bh) {
     try {
-      this.__page_injector__.get(MatSnackBar).open('Password Changed', 'OK', {
-        duration: 3000,
-        direction: 'ltr',
-        horizontalPosition: 'center',
-        verticalPosition: 'bottom',
-      });
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Password has changed successfully!', 'OK', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
       bh = this.sd_YcIGtPOxknGkMsVO(bh);
       //appendnew_next_sd_xrMJ1S7dOnh6EyuI
       return bh;
@@ -313,9 +313,7 @@ export class change_password2Component {
         this.sdService.getPathAndQParamsObj('/deposit');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_YcIGtPOxknGkMsVO
       return bh;
     } catch (e) {

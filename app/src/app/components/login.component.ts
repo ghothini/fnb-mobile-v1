@@ -5,6 +5,7 @@
 
 import { Component, Injector } from '@angular/core'; //_splitter_
 import { FormControl, FormGroup, Validators } from '@angular/forms'; //_splitter_
+import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -96,7 +97,7 @@ export class loginComponent {
         .constructFlowObject(this);
       bh.input = { form };
       bh.local = {};
-      bh = this.sd_sLY2AoAhaPHAAaDr(bh);
+      bh = this.sd_XcH0HPbNJBk5GnM2(bh);
       //appendnew_next_login
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_44CrbDcLdLIXeUnr');
@@ -122,6 +123,7 @@ export class loginComponent {
       this.page.userDetails = { email: '', password: '' };
       this.page.loginForm = undefined;
       this.page.email = undefined;
+      this.page.showSpinner = false;
       bh = this.sd_dQ2knbDgryiwbT69(bh);
       //appendnew_next_sd_PrG6MjwBVP5tc48y
       return bh;
@@ -186,27 +188,6 @@ export class loginComponent {
     }
   }
 
-  async sd_sLY2AoAhaPHAAaDr(bh) {
-    try {
-      if (
-        this.sdService.operators['se'](
-          this.page.loginForm.value.password.length,
-          4,
-          undefined,
-          undefined
-        )
-      ) {
-        bh = this.sd_XcH0HPbNJBk5GnM2(bh);
-      } else {
-        bh = await this.sd_AuqUk4zhQQO4MrD4(bh);
-      }
-
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_sLY2AoAhaPHAAaDr');
-    }
-  }
-
   sd_XcH0HPbNJBk5GnM2(bh) {
     try {
       this.page.ssdUrl = bh.system.environment.properties.ssdURL;
@@ -221,13 +202,12 @@ export class loginComponent {
   sd_7q0RrCOpw7ALlMgL(bh) {
     try {
       const page = this.page;
+      bh.url = page.ssdUrl + 'login';
+      page.showSpinner = true;
       bh.body = {
         email: bh.input.form.get('email').value,
-        pin: bh.input.form.get('password').value,
+        password: bh.input.form.get('password').value,
       };
-
-      bh.url = page.ssdUrl + 'login-pin';
-      // bh.url = page.ssdUrl + 'login';
 
       bh = this.sd_OD8zvEV2HAw9CPuS(bh);
       //appendnew_next_sd_7q0RrCOpw7ALlMgL
@@ -248,7 +228,7 @@ export class loginComponent {
         body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_AEBXo1QgAnxUvQ0R(bh);
+      bh = this.sd_AJM5lDNztTD8OOWR(bh);
       //appendnew_next_sd_OD8zvEV2HAw9CPuS
       return bh;
     } catch (e) {
@@ -256,26 +236,225 @@ export class loginComponent {
     }
   }
 
-  sd_AEBXo1QgAnxUvQ0R(bh) {
+  sd_AJM5lDNztTD8OOWR(bh) {
     try {
       const page = this.page;
-      console.log(page.result);
-      bh = this.sd_PghIfVviJmN5zGeI(bh);
-      //appendnew_next_sd_AEBXo1QgAnxUvQ0R
+      page.showSpinner = false;
+      bh.isUserExisting = true;
+      if (page.result.message && page.result.message === "User don't exist") {
+        bh.isUserExisting = false;
+      }
+      bh = this.sd_JsDGX4JTsLYSoWxZ(bh);
+      //appendnew_next_sd_AJM5lDNztTD8OOWR
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_AEBXo1QgAnxUvQ0R');
+      return this.errorHandler(bh, e, 'sd_AJM5lDNztTD8OOWR');
+    }
+  }
+
+  sd_JsDGX4JTsLYSoWxZ(bh) {
+    try {
+      if (
+        this.sdService.operators['true'](
+          bh.isUserExisting,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_ZCu2UC1aCqPpAC3J(bh);
+      } else if (
+        this.sdService.operators['false'](
+          bh.isUserExisting,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_RuNewNHwsLyRAwry(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_JsDGX4JTsLYSoWxZ');
+    }
+  }
+
+  sd_ZCu2UC1aCqPpAC3J(bh) {
+    try {
+      const page = this.page;
+      bh.isPendingApplication = false;
+      if (page.result.isNotApprovedAcc) {
+        bh.isPendingApplication = true;
+      }
+      bh = this.sd_LpiRljUD2nFTMLeW(bh);
+      //appendnew_next_sd_ZCu2UC1aCqPpAC3J
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ZCu2UC1aCqPpAC3J');
+    }
+  }
+
+  sd_LpiRljUD2nFTMLeW(bh) {
+    try {
+      if (
+        this.sdService.operators['true'](
+          bh.isPendingApplication,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_YTD1C8oAD7gNiGGG(bh);
+      } else if (
+        this.sdService.operators['false'](
+          bh.isPendingApplication,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_72DqN6b1RHPKOT63(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_LpiRljUD2nFTMLeW');
+    }
+  }
+
+  sd_YTD1C8oAD7gNiGGG(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Your application is still pending!', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_YTD1C8oAD7gNiGGG
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_YTD1C8oAD7gNiGGG');
+    }
+  }
+
+  sd_72DqN6b1RHPKOT63(bh) {
+    try {
+      const page = this.page;
+      bh.isPasswordMatching = true;
+      if (
+        page.result.message &&
+        page.result.message === "PASSWORD DON'T MATCH"
+      ) {
+        bh.isPasswordMatching = false;
+      }
+      bh = this.sd_P8QtzbDB7dB5JZwb(bh);
+      //appendnew_next_sd_72DqN6b1RHPKOT63
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_72DqN6b1RHPKOT63');
+    }
+  }
+
+  sd_P8QtzbDB7dB5JZwb(bh) {
+    try {
+      if (
+        this.sdService.operators['true'](
+          bh.isPasswordMatching,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_kQedG9ymH3bYcKWT(bh);
+      } else if (
+        this.sdService.operators['false'](
+          bh.isPasswordMatching,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_WNaJxQp0zvBigjEu(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_P8QtzbDB7dB5JZwb');
+    }
+  }
+
+  sd_kQedG9ymH3bYcKWT(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Logged in successfully!', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_PghIfVviJmN5zGeI(bh);
+      //appendnew_next_sd_kQedG9ymH3bYcKWT
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kQedG9ymH3bYcKWT');
     }
   }
 
   sd_PghIfVviJmN5zGeI(bh) {
     try {
       sessionStorage.setItem('user', JSON.stringify(this.page.result));
-      bh = this.sd_2U4d5CqtIFcteErr(bh);
+      bh = this.sd_hcHGRCdiyZhmv29d(bh);
       //appendnew_next_sd_PghIfVviJmN5zGeI
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_PghIfVviJmN5zGeI');
+    }
+  }
+
+  sd_hcHGRCdiyZhmv29d(bh) {
+    try {
+      const page = this.page;
+      bh.isFirstTimeLogin = false;
+      if (page.result.firstTimeLogin) {
+        bh.isFirstTimeLogin = true;
+      }
+      bh = this.sd_FA71l5F6h6xGk01G(bh);
+      //appendnew_next_sd_hcHGRCdiyZhmv29d
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hcHGRCdiyZhmv29d');
+    }
+  }
+
+  sd_FA71l5F6h6xGk01G(bh) {
+    try {
+      if (
+        this.sdService.operators['true'](
+          bh.isFirstTimeLogin,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_2U4d5CqtIFcteErr(bh);
+      } else if (
+        this.sdService.operators['false'](
+          bh.isFirstTimeLogin,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_w7pLMcccCEh0xCaL(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_FA71l5F6h6xGk01G');
     }
   }
 
@@ -295,81 +474,6 @@ export class loginComponent {
     }
   }
 
-  sd_AuqUk4zhQQO4MrD4(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_mjHhs3TZbNwVZsQd(bh);
-      //appendnew_next_sd_AuqUk4zhQQO4MrD4
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_AuqUk4zhQQO4MrD4');
-    }
-  }
-
-  sd_mjHhs3TZbNwVZsQd(bh) {
-    try {
-      const page = this.page;
-      bh.body = {
-        email: bh.input.form.get('email').value,
-        password: bh.input.form.get('password').value,
-      };
-
-      bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/login`;
-      bh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/get-user/${
-        bh.input.form.get('email').value
-      }`;
-      // bh.url = page.ssdUrl + `get-user/${bh.input.form.get('email').value}`
-
-      bh = this.sd_OBFx5QCcbXpVMC3X(bh);
-      //appendnew_next_sd_mjHhs3TZbNwVZsQd
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_mjHhs3TZbNwVZsQd');
-    }
-  }
-
-  async sd_OBFx5QCcbXpVMC3X(bh) {
-    try {
-      let requestOptions = {
-        url: bh.url,
-        method: 'post',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: bh.body,
-      };
-      this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_jBhlw0WwVBhFapvj(bh);
-      //appendnew_next_sd_OBFx5QCcbXpVMC3X
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_OBFx5QCcbXpVMC3X');
-    }
-  }
-
-  sd_jBhlw0WwVBhFapvj(bh) {
-    try {
-      const page = this.page;
-      console.log(page.result);
-      bh = this.sd_1Nc70SHc4wCOUjSZ(bh);
-      //appendnew_next_sd_jBhlw0WwVBhFapvj
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_jBhlw0WwVBhFapvj');
-    }
-  }
-
-  sd_1Nc70SHc4wCOUjSZ(bh) {
-    try {
-      sessionStorage.setItem('user', JSON.stringify(this.page.result));
-      bh = this.sd_w7pLMcccCEh0xCaL(bh);
-      //appendnew_next_sd_1Nc70SHc4wCOUjSZ
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_1Nc70SHc4wCOUjSZ');
-    }
-  }
-
   async sd_w7pLMcccCEh0xCaL(bh) {
     try {
       const { paramObj: qprm, path: path } =
@@ -383,6 +487,40 @@ export class loginComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_w7pLMcccCEh0xCaL');
+    }
+  }
+
+  sd_WNaJxQp0zvBigjEu(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Password is incorrect!', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_WNaJxQp0zvBigjEu
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_WNaJxQp0zvBigjEu');
+    }
+  }
+
+  sd_RuNewNHwsLyRAwry(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('User account does not exist!', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_RuNewNHwsLyRAwry
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_RuNewNHwsLyRAwry');
     }
   }
 

@@ -13,6 +13,22 @@ body {
     font-family:"Roboto", sans-serif;
 }
 
+// spaces
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.mat-spinner {
+    right: calc(50% - 47px);
+    top: calc(50% - 49px);
+    z-index: 1;
+}
+
 .bank-primary {
     color: $primary;
 }

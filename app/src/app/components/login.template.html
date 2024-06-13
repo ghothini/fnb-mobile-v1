@@ -1,4 +1,7 @@
-<div fxLayout="column wrap" class="add-profile-pic-ff-roboto bank-full-width login" fxLayoutAlign="start center" [fxShow]="true">
+<div fxLayout="column wrap" class="relative add-profile-pic-ff-roboto bank-full-width login" fxLayoutAlign="start center" [fxShow]="true">
+  <div *ngIf="page.showSpinner" class="mat-spinner absolute">
+    <mat-spinner></mat-spinner>
+  </div>
   <div fxLayout="row wrap" style="    position: fixed;" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
     <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
                 <span class="material-symbols-outlined ">

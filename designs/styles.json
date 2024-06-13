@@ -1,5 +1,8 @@
 {
     "classes": [
+        "relative",
+        "absolute",
+        "mat-spinner",
         "bank-primary",
         "bank-light-grey",
         "bank-dark-grey",
