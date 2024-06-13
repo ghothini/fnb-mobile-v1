@@ -123,10 +123,10 @@ export class view_transactionsComponent {
   sd_UtIdsMpnbEzdy33G(bh) {
     try {
       const page = this.page;
-      bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/get-airtime/${page.loggedInUser.email}`;
-      bh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/get-electricity/${page.loggedInUser.email}`;
-      bh.url3 = `https://111e-169-239-176-9.ngrok-free.app/api/get-ewallet/${page.loggedInUser.email}`;
-      bh.url4 = `https://111e-169-239-176-9.ngrok-free.app/api/get-pay/${page.loggedInUser.email}`;
+      bh.url = `${page.ssdUrl}get-airtime/${page.loggedInUser.email}`;
+      bh.url2 = `${page.ssdUrl}get-electricity/${page.loggedInUser.email}`;
+      bh.url3 = `${page.ssdUrl}get-ewallet/${page.loggedInUser.email}`;
+      bh.url4 = `${page.ssdUrl}get-pay/${page.loggedInUser.email}`;
 
       bh = this.sd_NO1swfx7Djl88TaU(bh);
       //appendnew_next_sd_UtIdsMpnbEzdy33G

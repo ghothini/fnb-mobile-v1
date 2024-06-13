@@ -247,8 +247,8 @@ export class ewalletComponent {
   sd_X4wo6MWSDt6k4TJ9(bh) {
     try {
       const page = this.page;
-      bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/ewallet`;
-      bh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/update`;
+      bh.url = `${page.ssdUrl}ewallet`;
+      bh.url2 = `${page.ssdUrl}update`;
 
       bh.body = page.ewalletForm.value;
 

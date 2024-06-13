@@ -248,8 +248,8 @@ export class buy_electricityComponent {
   sd_Vy7Re1ff3VKGjGux(bh) {
     try {
       const page = this.page;
-      bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/buy-electricity`;
-      bh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/update`;
+      bh.url = `${page.ssdUrl}buy-electricity`;
+      bh.url2 = `${page.ssdUrl}update`;
 
       bh.body = page.electricityForm.value;
 

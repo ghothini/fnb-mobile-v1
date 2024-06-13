@@ -252,8 +252,8 @@ export class payComponent {
   sd_Tcg4UXywzDFqRyjt(bh) {
     try {
       const page = this.page;
-      bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/pay`;
-      bh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/update`;
+      bh.url = `${page.ssdUrl}pay`;
+      bh.url2 = `${page.ssdUrl}update`;
 
       // Add in pay
       bh.body = page.payForm.value;

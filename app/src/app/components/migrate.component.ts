@@ -169,7 +169,7 @@ export class migrateComponent {
   sd_4ea6CJ6HspJDAa6e(bh) {
     try {
       const page = this.page;
-      bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/registration`;
+      bh.url = `${page.ssdUrl}registration`;
       console.log('updated bh', bh);
       bh = this.sd_B1cv4ZZaboP97qFx(bh);
       //appendnew_next_sd_4ea6CJ6HspJDAa6e

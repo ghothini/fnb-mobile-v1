@@ -278,8 +278,8 @@ export class limitsComponent {
         collection: 'limits',
       };
 
-      bh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/update-limits`;
-      bh.url3 = `https://111e-169-239-176-9.ngrok-free.app/api/get-limit/${page.data._id}`;
+      bh.url2 = `${page.ssdUrl}update-limits`;
+      bh.url3 = `${page.ssdUrl}get-limit/${page.data._id}`;
 
       bh = this.sd_5iTDLklc90d8NiC2(bh);
       //appendnew_next_sd_1P36hwFlABCvZYmR

@@ -263,8 +263,8 @@ export class airtime_detailsComponent {
   sd_lAbfwbbbbQzhZxvw(bh) {
     try {
       const page = this.page;
-      bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/buy-airtime`;
-      bh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/update`;
+      bh.url = `${page.ssdUrl}buy-airtime`;
+      bh.url2 = `${page.ssdUrl}update`;
 
       bh.body = page.airtimeForm.value;
 
