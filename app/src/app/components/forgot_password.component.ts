@@ -4,7 +4,12 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
-import { FormControl, FormGroup, Validators } from '@angular/forms'; //_splitter_
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -28,6 +33,7 @@ export class forgot_passwordComponent {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
+    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 
@@ -283,7 +289,9 @@ export class forgot_passwordComponent {
         this.sdService.getPathAndQParamsObj('/verify-code');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_rT7Iv9cm3h7pEb8y
       return bh;
     } catch (e) {

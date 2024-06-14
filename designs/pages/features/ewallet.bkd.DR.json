@@ -3332,7 +3332,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "<input type=\"number\" formControlName = 'amount' class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\">",
+                                    "_value": "<input type=\"number\" formControlName = 'amount' class=\"bank-padding-10px height-45 bank-border-box bank-no-margin bank-input bank-border-radius-10px\">",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -3888,7 +3888,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "<input type=\"number\" formControlName = 'cellNumber' class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\">",
+                                    "_value": "<input type=\"number\" formControlName = 'cellNumber' class=\"bank-padding-10px height-45 bank-border-box bank-no-margin bank-input bank-border-radius-10px\">",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -3973,6 +3973,7 @@
                     {
                         "_key": "class",
                         "_value": [
+                            "height-45",
                             "bank-top-110px",
                             "bank-purchase",
                             "bank-relative"

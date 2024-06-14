@@ -251,7 +251,9 @@ export class verify_codeComponent {
         this.sdService.getPathAndQParamsObj('/change-password2');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_syhqL8DbCmWvp5qY
       return bh;
     } catch (e) {
@@ -307,9 +309,9 @@ export class verify_codeComponent {
       const page = this.page;
       bh.body = {
         email: page.email,
-        OTP: page.random,
+        otp: page.random,
       };
-
+      page.code = page.random;
       bh.url = page.ssdUrl + 'forgot-password';
 
       // console.log(bh.body)

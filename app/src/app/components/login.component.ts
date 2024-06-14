@@ -4,7 +4,12 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
-import { FormControl, FormGroup, Validators } from '@angular/forms'; //_splitter_
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -29,6 +34,7 @@ export class loginComponent {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
+    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 

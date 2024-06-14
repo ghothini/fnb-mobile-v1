@@ -4,6 +4,7 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { FormBuilder } from '@angular/forms'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -25,6 +26,7 @@ export class homeComponent {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
+    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 
