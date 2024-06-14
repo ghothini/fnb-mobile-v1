@@ -7,6 +7,7 @@
         "bank-light-grey",
         "bank-dark-grey",
         "bank-light-grey-bg",
+        "height-45",
         "bank-flex",
         "bank-space-between-center",
         "bank-center-center",
@@ -66,7 +67,6 @@
         "bank-top-240px",
         "bank-left-40px",
         "bank-purchase",
-        "landing-main-component",
         "landing-toolbar",
         "landing-width-90",
         "landing-fw-500",
@@ -202,6 +202,14 @@
         "verify-code-row1",
         "verify-code-input",
         "verify-btn",
-        "migrate"
+        "migrate",
+        "mat-form-field-underline",
+        "mat-form-field-appearance-fill",
+        "mat-form-field-flex",
+        "mat-input-element",
+        "mat-form-field-wrapper",
+        "mat-button",
+        "verify",
+        "text-center"
     ]
 }

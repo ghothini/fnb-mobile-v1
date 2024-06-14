@@ -18,9 +18,11 @@ qr_code
   <div fxLayout="column wrap" class="add-profile-pic-ff-roboto landing-middle" fxLayoutAlign="center center" [fxShow]="true">
     <div fxLayout="column wrap" class="landing-width-90 landing-height-95" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
       <div fxLayout="row wrap" class="landing-search-tab" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div style="width: 100%; height: 100%">
-          <input type="text" style="width: 98%; height:80% ; border: 2px solid gray;
-    border-radius: 20px; font-size: 20px; padding-left: 10px" placeholder="How can we help you?" [(ngModel)]="page.term">
+        <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput [(ngModel)]="page.term" name="term" placeholder="How can we help you" [required]="false">
+            <mat-icon matPrefix>search</mat-icon>
+          </mat-form-field>
           <div *ngFor="let item of page.landingOptions |filter:page.term">
             <p>
               {{item.name}}

@@ -45,6 +45,10 @@ body {
     background: $bg-light;
 }
 
+// Heights
+.height-45 {
+    height: 45px;
+}
 
 // Bank styles
 // flex
@@ -377,10 +381,10 @@ body {
 
 
 //Landing Styles
-.landing-main-component{
-    // height: 154vh;
-    width: 100%;
-}
+// .landing-main-component{
+//     // height: 154vh;
+//     width: 100%;
+// }
 
 .landing-toolbar{
     height: 64px;
@@ -681,7 +685,7 @@ $my-profile-green: #00a9ac;
 }
 
 .login-green-bg{
-    background-color: $my-profile-green;
+    background-color: $my-profile-green !important;
 }
 
 .my-profile-round{
@@ -1081,4 +1085,49 @@ bh-limits{
 
 .migrate{
     height: 125vh;
+}
+
+.mat-form-field-underline {
+    width: 0 !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 20px !important;
+    padding: 0 0.75em 0 .75em !important;
+    border: 1px solid darkgray;
+    background-color: white !important;
+    height: 70x !important;
+    line-height: 0.125;
+
+}
+
+.mat-input-element {
+    color: black !important;
+}
+.login {
+    .mat-form-field-wrapper {
+    padding-bottom: 0 !important; 
+}
+}
+
+.mat-button {
+    height: 46px !important;
+    width: 21%;
+    background: black;
+    color: white;
+    border-radius: 0 15px 16px 0;
+    position: relative;
+    top: -48px;
+    right: -128px;
+}
+
+.verify {
+    .mat-form-field-appearance-fill .mat-form-field-flex {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+.text-center {
+    text-align: center;
 }
