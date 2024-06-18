@@ -66,7 +66,7 @@ export class homeComponent {
         {
           label: 'Message',
           image: '/Web/Images/message.PNG',
-          route: '/coming-soon',
+          route: '/view-transactions',
         },
         {
           label: 'Contact Us',
