@@ -1,4 +1,7 @@
 <div fxLayout="column wrap" class="bank-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div *ngIf="page.showSpinner" class="spinner-login absolute">
+    <mat-spinner></mat-spinner>
+  </div>
   <div fxLayout="row wrap" class="bank-padding-5px" fxLayoutAlign="space-between center" [fxShow]="true">
     <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
       <p>
@@ -13,19 +16,21 @@
     </div>
   </div>
   <div fxLayout="column " class="bank-height-500px bank-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
-    <div>
-      <ngx-scanner-qrcode #action="scanner"></ngx-scanner-qrcode>
-    </div>
-    <div class="bank-full-width">
-      <button mat-raised-button (click)="action.isStart ? action.stop() : action.start()" class="bank-full-width">{{action.isStart ?
-        &apos;Stop&apos; : &apos;Start&apos;}}</button>
-    </div>
-    <div class="bank-center-center bank-flex">
-      <!-- data  -->
-      <span>{{ action.data.value | json }}</span><!-- value -->
-      <span>{{ action.data | async | json }}</span><!-- async -->
+    <div (click)="viewData(action)">
+      <ngx-scanner-qrcode #action="scanner" class="full-height"></ngx-scanner-qrcode>
 
       <!-- Loading -->
+      <p *ngIf="action.isLoading">&#x231B; Loading...</p>
+
+      <!-- start -->
+      <div class="bank-center-center bank-flex">
+        <button mat-raised-button class="bank-margin-top-10px bg-blue poppins  padding-10 scan-buttom color-w" mat-flat-button (click)="action.isStart ? action.stop() : action.start()">{{action.isStart ? &apos;Stop&apos; : &apos;Start&apos;}}</button>
+      </div>
+    </div>
+    <div (click)="viewData()" class="bank-full-width">
+    </div>
+    <div class="bank-center-center bank-flex">
+
       <p *ngIf="action.isLoading">&#x231B; Loading...</p>
     </div>
   </div>

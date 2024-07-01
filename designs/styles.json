@@ -1,5 +1,6 @@
 {
     "classes": [
+        "spinner-login",
         "relative",
         "absolute",
         "mat-spinner",
@@ -28,6 +29,7 @@
         "bank-margin-top-1px",
         "bank-margin-bottom-1px",
         "bank-margin-left-1px",
+        "scan-buttom",
         "bank-gap-05em",
         "bank-gap-1em",
         "bank-electricity-input",
@@ -210,6 +212,7 @@
         "mat-form-field-wrapper",
         "mat-button",
         "verify",
-        "text-center"
+        "text-center",
+        "origin-video"
     ]
 }

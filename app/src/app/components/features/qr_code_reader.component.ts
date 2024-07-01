@@ -5,6 +5,8 @@
 
 import { Location } from '@angular/common'; //_splitter_
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -70,14 +72,41 @@ export class qr_code_readerComponent {
       return this.errorHandler(bh, e, 'sd_IaPEY5gAM9QL2Zh4');
     }
   }
+
+  viewData(action: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { action };
+      bh.local = {};
+      bh = this.sd_GfcIe9RgKA14Oy0X(bh);
+      //appendnew_next_viewData
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hERbmQfiGKDFVTdC');
+    }
+  }
   //appendnew_flow_qr_code_readerComponent_start
 
   sd_tS4QeW0tWbtwlwf1(bh) {
     try {
+      this.page.showSpinner = false;
+      bh = this.sd_fINOKqWSNegNVblj(bh);
       //appendnew_next_sd_tS4QeW0tWbtwlwf1
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_tS4QeW0tWbtwlwf1');
+    }
+  }
+
+  sd_fINOKqWSNegNVblj(bh) {
+    try {
+      this.page.user = JSON.parse(sessionStorage.getItem('user'));
+      //appendnew_next_sd_fINOKqWSNegNVblj
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_fINOKqWSNegNVblj');
     }
   }
 
@@ -101,6 +130,206 @@ export class qr_code_readerComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_wkoF8gW7CdJX16if');
+    }
+  }
+
+  sd_GfcIe9RgKA14Oy0X(bh) {
+    try {
+      const page = this.page;
+
+      if (bh.input.action) {
+        const data = JSON.stringify(bh.input.action.data.value[0].value);
+        const parsed = JSON.parse(data);
+        bh.scanned = JSON.parse(parsed);
+        bh.scanned.belongsTo = page.user.email;
+        bh.scanned.transDate = new Date();
+        bh.scanned.transType = 'scan_to_pay';
+        bh.scanned.statement = bh.scanned.itemName;
+        bh.scanned.moneyType = 'moneyOut';
+        bh.scanned._id = new Date().getTime();
+        bh.scanned['email'] = page.user.email;
+        delete bh.scanned['accountNumber'];
+        page.showSpinner = true;
+      }
+      bh = this.sd_Q732udEvExH85ymY(bh);
+      //appendnew_next_sd_GfcIe9RgKA14Oy0X
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_GfcIe9RgKA14Oy0X');
+    }
+  }
+
+  sd_Q732udEvExH85ymY(bh) {
+    try {
+      this.page.ssdURL = bh.system.environment.properties.ssdURL;
+      bh = this.sd_hjj29cqmNZyDSYRA(bh);
+      //appendnew_next_sd_Q732udEvExH85ymY
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Q732udEvExH85ymY');
+    }
+  }
+
+  sd_hjj29cqmNZyDSYRA(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdURL + 'scan-payment';
+      bh.url_update = page.ssdURL + 'update';
+      bh.url_user = page.ssdURL + 'get-users';
+
+      bh.difference = page.user.balance - bh.scanned.amount;
+
+      bh.body = {
+        email: page.user.email,
+        balance: bh.difference,
+        collection: 'users',
+        amount: bh.scanned.amount,
+      };
+
+      bh = this.sd_m7lT5x0dyAM3txcJ(bh);
+      //appendnew_next_sd_hjj29cqmNZyDSYRA
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hjj29cqmNZyDSYRA');
+    }
+  }
+
+  async sd_m7lT5x0dyAM3txcJ(bh) {
+    try {
+      if (
+        this.sdService.operators['gte'](
+          this.page.user.balance,
+          bh.scanned.amount,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.scanner(bh);
+      } else {
+        bh = await this.sd_iEk6KDPN7nSJgy9b(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_m7lT5x0dyAM3txcJ');
+    }
+  }
+
+  async scanner(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.scanned,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.updateUser(bh);
+      //appendnew_next_scanner
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_663pfADz7NdrrjfM');
+    }
+  }
+
+  async updateUser(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url_update,
+        method: 'put',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.body,
+      };
+      this.page.update_results = await this.sdService.nHttpRequest(
+        requestOptions
+      );
+      bh = this.getUser(bh);
+      //appendnew_next_updateUser
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_CQBHxM4rQPlBpSON');
+    }
+  }
+
+  async getUser(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url_user,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: undefined,
+      };
+      this.page.users_results = await this.sdService.nHttpRequest(
+        requestOptions
+      );
+      bh = this.sd_Fpb5KSqsPMPlnxt4(bh);
+      //appendnew_next_getUser
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_rT5pfQdV6MB1EVEo');
+    }
+  }
+
+  sd_Fpb5KSqsPMPlnxt4(bh) {
+    try {
+      const page = this.page;
+      bh.currentUser = page.users_results.find((user: any) => {
+        return user.email == page.user.email;
+      });
+
+      page.showSpinner = false;
+
+      bh = this.sd_npQatSY15TuyrsgD(bh);
+      //appendnew_next_sd_Fpb5KSqsPMPlnxt4
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Fpb5KSqsPMPlnxt4');
+    }
+  }
+
+  sd_npQatSY15TuyrsgD(bh) {
+    try {
+      sessionStorage.setItem('user', JSON.stringify(bh.currentUser));
+      bh = this.sd_Zuae4FuwHVc4AIUJ(bh);
+      //appendnew_next_sd_npQatSY15TuyrsgD
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_npQatSY15TuyrsgD');
+    }
+  }
+
+  async sd_Zuae4FuwHVc4AIUJ(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/home');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_Zuae4FuwHVc4AIUJ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Zuae4FuwHVc4AIUJ');
+    }
+  }
+
+  sd_iEk6KDPN7nSJgy9b(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('Insuficient funds', '', {
+        duration: 1000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      //appendnew_next_sd_iEk6KDPN7nSJgy9b
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_iEk6KDPN7nSJgy9b');
     }
   }
 

@@ -296,7 +296,7 @@ export class change_passwordComponent {
       const page = this.page;
       bh.input.body = {
         email: page.userDetails.email,
-        newPassword: bh.input.form.controls.password.value,
+        password: bh.input.form.controls.password.value,
       };
 
       bh.url3 = page.ssdUrl + 'reset-password';
