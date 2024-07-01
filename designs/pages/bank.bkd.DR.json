@@ -10666,6 +10666,7 @@
                         {
                             "_key": "class",
                             "_value": [
+                                "bank-icons",
                                 "bank-border-box",
                                 "bank-center-center",
                                 "bank-flex",
@@ -10680,6 +10681,19 @@
                             "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
+                        },
+                        {
+                            "_key": "(click)",
+                            "_value": "goToPay()",
+                            "_type": "kv",
+                            "_attrDef": "c",
+                            "objValue": {
+                                "nodeID": "sd_Yo8FSaXAR6ou4ZLB",
+                                "functionName": "goToPay",
+                                "activeTree": "pages",
+                                "z": "sd_OnCLyxjiMYoKcuBV",
+                                "input": []
+                            }
                         }
                     ],
                     "36ec078b-a2da-3205-6523-5dd0e3ea33f4": {
@@ -10914,7 +10928,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "<span class=\"material-symbols-outlined bank-disabled\">\r\n                bolt\r\n                </span>",
+                                        "_value": "<span class=\"material-symbols-outlined\">\r\n                bolt\r\n                </span>",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
