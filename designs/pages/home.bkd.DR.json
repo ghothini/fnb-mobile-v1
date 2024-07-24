@@ -528,7 +528,7 @@
                         },
                         {
                             "_key": "[routerLink]",
-                            "_value": "['/coming-soon']",
+                            "_value": "['/qr-code-reader']",
                             "_type": "kv",
                             "_attrDef": "c"
                         }
@@ -1140,7 +1140,6 @@
                             "paletteKey": "NG-Input",
                             "parentEditorKey": "3e11b69f-e7d8-2fe5-163e-1a4bdc84e26a",
                             "isAdvancedComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {

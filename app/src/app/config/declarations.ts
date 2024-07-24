@@ -216,7 +216,7 @@ export const appRoutes = [
   { path: 'cards', component: cardComponent },
   { path: 'landing', component: landingComponent },
   { path: 'home', component: homeComponent },
-  { path: 'message', component: messageComponent },
+  { path: 'message', component: view_transactionsComponent },
   { path: 'profile', component: profileComponent },
   { path: 'personal-info', component: personal_infoComponent },
   { path: 'settings', component: settingsComponent },

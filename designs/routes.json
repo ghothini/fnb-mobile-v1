@@ -46,7 +46,7 @@
         },
         {
             "path": "message",
-            "component": "messageComponent"
+            "component": "view_transactionsComponent"
         },
         {
             "path": "profile",

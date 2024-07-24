@@ -532,26 +532,6 @@
         "generated": true
     },
     {
-        "id": "sd_n4nRrKPEshmLxTLw",
-        "type": "Script",
-        "z": "sd_OnCLyxjiMYoKcuBV",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\n// page.currentQuote = page.logged.balance;\n\n// if (bh.currentQuote) {\n//     console.log('value');\n//     page.currentQuote = bh.currentQuote.input.newQuote;\n//     console.log(\"new bh :\", bh.currentQuote.input.newQuote);\n// } else {\n//     console.log('no value');\n// }\n\nconsole.log('page', page)\nconsole.log('bh', bh)\n",
-        "functionName": "sd_n4nRrKPEshmLxTLw",
-        "category": "Function",
-        "x": 605,
-        "y": 80,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "bankComponent",
-        "generated": true
-    },
-    {
         "id": "sd_27vHPFM3aNGZbRyw",
         "type": "Storage",
         "z": "sd_OnCLyxjiMYoKcuBV",
@@ -575,9 +555,7 @@
         "x": 445,
         "y": 80,
         "wires": [
-            [
-                "sd_n4nRrKPEshmLxTLw"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

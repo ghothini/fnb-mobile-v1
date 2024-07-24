@@ -3278,7 +3278,7 @@
                         },
                         {
                             "_key": "[routerLink]",
-                            "_value": "['/migrate']",
+                            "_value": "['/coming-soon']",
                             "_type": "kv",
                             "_attrDef": "c"
                         }

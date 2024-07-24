@@ -105,6 +105,7 @@ export class buy_airtimeComponent {
 
   sd_4NC0TDgF3SEBdfuA(bh) {
     try {
+      this.page.showSpinner = false;
       bh = this.sd_24vDLIgEl1Ye1BkQ(bh);
       //appendnew_next_sd_4NC0TDgF3SEBdfuA
       return bh;
@@ -115,35 +116,11 @@ export class buy_airtimeComponent {
 
   sd_24vDLIgEl1Ye1BkQ(bh) {
     try {
-      this.page.loggedInUser = JSON.parse(sessionStorage.getItem('user'));
-      bh = this.sd_AYvdSXjUTKDz7u6s(bh);
+      this.page.user = JSON.parse(sessionStorage.getItem('user'));
       //appendnew_next_sd_24vDLIgEl1Ye1BkQ
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_24vDLIgEl1Ye1BkQ');
-    }
-  }
-
-  sd_AYvdSXjUTKDz7u6s(bh) {
-    try {
-      const page = this.page; // console.log("new bh :", bh.currentQuote.input.newQuote)
-      page.currentQuote = page.loggedInUser.balance;
-
-      // if (bh.currentQuote) {
-      //     console.log('value');
-      //     page.currentQuote = bh.currentQuote.input.newQuote;
-      //     console.log("new bh :", bh.currentQuote.input.newQuote);
-      // } else {
-      //     console.log('no value');
-      // }
-
-      console.log('page', page);
-      console.log('bh', bh);
-
-      //appendnew_next_sd_AYvdSXjUTKDz7u6s
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_AYvdSXjUTKDz7u6s');
     }
   }
 
@@ -166,9 +143,7 @@ export class buy_airtimeComponent {
         this.sdService.getPathAndQParamsObj('/airtime-details');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_6zQvR1COL7ks0Uhe
       return bh;
     } catch (e) {

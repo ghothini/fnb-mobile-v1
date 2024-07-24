@@ -40,7 +40,15 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "textIp": "showSpinner",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            }
+        ],
         "functionName": "sd_4NC0TDgF3SEBdfuA",
         "category": "Function",
         "x": 180,
@@ -68,8 +76,8 @@
         "flow_type": "sync",
         "functionName": "goBack2",
         "category": "General",
-        "x": 180,
-        "y": 200,
+        "x": 165,
+        "y": 180,
         "wires": [
             [
                 "sd_rnwzf7GG4GtwMenu"
@@ -112,7 +120,7 @@
         "accept_csd": true,
         "functionName": "sd_rnwzf7GG4GtwMenu",
         "category": "General",
-        "x": 320,
+        "x": 285,
         "y": 180,
         "wires": [
             []
@@ -357,13 +365,6 @@
         "nodeType": "flow",
         "name": "",
         "path": "/airtime-details",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
         "functionName": "sd_6zQvR1COL7ks0Uhe",
         "category": "Navigation",
         "x": 180,
@@ -428,26 +429,6 @@
         "generated": true
     },
     {
-        "id": "sd_AYvdSXjUTKDz7u6s",
-        "type": "Script",
-        "z": "sd_bMbO2PhrGXVJB4Gr",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\npage.currentQuote = page.loggedInUser.balance;\n\n// if (bh.currentQuote) {\n//     console.log('value');\n//     page.currentQuote = bh.currentQuote.input.newQuote;\n//     console.log(\"new bh :\", bh.currentQuote.input.newQuote);\n// } else {\n//     console.log('no value');\n// }\n\nconsole.log('page', page)\nconsole.log('bh', bh)\n",
-        "functionName": "sd_AYvdSXjUTKDz7u6s",
-        "category": "Function",
-        "x": 485,
-        "y": 40,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "buy_airtimeComponent",
-        "generated": true
-    },
-    {
         "id": "sd_24vDLIgEl1Ye1BkQ",
         "type": "Storage",
         "z": "sd_bMbO2PhrGXVJB4Gr",
@@ -464,16 +445,14 @@
         "value": {},
         "resultMapping": {
             "type": "this.page",
-            "value": "loggedInUser"
+            "value": "user"
         },
         "functionName": "sd_24vDLIgEl1Ye1BkQ",
         "category": "Storage",
-        "x": 325,
+        "x": 305,
         "y": 40,
         "wires": [
-            [
-                "sd_AYvdSXjUTKDz7u6s"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

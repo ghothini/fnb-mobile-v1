@@ -332,34 +332,10 @@ export class bankComponent {
   sd_27vHPFM3aNGZbRyw(bh) {
     try {
       this.page.loggedInUser = JSON.parse(sessionStorage.getItem('user'));
-      bh = this.sd_n4nRrKPEshmLxTLw(bh);
       //appendnew_next_sd_27vHPFM3aNGZbRyw
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_27vHPFM3aNGZbRyw');
-    }
-  }
-
-  sd_n4nRrKPEshmLxTLw(bh) {
-    try {
-      const page = this.page; // console.log("new bh :", bh.currentQuote.input.newQuote)
-      // page.currentQuote = page.logged.balance;
-
-      // if (bh.currentQuote) {
-      //     console.log('value');
-      //     page.currentQuote = bh.currentQuote.input.newQuote;
-      //     console.log("new bh :", bh.currentQuote.input.newQuote);
-      // } else {
-      //     console.log('no value');
-      // }
-
-      console.log('page', page);
-      console.log('bh', bh);
-
-      //appendnew_next_sd_n4nRrKPEshmLxTLw
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_n4nRrKPEshmLxTLw');
     }
   }
 

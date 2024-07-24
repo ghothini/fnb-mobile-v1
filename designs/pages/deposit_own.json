@@ -138,32 +138,6 @@
         "generated": true
     },
     {
-        "id": "sd_F4KXyA8KsxeWXj4H",
-        "type": "Navigation",
-        "z": "sd_pJX4oN0ELFcPypn0",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "path": "/bank",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
-        "functionName": "sd_F4KXyA8KsxeWXj4H",
-        "category": "Navigation",
-        "x": 365,
-        "y": 460,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "deposit_ownComponent"
-    },
-    {
         "id": "sd_n1swxNd5XPSBN52k",
         "type": "Script",
         "z": "sd_pJX4oN0ELFcPypn0",
@@ -570,6 +544,59 @@
             [
                 "sd_9vr6cKjC0YU5tOu6"
             ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_BcwJb7fv0oULUhUE",
+        "type": "PageStart",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "allowNumbers",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "allowNumbers",
+        "category": "General",
+        "x": 140,
+        "y": 520,
+        "wires": [
+            [
+                "sd_8uEaZpxTwrkseMoQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "deposit_ownComponent"
+    },
+    {
+        "id": "sd_8uEaZpxTwrkseMoQ",
+        "type": "Script",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.allowedKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Control']; // Add any other allowed keys here\n    if (bh.allowedKeys.includes(bh.input.event.key) || (bh.input.event.ctrlKey && (bh.input.event.key === 'v' || bh.input.event.key === 'c'))) {\n      return; // Allow these keys\n    }\n\n    if (!/^\\d$/.test(bh.input.event.key)) {\n      bh.input.event.preventDefault(); // Prevent non-numeric keys\n    }",
+        "functionName": "sd_8uEaZpxTwrkseMoQ",
+        "category": "Function",
+        "x": 225,
+        "y": 520,
+        "wires": [
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
