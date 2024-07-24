@@ -6,7 +6,7 @@
         Amount:</div>
       <div style="height: 10%; margin-top: 10px" class="bank-full-width">
         <input placeholder="eg : 4000" required [(ngModel)]="page.quote" formControlName="depositAmount" type="number" style="width: 98%; height:70% ; border: 2px solid gray;
-    border-radius: 15px; font-size: 20px; padding-left: 10px">
+    border-radius: 15px; font-size: 20px; padding-left: 10px" (keydown)="allowNumbers($event)">
       </div>
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
         <p *ngIf="(page.depositForm.controls.depositAmount?.touched) &amp;&amp; (page.depositForm.controls.depositAmount?.errors?.required)" style="color:red;" class="message-no-margin">

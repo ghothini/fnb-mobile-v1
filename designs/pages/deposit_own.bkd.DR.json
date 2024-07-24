@@ -903,7 +903,7 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "<input placeholder=\"eg : 4000\" required [(ngModel)] = \"page.quote\" formControlName = \"depositAmount\" type=\"number\" style=\"width: 98%; height:70% ; border: 2px solid gray;\r\n    border-radius: 15px; font-size: 20px; padding-left: 10px\">",
+                                "_value": "<input placeholder=\"eg : 4000\" required [(ngModel)] = \"page.quote\" formControlName = \"depositAmount\" type=\"number\" style=\"width: 98%; height:70% ; border: 2px solid gray;\r\n    border-radius: 15px; font-size: 20px; padding-left: 10px\" (keydown)=\"allowNumbers($event)\">",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }

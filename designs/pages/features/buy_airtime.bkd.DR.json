@@ -1863,11 +1863,83 @@
                         "_customAttributeFlag": "customInput"
                     }
                 ],
+                "879bdea8-0bd3-2ee6-5662-3f6277633f87": {
+                    "paletteKey": "NG-RaisedButton",
+                    "parentEditorKey": "084e9ef4-e63c-1d0f-0b37-c01253d0b54c",
+                    "commentid": null,
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": [
+                                "bank-amount"
+                            ],
+                            "_type": "dav",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "buttonname",
+                            "_value": "Buy",
+                            "_type": "a",
+                            "_attrDef": "p",
+                            "_useAsLabel": true
+                        },
+                        {
+                            "_key": "color",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "(click)",
+                            "_value": "openAirtimeDetails()",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "objValue": {
+                                "nodeID": "sd_ciLgyBpsargQvb9r",
+                                "functionName": "openAirtimeDetails",
+                                "activeTree": "pages",
+                                "z": "sd_bMbO2PhrGXVJB4Gr",
+                                "input": []
+                            }
+                        },
+                        {
+                            "_key": "[disabled]",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "[disableRipple]",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "type",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "routerLink",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        }
+                    ]
+                },
                 "2d4517f2-3569-742f-0b98-2af1884debdc": {
                     "paletteKey": "Html5",
                     "parentEditorKey": "084e9ef4-e63c-1d0f-0b37-c01253d0b54c",
                     "isAdvancedComponent": true,
-                    "commentid": null,
+                    "isCommented": "true",
+                    "commentid": "1719918408237",
                     "designerReference": [
                         {
                             "_key": "style",
@@ -2058,7 +2130,8 @@
                         "paletteKey": "html-editor",
                         "parentEditorKey": "2d4517f2-3569-742f-0b98-2af1884debdc",
                         "isAdvancedChildComponent": true,
-                        "commentid": null,
+                        "isCommented": "true",
+                        "commentid": "1719918408237",
                         "designerReference": [
                             {
                                 "_key": "style",
@@ -2074,7 +2147,7 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "{{page.loggedInUser.cell}}",
+                                "_value": "<strong>Buy</strong>",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }

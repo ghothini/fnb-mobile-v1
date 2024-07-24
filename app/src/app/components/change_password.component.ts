@@ -81,7 +81,8 @@ export class change_passwordComponent {
         .constructFlowObject(this);
       bh.input = { form };
       bh.local = {};
-      bh = this.sd_XhVQOmTtgKdzutt9(bh);
+      bh = this.sd_wMSnfjxmDU4TrP2f(bh);
+      bh = this.sd_iDS1s354RTwppi61(bh);
       //appendnew_next_changePassword
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_bXl36kavUNfxNOZt');
@@ -115,6 +116,7 @@ export class change_passwordComponent {
       this.page.changepasswordForm = undefined;
       this.page.passwordPattern =
         /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@]).{8,30}$/;
+      this.page.showSpinner = false;
       bh = this.sd_JmAzaumQzsqtdBXO(bh);
       //appendnew_next_sd_4QTWai7UHhI5IGma
       return bh;
@@ -171,6 +173,34 @@ export class change_passwordComponent {
     }
   }
 
+  sd_wMSnfjxmDU4TrP2f(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          this.page.changepasswordForm.status,
+          'VALID',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_XhVQOmTtgKdzutt9(bh);
+      } else if (
+        this.sdService.operators['eq'](
+          this.page.changepasswordForm.status,
+          'INVALID',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_R48XhQdWfYbpn7ux(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_wMSnfjxmDU4TrP2f');
+    }
+  }
+
   sd_XhVQOmTtgKdzutt9(bh) {
     try {
       this.page.ssdUrl = bh.system.environment.properties.ssdURL;
@@ -192,6 +222,8 @@ export class change_passwordComponent {
       };
 
       bh.url = page.ssdUrl + 'verify-password';
+
+      page.showSpinner = true;
 
       bh = this.sd_JtVpTsYnu6nJiteO(bh);
       //appendnew_next_sd_eaDQrlSGKTsPb58S
@@ -351,7 +383,7 @@ export class change_passwordComponent {
   sd_vtXD73efgrIZDkT4(bh) {
     try {
       const page = this.page;
-      console.log('results:', bh.results);
+      page.showSpinner = false;
 
       //appendnew_next_sd_vtXD73efgrIZDkT4
       return bh;
@@ -374,6 +406,32 @@ export class change_passwordComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_oJ9MgN1Vhm8TrRHM');
+    }
+  }
+
+  sd_R48XhQdWfYbpn7ux(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('INVALID', 'ok', {
+        duration: 2000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      //appendnew_next_sd_R48XhQdWfYbpn7ux
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_R48XhQdWfYbpn7ux');
+    }
+  }
+
+  sd_iDS1s354RTwppi61(bh) {
+    try {
+      const page = this.page;
+      console.log(page.changepasswordForm);
+      //appendnew_next_sd_iDS1s354RTwppi61
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_iDS1s354RTwppi61');
     }
   }
 

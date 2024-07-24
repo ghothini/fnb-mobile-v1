@@ -19,6 +19,7 @@
             {
                 "_key": "class",
                 "_value": [
+                    "height-1",
                     "bank-padding-5px",
                     "bank-full-width"
                 ],
@@ -60,8 +61,237 @@
                 "_value": "true",
                 "_type": "kv",
                 "_attrDef": "p"
+            },
+            {
+                "_key": "fxFill",
+                "_value": "fxFill",
+                "_type": "a",
+                "_attrDef": "c"
             }
         ],
+        "806b1747-e04d-bdb0-037b-7b9835fe8510": {
+            "paletteKey": "Html5",
+            "parentEditorKey": "b74a6c2f-c998-564f-2b88-411d1ed30d89",
+            "isAdvancedComponent": true,
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": [
+                        "spinner-login",
+                        "absolute"
+                    ],
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "htmlElement",
+                    "_value": "div",
+                    "_type": "dav",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "tagType",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "name",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "sandbox",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "src",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "srcdoc",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "width",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "[autoplay]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "[loop]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "data",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "audioSource",
+                    "_value": [],
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "videoSource",
+                    "_value": [],
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "audioDatasource",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "audioSrc",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "audioType",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "videoDatasource",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "videoSrc",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "videoType",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(audioplay)",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(videoplay)",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(audiopause)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(videopause)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(audioended)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(videoended)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "*ngIf",
+                    "_value": "page.showSpinner",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                }
+            ],
+            "e0755a3c-2345-cca9-eff5-3a3224165187": {
+                "paletteKey": "html-editor",
+                "parentEditorKey": "806b1747-e04d-bdb0-037b-7b9835fe8510",
+                "isAdvancedChildComponent": true,
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "html",
+                        "_value": "<mat-spinner></mat-spinner>",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    }
+                ]
+            }
+        },
         "70715b94-a36b-57d5-95d1-900d5931bf22": {
             "paletteKey": "FlexLayoutRow",
             "parentEditorKey": "b74a6c2f-c998-564f-2b88-411d1ed30d89",
@@ -1254,7 +1484,9 @@
                 },
                 {
                     "_key": "class",
-                    "_value": [],
+                    "_value": [
+                        "height-87"
+                    ],
                     "_type": "dav",
                     "_attrDef": "p"
                 },
@@ -1316,6 +1548,7 @@
                     {
                         "_key": "class",
                         "_value": [
+                            "margin-bottom-10em",
                             "bank-margin-top-10px"
                         ],
                         "_type": "dav",
@@ -1908,7 +2141,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "<input type=\"number\" formControlName = \"cell\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\">",
+                                        "_value": "<input type=\"number\" required formControlName = \"cell\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\" (keydown)=\"allowNumbers($event)\">",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -2466,7 +2699,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "<select formControlName = \"networkProvider\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\">\r\n    <option value = \"Vodacom\">Vodacom</option>\r\n    <option value = \"MTN\">MTN</option>\r\n    <option value = \"Telkom\">Telkom</option>\r\n    <option value = \"Cell-C\">Cell-C</option>\r\n</select>",
+                                        "_value": "<select formControlName =\"networkProvider\" required  class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\">\r\n    <option value = \"Vodacom\">Vodacom</option>\r\n    <option value = \"MTN\">MTN</option>\r\n    <option value = \"Telkom\">Telkom</option>\r\n    <option value = \"Cell-C\">Cell-C</option>\r\n</select>",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -3024,7 +3257,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "<input type=\"text\" formControlName = \"bundleType\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\" readonly>",
+                                        "_value": "<input type=\"text\"  required formControlName = \"bundleType\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\" readonly>",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -3582,7 +3815,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "<input type=\"number\" formControlName = \"amount\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\">",
+                                        "_value": "<input type=\"number\" required formControlName = \"amount\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\" (keydown)=\"allowNumbers($event)\">",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -4140,7 +4373,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "<input type=\"text\" formControlName = \"fromAccount\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\" readonly>",
+                                        "_value": "<input type=\"text\" required formControlName = \"fromAccount\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\" readonly>",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -4170,7 +4403,7 @@
                     },
                     {
                         "_key": "class",
-                        "_value": "",
+                        "_value": [],
                         "_type": "dav",
                         "_attrDef": "p"
                     },
@@ -4225,9 +4458,7 @@
                         {
                             "_key": "class",
                             "_value": [
-                                "bank-top-240px",
-                                "bank-purchase",
-                                "bank-relative"
+                                "bank-purchase"
                             ],
                             "_type": "dav",
                             "_attrDef": "p"
@@ -4247,15 +4478,17 @@
                         },
                         {
                             "_key": "(click)",
-                            "_value": "buy()",
+                            "_value": "buy(airtimeForm)",
                             "_type": "kv",
                             "_attrDef": "p",
                             "objValue": {
-                                "nodeID": "sd_x1qBKHWc0vQI4xpo",
+                                "nodeID": "sd_Aoh8QiXBxIq3gyFE",
                                 "functionName": "buy",
                                 "activeTree": "pages",
-                                "z": "sd_KllidtGkgXUKHnHN",
-                                "input": []
+                                "z": "sd_NebjxnLYDwkz9Qzy",
+                                "input": [
+                                    "airtimeForm"
+                                ]
                             }
                         },
                         {

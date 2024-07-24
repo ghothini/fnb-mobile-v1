@@ -3555,7 +3555,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "<input type=\"text\" formControlName = \"meterNumber\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\" maxlength=\"11\">",
+                                    "_value": "<input type=\"number\" formControlName = \"meterNumber\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\" maxlength=\"11\" (keydown)=\"allowNumbers($event)\">",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -4111,7 +4111,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "<input type=\"number\" formControlName = \"amount\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\">",
+                                    "_value": "<input type=\"number\" formControlName = \"amount\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\" (keydown)=\"allowNumbers($event)\">",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -4667,7 +4667,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "<input type=\"number\" formControlName = \"cellphone\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\">",
+                                    "_value": "<input type=\"number\" formControlName = \"cellphone\" class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\" (keydown)=\"allowNumbers($event)\">",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }

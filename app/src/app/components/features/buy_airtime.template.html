@@ -31,11 +31,7 @@
         {{page.user.name}} {{page.user.surname}}
       </div>
     </div>
-    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" (click)="openAirtimeDetails()">
-      <div class="bank-amount-btn2 bank-flex bank-center-center">
-        {{page.loggedInUser.cell}}
-      </div>
-    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" (click)="openAirtimeDetails()"><button mat-raised-button class="bank-amount" (click)="openAirtimeDetails()">Buy</button></div>
   </div>
   <div>
     <mat-divider></mat-divider>

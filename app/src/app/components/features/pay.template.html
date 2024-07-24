@@ -1,4 +1,7 @@
 <div fxLayout="column wrap" class="bank-padding-10px bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div *ngIf="page.showSpinner" class="spinner-login absolute">
+    <mat-spinner></mat-spinner>
+  </div>
   <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
     <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
       <div fxLayout="row wrap" class="bank-padding-5px" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true"><span class="bank-no-margin">
@@ -72,7 +75,7 @@
         <p>
           Card Number</p>
         <div class="bank-full-width">
-          <input type="text" formControlName="cardNumber" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" readonly>
+          <input type="text" formControlName="cardNumber" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" required (keydown)="allowNumbers($event)">
         </div>
       </div>
     </div>
@@ -81,7 +84,7 @@
         <p>
           Amount</p>
         <div class="bank-full-width">
-          <input type="number" formControlName="amount" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px">
+          <input type="number" formControlName="amount" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" required (keydown)="allowNumbers($event)">
         </div>
       </div>
     </div>

@@ -354,7 +354,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log('electricityForm', page.electricityForm.value)\n\npage.loggedInUser.balance = page.loggedInUser.balance - page.electricityForm.value.amount;\n\nconsole.log('page', page)",
+        "script": "page.loggedInUser.balance = page.loggedInUser.balance - page.electricityForm.value.amount;",
         "functionName": "sd_uuViWYba2ueOJw37",
         "category": "Function",
         "x": 405,
@@ -468,6 +468,7 @@
         "nodeType": "flow",
         "name": "buy-post",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -475,8 +476,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -492,9 +495,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "buyPost",
         "category": "HTTP",
@@ -644,9 +649,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -657,7 +660,9 @@
         "x": 385,
         "y": 240,
         "wires": [
-            []
+            [
+                "sd_SrvyCFRE6hVopx2K"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -791,7 +796,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(\"input\", page.electricityForm)\n\npage.showSpinner = true",
+        "script": "page.showSpinner = true",
         "functionName": "sd_3FuyYvLatFAEaCYY",
         "category": "Function",
         "x": 125,
@@ -814,6 +819,7 @@
         "nodeType": "flow",
         "name": "get user",
         "method": "get",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url_user",
         "urlMappingObj": {
@@ -821,11 +827,14 @@
             "mapVarValue": "url_user"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
+        "reqBody": "",
         "reqBodyObj": {
             "mapVarType": "bh",
             "mapVarValue": ""
@@ -837,9 +846,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "getUser",
         "category": "HTTP",
@@ -904,6 +915,79 @@
             [
                 "sd_86j6RevOd8e3ZKkO"
             ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_pa0RfEjLU5Ic3COL",
+        "type": "PageStart",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "allowNumbers",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "allowNumbers",
+        "category": "General",
+        "x": 85,
+        "y": 500,
+        "wires": [
+            [
+                "sd_vf9jthAVSFYPJbwi"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "buy_electricityComponent"
+    },
+    {
+        "id": "sd_vf9jthAVSFYPJbwi",
+        "type": "Script",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.allowedKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Control']; // Add any other allowed keys here\n    if (bh.allowedKeys.includes(bh.input.event.key) || (bh.input.event.ctrlKey && (bh.input.event.key === 'v' || bh.input.event.key === 'c'))) {\n      return; // Allow these keys\n    }\n\n   \n\n\n    if (!/^\\d$/.test(bh.input.event.key)) {\n      bh.input.event.preventDefault(); // Prevent non-numeric keys\n    }",
+        "functionName": "sd_vf9jthAVSFYPJbwi",
+        "category": "Function",
+        "x": 170,
+        "y": 500,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_SrvyCFRE6hVopx2K",
+        "type": "Script",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.showSpinner = false;",
+        "functionName": "sd_SrvyCFRE6hVopx2K",
+        "category": "Function",
+        "x": 465,
+        "y": 240,
+        "wires": [
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

@@ -143,9 +143,7 @@ export class buy_airtimeComponent {
         this.sdService.getPathAndQParamsObj('/airtime-details');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_6zQvR1COL7ks0Uhe
       return bh;
     } catch (e) {

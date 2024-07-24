@@ -74,15 +74,15 @@ export class airtimeAnother_detailsComponent {
     }
   }
 
-  buy(...others) {
+  buy(form: any = undefined, ...others) {
     let bh: any = {};
     try {
       bh = this.__page_injector__
         .get(SDPageCommonService)
         .constructFlowObject(this);
-      bh.input = {};
+      bh.input = { form };
       bh.local = {};
-      bh = this.sd_LL8fJw3h4l2Q1sMn(bh);
+      bh = this.sd_iWPIIAG2PTP4F2rF(bh);
       //appendnew_next_buy
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_Aoh8QiXBxIq3gyFE');
@@ -103,6 +103,21 @@ export class airtimeAnother_detailsComponent {
       return this.errorHandler(bh, e, 'sd_ZyaE807FtlayvVOS');
     }
   }
+
+  allowNumbers(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_AsUcVEf2bwM8DEI5(bh);
+      //appendnew_next_allowNumbers
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_J4bPS5NRuJHVdl5z');
+    }
+  }
   //appendnew_flow_airtimeAnother_detailsComponent_start
 
   sd_1ptxED68vGFSlRem(bh) {
@@ -117,6 +132,7 @@ export class airtimeAnother_detailsComponent {
 
   sd_I6Ck8WFM6r3yfT8O(bh) {
     try {
+      this.page.showSpinner = false;
       bh = this.sd_qhiPYM3uEmm0N3w3(bh);
       //appendnew_next_sd_I6Ck8WFM6r3yfT8O
       return bh;
@@ -200,6 +216,48 @@ export class airtimeAnother_detailsComponent {
     }
   }
 
+  sd_iWPIIAG2PTP4F2rF(bh) {
+    try {
+      const page = this.page;
+      console.log('FORM DATA==>', page.airtimeForm);
+
+      page.showSpinner = true;
+      bh = this.sd_uSvAU4XSF5ERlRwS(bh);
+      //appendnew_next_sd_iWPIIAG2PTP4F2rF
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_iWPIIAG2PTP4F2rF');
+    }
+  }
+
+  sd_uSvAU4XSF5ERlRwS(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          this.page.airtimeForm.status,
+          'VALID',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_LL8fJw3h4l2Q1sMn(bh);
+      } else if (
+        this.sdService.operators['eq'](
+          this.page.airtimeForm.status,
+          'INVALID',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_J0ZcqFWP8tjcHkKO(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_uSvAU4XSF5ERlRwS');
+    }
+  }
+
   async sd_LL8fJw3h4l2Q1sMn(bh) {
     try {
       if (
@@ -251,7 +309,7 @@ export class airtimeAnother_detailsComponent {
 
   sd_xqgR99EOqaKxMYIs(bh) {
     try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      this.page.ssdURL = bh.system.environment.properties.ssdURL;
       bh = this.sd_tdwCuy894ZgUM7nx(bh);
       //appendnew_next_sd_xqgR99EOqaKxMYIs
       return bh;
@@ -263,8 +321,9 @@ export class airtimeAnother_detailsComponent {
   sd_tdwCuy894ZgUM7nx(bh) {
     try {
       const page = this.page;
-      bh.url = `${page.ssdUrl}buy-airtime`;
-      bh.url2 = `${page.ssdUrl}update`;
+      bh.url = page.ssdURL + 'buy-airtime';
+      bh.url2 = page.ssdURL + 'update';
+      bh.url_get = page.ssdURL + `get-users`;
 
       bh.body = page.airtimeForm.value;
 
@@ -273,7 +332,7 @@ export class airtimeAnother_detailsComponent {
         collection: 'users',
         balance: page.loggedInUser.balance,
       };
-      bh = this.sd_SsPmsyckLWULE36b(bh);
+      bh = this.buyAirtime(bh);
       //appendnew_next_sd_tdwCuy894ZgUM7nx
       return bh;
     } catch (e) {
@@ -281,7 +340,7 @@ export class airtimeAnother_detailsComponent {
     }
   }
 
-  async sd_SsPmsyckLWULE36b(bh) {
+  async buyAirtime(bh) {
     try {
       let requestOptions = {
         url: bh.url,
@@ -292,15 +351,15 @@ export class airtimeAnother_detailsComponent {
         body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_151xn46uUHeCLgN3(bh);
-      //appendnew_next_sd_SsPmsyckLWULE36b
+      bh = this.updateUser(bh);
+      //appendnew_next_buyAirtime
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_SsPmsyckLWULE36b');
     }
   }
 
-  async sd_151xn46uUHeCLgN3(bh) {
+  async updateUser(bh) {
     try {
       let requestOptions = {
         url: bh.url2,
@@ -311,11 +370,58 @@ export class airtimeAnother_detailsComponent {
         body: bh.body2,
       };
       this.page.update = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_3kYbKQMbfceW6u51(bh);
-      //appendnew_next_sd_151xn46uUHeCLgN3
+      bh = this.getUser(bh);
+      //appendnew_next_updateUser
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_151xn46uUHeCLgN3');
+    }
+  }
+
+  async getUser(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url_get,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: undefined,
+      };
+      this.page.get_user = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_G6LgCezreEDe39ZL(bh);
+      //appendnew_next_getUser
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_x86XYZre0jtEn7A5');
+    }
+  }
+
+  sd_G6LgCezreEDe39ZL(bh) {
+    try {
+      const page = this.page;
+      page.showSpinner = false;
+
+      bh.foundUser = page.get_user.find((user: any) => {
+        return user.email == page.loggedInUser.email;
+      });
+
+      bh = this.sd_kLxQN65XQwLECWBg(bh);
+      //appendnew_next_sd_G6LgCezreEDe39ZL
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_G6LgCezreEDe39ZL');
+    }
+  }
+
+  sd_kLxQN65XQwLECWBg(bh) {
+    try {
+      sessionStorage.setItem('user', JSON.stringify(bh.foundUser));
+      bh = this.sd_3kYbKQMbfceW6u51(bh);
+      //appendnew_next_sd_kLxQN65XQwLECWBg
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kLxQN65XQwLECWBg');
     }
   }
 
@@ -368,6 +474,23 @@ export class airtimeAnother_detailsComponent {
     }
   }
 
+  sd_J0ZcqFWP8tjcHkKO(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Please fill in the fields', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_J0ZcqFWP8tjcHkKO
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_J0ZcqFWP8tjcHkKO');
+    }
+  }
+
   async sd_O1GYd8CKhEQuhXxH(bh) {
     try {
       const commonInstance: common = this.__page_injector__.get(common);
@@ -378,6 +501,34 @@ export class airtimeAnother_detailsComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_O1GYd8CKhEQuhXxH');
+    }
+  }
+
+  sd_AsUcVEf2bwM8DEI5(bh) {
+    try {
+      const page = this.page;
+      bh.allowedKeys = [
+        'Backspace',
+        'ArrowLeft',
+        'ArrowRight',
+        'Delete',
+        'Control',
+      ]; // Add any other allowed keys here
+      if (
+        bh.allowedKeys.includes(bh.input.event.key) ||
+        (bh.input.event.ctrlKey &&
+          (bh.input.event.key === 'v' || bh.input.event.key === 'c'))
+      ) {
+        return; // Allow these keys
+      }
+
+      if (!/^\d$/.test(bh.input.event.key)) {
+        bh.input.event.preventDefault(); // Prevent non-numeric keys
+      }
+      //appendnew_next_sd_AsUcVEf2bwM8DEI5
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AsUcVEf2bwM8DEI5');
     }
   }
 

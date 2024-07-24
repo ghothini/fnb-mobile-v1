@@ -13,6 +13,11 @@ body {
     font-family:"Roboto", sans-serif;
 }
 
+.space-between-ce{
+    display: flex !important;
+    gap: 5em !important;
+}
+
 .spinner-login {
     top: calc(50% - 37px);
     left: calc(50% - 50px);
@@ -53,6 +58,10 @@ body {
 // Heights
 .height-45 {
     height: 45px;
+}
+
+.height-87{
+    height: 87%;
 }
 
 // Bank styles
@@ -104,6 +113,10 @@ body {
     padding: 5px !important;
 }
 
+.height-1{
+    height: auto !important;
+}
+
 .bank-padding-10px {
     padding: 10px !important;
 }
@@ -130,6 +143,14 @@ body {
 
 .bank-margin-right-1px {  
     margin-right: 1px;
+}
+
+.margin-bottom-1em{
+    margin-bottom: 1em
+}
+
+.margin-bottom-10em{
+    margin-bottom: 10em;
 }
 
 .bank-margin-top-1px {
@@ -679,6 +700,14 @@ $message-orange: #fe9800;
     margin-top: 1em !important;
 }
 
+.change-button{
+    height: 46px !important;
+    background: black;
+    color: white;
+    border-radius:  15px !important;
+    width: 100% !important;
+}
+
 .my-profile-row1{
     width: 17%;
     height: 90%;
@@ -896,7 +925,7 @@ $my-profile-green: #00a9ac;
 }
 
 .change-psw{
-    height: 100vh;
+    height: auto;
 }
 
 .change-psw-bottom{
@@ -1132,8 +1161,8 @@ bh-limits{
     color: white;
     border-radius: 0 15px 16px 0;
     position: relative;
-    top: -48px;
-    right: -128px;
+    // top: -48px;
+    // right: -128px;
 }
 
 .verify {

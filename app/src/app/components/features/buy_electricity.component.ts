@@ -88,6 +88,21 @@ export class buy_electricityComponent {
       return this.errorHandler(bh, e, 'sd_QJljhIzH0nQatkB8');
     }
   }
+
+  allowNumbers(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_vf9jthAVSFYPJbwi(bh);
+      //appendnew_next_allowNumbers
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_pa0RfEjLU5Ic3COL');
+    }
+  }
   //appendnew_flow_buy_electricityComponent_start
 
   sd_IfSSwRERBH4XQxJH(bh) {
@@ -183,8 +198,6 @@ export class buy_electricityComponent {
   sd_3FuyYvLatFAEaCYY(bh) {
     try {
       const page = this.page;
-      console.log('input', page.electricityForm);
-
       page.showSpinner = true;
       bh = this.sd_KBRZtw4iiZARs8GS(bh);
       //appendnew_next_sd_3FuyYvLatFAEaCYY
@@ -239,12 +252,8 @@ export class buy_electricityComponent {
   sd_uuViWYba2ueOJw37(bh) {
     try {
       const page = this.page;
-      console.log('electricityForm', page.electricityForm.value);
-
       page.loggedInUser.balance =
         page.loggedInUser.balance - page.electricityForm.value.amount;
-
-      console.log('page', page);
       bh = this.sd_ZNL962tT5IeCTqBZ(bh);
       //appendnew_next_sd_uuViWYba2ueOJw37
       return bh;
@@ -424,10 +433,22 @@ export class buy_electricityComponent {
         horizontalPosition: 'center',
         verticalPosition: 'bottom',
       });
+      bh = this.sd_SrvyCFRE6hVopx2K(bh);
       //appendnew_next_sd_lmOQOnE9gGW0Jqxz
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_lmOQOnE9gGW0Jqxz');
+    }
+  }
+
+  sd_SrvyCFRE6hVopx2K(bh) {
+    try {
+      const page = this.page;
+      page.showSpinner = false;
+      //appendnew_next_sd_SrvyCFRE6hVopx2K
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SrvyCFRE6hVopx2K');
     }
   }
 
@@ -445,6 +466,34 @@ export class buy_electricityComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_PgTZ58JiDkGAIVFP');
+    }
+  }
+
+  sd_vf9jthAVSFYPJbwi(bh) {
+    try {
+      const page = this.page;
+      bh.allowedKeys = [
+        'Backspace',
+        'ArrowLeft',
+        'ArrowRight',
+        'Delete',
+        'Control',
+      ]; // Add any other allowed keys here
+      if (
+        bh.allowedKeys.includes(bh.input.event.key) ||
+        (bh.input.event.ctrlKey &&
+          (bh.input.event.key === 'v' || bh.input.event.key === 'c'))
+      ) {
+        return; // Allow these keys
+      }
+
+      if (!/^\d$/.test(bh.input.event.key)) {
+        bh.input.event.preventDefault(); // Prevent non-numeric keys
+      }
+      //appendnew_next_sd_vf9jthAVSFYPJbwi
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_vf9jthAVSFYPJbwi');
     }
   }
 
