@@ -121,6 +121,13 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "showSpinner",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
             }
         ],
         "functionName": "sd_fwxLkqzq3xDQqn6O",
@@ -370,7 +377,7 @@
         },
         "functionName": "sd_D4TSF2KvJlb00H4k",
         "category": "Navigation",
-        "x": 765,
+        "x": 865,
         "y": 320,
         "wires": [
             []
@@ -399,8 +406,8 @@
         ],
         "functionName": "sd_nI18BeqqDSJEhPi2",
         "category": "General",
-        "x": 285,
-        "y": 300,
+        "x": 305,
+        "y": 320,
         "wires": [
             [
                 "sd_KjA1mPc8d0LZLJFC"
@@ -418,10 +425,10 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = page.ssdUrl + 'update'\nbh.url2 = page.ssdUrl + `get-user/${page.loggedInUser.email}`\npage.loggedInUser.balance = page.quote \npage.loggedInUser.collection = 'users'\n\n\n\nconsole.log('bh', bh)\nconsole.log('page', page)",
+        "script": "page.showSpinner = true;\nbh.url = page.ssdUrl + 'update'\nbh.url2 = page.ssdUrl + `get-user/${page.loggedInUser.email}`\npage.loggedInUser.balance = page.quote \npage.loggedInUser.collection = 'users'\n\n\n\nconsole.log('bh', bh)\nconsole.log('page', page)",
         "functionName": "sd_KjA1mPc8d0LZLJFC",
         "category": "Function",
-        "x": 385,
+        "x": 405,
         "y": 320,
         "wires": [
             [
@@ -509,7 +516,7 @@
         "resultMapping": {},
         "functionName": "sd_9vr6cKjC0YU5tOu6",
         "category": "Storage",
-        "x": 665,
+        "x": 765,
         "y": 320,
         "wires": [
             [
@@ -565,6 +572,28 @@
         "functionName": "sd_Gp3SXjhwB91r12WX",
         "category": "HTTP",
         "x": 565,
+        "y": 320,
+        "wires": [
+            [
+                "sd_1oaBAX86eAE0Ts6A"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_1oaBAX86eAE0Ts6A",
+        "type": "Script",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.showSpinner = false;",
+        "functionName": "sd_1oaBAX86eAE0Ts6A",
+        "category": "Function",
+        "x": 665,
         "y": 320,
         "wires": [
             [

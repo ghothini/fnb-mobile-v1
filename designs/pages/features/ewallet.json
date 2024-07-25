@@ -313,7 +313,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/ewallet`\nbh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/update`\n\nbh.body = page.ewalletForm.value\n\nbh.body2 = {\n    email: page.loggedInUser.email,\n    collection: 'users',\n    balance: page.loggedInUser.balance\n}",
+        "script": "bh.url = `${page.ssdUrl}ewallet`\nbh.url2 = `${page.ssdUrl}update`\n\nbh.body = page.ewalletForm.value\n\nbh.body2 = {\n    email: page.loggedInUser.email,\n    collection: 'users',\n    balance: page.loggedInUser.balance\n}",
         "functionName": "sd_X4wo6MWSDt6k4TJ9",
         "category": "Function",
         "x": 525,

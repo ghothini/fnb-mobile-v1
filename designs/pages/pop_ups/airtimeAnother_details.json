@@ -414,7 +414,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/buy-airtime`\nbh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/update`\n\nbh.body = page.airtimeForm.value\n\nbh.body2 = {\n    email: page.loggedInUser.email,\n    collection: 'users',\n    balance: page.loggedInUser.balance\n}",
+        "script": "bh.url = `${page.ssdUrl}buy-airtime`\nbh.url2 = `${page.ssdUrl}update`\n\nbh.body = page.airtimeForm.value\n\nbh.body2 = {\n    email: page.loggedInUser.email,\n    collection: 'users',\n    balance: page.loggedInUser.balance\n}",
         "functionName": "sd_tdwCuy894ZgUM7nx",
         "category": "Function",
         "x": 485,

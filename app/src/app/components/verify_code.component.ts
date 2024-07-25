@@ -133,6 +133,7 @@ export class verify_codeComponent {
     try {
       this.page.codeObject = { a: '', b: '', c: '', d: '' };
       this.page.passwordForm = undefined;
+      this.page.showSpinner = false;
       bh = this.sd_rrlkQXrIDUo9u0rB(bh);
       //appendnew_next_sd_JnOutHTCg72NGJIq
       return bh;
@@ -254,10 +255,28 @@ export class verify_codeComponent {
         .navigate([this.sdService.formatPathWithParams(path, undefined)], {
           queryParams: Object.assign(qprm, ''),
         });
+      bh = this.sd_8SYIRhH5NBwbV1cb(bh);
       //appendnew_next_sd_syhqL8DbCmWvp5qY
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_syhqL8DbCmWvp5qY');
+    }
+  }
+
+  sd_8SYIRhH5NBwbV1cb(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Successfully authenticated', 'OK', {
+          duration: 2000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_8SYIRhH5NBwbV1cb
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8SYIRhH5NBwbV1cb');
     }
   }
 
@@ -307,6 +326,7 @@ export class verify_codeComponent {
   sd_gTeUoaunEY4SEmNI(bh) {
     try {
       const page = this.page;
+      page.showSpinner = true;
       bh.body = {
         email: page.email,
         otp: page.random,
@@ -335,11 +355,23 @@ export class verify_codeComponent {
         body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_XPR8zTL16v7wobXG(bh);
+      bh = this.sd_8GvoEO58wXpxY8Ns(bh);
       //appendnew_next_sd_afKuwnXlNLvaV6aQ
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_afKuwnXlNLvaV6aQ');
+    }
+  }
+
+  sd_8GvoEO58wXpxY8Ns(bh) {
+    try {
+      const page = this.page;
+      page.showSpinner = false;
+      bh = this.sd_XPR8zTL16v7wobXG(bh);
+      //appendnew_next_sd_8GvoEO58wXpxY8Ns
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8GvoEO58wXpxY8Ns');
     }
   }
 
@@ -356,12 +388,14 @@ export class verify_codeComponent {
 
   sd_jhaRzdlpZkZv36Oc(bh) {
     try {
-      this.__page_injector__.get(MatSnackBar).open('Email Resent', 'OK', {
-        duration: 5000,
-        direction: 'ltr',
-        horizontalPosition: 'center',
-        verticalPosition: 'bottom',
-      });
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Email with OTP resent', 'OK', {
+          duration: 5000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
       this.sd_TlD2ZlPTBdAsgIdY(bh);
       //appendnew_next_sd_jhaRzdlpZkZv36Oc
       return bh;

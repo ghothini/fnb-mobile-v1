@@ -103,6 +103,7 @@ export class deposit_ownComponent {
     try {
       this.page.depositForm = undefined;
       this.page.quote = undefined;
+      this.page.showSpinner = false;
       bh = this.sd_OaQEDxEmVHx3C3g1(bh);
       //appendnew_next_sd_fwxLkqzq3xDQqn6O
       return bh;
@@ -179,6 +180,7 @@ export class deposit_ownComponent {
   sd_KjA1mPc8d0LZLJFC(bh) {
     try {
       const page = this.page;
+      page.showSpinner = true;
       bh.url = page.ssdUrl + 'update';
       bh.url2 = page.ssdUrl + `get-user/${page.loggedInUser.email}`;
       page.loggedInUser.balance = page.quote;
@@ -226,11 +228,23 @@ export class deposit_ownComponent {
         body: this.page.loggedInUser.collection,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_9vr6cKjC0YU5tOu6(bh);
+      bh = this.sd_1oaBAX86eAE0Ts6A(bh);
       //appendnew_next_sd_Gp3SXjhwB91r12WX
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_Gp3SXjhwB91r12WX');
+    }
+  }
+
+  sd_1oaBAX86eAE0Ts6A(bh) {
+    try {
+      const page = this.page;
+      page.showSpinner = false;
+      bh = this.sd_9vr6cKjC0YU5tOu6(bh);
+      //appendnew_next_sd_1oaBAX86eAE0Ts6A
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1oaBAX86eAE0Ts6A');
     }
   }
 

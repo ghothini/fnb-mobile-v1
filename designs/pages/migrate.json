@@ -311,7 +311,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/registration`\nconsole.log('updated bh', bh)",
+        "script": "bh.url = `${page.ssdUrl}registration`\nconsole.log('updated bh', bh)",
         "functionName": "sd_4ea6CJ6HspJDAa6e",
         "category": "Function",
         "x": 405,

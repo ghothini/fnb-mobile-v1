@@ -455,7 +455,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/pay`\nbh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/update`\n\n// Add in pay\nbh.body = page.payForm.value\n\n// update in users\nbh.body2 = {\n    email: page.loggedInUser.email,\n    collection: 'users',\n    balance: page.loggedInUser.balance\n}",
+        "script": "bh.url = `${page.ssdUrl}pay`\nbh.url2 = `${page.ssdUrl}update`\n\n// Add in pay\nbh.body = page.payForm.value\n\n// update in users\nbh.body2 = {\n    email: page.loggedInUser.email,\n    collection: 'users',\n    balance: page.loggedInUser.balance\n}",
         "functionName": "sd_Tcg4UXywzDFqRyjt",
         "category": "Function",
         "x": 505,

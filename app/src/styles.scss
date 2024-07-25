@@ -10,7 +10,13 @@ $dark-grey: #b0b0b0;
 $bg-light: #fdfdfd;
 
 body {
-    font-family:"Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+
+// Colors 
+
+.color-black {
+    color: #000000 !important;
 }
 
 // spaces
@@ -20,13 +26,29 @@ body {
 }
 
 .absolute {
-    position: absolute;
+    position: absolute !important;
+}
+
+.m-b-05em {
+    margin-bottom: .5em;
+}
+
+.m-b-1em {
+    margin-bottom: 1em;
+}
+
+.m-t-1em {
+    margin-top: 1em !important;
 }
 
 .mat-spinner {
     right: calc(50% - 47px);
     top: calc(50% - 49px);
     z-index: 1;
+}
+
+.mat-error {
+    margin-top: -.1em !important;
 }
 
 .bank-primary {
@@ -113,7 +135,7 @@ body {
 
 // margin
 .bank-no-margin {
-    margin: 0;
+    margin: 0 !important;
 }
 .bank-margin-top-10px {
     margin-top: 10px;
@@ -993,10 +1015,19 @@ bh-limits{
     margin-top: 4em;
 }
 
+.btn {
+    border: 1px solid black !important;
+    height: 37px !important;
+    border-radius: 30px !important;
+    font-size: 18px;
+    background-color: #00a9ac;
+    color: white;
+}
+
 .login-btn{
     color: white;
     border: 1px solid black !important;
-    height: 8% !important;
+    height: 37px !important;
     border-radius: 30px !important;
 }
 
@@ -1004,7 +1035,7 @@ bh-limits{
     background-color: white;
     color: black;
     border: 1px solid black !important;
-    height: 8% !important;
+    height: 37px !important;
     border-radius: 30px !important;
 }
 
@@ -1052,10 +1083,6 @@ bh-limits{
     height: 35%;
 }
 
-.forgot-psw-middle{
-    height: 50%;
-}
-
 .forgot-psw-btn{
     background-color: white;
     color: black;
@@ -1074,13 +1101,6 @@ bh-limits{
     // border-radius: 8px;
     height: 70%;
     width: 20%;
-}
-
-.verify-btn{
-    color: white;
-    border: 1px solid black !important;
-    height: 10% !important;
-    border-radius: 30px !important;
 }
 
 .migrate{
@@ -1104,21 +1124,13 @@ bh-limits{
 .mat-input-element {
     color: black !important;
 }
-.login {
-    .mat-form-field-wrapper {
-    padding-bottom: 0 !important; 
-}
-}
 
 .mat-button {
-    height: 46px !important;
-    width: 21%;
     background: black;
     color: white;
     border-radius: 0 15px 16px 0;
-    position: relative;
-    top: -48px;
-    right: -128px;
+    top: 0;
+    right: 0;
 }
 
 .verify {

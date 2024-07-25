@@ -493,7 +493,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.input.form = {\n    email: page.data.email,\n    collection: 'users',\n    cardlessCashWithdrawal: bh.input.form.value.cardlessCashWithdrawal,\n    payAndClear:  bh.input.form.value.payAndClear,\n    payments: bh.input.form.value.payments,\n    prepaid: bh.input.form.value.prepaid, \n    sendMoney: bh.input.form.value.sendMoney, \n    transfers: bh.input.form.value.transfers,\n    vouchers: bh.input.form.value.vouchers   \n};\n\nbh.input.form2 = {\n    collection: 'limits'\n}\n\nbh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/update-limits`;\nbh.url3 = `https://111e-169-239-176-9.ngrok-free.app/api/get-limit/${page.data._id}`;\n\n\n\n\n",
+        "script": "bh.input.form = {\n    email: page.data.email,\n    collection: 'users',\n    cardlessCashWithdrawal: bh.input.form.value.cardlessCashWithdrawal,\n    payAndClear:  bh.input.form.value.payAndClear,\n    payments: bh.input.form.value.payments,\n    prepaid: bh.input.form.value.prepaid, \n    sendMoney: bh.input.form.value.sendMoney, \n    transfers: bh.input.form.value.transfers,\n    vouchers: bh.input.form.value.vouchers   \n};\n\nbh.input.form2 = {\n    collection: 'limits'\n}\n\nbh.url2 = `${page.ssdUrl}update-limits`;\nbh.url3 = `${page.ssdUrl}get-limit/${page.data._id}`;\n\n\n\n\n",
         "functionName": "sd_1P36hwFlABCvZYmR",
         "category": "Function",
         "x": 265,

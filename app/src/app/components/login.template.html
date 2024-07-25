@@ -21,25 +21,21 @@
           <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
             <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput [required]="true" [pattern]="page.emailPattern" formControlName="email">
-
+              <mat-error align="start" *ngIf="(page.loginForm.controls.email?.touched) &amp;&amp; (page.loginForm.controls.email?.errors?.required)">Email is <b>required</b></mat-error><mat-error align="start" *ngIf="(page.loginForm.controls.email?.touched) &amp;&amp; (page.loginForm.controls.email?.errors?.pattern)">Please provide a <b>valid email</b></mat-error>
             </mat-form-field>
           </div>
-        </div><label *ngIf="(page.loginForm.controls.email?.touched) &amp;&amp; (page.loginForm.controls.email?.errors?.required)" style="color: red">
-          Email is <b>required</b></label>
-        <div *ngIf="(page.loginForm.controls.email?.touched) &amp;&amp; (page.loginForm.controls.email?.errors?.email)" style="color: red">
-          <b>Please provide a valid email</b>
         </div>
-        <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="m-b-1em" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true">
           <div class="bank-margin-top-10px bank-full-width">
             Password</div>
-          <div fxLayout="row wrap" style="height: 10%; " class="bank-full-width" fxLayoutAlign="center start" [fxShow]="true">
+          <div fxLayout="row wrap" style="height: 10%; " class="relative bank-full-width" fxLayoutAlign="center stretch" [fxShow]="true">
             <mat-form-field class="relative bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput [required]="true" [type]="page.password" formControlName="password">
-
-            </mat-form-field><button mat-button style="height: 80%; width: 20%; background: black; color: white; border-radius: 0 15px 16px 0;" class="absolute" id="btn" (click)="showPassword()">Show</button>
+              <mat-error align="start" *ngIf="true">Password is <b>required</b></mat-error>
+            </mat-form-field><button mat-button style="width: 20%; background: black; color: white; border-radius: 0 15px 16px 0;" class="bank-full-height absolute" id="btn" (click)="showPassword()">Show</button>
           </div>
         </div>
-        <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="login-green-bg login-forgot-btn" (click)="login(page.loginForm)">Login</button><button mat-raised-button routerLink="/forgot-password" class="change-psw-row2-button">Forgot password</button></div>
+        <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="color-black btn bank-no-margin" (click)="login(page.loginForm)">Login</button><button mat-raised-button routerLink="/forgot-password" class="change-psw-row2-button">Forgot password</button></div>
       </div>
     </div>
   </form>

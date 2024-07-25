@@ -1,4 +1,7 @@
 <div fxLayout="column wrap" class="add-profile-pic-ff-roboto bank-full-width" fxLayoutAlign="start center" [fxShow]="true">
+  <div *ngIf="page.showSpinner" class="mat-spinner absolute">
+    <mat-spinner></mat-spinner>
+  </div>
   <div fxLayout="row wrap" style="margin-top: 12px;" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
     <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
                 <span class="material-symbols-outlined ">
@@ -43,7 +46,7 @@
         <div fxLayout="column wrap" class="message-fz-18 verify-code-row1 bank-full-width" fxLayoutAlign="center center" [fxShow]="true"><label>
             Didn&apos;t receive an OTP?</label><label (click)="resendCode()" style="text-decoration: underline">
             <span>Resend code <span></span></span></label></div>
-      </div><button mat-raised-button style="color:white !important; height: 45px !important" class="login-green-bg verify-btn bank-full-width message-fz-18" (click)="submit(VerifyCodeForm)" [disabled]="VerifyCodeForm?.invalid">Submit</button>
+      </div><button mat-raised-button class="btn bank-full-width" (click)="submit(VerifyCodeForm)" [disabled]="VerifyCodeForm?.invalid">Submit</button>
     </div>
   </form>
 </div>

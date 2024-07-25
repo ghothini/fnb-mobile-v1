@@ -506,7 +506,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/buy-electricity`\nbh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/update`\n\nbh.body = page.electricityForm.value\n\nbh.body2 = {\n    email: page.loggedInUser.email,\n    collection: 'users',\n    balance: page.loggedInUser.balance\n}",
+        "script": "bh.url = `${page.ssdUrl}buy-electricity`\nbh.url2 = `${page.ssdUrl}update`\n\nbh.body = page.electricityForm.value\n\nbh.body2 = {\n    email: page.loggedInUser.email,\n    collection: 'users',\n    balance: page.loggedInUser.balance\n}",
         "functionName": "sd_Vy7Re1ff3VKGjGux",
         "category": "Function",
         "x": 545,

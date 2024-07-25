@@ -1,4 +1,7 @@
 <div fxLayout="column wrap" class="add-profile-pic-ff-roboto bank-full-width login" fxLayoutAlign="start center" [fxShow]="true">
+  <div *ngIf="page.showSpinner" class="mat-spinner absolute">
+    <mat-spinner></mat-spinner>
+  </div>
   <form [formGroup]="page.depositForm" class="my-profile-width-90-only login-middle">
     <div fxLayout="column wrap" class="bank-full-height bank-full-width" fxLayoutAlign="start center" [fxShow]="true"><img imgSrc="Web/Images/fnb-logo2.webp" style="width: 42%; height: 15%;"><label class="limits-fz-16 my-profile-margin-top-1em my-profile-green-text">
         <b>Please enter the amount you would like to deposit into your account</b></label>
