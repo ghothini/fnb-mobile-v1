@@ -61,6 +61,229 @@
                 "_attrDef": "p"
             }
         ],
+        "394503b8-af3c-c420-9dfe-3a61216f33af": {
+            "paletteKey": "Html5",
+            "parentEditorKey": "3647626e-aa39-1d27-e8cc-571f119d74b5",
+            "isAdvancedComponent": true,
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": [
+                        "spinner-login",
+                        "absolute"
+                    ],
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "htmlElement",
+                    "_value": "div",
+                    "_type": "dav",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "tagType",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "name",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "sandbox",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "src",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "srcdoc",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "width",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "[autoplay]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "[loop]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "data",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "audioSource",
+                    "_value": [],
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "videoSource",
+                    "_value": [],
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "audioDatasource",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "audioSrc",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "audioType",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "videoDatasource",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "videoSrc",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "videoType",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(audioplay)",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(videoplay)",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(audiopause)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(videopause)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(audioended)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "(videoended)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_visibility": false
+                },
+                {
+                    "_key": "*ngIf",
+                    "_value": "page.showSpinner",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                }
+            ],
+            "372a8d0a-54bf-a5bb-540e-1f2a7d9cfc81": {
+                "paletteKey": "html-editor",
+                "parentEditorKey": "394503b8-af3c-c420-9dfe-3a61216f33af",
+                "isAdvancedChildComponent": true,
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "html",
+                        "_value": "<mat-spinner></mat-spinner>",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    }
+                ]
+            }
+        },
         "7d0a2706-f8c8-ec15-d9e7-435eb021cb4f": {
             "paletteKey": "FlexLayoutRow",
             "parentEditorKey": "3647626e-aa39-1d27-e8cc-571f119d74b5",
@@ -646,6 +869,12 @@
                             "_type": "kv",
                             "_attrDef": "p",
                             "_visibility": false
+                        },
+                        {
+                            "_key": "(click)",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "c"
                         }
                     ],
                     "3c55b462-8651-c3be-8af4-bff55b5aae43": {
@@ -926,6 +1155,21 @@
                         "_type": "kv",
                         "_attrDef": "p",
                         "_visibility": false
+                    },
+                    {
+                        "_key": "(click)",
+                        "_value": "viewData(action)",
+                        "_type": "kv",
+                        "_attrDef": "c",
+                        "objValue": {
+                            "nodeID": "sd_hERbmQfiGKDFVTdC",
+                            "functionName": "viewData",
+                            "activeTree": "pages",
+                            "z": "sd_AOv9kIt72QmNixpa",
+                            "input": [
+                                "action"
+                            ]
+                        }
                     }
                 ],
                 "bc81d25c-625f-b874-2a41-1512defaf965": {
@@ -948,7 +1192,7 @@
                         },
                         {
                             "_key": "html",
-                            "_value": "<ngx-scanner-qrcode #action = 'scanner'></ngx-scanner-qrcode>\r\n ",
+                            "_value": "<ngx-scanner-qrcode #action=\"scanner\" class=\"full-height\"></ngx-scanner-qrcode>\r\n\r\n<!-- Loading -->\r\n<p *ngIf=\"action.isLoading\">⌛ Loading...</p>\r\n\r\n<!-- start -->\r\n<div class=\"bank-center-center bank-flex\">\r\n    <button mat-raised-button class=\"bank-margin-top-10px bg-blue poppins  padding-10 scan-buttom color-w\" mat-flat-button (click)=\"action.isStart ? action.stop() : action.start()\">{{action.isStart ? 'Stop' : 'Start'}}</button>\r\n</div>",
                             "_type": "a",
                             "_attrDef": "p"
                         }
@@ -959,7 +1203,6 @@
                 "paletteKey": "Html5",
                 "parentEditorKey": "6ffa3d67-8dfb-d73b-c686-3cf1876252aa",
                 "isAdvancedComponent": true,
-                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -1143,14 +1386,27 @@
                         "_type": "kv",
                         "_attrDef": "p",
                         "_visibility": false
+                    },
+                    {
+                        "_key": "(click)",
+                        "_value": "viewData()",
+                        "_type": "kv",
+                        "_attrDef": "c",
+                        "objValue": {
+                            "nodeID": "sd_hERbmQfiGKDFVTdC",
+                            "functionName": "viewData",
+                            "activeTree": "pages",
+                            "z": "sd_AOv9kIt72QmNixpa",
+                            "input": []
+                        }
                     }
                 ],
                 "b427ba00-b4c2-ba5b-b874-c137045f7d14": {
                     "paletteKey": "html-editor",
                     "parentEditorKey": "ac4e7057-66b1-8e0a-a8d3-afb292b36534",
                     "isAdvancedChildComponent": true,
-                    "isCommented": "false",
-                    "commentid": null,
+                    "isCommented": "true",
+                    "commentid": "1718698560848",
                     "designerReference": [
                         {
                             "_key": "style",
@@ -1166,7 +1422,7 @@
                         },
                         {
                             "_key": "html",
-                            "_value": " <button mat-raised-button (click)=\"action.isStart ? action.stop() : action.start()\" class=\"bank-full-width\">{{action.isStart ?\r\n        'Stop' : 'Start'}}</button>\r\n",
+                            "_value": " <button mat-raised-button (click)=\"action.isStart ? action.stop() : action.start()\" class=\"bank-full-width\">\r\n     {{action.isStart ? 'Stop' : 'Start'}}</button>\r\n",
                             "_type": "a",
                             "_attrDef": "p"
                         }
@@ -1383,7 +1639,7 @@
                         },
                         {
                             "_key": "html",
-                            "_value": "<!-- data  -->\r\n<span>{{ action.data.value | json }}</span><!-- value -->\r\n<span>{{ action.data | async | json }}</span><!-- async -->\r\n\r\n<!-- Loading -->\r\n<p *ngIf=\"action.isLoading\">⌛ Loading...</p>",
+                            "_value": "\r\n<p *ngIf=\"action.isLoading\">⌛ Loading...</p>",
                             "_type": "a",
                             "_attrDef": "p"
                         }

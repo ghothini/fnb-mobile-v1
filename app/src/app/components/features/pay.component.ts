@@ -82,10 +82,25 @@ export class payComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_mN43q02NijFPwvIP(bh);
+      bh = this.sd_mYq7iz7SEzt8K1tZ(bh);
       //appendnew_next_submit
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_INsPkoF2I6stXxZP');
+    }
+  }
+
+  allowNumbers(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_v9qn1dR9qFe8IDbr(bh);
+      //appendnew_next_allowNumbers
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_wU87Sten91GyJyJA');
     }
   }
   //appendnew_flow_payComponent_start
@@ -103,6 +118,7 @@ export class payComponent {
   sd_Z07RwCfbca3o40KI(bh) {
     try {
       this.page.quote = undefined;
+      this.page.showSpinner = false;
       bh = this.sd_94UUEejAMkL5eMjJ(bh);
       //appendnew_next_sd_Z07RwCfbca3o40KI
       return bh;
@@ -144,8 +160,6 @@ export class payComponent {
       const minutes = String(date.getMinutes()).padStart(2, '0');
 
       page.formattedDate = `${day} ${month} ${year} ${hours}:${minutes}`;
-
-      console.log('page', page);
 
       page.payForm = new FormGroup({
         customer: new FormControl(page.loggedInUser.name),
@@ -189,6 +203,27 @@ export class payComponent {
     }
   }
 
+  async sd_mYq7iz7SEzt8K1tZ(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          this.page.payForm.status,
+          'VALID',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_mN43q02NijFPwvIP(bh);
+      } else {
+        bh = await this.sd_METwXwgOsk2ebHtJ(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_mYq7iz7SEzt8K1tZ');
+    }
+  }
+
   async sd_mN43q02NijFPwvIP(bh) {
     try {
       if (
@@ -213,13 +248,11 @@ export class payComponent {
   sd_87u5vf1sAWZgg8wZ(bh) {
     try {
       const page = this.page;
-      console.log('submitted page', page.payForm.value);
-
+      page.showSpinner = true;
       page.loggedInUser.balance =
         page.loggedInUser.balance - page.payForm.value.amount;
 
-      console.log('page', page);
-      bh = this.sd_TlB7htOQ8ofL8HQx(bh);
+      bh = this.sd_wuJbdiHRyvy8O0e6(bh);
       //appendnew_next_sd_87u5vf1sAWZgg8wZ
       return bh;
     } catch (e) {
@@ -227,20 +260,9 @@ export class payComponent {
     }
   }
 
-  sd_TlB7htOQ8ofL8HQx(bh) {
-    try {
-      sessionStorage.setItem('user', JSON.stringify(this.page.loggedInUser));
-      bh = this.sd_wuJbdiHRyvy8O0e6(bh);
-      //appendnew_next_sd_TlB7htOQ8ofL8HQx
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_TlB7htOQ8ofL8HQx');
-    }
-  }
-
   sd_wuJbdiHRyvy8O0e6(bh) {
     try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      this.page.ssdURL = bh.system.environment.properties.ssdURL;
       bh = this.sd_Tcg4UXywzDFqRyjt(bh);
       //appendnew_next_sd_wuJbdiHRyvy8O0e6
       return bh;
@@ -252,8 +274,9 @@ export class payComponent {
   sd_Tcg4UXywzDFqRyjt(bh) {
     try {
       const page = this.page;
-      bh.url = `${page.ssdUrl}pay`;
-      bh.url2 = `${page.ssdUrl}update`;
+      bh.url = page.ssdURL + 'pay';
+      bh.url_update = page.ssdURL + 'update';
+      bh.url_user = page.ssdURL + 'get-users';
 
       // Add in pay
       bh.body = page.payForm.value;
@@ -264,7 +287,7 @@ export class payComponent {
         collection: 'users',
         balance: page.loggedInUser.balance,
       };
-      bh = this.sd_DYB2LfCrhED6xWGT(bh);
+      bh = this.buyPost(bh);
       //appendnew_next_sd_Tcg4UXywzDFqRyjt
       return bh;
     } catch (e) {
@@ -272,7 +295,7 @@ export class payComponent {
     }
   }
 
-  async sd_DYB2LfCrhED6xWGT(bh) {
+  async buyPost(bh) {
     try {
       let requestOptions = {
         url: bh.url,
@@ -283,18 +306,18 @@ export class payComponent {
         body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_uxzf2cB3321WVCck(bh);
-      //appendnew_next_sd_DYB2LfCrhED6xWGT
+      bh = this.update(bh);
+      //appendnew_next_buyPost
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_DYB2LfCrhED6xWGT');
+      return this.errorHandler(bh, e, 'sd_rmwAjgJ2A0YZw6xb');
     }
   }
 
-  async sd_uxzf2cB3321WVCck(bh) {
+  async update(bh) {
     try {
       let requestOptions = {
-        url: bh.url2,
+        url: bh.url_update,
         method: 'put',
         responseType: 'json',
         headers: {},
@@ -302,11 +325,58 @@ export class payComponent {
         body: bh.body2,
       };
       this.page.update = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_yegflL4smDHdpDeI(bh);
-      //appendnew_next_sd_uxzf2cB3321WVCck
+      bh = this.getUser(bh);
+      //appendnew_next_update
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_uxzf2cB3321WVCck');
+      return this.errorHandler(bh, e, 'sd_oDh5uXHf5qoEZzTv');
+    }
+  }
+
+  async getUser(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url_user,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: undefined,
+      };
+      this.page.get_user = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_U2xXQRRxoE5SCP4h(bh);
+      //appendnew_next_getUser
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_zWNR3bKbToUrCEoF');
+    }
+  }
+
+  sd_U2xXQRRxoE5SCP4h(bh) {
+    try {
+      const page = this.page;
+      bh.found = page.get_user.find((user: any) => {
+        return user.email == page.loggedInUser.email;
+      });
+
+      page.showSpinner = false;
+
+      bh = this.sd_0BVRABPBifM9oHQD(bh);
+      //appendnew_next_sd_U2xXQRRxoE5SCP4h
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_U2xXQRRxoE5SCP4h');
+    }
+  }
+
+  sd_0BVRABPBifM9oHQD(bh) {
+    try {
+      sessionStorage.setItem('user', JSON.stringify(bh.found));
+      bh = this.sd_yegflL4smDHdpDeI(bh);
+      //appendnew_next_sd_0BVRABPBifM9oHQD
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0BVRABPBifM9oHQD');
     }
   }
 
@@ -354,6 +424,49 @@ export class payComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_2M9yLasHjJOVIazz');
+    }
+  }
+
+  sd_METwXwgOsk2ebHtJ(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('Fill in all fields', 'Ok', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      //appendnew_next_sd_METwXwgOsk2ebHtJ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_METwXwgOsk2ebHtJ');
+    }
+  }
+
+  sd_v9qn1dR9qFe8IDbr(bh) {
+    try {
+      const page = this.page;
+      bh.allowedKeys = [
+        'Backspace',
+        'ArrowLeft',
+        'ArrowRight',
+        'Delete',
+        'Control',
+      ]; // Add any other allowed keys here
+      if (
+        bh.allowedKeys.includes(bh.input.event.key) ||
+        (bh.input.event.ctrlKey &&
+          (bh.input.event.key === 'v' || bh.input.event.key === 'c'))
+      ) {
+        return; // Allow these keys
+      }
+
+      if (!/^\d$/.test(bh.input.event.key)) {
+        bh.input.event.preventDefault(); // Prevent non-numeric keys
+      }
+      //appendnew_next_sd_v9qn1dR9qFe8IDbr
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_v9qn1dR9qFe8IDbr');
     }
   }
 

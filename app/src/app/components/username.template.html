@@ -21,9 +21,11 @@
           <!-- {{page.usernameForm.controls.newUsername.value}} --></label></div>
       <div fxLayout="column wrap" style="height: 20%; " fxLayoutAlign="start stretch" [fxShow]="true"><label class="profile-gray-text message-margin-top-6px message-fz-18">
           New username</label>
-        <div style="background-color: #80808014; height: 35%" class="message-margin-top-6px">
-          <input [pattern]="page.usernamePattern" formControlName="username" type="text" style="width: 98%; height:100% ; border: 2px solid gray;
-    border-radius: 20px; font-size: 18px; background-color: #80808014; padding-left: 6px">
+        <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+          <mat-form-field class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput [required]="true" [pattern]="page.usernamePattern" formControlName="username">
+
+          </mat-form-field>
         </div><label *ngIf="(page.usernameForm.controls.newUsername?.touched) &amp;&amp; (page.usernameForm.controls.newUsername?.errors?.required)" style="color: red; " class="my-profile-margin-top-1em">
           New user name is required</label>
         <div *ngIf="(page.usernameForm.controls.newUsername?.touched) &amp;&amp; (page.usernameForm.controls.newUsername?.errors?.pattern)" style="color: red" class="my-profile-margin-top-1em">

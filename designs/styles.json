@@ -1,5 +1,7 @@
 {
     "classes": [
+        "space-between-ce",
+        "spinner-login",
         "color-black",
         "relative",
         "absolute",
@@ -13,6 +15,7 @@
         "bank-dark-grey",
         "bank-light-grey-bg",
         "height-45",
+        "height-87",
         "bank-flex",
         "bank-space-between-center",
         "bank-center-center",
@@ -23,6 +26,7 @@
         "bank-height-500px",
         "bank-no-padding",
         "bank-padding-5px",
+        "height-1",
         "bank-padding-10px",
         "bank-padding-20px",
         "bank-padding-left-33px",
@@ -30,9 +34,12 @@
         "bank-margin-top-10px",
         "bank-margin-bottom-10px",
         "bank-margin-right-1px",
+        "margin-bottom-1em",
+        "margin-bottom-10em",
         "bank-margin-top-1px",
         "bank-margin-bottom-1px",
         "bank-margin-left-1px",
+        "scan-buttom",
         "bank-gap-05em",
         "bank-gap-1em",
         "bank-electricity-input",
@@ -128,6 +135,7 @@
         "my-profile-width-90-only",
         "my-profile-row",
         "my-profile-margin-top-1em",
+        "change-button",
         "my-profile-row1",
         "my-profile-row2",
         "my-profile-fz-30",
@@ -213,6 +221,7 @@
         "mat-input-element",
         "mat-button",
         "verify",
-        "text-center"
+        "text-center",
+        "origin-video"
     ]
 }

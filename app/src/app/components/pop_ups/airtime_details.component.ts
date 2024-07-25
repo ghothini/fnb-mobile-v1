@@ -82,7 +82,7 @@ export class airtime_detailsComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_4ROZjjy39sOjCcZW(bh);
+      bh = this.sd_UUGfx0MQZvTUB7Of(bh);
       //appendnew_next_buy
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_x1qBKHWc0vQI4xpo');
@@ -103,6 +103,36 @@ export class airtime_detailsComponent {
       return this.errorHandler(bh, e, 'sd_st5m0B8MGxGA7FgV');
     }
   }
+
+  checkInputField(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_joZsTBuwqbdMPlKU(bh);
+      //appendnew_next_checkInputField
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_HfX13PelbXvxGJxM');
+    }
+  }
+
+  allowNumbers(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_T3YhXmkt6B9BtVyv(bh);
+      //appendnew_next_allowNumbers
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_vryAb2tnQopg5hwF');
+    }
+  }
   //appendnew_flow_airtime_detailsComponent_start
 
   sd_2nITGwhCd7PRhjq6(bh) {
@@ -117,6 +147,7 @@ export class airtime_detailsComponent {
 
   sd_L0DOWUtYu3QzOwWj(bh) {
     try {
+      this.page.showSpinner = false;
       bh = this.sd_m1B9ke7dS6biVQd9(bh);
       //appendnew_next_sd_L0DOWUtYu3QzOwWj
       return bh;
@@ -148,8 +179,6 @@ export class airtime_detailsComponent {
       // } else {
       //     console.log('no value');
       // }
-
-      console.log('page', page);
 
       const date = new Date();
 
@@ -200,6 +229,34 @@ export class airtime_detailsComponent {
     }
   }
 
+  sd_UUGfx0MQZvTUB7Of(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          this.page.airtimeForm.status,
+          'VALID',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_4ROZjjy39sOjCcZW(bh);
+      } else if (
+        this.sdService.operators['eq'](
+          this.page.airtimeForm.status,
+          'INVALID',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_qgJ9pa3hSx043E7R(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UUGfx0MQZvTUB7Of');
+    }
+  }
+
   async sd_4ROZjjy39sOjCcZW(bh) {
     try {
       if (
@@ -224,13 +281,11 @@ export class airtime_detailsComponent {
   sd_6hCfCYi0nbrxfeGQ(bh) {
     try {
       const page = this.page;
-      console.log('airtimeForm', page.airtimeForm.value);
-
       page.loggedInUser.balance =
         page.loggedInUser.balance - page.airtimeForm.value.amount;
 
-      console.log('page', page);
-      bh = this.sd_sxgmbQZXtgUmpagW(bh);
+      page.showSpinner = true;
+      bh = this.sd_Igh9Z5stTzYOVqCk(bh);
       //appendnew_next_sd_6hCfCYi0nbrxfeGQ
       return bh;
     } catch (e) {
@@ -238,20 +293,9 @@ export class airtime_detailsComponent {
     }
   }
 
-  sd_sxgmbQZXtgUmpagW(bh) {
-    try {
-      sessionStorage.setItem('user', JSON.stringify(this.page.loggedInUser));
-      bh = this.sd_Igh9Z5stTzYOVqCk(bh);
-      //appendnew_next_sd_sxgmbQZXtgUmpagW
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_sxgmbQZXtgUmpagW');
-    }
-  }
-
   sd_Igh9Z5stTzYOVqCk(bh) {
     try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      this.page.ssdURL = bh.system.environment.properties.ssdURL;
       bh = this.sd_lAbfwbbbbQzhZxvw(bh);
       //appendnew_next_sd_Igh9Z5stTzYOVqCk
       return bh;
@@ -263,8 +307,9 @@ export class airtime_detailsComponent {
   sd_lAbfwbbbbQzhZxvw(bh) {
     try {
       const page = this.page;
-      bh.url = `${page.ssdUrl}buy-airtime`;
-      bh.url2 = `${page.ssdUrl}update`;
+      bh.url = page.ssdURL + 'buy-airtime';
+      bh.url2 = page.ssdURL + `update`;
+      bh.url_get = page.ssdURL + `get-users`;
 
       bh.body = page.airtimeForm.value;
 
@@ -273,7 +318,7 @@ export class airtime_detailsComponent {
         collection: 'users',
         balance: page.loggedInUser.balance,
       };
-      bh = this.sd_G4qQFwO4pCp2Hm3h(bh);
+      bh = this.post(bh);
       //appendnew_next_sd_lAbfwbbbbQzhZxvw
       return bh;
     } catch (e) {
@@ -281,7 +326,7 @@ export class airtime_detailsComponent {
     }
   }
 
-  async sd_G4qQFwO4pCp2Hm3h(bh) {
+  async post(bh) {
     try {
       let requestOptions = {
         url: bh.url,
@@ -292,15 +337,15 @@ export class airtime_detailsComponent {
         body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_0Pb0Uhvb5rO399T1(bh);
-      //appendnew_next_sd_G4qQFwO4pCp2Hm3h
+      bh = this.update(bh);
+      //appendnew_next_post
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_G4qQFwO4pCp2Hm3h');
     }
   }
 
-  async sd_0Pb0Uhvb5rO399T1(bh) {
+  async update(bh) {
     try {
       let requestOptions = {
         url: bh.url2,
@@ -311,11 +356,58 @@ export class airtime_detailsComponent {
         body: bh.body2,
       };
       this.page.update = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_eIipOQSbbRJCI0Ka(bh);
-      //appendnew_next_sd_0Pb0Uhvb5rO399T1
+      bh = this.getUser(bh);
+      //appendnew_next_update
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_0Pb0Uhvb5rO399T1');
+    }
+  }
+
+  async getUser(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url_get,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: undefined,
+      };
+      this.page.get_user = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_UcKXyEJByOi0f9el(bh);
+      //appendnew_next_getUser
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_5okGZwnT4FF4AzIh');
+    }
+  }
+
+  sd_UcKXyEJByOi0f9el(bh) {
+    try {
+      const page = this.page;
+      page.showSpinner = false;
+
+      bh.foundUser = page.get_user.find((user: any) => {
+        return user.email == page.loggedInUser.email;
+      });
+
+      bh = this.sd_sxgmbQZXtgUmpagW(bh);
+      //appendnew_next_sd_UcKXyEJByOi0f9el
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UcKXyEJByOi0f9el');
+    }
+  }
+
+  sd_sxgmbQZXtgUmpagW(bh) {
+    try {
+      sessionStorage.setItem('user', JSON.stringify(bh.foundUser));
+      bh = this.sd_eIipOQSbbRJCI0Ka(bh);
+      //appendnew_next_sd_sxgmbQZXtgUmpagW
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_sxgmbQZXtgUmpagW');
     }
   }
 
@@ -340,7 +432,7 @@ export class airtime_detailsComponent {
   async sd_hKRqPgBx5eOz9254(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/bank');
+        this.sdService.getPathAndQParamsObj('/airtime');
       await this.__page_injector__
         .get(Router)
         .navigate([this.sdService.formatPathWithParams(path, undefined)], {
@@ -368,6 +460,21 @@ export class airtime_detailsComponent {
     }
   }
 
+  sd_qgJ9pa3hSx043E7R(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('INVALID', 'Ok', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      //appendnew_next_sd_qgJ9pa3hSx043E7R
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_qgJ9pa3hSx043E7R');
+    }
+  }
+
   async sd_RXYbpHEPujHY7QNe(bh) {
     try {
       const commonInstance: common = this.__page_injector__.get(common);
@@ -378,6 +485,46 @@ export class airtime_detailsComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_RXYbpHEPujHY7QNe');
+    }
+  }
+
+  sd_joZsTBuwqbdMPlKU(bh) {
+    try {
+      const page = this.page; // if(page.airtimeForm.controls['amount'].value == "-"){
+      //     page.airtimeForm.controls['amount'].value = ""
+      // }
+      //appendnew_next_sd_joZsTBuwqbdMPlKU
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_joZsTBuwqbdMPlKU');
+    }
+  }
+
+  sd_T3YhXmkt6B9BtVyv(bh) {
+    try {
+      const page = this.page;
+      bh.allowedKeys = [
+        'Backspace',
+        'ArrowLeft',
+        'ArrowRight',
+        'Delete',
+        'Control',
+      ]; // Add any other allowed keys here
+      if (
+        bh.allowedKeys.includes(bh.input.event.key) ||
+        (bh.input.event.ctrlKey &&
+          (bh.input.event.key === 'v' || bh.input.event.key === 'c'))
+      ) {
+        return; // Allow these keys
+      }
+
+      if (!/^\d$/.test(bh.input.event.key)) {
+        bh.input.event.preventDefault(); // Prevent non-numeric keys
+      }
+      //appendnew_next_sd_T3YhXmkt6B9BtVyv
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_T3YhXmkt6B9BtVyv');
     }
   }
 

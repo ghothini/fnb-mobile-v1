@@ -1426,7 +1426,7 @@
                     },
                     {
                         "_key": "[routerLink]",
-                        "_value": "['/coming-soon']",
+                        "_value": "['/view-transactions']",
                         "_type": "kv",
                         "_attrDef": "c"
                     }

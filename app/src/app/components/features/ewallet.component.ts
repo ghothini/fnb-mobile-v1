@@ -82,10 +82,25 @@ export class ewalletComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_KpidmSIY6Y1p6PJ3(bh);
+      bh = this.sd_OnSUPPFMBUNz3qXm(bh);
       //appendnew_next_send
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_yH9RhqdKZgTlfLF9');
+    }
+  }
+
+  allowNumbers(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_R7mMy4CLbqOVfK40(bh);
+      //appendnew_next_allowNumbers
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_HGRTJ7UpyDA4nPij');
     }
   }
   //appendnew_flow_ewalletComponent_start
@@ -102,6 +117,7 @@ export class ewalletComponent {
 
   sd_8gRcQKgo7rGWCf8f(bh) {
     try {
+      this.page.showSpinner = false;
       bh = this.sd_kZgzC8EObqLtlnGU(bh);
       //appendnew_next_sd_8gRcQKgo7rGWCf8f
       return bh;
@@ -144,8 +160,6 @@ export class ewalletComponent {
 
       page.formattedDate = `${day} ${month} ${year} ${hours}:${minutes}`;
 
-      console.log('page', page);
-
       page.ewalletForm = new FormGroup({
         firstName: new FormControl(page.loggedInUser.name),
         email: new FormControl(page.loggedInUser.email),
@@ -184,6 +198,27 @@ export class ewalletComponent {
     }
   }
 
+  async sd_OnSUPPFMBUNz3qXm(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          this.page.ewalletForm.status,
+          'VALID',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_KpidmSIY6Y1p6PJ3(bh);
+      } else {
+        bh = await this.sd_KTQtj2xIkv7GmW38(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_OnSUPPFMBUNz3qXm');
+    }
+  }
+
   async sd_KpidmSIY6Y1p6PJ3(bh) {
     try {
       if (
@@ -208,13 +243,11 @@ export class ewalletComponent {
   sd_Jm45EC1HjOc0Til9(bh) {
     try {
       const page = this.page;
-      console.log('ewallet', page.ewalletForm.value);
-
+      page.showSpinner = true;
       page.loggedInUser.balance =
         page.loggedInUser.balance - page.ewalletForm.value.amount;
 
-      console.log('page', page);
-      bh = this.sd_o88uOmbvijx6Wy63(bh);
+      bh = this.sd_r8tm4SfEpQZwMiOP(bh);
       //appendnew_next_sd_Jm45EC1HjOc0Til9
       return bh;
     } catch (e) {
@@ -222,20 +255,9 @@ export class ewalletComponent {
     }
   }
 
-  sd_o88uOmbvijx6Wy63(bh) {
-    try {
-      sessionStorage.setItem('user', JSON.stringify(this.page.loggedInUser));
-      bh = this.sd_r8tm4SfEpQZwMiOP(bh);
-      //appendnew_next_sd_o88uOmbvijx6Wy63
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_o88uOmbvijx6Wy63');
-    }
-  }
-
   sd_r8tm4SfEpQZwMiOP(bh) {
     try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      this.page.ssdURL = bh.system.environment.properties.ssdURL;
       bh = this.sd_X4wo6MWSDt6k4TJ9(bh);
       //appendnew_next_sd_r8tm4SfEpQZwMiOP
       return bh;
@@ -247,8 +269,9 @@ export class ewalletComponent {
   sd_X4wo6MWSDt6k4TJ9(bh) {
     try {
       const page = this.page;
-      bh.url = `https://111e-169-239-176-9.ngrok-free.app/api/ewallet`;
-      bh.url2 = `https://111e-169-239-176-9.ngrok-free.app/api/update`;
+      bh.url = page.ssdURL + 'ewallet';
+      bh.url2 = page.ssdURL + 'update';
+      bh.url_user = page.ssdURL + 'get-users';
 
       bh.body = page.ewalletForm.value;
 
@@ -257,7 +280,7 @@ export class ewalletComponent {
         collection: 'users',
         balance: page.loggedInUser.balance,
       };
-      bh = this.sd_lnBzQH0qh2i6tbcJ(bh);
+      bh = this.sendEwallet(bh);
       //appendnew_next_sd_X4wo6MWSDt6k4TJ9
       return bh;
     } catch (e) {
@@ -265,7 +288,7 @@ export class ewalletComponent {
     }
   }
 
-  async sd_lnBzQH0qh2i6tbcJ(bh) {
+  async sendEwallet(bh) {
     try {
       let requestOptions = {
         url: bh.url,
@@ -276,15 +299,15 @@ export class ewalletComponent {
         body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_3JoUcgHKLhQQMcnP(bh);
-      //appendnew_next_sd_lnBzQH0qh2i6tbcJ
+      bh = this.update(bh);
+      //appendnew_next_sendEwallet
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_lnBzQH0qh2i6tbcJ');
     }
   }
 
-  async sd_3JoUcgHKLhQQMcnP(bh) {
+  async update(bh) {
     try {
       let requestOptions = {
         url: bh.url2,
@@ -295,24 +318,69 @@ export class ewalletComponent {
         body: bh.body2,
       };
       this.page.update = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_lkytglxcN3IN0Nrp(bh);
-      //appendnew_next_sd_3JoUcgHKLhQQMcnP
+      bh = this.getUser(bh);
+      //appendnew_next_update
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_3JoUcgHKLhQQMcnP');
     }
   }
 
+  async getUser(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url_user,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: undefined,
+      };
+      this.page.get_user = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_FNEDdD8RKmhrAfPt(bh);
+      //appendnew_next_getUser
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UX53ofbJtG11eGVm');
+    }
+  }
+
+  sd_FNEDdD8RKmhrAfPt(bh) {
+    try {
+      const page = this.page;
+      bh.found = page.get_user.find((user: any) => {
+        return user.email == page.loggedInUser.email;
+      });
+
+      page.showSpinner = false;
+
+      bh = this.sd_mfVB2S0l2eO7gW8X(bh);
+      //appendnew_next_sd_FNEDdD8RKmhrAfPt
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_FNEDdD8RKmhrAfPt');
+    }
+  }
+
+  sd_mfVB2S0l2eO7gW8X(bh) {
+    try {
+      sessionStorage.setItem('user', JSON.stringify(bh.found));
+      bh = this.sd_lkytglxcN3IN0Nrp(bh);
+      //appendnew_next_sd_mfVB2S0l2eO7gW8X
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_mfVB2S0l2eO7gW8X');
+    }
+  }
+
   sd_lkytglxcN3IN0Nrp(bh) {
     try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('Purchase Successful', 'Ok', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
+      this.__page_injector__.get(MatSnackBar).open('eWallet Successful', 'Ok', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
       bh = this.sd_wBaHh0763j38xP64(bh);
       //appendnew_next_sd_lkytglxcN3IN0Nrp
       return bh;
@@ -349,6 +417,51 @@ export class ewalletComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_y8NPVOYtgWYXmVH1');
+    }
+  }
+
+  sd_KTQtj2xIkv7GmW38(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Fill in all form fields', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_KTQtj2xIkv7GmW38
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_KTQtj2xIkv7GmW38');
+    }
+  }
+
+  sd_R7mMy4CLbqOVfK40(bh) {
+    try {
+      const page = this.page;
+      bh.allowedKeys = [
+        'Backspace',
+        'ArrowLeft',
+        'ArrowRight',
+        'Delete',
+        'Control',
+      ]; // Add any other allowed keys here
+      if (
+        bh.allowedKeys.includes(bh.input.event.key) ||
+        (bh.input.event.ctrlKey &&
+          (bh.input.event.key === 'v' || bh.input.event.key === 'c'))
+      ) {
+        return; // Allow these keys
+      }
+
+      if (!/^\d$/.test(bh.input.event.key)) {
+        bh.input.event.preventDefault(); // Prevent non-numeric keys
+      }
+      //appendnew_next_sd_R7mMy4CLbqOVfK40
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_R7mMy4CLbqOVfK40');
     }
   }
 
