@@ -235,7 +235,7 @@ export class verify_codeComponent {
           undefined
         )
       ) {
-        bh = this.sd_syhqL8DbCmWvp5qY(bh);
+        bh = this.sd_yYnwvUV5TR3cXsug(bh);
       } else {
         bh = await this.sd_07Za3yDeFoDhz1NB(bh);
       }
@@ -246,15 +246,39 @@ export class verify_codeComponent {
     }
   }
 
+  sd_yYnwvUV5TR3cXsug(bh) {
+    try {
+      const page = this.page;
+      bh.isDepositAfterChange = true;
+      bh = this.sd_bVwUh6HpYceEc0qL(bh);
+      //appendnew_next_sd_yYnwvUV5TR3cXsug
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_yYnwvUV5TR3cXsug');
+    }
+  }
+
+  sd_bVwUh6HpYceEc0qL(bh) {
+    try {
+      sessionStorage.setItem(
+        'isDepositAfterChange',
+        JSON.stringify(bh.isDepositAfterChange)
+      );
+      bh = this.sd_syhqL8DbCmWvp5qY(bh);
+      //appendnew_next_sd_bVwUh6HpYceEc0qL
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_bVwUh6HpYceEc0qL');
+    }
+  }
+
   async sd_syhqL8DbCmWvp5qY(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/change-password2');
+        this.sdService.getPathAndQParamsObj('/change-password');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       bh = this.sd_8SYIRhH5NBwbV1cb(bh);
       //appendnew_next_sd_syhqL8DbCmWvp5qY
       return bh;

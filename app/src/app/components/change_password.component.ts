@@ -117,11 +117,26 @@ export class change_passwordComponent {
       this.page.passwordPattern =
         /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@]).{8,30}$/;
       this.page.showSpinner = false;
-      bh = this.sd_JmAzaumQzsqtdBXO(bh);
+      this.page.actionAfterPassword = undefined;
+      bh = this.sd_EaPg8dVWme9LOGJ3(bh);
       //appendnew_next_sd_4QTWai7UHhI5IGma
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_4QTWai7UHhI5IGma');
+    }
+  }
+
+  sd_EaPg8dVWme9LOGJ3(bh) {
+    try {
+      this.page.actionAfterPassword = JSON.parse(
+        sessionStorage.getItem('isDepositAfterChange')
+      );
+      bh = this.sd_JmAzaumQzsqtdBXO(bh);
+      this.sd_uqtkQlc2w5GkKwaV(bh);
+      //appendnew_next_sd_EaPg8dVWme9LOGJ3
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_EaPg8dVWme9LOGJ3');
     }
   }
 
@@ -157,6 +172,19 @@ export class change_passwordComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_gCGmtS3KI3uFKwe4');
+    }
+  }
+
+  sd_uqtkQlc2w5GkKwaV(bh) {
+    try {
+      console.log(
+        new Date().toLocaleTimeString(),
+        this.page.actionAfterPassword
+      );
+      //appendnew_next_sd_uqtkQlc2w5GkKwaV
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_uqtkQlc2w5GkKwaV');
     }
   }
 

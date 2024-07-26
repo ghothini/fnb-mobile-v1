@@ -1,8 +1,8 @@
 {
     "classes": [
+        "color-black",
         "space-between-ce",
         "spinner-login",
-        "color-black",
         "relative",
         "absolute",
         "m-b-05em",
@@ -215,6 +215,7 @@
         "verify-code-row1",
         "verify-code-input",
         "migrate",
+        "mat-form-field-wrapper",
         "mat-form-field-underline",
         "mat-form-field-appearance-fill",
         "mat-form-field-flex",

@@ -397,7 +397,7 @@
         "y": 400,
         "wires": [
             [
-                "sd_syhqL8DbCmWvp5qY"
+                "sd_yYnwvUV5TR3cXsug"
             ],
             [
                 "sd_07Za3yDeFoDhz1NB"
@@ -415,17 +415,10 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "/change-password2",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
+        "path": "/change-password",
         "functionName": "sd_syhqL8DbCmWvp5qY",
         "category": "Navigation",
-        "x": 405,
+        "x": 565,
         "y": 360,
         "wires": [
             [
@@ -678,7 +671,9 @@
             "value": "5000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -840,7 +835,7 @@
         "functionName": "sd_07Za3yDeFoDhz1NB",
         "category": "General",
         "x": 365,
-        "y": 440,
+        "y": 460,
         "wires": [
             []
         ],
@@ -869,7 +864,9 @@
             "value": "2000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -877,10 +874,116 @@
         "direction": "ltr",
         "functionName": "sd_8SYIRhH5NBwbV1cb",
         "category": "General",
-        "x": 505,
+        "x": 665,
         "y": 360,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "verify_codeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_CJGUVgO2WH9EVwoA",
+        "type": "PageCallService",
+        "z": "sd_O5utXTlOeL3NSqi0",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_O7BgeFkazhosv8N2",
+            "type": "tab",
+            "createdDate": "2024-05-14T08:16:55.985Z",
+            "label": "common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_fBcbEqP7uTw4Uren",
+            "flowName": "setPasswordChangeFollowUp"
+        },
+        "inputVariables": [
+            {
+                "key": "action",
+                "map": true,
+                "valueType": "bh",
+                "value": "isDepositAfterChange"
+            }
+        ],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/common",
+        "startName": "setPasswordChangeFollowUp",
+        "inputParams": [
+            "bh.isDepositAfterChange"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_CJGUVgO2WH9EVwoA",
+        "category": "General",
+        "x": 465,
+        "y": 260,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "verify_codeComponent"
+    },
+    {
+        "id": "sd_yYnwvUV5TR3cXsug",
+        "type": "Script",
+        "z": "sd_O5utXTlOeL3NSqi0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.isDepositAfterChange = true;",
+        "functionName": "sd_yYnwvUV5TR3cXsug",
+        "category": "Function",
+        "x": 365,
+        "y": 360,
+        "wires": [
+            [
+                "sd_bVwUh6HpYceEc0qL"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "verify_codeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_bVwUh6HpYceEc0qL",
+        "type": "Storage",
+        "z": "sd_O5utXTlOeL3NSqi0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "isDepositAfterChange"
+        },
+        "value": {
+            "type": "bh",
+            "value": "isDepositAfterChange"
+        },
+        "resultMapping": {},
+        "functionName": "sd_bVwUh6HpYceEc0qL",
+        "category": "Storage",
+        "x": 465,
+        "y": 360,
+        "wires": [
+            [
+                "sd_syhqL8DbCmWvp5qY"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

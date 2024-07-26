@@ -1183,7 +1183,7 @@
                     },
                     {
                         "_key": "fxLayoutGap",
-                        "_value": "",
+                        "_value": "1em",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -1296,7 +1296,6 @@
                             "_key": "class",
                             "_value": [
                                 "limits-fz-16",
-                                "my-profile-margin-top-1em",
                                 "my-profile-green-text"
                             ],
                             "_type": "dav",
