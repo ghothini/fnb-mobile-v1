@@ -24,49 +24,49 @@
               <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
                   Transfers (Max Unlimited)</label></div>
               <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                <input matInput type="number" [required]="true" formControlName="transfers">
+                <input matInput type="number" [required]="true" formControlName="transfers" (keydown)="allowNumbers($event)">
                 <mat-error align="start" *ngIf="(page.changeLimitsForm.controls.transfers?.touched) &amp;&amp; (page.changeLimitsForm.controls.transfers?.errors?.required)">Transfers limit is <b>required</b></mat-error>
               </mat-form-field>
             </div>
             <div fxLayout="column wrap" class="landing-full-width limits-row2" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
                 Payments (Max R1, 000, 000)</label>
               <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                <input matInput type="number" [required]="true" formControlName="payments">
+                <input matInput type="number" [required]="true" formControlName="payments" (keydown)="allowNumbers($event)">
                 <mat-error align="start" *ngIf="(page.changeLimitsForm.controls.payments?.touched) &amp;&amp; (page.changeLimitsForm.controls.payments?.errors?.required)">Payments limit is <b>required</b></mat-error>
               </mat-form-field>
             </div>
             <div fxLayout="column wrap" class="landing-full-width limits-row2" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
                 Pay and Clear (Max R35, 000)</label>
               <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                <input matInput type="number" [required]="true" formControlName="payAndClear">
+                <input matInput type="number" [required]="true" formControlName="payAndClear" (keydown)="allowNumbers($event)">
                 <mat-error align="start" *ngIf="(page.changeLimitsForm.controls.payAndClear?.touched) &amp;&amp; (page.changeLimitsForm.controls.payAndClear?.errors?.required)">Pay and Clear limit is <b>required</b></mat-error>
               </mat-form-field>
             </div>
             <div fxLayout="column wrap" class="landing-full-width limits-row2" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
                 Prepaid (Max R10, 000)</label>
               <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                <input matInput type="number" [required]="true" formControlName="prepaid">
+                <input matInput type="number" [required]="true" formControlName="prepaid" (keydown)="allowNumbers($event)">
                 <mat-error align="start" *ngIf="(page.changeLimitsForm.controls.prepaid?.touched) &amp;&amp; (page.changeLimitsForm.controls.prepaid?.errors?.required)">Prepaid limit is <b>required</b></mat-error>
               </mat-form-field>
             </div>
             <div fxLayout="column wrap" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
                 Send money (Max R5, 000)</label>
               <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                <input matInput type="number" [required]="true" formControlName="sendMoney">
+                <input matInput type="number" [required]="true" formControlName="sendMoney" (keydown)="allowNumbers($event)">
                 <mat-error align="start" *ngIf="(page.changeLimitsForm.controls.sendMoney?.touched) &amp;&amp; (page.changeLimitsForm.controls.sendMoney?.errors?.required)">Send money limit is <b>required</b></mat-error>
               </mat-form-field>
             </div>
             <div fxLayout="column wrap" class="landing-full-width limits-row2" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true"><label>
                 Vouchers (Max R5, 000)</label>
               <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                <input matInput type="number" [required]="true" formControlName="vouchers">
+                <input matInput type="number" [required]="true" formControlName="vouchers" (keydown)="allowNumbers($event)">
                 <mat-error align="start" *ngIf="(page.changeLimitsForm.controls.vouchers?.touched) &amp;&amp; (page.changeLimitsForm.controls.vouchers?.errors?.required)">Vouchers limit is <b>required</b></mat-error>
               </mat-form-field>
             </div>
             <div fxLayout="column wrap" class="landing-full-width limits-row2" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
                 Cardless cash withdrawls (Max R3, 000)</label>
               <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                <input matInput type="number" [required]="true" formControlName="cardlessCashWithdrawal">
+                <input matInput type="number" [required]="true" formControlName="cardlessCashWithdrawal" (keydown)="allowNumbers($event)">
                 <mat-error align="start" *ngIf="(page.changeLimitsForm.controls.cardlessCashWithdrawal?.touched) &amp;&amp; (page.changeLimitsForm.controls.cardlessCashWithdrawal?.errors?.required)">Cardless cash withdrawal limit is <b>required</b></mat-error>
               </mat-form-field>
             </div><button mat-button class="bank-full-width btn" (click)="changeLimits(page.changeLimitsForm)">Next</button>

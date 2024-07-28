@@ -305,7 +305,7 @@
         "paramMappingObj": {},
         "functionName": "getElectricity",
         "category": "HTTP",
-        "x": 605,
+        "x": 565,
         "y": 40,
         "wires": [
             [
@@ -354,7 +354,7 @@
         "paramMappingObj": {},
         "functionName": "getEwallet",
         "category": "HTTP",
-        "x": 705,
+        "x": 645,
         "y": 40,
         "wires": [
             [
@@ -404,7 +404,7 @@
         "paramMappingObj": {},
         "functionName": "getPay",
         "category": "HTTP",
-        "x": 805,
+        "x": 725,
         "y": 40,
         "wires": [
             [
@@ -456,10 +456,10 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.showSpinner = false;",
+        "script": "page.showSpinner = false;\n\nbh.airtime = page.airtime.filter((user:any) => {\n    return page.loggedInUser.email == user.email\n})\npage.airtimeArr = bh.airtime\nconsole.log(\"airtime ==>\", page.airtimeArr)\n\nbh.eWallet = page.ewallet.filter((user:any) => {\n    return page.loggedInUser.email == user.email\n})\npage.eWalletArr = bh.eWallet\nconsole.log(\"eWallet ==>\", page.eWalletArr)\n\n\nbh.electricity = page.electricity.filter((user:any) => {\n    return page.loggedInUser.email == user.email\n})\n page.electricityArr = bh.electricity\nconsole.log(\"electricity ==>\", page.electricityArr)\n\n\n bh.pay = page.pay.filter((user:any) => {\n    return page.loggedInUser.email == user.email\n})\n page.payArr = bh.pay\nconsole.log(\"pay ==>\", page.payArr)\n\n\n  bh.scan = page.scan.filter((user:any) => {\n    return page.loggedInUser.email == user.email\n})\n page.scanArr = bh.scan\nconsole.log(\"scan ==>\", page.scanArr)\n",
         "functionName": "sd_QXMibve5VdwFRL9r",
         "category": "Function",
-        "x": 965,
+        "x": 885,
         "y": 40,
         "wires": [
             [
@@ -508,7 +508,7 @@
         "paramMappingObj": {},
         "functionName": "getScan",
         "category": "HTTP",
-        "x": 885,
+        "x": 805,
         "y": 40,
         "wires": [
             [
@@ -534,42 +534,42 @@
             {
                 "textIp": "electricityArr",
                 "typedIpValue": {
-                    "type": "this.page",
+                    "type": "bh",
                     "value": "electricity"
                 }
             },
             {
                 "textIp": "airtimeArr",
                 "typedIpValue": {
-                    "type": "this.page",
+                    "type": "bh",
                     "value": "airtime"
                 }
             },
             {
                 "textIp": "scanArr",
                 "typedIpValue": {
-                    "type": "this.page",
+                    "type": "bh",
                     "value": "scan"
                 }
             },
             {
                 "textIp": "payArr",
                 "typedIpValue": {
-                    "type": "this.page",
+                    "type": "bh",
                     "value": "pay"
                 }
             },
             {
                 "textIp": "eWalletArr",
                 "typedIpValue": {
-                    "type": "this.page",
-                    "value": "ewallet"
+                    "type": "bh",
+                    "value": "eWallet"
                 }
             }
         ],
         "functionName": "sd_4oYRr5H41YvEZUZT",
         "category": "Function",
-        "x": 1065,
+        "x": 965,
         "y": 40,
         "wires": [
             []
@@ -578,31 +578,6 @@
         "generateNext": false,
         "serviceName": "view_transactionsComponent",
         "generated": true
-    },
-    {
-        "id": "sd_ZBBG9MMOgDqDwzZG",
-        "type": "Log",
-        "z": "sd_kp9oBTcqwP8tLzjP",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 0,
-        "logObject": "this.page.pay",
-        "functionName": "sd_ZBBG9MMOgDqDwzZG",
-        "category": "General",
-        "x": 885,
-        "y": 140,
-        "wires": [],
-        "__ssdTypeInputs__": {
-            "logObject": {
-                "type": "this.page",
-                "value": "pay",
-                "constant": false
-            }
-        },
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "view_transactionsComponent"
     },
     {
         "id": "sd_kf5vK3nhsEfEJS6b",
