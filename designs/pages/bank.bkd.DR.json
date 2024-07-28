@@ -9654,12 +9654,12 @@
                         },
                         {
                             "_key": "(click)",
-                            "_value": "goToPay()",
+                            "_value": "comingSoon()",
                             "_type": "kv",
                             "_attrDef": "c",
                             "objValue": {
-                                "nodeID": "sd_Yo8FSaXAR6ou4ZLB",
-                                "functionName": "goToPay",
+                                "nodeID": "sd_zn2HZBfrmk2g6yAl",
+                                "functionName": "comingSoon",
                                 "activeTree": "pages",
                                 "z": "sd_OnCLyxjiMYoKcuBV",
                                 "input": []

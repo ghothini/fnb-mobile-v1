@@ -232,6 +232,9 @@
         "mat-input-element",
         "mat-button",
         "verify",
-        "origin-video"
+        "origin-video",
+        "mat-checkbox-checked",
+        "mat-checkbox-background",
+        "mat-checkbox-indeterminate"
     ]
 }

@@ -1238,3 +1238,8 @@ padding-bottom: 0em !important;
 video.origin-video {
     height: 78vh !important;
 }
+
+.mat-checkbox-checked .mat-checkbox-background,
+.mat-checkbox-indeterminate .mat-checkbox-background {
+  background-color: $primary !important;
+}
