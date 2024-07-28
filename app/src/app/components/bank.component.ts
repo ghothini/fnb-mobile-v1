@@ -176,6 +176,20 @@ export class bankComponent {
     }
   }
 
+  comingSoon(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_5BJxjFHynhFcApHB(bh);
+      //appendnew_next_comingSoon
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_zn2HZBfrmk2g6yAl');
+    }
+  }
   //appendnew_flow_bankComponent_start
 
   async sd_lzbhoAkaARC0iBfx(bh) {
@@ -336,6 +350,20 @@ export class bankComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_27vHPFM3aNGZbRyw');
+    }
+  }
+
+  async sd_5BJxjFHynhFcApHB(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/coming-soon');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_5BJxjFHynhFcApHB
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_5BJxjFHynhFcApHB');
     }
   }
 

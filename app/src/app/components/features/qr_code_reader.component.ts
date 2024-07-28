@@ -310,11 +310,31 @@ export class qr_code_readerComponent {
         this.sdService.getPathAndQParamsObj('/home');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      bh = this.sd_Lhi3K1SeUqzMUG5J(bh);
       //appendnew_next_sd_Zuae4FuwHVc4AIUJ
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_Zuae4FuwHVc4AIUJ');
+    }
+  }
+
+  sd_Lhi3K1SeUqzMUG5J(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('payment successful!', 'OK', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_Lhi3K1SeUqzMUG5J
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Lhi3K1SeUqzMUG5J');
     }
   }
 

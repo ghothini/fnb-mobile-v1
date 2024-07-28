@@ -219,6 +219,9 @@
         "mat-button",
         "verify",
         "text-center",
-        "origin-video"
+        "origin-video",
+        "mat-checkbox-checked",
+        "mat-checkbox-background",
+        "mat-checkbox-indeterminate"
     ]
 }
