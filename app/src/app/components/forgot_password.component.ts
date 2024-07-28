@@ -10,6 +10,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -87,7 +88,7 @@ export class forgot_passwordComponent {
         .constructFlowObject(this);
       bh.input = { form };
       bh.local = {};
-      bh = this.sd_2Xj20Ht9f7GhnmKJ(bh);
+      bh = this.sd_diYAlOTFdaWvudpc(bh);
       //appendnew_next_submit
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_sKJ4EVPTNuClAKte');
@@ -112,7 +113,9 @@ export class forgot_passwordComponent {
       this.page.submitted = false;
       this.page.forgotPasswordForm = undefined;
       this.page.email = undefined;
-      bh = this.sd_GTWLLiw6tkF425qr(bh);
+      this.page.showSpinner = false;
+      this.page.ssdUrl = undefined;
+      bh = this.sd_l8TMBTNL3K4xZtdP(bh);
       //appendnew_next_sd_tccPHs4fcoYfU5Zd
       return bh;
     } catch (e) {
@@ -120,11 +123,25 @@ export class forgot_passwordComponent {
     }
   }
 
+  sd_l8TMBTNL3K4xZtdP(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_GTWLLiw6tkF425qr(bh);
+      //appendnew_next_sd_l8TMBTNL3K4xZtdP
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_l8TMBTNL3K4xZtdP');
+    }
+  }
+
   sd_GTWLLiw6tkF425qr(bh) {
     try {
       const page = this.page;
       page.forgotPasswordForm = new FormGroup({
-        email: new FormControl('', [Validators.required, Validators.email]),
+        email: new FormControl('', [
+          Validators.required,
+          Validators.pattern(/^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/),
+        ]),
       });
 
       //appendnew_next_sd_GTWLLiw6tkF425qr
@@ -147,21 +164,24 @@ export class forgot_passwordComponent {
     }
   }
 
-  sd_2Xj20Ht9f7GhnmKJ(bh) {
+  async sd_diYAlOTFdaWvudpc(bh) {
     try {
-      const page = this.page;
-      if (bh.input.form) {
-        page.email = bh.input.form.get('email').value;
-        // console.log("valid")
+      if (
+        this.sdService.operators['true'](
+          this.page.forgotPasswordForm.invalid,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_ZTKwAq1KSVkvMrI5(bh);
       } else {
-        // console.log("not valid")
+        bh = await this.sd_CMEjWYscrjevbYPX(bh);
       }
 
-      bh = this.sd_CMEjWYscrjevbYPX(bh);
-      //appendnew_next_sd_2Xj20Ht9f7GhnmKJ
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_2Xj20Ht9f7GhnmKJ');
+      return this.errorHandler(bh, e, 'sd_diYAlOTFdaWvudpc');
     }
   }
 
@@ -174,7 +194,7 @@ export class forgot_passwordComponent {
       );
       this.page.random = outputVariables.local.random;
 
-      bh = this.sd_l8TMBTNL3K4xZtdP(bh);
+      bh = this.sd_LSh7NpWWTjA7NlY6(bh);
       //appendnew_next_sd_CMEjWYscrjevbYPX
       return bh;
     } catch (e) {
@@ -182,36 +202,17 @@ export class forgot_passwordComponent {
     }
   }
 
-  sd_l8TMBTNL3K4xZtdP(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_LSh7NpWWTjA7NlY6(bh);
-      //appendnew_next_sd_l8TMBTNL3K4xZtdP
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_l8TMBTNL3K4xZtdP');
-    }
-  }
-
   sd_LSh7NpWWTjA7NlY6(bh) {
     try {
       const page = this.page;
+      page.showSpinner = true;
       bh.input.body = {
-        email: page.email,
+        email: page.forgotPasswordForm.value.email,
         otp: page.random,
       };
 
-      // bh.user = {
-      //     email: page.email,
-      //     collection: 'users'
-      // }
-
       bh.url = page.ssdUrl + 'forgot-password';
-      bh.url2 = page.ssdUrl + `get-user/${page.email}`;
-
-      console.log('bh', bh);
-      console.log('page', page);
-
+      bh.url2 = page.ssdUrl + `get-user/${page.forgotPasswordForm.value.email}`;
       bh = this.sd_8vELHlSQYJthK1VQ(bh);
       //appendnew_next_sd_LSh7NpWWTjA7NlY6
       return bh;
@@ -261,14 +262,33 @@ export class forgot_passwordComponent {
   sd_FGMGlJIXhjO3oSmm(bh) {
     try {
       const page = this.page;
-      console.log('page.userDetails', page.userDetails);
-      console.log('page.result', page.result);
-
-      bh = this.sd_lcGzAslv2kifP3X5(bh);
+      page.showSpinner = false;
+      bh = this.sd_qJOK5469mShC9yhL(bh);
       //appendnew_next_sd_FGMGlJIXhjO3oSmm
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_FGMGlJIXhjO3oSmm');
+    }
+  }
+
+  async sd_qJOK5469mShC9yhL(bh) {
+    try {
+      if (
+        this.sdService.operators['nempty'](
+          this.page.result.message,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_AN8zccbRrFPQ7QJA(bh);
+      } else {
+        bh = await this.sd_lcGzAslv2kifP3X5(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_qJOK5469mShC9yhL');
     }
   }
 
@@ -286,16 +306,48 @@ export class forgot_passwordComponent {
   async sd_rT7Iv9cm3h7pEb8y(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/verify-code');
+        this.sdService.getPathAndQParamsObj('/home/verify-code');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_rT7Iv9cm3h7pEb8y
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_rT7Iv9cm3h7pEb8y');
+    }
+  }
+
+  sd_AN8zccbRrFPQ7QJA(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Account does not exist', 'OK', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_AN8zccbRrFPQ7QJA
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AN8zccbRrFPQ7QJA');
+    }
+  }
+
+  sd_ZTKwAq1KSVkvMrI5(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Email address is required', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_ZTKwAq1KSVkvMrI5
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ZTKwAq1KSVkvMrI5');
     }
   }
 

@@ -1,18 +1,6 @@
-<div fxLayout="column wrap" class="landing-full-width my-profile" fxLayoutAlign="start stretch" [fxShow]="true">
-  <div fxLayout="row wrap" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
-    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
-                <span class="material-symbols-outlined ">
-                arrow_back
-            </span></span></div><label class="message-fz-21 message-margin-left-1em">
-      My profile</label><span class="message-flex-1">
-                </span>
-    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true"><span>
-                <span class="material-symbols-outlined">
-                search
-                </span></span></div>
-  </div>
+<div fxLayout="column wrap" class="landing-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
   <div fxLayout="column wrap" class="my-profile-middle" fxLayoutAlign="center center" [fxShow]="true">
-    <div fxLayout="column wrap" class="my-profile-width-90-only landing-full-height" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="column wrap" class="landing-full-height" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
       <div fxLayout="row wrap" class="my-profile-margin-top-1em my-profile-row" fxLayoutAlign="space-between center" [fxShow]="true" [routerLink]="[&apos;/personal-info&apos;]">
         <div fxLayout="row wrap" class="my-profile-margin-10 my-profile-round my-profile-row1" fxLayoutAlign="center center" [fxShow]="true">
           <div>
@@ -67,5 +55,4 @@ transfer_within_a_station
       </div>
     </div>
   </div>
-  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><bh-footer></bh-footer></div>
 </div>

@@ -283,7 +283,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url =`https://111e-169-239-176-9.ngrok-free.app/api/get-airtime/${page.loggedInUser.email}`\nbh.url2 =`https://111e-169-239-176-9.ngrok-free.app/api/get-electricity/${page.loggedInUser.email}`\nbh.url3 =`https://111e-169-239-176-9.ngrok-free.app/api/get-ewallet/${page.loggedInUser.email}`\nbh.url4 =`https://111e-169-239-176-9.ngrok-free.app/api/get-pay/${page.loggedInUser.email}`\n\n\n",
+        "script": "bh.url =`${page.ssdUrl}get-airtime/${page.loggedInUser.email}`\nbh.url2 =`${page.ssdUrl}get-electricity/${page.loggedInUser.email}`\nbh.url3 =`${page.ssdUrl}get-ewallet/${page.loggedInUser.email}`\nbh.url4 =`${page.ssdUrl}get-pay/${page.loggedInUser.email}`\n\n\n",
         "functionName": "sd_UtIdsMpnbEzdy33G",
         "category": "Function",
         "x": 405,

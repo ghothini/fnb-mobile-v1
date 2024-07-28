@@ -1,4 +1,4 @@
-<div fxLayout="column wrap" class="landing-main-component" fxLayoutAlign="start stretch" [fxShow]="true">
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
   <div fxLayout="row wrap" class="landing-toolbar" fxLayoutAlign="center center" [fxShow]="true">
     <div fxLayout="row wrap" class="landing-width-90" fxLayoutAlign="space-between stretch" [fxShow]="true">
       <div fxLayout="row wrap" style="width: 15%; height: 100%;" fxLayoutAlign="start center" [fxShow]="true">
@@ -41,59 +41,5 @@ qr_code
         </div>
       </div>
     </div>
-  </div>
-  <div fxLayout="row wrap" class="footer" fxLayoutAlign="start stretch" [fxShow]="true"><mat-toolbar class="footer-mat-toolbar landing-full-width landing-full-height">
-      <div fxLayout="row wrap" class="landing-full-width landing-full-height" fxLayoutAlign="space-between end" [fxShow]="true">
-        <div fxLayout="column wrap" style="height: 80%" class="landing-full-height footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/login&apos;]">
-          <div fxLayout="row wrap" class="footer-icon" fxLayoutAlign="center end" [fxShow]="true"><span>
-                <span class="material-symbols-outlined footer-tab-icon">
-                    home
-                    </span></span></div>
-          <div fxLayout="row wrap" class="footer-label" fxLayoutAlign="center center" [fxShow]="true">
-            <h6 class="footer-text-center">
-              Home</h6>
-          </div>
-        </div>
-        <div fxLayout="column wrap" style=" height: 80%" class="footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/login&apos;]">
-          <div fxLayout="row wrap" class="footer-icon" fxLayoutAlign="center center" [fxShow]="true"><span>
-                <span class="material-symbols-outlined footer-tab-icon">
-                    credit_card
-                    </span></span></div>
-          <div fxLayout="row wrap" class="footer-label" fxLayoutAlign="center center" [fxShow]="true">
-            <h6 class="footer-text-center">
-              Bank</h6>
-          </div>
-        </div>
-        <div fxLayout="column wrap" style="height: 80%" class="footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/login&apos;]">
-          <div fxLayout="row wrap" class="footer-icon" fxLayoutAlign="center center" [fxShow]="true"><span>
-                <span class="material-symbols-outlined footer-tab-icon">
-                    mode_comment
-                    </span></span></div>
-          <div fxLayout="row wrap" class="footer-label" fxLayoutAlign="center center" [fxShow]="true">
-            <h6 class="footer-text-center">
-              Message</h6>
-          </div>
-        </div>
-        <div fxLayout="column wrap" style="height: 80%" class="footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/login&apos;]">
-          <div fxLayout="row wrap" class="footer-icon" fxLayoutAlign="center center" [fxShow]="true"><span>
-                <span class="material-symbols-outlined footer-tab-icon">
-                    account_circle
-                    </span></span></div>
-          <div fxLayout="row wrap" class="footer-label" fxLayoutAlign="center center" [fxShow]="true">
-            <h6 class="footer-text-center">
-              Profile</h6>
-          </div>
-        </div>
-        <div fxLayout="column wrap" style="height: 80%" class="footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="openTheDialog()">
-          <div fxLayout="row wrap" class="footer-icon" fxLayoutAlign="center center" [fxShow]="true"><span>
-                <span class="material-symbols-outlined footer-tab-icon">
-                    menu
-                    </span></span></div>
-          <div fxLayout="row wrap" class="footer-label" fxLayoutAlign="center center" [fxShow]="true">
-            <h6 class="footer-text-center">
-              Menu</h6>
-          </div>
-        </div>
-      </div>
-    </mat-toolbar></div>
+  </div><bh-footer class="footer"></bh-footer>
 </div>

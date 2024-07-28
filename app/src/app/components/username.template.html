@@ -1,48 +1,28 @@
 <div fxLayout="column wrap" class="add-profile-pic-ff-roboto landing-full-width username" fxLayoutAlign="start center" [fxShow]="true">
+  <div *ngIf="page.showSpinner" class="mat-spinner absolute">
+    <mat-spinner></mat-spinner>
+  </div>
   <div fxLayout="row wrap" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
-    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="__serviceInvoker__.invoke(&apos;sd_O7BgeFkazhosv8N2&apos;, &apos;goBack&apos;)"><span>
                 <span class="material-symbols-outlined ">
                 arrow_back
             </span></span></div><label class="message-fz-21 message-margin-left-1em">
       My Username</label><span class="message-flex-1">
                 </span>
-    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true"><span>
-                <span class="material-symbols-outlined">
-                search
-                </span></span></div>
   </div>
   <form [formGroup]="page.usernameForm" class="username-bottom">
-    <div fxLayout="column wrap" class="bank-full-height bank-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
-      <h1 class="landing-fw-500 message-no-margin">
-        Username details</h1>
+    <div fxLayout="column wrap" class="bank-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
       <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-fz-18 profile-gray-text">
-          Current username</label><label *ngIf="page.usernameForm.valid" class="message-fz-18">
-          {{page.userDetails.username}}
-          <!-- {{page.usernameForm.controls.newUsername.value}} --></label></div>
-      <div fxLayout="column wrap" style="height: 20%; " fxLayoutAlign="start stretch" [fxShow]="true"><label class="profile-gray-text message-margin-top-6px message-fz-18">
-          New username</label>
+          Change username</label></div>
+      <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
         <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-          <mat-form-field class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-            <input matInput [required]="true" [pattern]="page.usernamePattern" formControlName="username">
-
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput placeholder="New username" [required]="true" formControlName="username">
+            <mat-error align="start" *ngIf="(page.usernameForm.controls.username?.touched) &amp;&amp; (page.usernameForm.controls.username?.required)">Username is <b>required</b></mat-error>
           </mat-form-field>
-        </div><label *ngIf="(page.usernameForm.controls.newUsername?.touched) &amp;&amp; (page.usernameForm.controls.newUsername?.errors?.required)" style="color: red; " class="my-profile-margin-top-1em">
-          New user name is required</label>
-        <div *ngIf="(page.usernameForm.controls.newUsername?.touched) &amp;&amp; (page.usernameForm.controls.newUsername?.errors?.pattern)" style="color: red" class="my-profile-margin-top-1em">
-          Please provide a valid username</div>
-      </div>
-      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-fz-18">
-          Your username must be between 8 - 30 characters long. It must contain:
-          <ul>
-            <li>Numbers (0 - 9)</li>
-            <li>Lower case (a - z)</li>
-            <li>Upper case (A - Z)</li>
-            <li>Special characters (@)</li>
-          </ul>
-
-          You cannot use an ID number as a username.
-        </label></div>
+        </div>
+      </div><label>
+        A <b>username </b> is a personal identifier you create for digital banking services. Because it&apos;s <b>unique</b>, we use it as a piece of information to verify it&apos;s you when logging into your account</label><button mat-button class="bank-full-width btn" (click)="submit()" [disabled]="false">Change</button>
     </div>
-    <div fxLayout="row wrap" style="left: 0" class="landing-full-width limits-footer-btn" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="limits-btn" (click)="changeUsername(page.usernameForm)" [disabled]="false">Change</button></div>
   </form>
 </div>

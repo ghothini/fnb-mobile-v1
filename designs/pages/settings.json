@@ -44,11 +44,19 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "textIp": "currentUser",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            }
+        ],
         "functionName": "sd_k2GpdPpd19NLOqet",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 145,
+        "y": 40,
         "wires": [
             []
         ],
@@ -116,6 +124,83 @@
         "category": "General",
         "x": 245,
         "y": 260,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "settingsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_fC3fI2FD4bT9iFP5",
+        "type": "PageStart",
+        "z": "sd_jIVXDidqQ8uyxAkI",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Set Action",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "setAction",
+        "category": "General",
+        "x": 65,
+        "y": 140,
+        "wires": [
+            [
+                "sd_QdMnr82CBLrQHmcb"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "settingsComponent"
+    },
+    {
+        "id": "sd_QdMnr82CBLrQHmcb",
+        "type": "Script",
+        "z": "sd_jIVXDidqQ8uyxAkI",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.action = 'Change Password';",
+        "functionName": "sd_QdMnr82CBLrQHmcb",
+        "category": "Function",
+        "x": 165,
+        "y": 140,
+        "wires": [
+            [
+                "sd_KQQjVtluk7du5Fv8"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "settingsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_KQQjVtluk7du5Fv8",
+        "type": "Storage",
+        "z": "sd_jIVXDidqQ8uyxAkI",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "action"
+        },
+        "value": {
+            "type": "bh",
+            "value": "action"
+        },
+        "resultMapping": {},
+        "functionName": "sd_KQQjVtluk7du5Fv8",
+        "category": "Storage",
+        "x": 265,
+        "y": 140,
         "wires": [
             []
         ],

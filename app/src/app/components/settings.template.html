@@ -19,7 +19,7 @@
         <div fxLayout="row wrap" class="settings-bottom-text" fxLayoutAlign="center center" [fxShow]="true"><label class="message-fz-14 landing-text-center">
             My Username</label></div>
       </div>
-      <div fxLayout="column wrap" class="settings-card-tab" fxLayoutAlign="start stretch" [fxShow]="true" [routerLink]="[&apos;/change-password&apos;]">
+      <div fxLayout="column wrap" class="settings-card-tab" fxLayoutAlign="start stretch" [fxShow]="true" [routerLink]="[&apos;/change-password&apos;]" (click)="setAction()">
         <div fxLayout="row wrap" class="settings-top-icon" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="Web/Images/settings-change-psw.PNG" style="width: 50%; height: 50%;"></div>
         <div fxLayout="row wrap" class="settings-bottom-text" fxLayoutAlign="center center" [fxShow]="true"><label class="message-fz-14 landing-text-center">
             Change Password</label></div>

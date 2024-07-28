@@ -46,7 +46,9 @@
         "x": 180,
         "y": 30,
         "wires": [
-            []
+            [
+                "sd_hdNds2pTAjvRdIiH"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -164,6 +166,37 @@
         "category": "Storage",
         "x": 160,
         "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_hdNds2pTAjvRdIiH",
+        "type": "Storage",
+        "z": "sd_vPNvaEpfinZ4fb1w",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "My Profile"
+        },
+        "resultMapping": {},
+        "functionName": "sd_hdNds2pTAjvRdIiH",
+        "category": "Storage",
+        "x": 283,
+        "y": 33.80208206176758,
         "wires": [
             []
         ],

@@ -3,8 +3,15 @@
 //CORE_REFERENCE_IMPORTS
 //append_imports_start
 
-import { Component, Injector } from '@angular/core'; //_splitter_
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  Injector,
+  Output,
+} from '@angular/core'; //_splitter_
 import { MatDialog } from '@angular/material/dialog'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { menu_dialogComponent } from 'app/components/menu_dialog.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -19,6 +26,8 @@ import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'
   ],
 })
 export class footerComponent {
+  @Output('selectedPage')
+  public selectedPage: any = new EventEmitter<any>();
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -49,7 +58,7 @@ export class footerComponent {
 
   sd_uxFh8suVjjtt5uuB(bh) {
     try {
-      bh = this.sd_uG476h0mGQexMXjY(bh);
+      bh = this.sd_jF8y0IaE8zFwZjJz(bh);
       //appendnew_next_sd_uxFh8suVjjtt5uuB
       return bh;
     } catch (e) {
@@ -72,40 +81,79 @@ export class footerComponent {
       return this.errorHandler(bh, e, 'sd_rWbfo4SPd6lqltWs');
     }
   }
-  //appendnew_flow_footerComponent_start
 
-  sd_uG476h0mGQexMXjY(bh) {
+  routeUser(tab: any = undefined, ...others) {
+    let bh: any = {};
     try {
-      const page = this.page;
-      bh.footerOptions = [
-        { label: 'Home', image: '', route: '/login' },
-        { label: 'Message', image: '/Web/Images/message.PNG', route: '/login' },
-        {
-          label: 'Contact Us',
-          image: '/Web/Images/contact-us.PNG',
-          route: '/login',
-        },
-        {
-          label: 'My Offers',
-          image: '/Web/Images/my-offers.PNG',
-          route: '/login',
-        },
-      ];
-      bh = this.sd_jF8y0IaE8zFwZjJz(bh);
-      //appendnew_next_sd_uG476h0mGQexMXjY
-      return bh;
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { tab };
+      bh.local = {};
+      bh = this.sd_nqfxKKcjBfmB0cZU(bh);
+      //appendnew_next_routeUser
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_uG476h0mGQexMXjY');
+      return this.errorHandler(bh, e, 'sd_7brMOsgab8Q1kxhs');
+    }
+  }
+  @HostListener('selectedPage', ['$event']) sd_0pNOHVfzysx9Ph4d(event) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.$event = event;
+      //appendnew_next_sd_0pNOHVfzysx9Ph4d
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0pNOHVfzysx9Ph4d');
     }
   }
 
+  //appendnew_flow_footerComponent_start
+
   sd_jF8y0IaE8zFwZjJz(bh) {
     try {
-      this.page.footerOptions = bh.footerOptions;
+      this.page.footerTabs = undefined;
+      bh = this.sd_uG476h0mGQexMXjY(bh);
       //appendnew_next_sd_jF8y0IaE8zFwZjJz
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_jF8y0IaE8zFwZjJz');
+    }
+  }
+
+  sd_uG476h0mGQexMXjY(bh) {
+    try {
+      const page = this.page;
+      page.footerTabs = [
+        {
+          label: 'Home',
+          image: 'Web/Image Icons/home.png',
+          route: '/home',
+          title: 'FNB',
+        },
+        {
+          label: 'Bank',
+          image: 'Web/Image Icons/credit-card.png',
+          route: 'home/bank',
+          title: 'Bank',
+        },
+        {
+          label: 'Message',
+          image: 'Web/Image Icons/messages.png',
+          route: 'home/message',
+          title: 'Message',
+        },
+        {
+          label: 'Profile',
+          image: 'Web/Image Icons/user.png',
+          route: 'home/profile',
+          title: 'My Profile',
+        },
+      ];
+      //appendnew_next_sd_uG476h0mGQexMXjY
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_uG476h0mGQexMXjY');
     }
   }
 
@@ -134,6 +182,117 @@ export class footerComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_owqwWGEntlJElkW9');
+    }
+  }
+
+  sd_nqfxKKcjBfmB0cZU(bh) {
+    try {
+      this.page.router = this.__page_injector__.get(Router);
+      bh = this.getLoggedInUser(bh);
+      //appendnew_next_sd_nqfxKKcjBfmB0cZU
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nqfxKKcjBfmB0cZU');
+    }
+  }
+
+  getLoggedInUser(bh) {
+    try {
+      this.page.currentUser = JSON.parse(sessionStorage.getItem('user'));
+      bh = this.sd_iU9pAgT2wOGiRKzA(bh);
+      //appendnew_next_getLoggedInUser
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Oq31DUbk2UL7SVC0');
+    }
+  }
+
+  async sd_iU9pAgT2wOGiRKzA(bh) {
+    try {
+      if (
+        this.sdService.operators['true'](
+          this.page.currentUser,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_v5ItJqAwNaOWMZXB(bh);
+      } else {
+        bh = await this.checkIfNavigatingHome(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_iU9pAgT2wOGiRKzA');
+    }
+  }
+
+  sd_v5ItJqAwNaOWMZXB(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify(bh.input.tab.title));
+      bh = this.sd_3BFSF0XkWfbQqvMC(bh);
+      //appendnew_next_sd_v5ItJqAwNaOWMZXB
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_v5ItJqAwNaOWMZXB');
+    }
+  }
+
+  sd_3BFSF0XkWfbQqvMC(bh) {
+    try {
+      const page = this.page;
+      page.router.navigate([bh.input.tab.route]);
+      //appendnew_next_sd_3BFSF0XkWfbQqvMC
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3BFSF0XkWfbQqvMC');
+    }
+  }
+
+  async checkIfNavigatingHome(bh) {
+    try {
+      if (
+        this.sdService.operators['se'](
+          bh.input.tab.title,
+          'FNB',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_v5ItJqAwNaOWMZXB(bh);
+      } else {
+        bh = await this.sd_dzQAwYyBzYnoooF2(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_zQWmzCK6TtKPd10B');
+    }
+  }
+
+  sd_dzQAwYyBzYnoooF2(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Login'));
+      bh = this.sd_NAnJYrZHHecXvzEv(bh);
+      //appendnew_next_sd_dzQAwYyBzYnoooF2
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_dzQAwYyBzYnoooF2');
+    }
+  }
+
+  async sd_NAnJYrZHHecXvzEv(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/home/login');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_NAnJYrZHHecXvzEv
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_NAnJYrZHHecXvzEv');
     }
   }
 

@@ -70,10 +70,26 @@ export class settingsComponent {
       return this.errorHandler(bh, e, 'sd_3vtrtATQaRVQzR6S');
     }
   }
+
+  setAction(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_QdMnr82CBLrQHmcb(bh);
+      //appendnew_next_setAction
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_fC3fI2FD4bT9iFP5');
+    }
+  }
   //appendnew_flow_settingsComponent_start
 
   sd_k2GpdPpd19NLOqet(bh) {
     try {
+      this.page.currentUser = undefined;
       //appendnew_next_sd_k2GpdPpd19NLOqet
       return bh;
     } catch (e) {
@@ -91,6 +107,28 @@ export class settingsComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_KU4DQujLAkyDU0Vz');
+    }
+  }
+
+  sd_QdMnr82CBLrQHmcb(bh) {
+    try {
+      const page = this.page;
+      bh.action = 'Change Password';
+      bh = this.sd_KQQjVtluk7du5Fv8(bh);
+      //appendnew_next_sd_QdMnr82CBLrQHmcb
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_QdMnr82CBLrQHmcb');
+    }
+  }
+
+  sd_KQQjVtluk7du5Fv8(bh) {
+    try {
+      sessionStorage.setItem('action', JSON.stringify(bh.action));
+      //appendnew_next_sd_KQQjVtluk7du5Fv8
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_KQQjVtluk7du5Fv8');
     }
   }
 

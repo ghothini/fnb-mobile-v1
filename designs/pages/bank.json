@@ -425,6 +425,10 @@
         "viewType": "common",
         "nodeType": "start",
         "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
         "functionName": "sd_K89ydCREuQk6JRCc",
         "category": "Lifecycle Events",
         "x": 85,
@@ -552,7 +556,40 @@
         },
         "functionName": "sd_27vHPFM3aNGZbRyw",
         "category": "Storage",
-        "x": 445,
+        "x": 405,
+        "y": 80,
+        "wires": [
+            [
+                "sd_AaO5z7pkvysoIdfz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_AaO5z7pkvysoIdfz",
+        "type": "Storage",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Bank"
+        },
+        "resultMapping": {},
+        "functionName": "sd_AaO5z7pkvysoIdfz",
+        "category": "Storage",
+        "x": 505,
         "y": 80,
         "wires": [
             []

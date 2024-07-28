@@ -19,8 +19,8 @@ declare const cordova: any;
 export class common {
   public random: any;
   public email: any;
-
   public currentQuote: any;
+  public isDepositAfterChange: any;
 
   constructor(
     private sdService: SDBaseService,
@@ -133,6 +133,30 @@ export class common {
       return await this.errorHandler(bh, e, 'sd_gDxgBOtWEwBlKd2e');
     }
   }
+
+  async setPasswordChangeFollowUp(action: any = undefined, ...others) {
+    let bh: any = {
+      input: {
+        action,
+      },
+      local: {},
+    };
+    try {
+      bh = this.sdService.__constructDefault(bh);
+
+      bh = await this.sd_1fpBSnGEOwIQ0dCy(bh);
+      //appendnew_next_setPasswordChangeFollowUp
+      return (
+        // formatting output variables
+        {
+          input: {},
+          local: {},
+        }
+      );
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_fBcbEqP7uTw4Uren');
+    }
+  }
   //appendnew_flow_common_start
 
   async sd_ZMlcqDyLVVUnwQuz(bh) {
@@ -234,6 +258,30 @@ export class common {
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_iShVV0N6PNcKApKr');
+    }
+  }
+
+  async sd_1fpBSnGEOwIQ0dCy(bh) {
+    try {
+      this.isDepositAfterChange = bh.input.action;
+      this.sd_G8MDIPdcDdzpS8V1(bh);
+      //appendnew_next_sd_1fpBSnGEOwIQ0dCy
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_1fpBSnGEOwIQ0dCy');
+    }
+  }
+
+  async sd_G8MDIPdcDdzpS8V1(bh) {
+    try {
+      console.log(
+        new Date().toLocaleTimeString(),
+        bh.input.isDepositAfterChange
+      );
+      //appendnew_next_sd_G8MDIPdcDdzpS8V1
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_G8MDIPdcDdzpS8V1');
     }
   }
 
