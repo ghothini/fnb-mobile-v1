@@ -243,6 +243,37 @@ export class view_transactionsComponent {
     try {
       const page = this.page;
       page.showSpinner = false;
+
+      bh.airtime = page.airtime.filter((user: any) => {
+        return page.loggedInUser.email == user.email;
+      });
+      page.airtimeArr = bh.airtime;
+      console.log('airtime ==>', page.airtimeArr);
+
+      bh.eWallet = page.ewallet.filter((user: any) => {
+        return page.loggedInUser.email == user.email;
+      });
+      page.eWalletArr = bh.eWallet;
+      console.log('eWallet ==>', page.eWalletArr);
+
+      bh.electricity = page.electricity.filter((user: any) => {
+        return page.loggedInUser.email == user.email;
+      });
+      page.electricityArr = bh.electricity;
+      console.log('electricity ==>', page.electricityArr);
+
+      bh.pay = page.pay.filter((user: any) => {
+        return page.loggedInUser.email == user.email;
+      });
+      page.payArr = bh.pay;
+      console.log('pay ==>', page.payArr);
+
+      bh.scan = page.scan.filter((user: any) => {
+        return page.loggedInUser.email == user.email;
+      });
+      page.scanArr = bh.scan;
+      console.log('scan ==>', page.scanArr);
+
       bh = this.sd_4oYRr5H41YvEZUZT(bh);
       //appendnew_next_sd_QXMibve5VdwFRL9r
       return bh;
@@ -253,11 +284,11 @@ export class view_transactionsComponent {
 
   sd_4oYRr5H41YvEZUZT(bh) {
     try {
-      this.page.electricityArr = this.page.electricity;
-      this.page.airtimeArr = this.page.airtime;
-      this.page.scanArr = this.page.scan;
-      this.page.payArr = this.page.pay;
-      this.page.eWalletArr = this.page.ewallet;
+      this.page.electricityArr = bh.electricity;
+      this.page.airtimeArr = bh.airtime;
+      this.page.scanArr = bh.scan;
+      this.page.payArr = bh.pay;
+      this.page.eWalletArr = bh.eWallet;
       //appendnew_next_sd_4oYRr5H41YvEZUZT
       return bh;
     } catch (e) {

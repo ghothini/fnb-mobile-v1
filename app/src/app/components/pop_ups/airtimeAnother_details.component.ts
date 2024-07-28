@@ -184,6 +184,7 @@ export class airtimeAnother_detailsComponent {
         bundleType: new FormControl('Airtime'),
         amount: new FormControl(''),
         fromAccount: new FormControl('Easy Zero'),
+        email: new FormControl(page.loggedInUser.email),
         transactionDate: new FormControl(page.formattedDate),
       });
 

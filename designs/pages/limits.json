@@ -147,6 +147,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "get",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -154,8 +155,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -171,9 +174,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_8BLGEcNOEIvq4nwb",
         "category": "HTTP",
@@ -432,6 +437,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "put",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -439,8 +445,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -456,9 +464,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_5iTDLklc90d8NiC2",
         "category": "HTTP",
@@ -514,7 +524,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -592,7 +604,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -667,6 +681,59 @@
         "category": "General",
         "x": 685,
         "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "limitsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ChP4sjsoHWI2LRXk",
+        "type": "PageStart",
+        "z": "sd_dfQ2vHZYHyt5Ymfr",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "allowNumbers",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "allowNumbers",
+        "category": "General",
+        "x": 65,
+        "y": 440,
+        "wires": [
+            [
+                "sd_mq93GNl3A4mX4nGV"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "limitsComponent"
+    },
+    {
+        "id": "sd_mq93GNl3A4mX4nGV",
+        "type": "Script",
+        "z": "sd_dfQ2vHZYHyt5Ymfr",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.allowedKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Control']; // Add any other allowed keys here\n    if (bh.allowedKeys.includes(bh.input.event.key) || (bh.input.event.ctrlKey && (bh.input.event.key === 'v' || bh.input.event.key === 'c'))) {\n      return; // Allow these keys\n    }\n\n   \n\n\n    if (!/^\\d$/.test(bh.input.event.key)) {\n      bh.input.event.preventDefault(); // Prevent non-numeric keys\n    }",
+        "functionName": "sd_mq93GNl3A4mX4nGV",
+        "category": "Function",
+        "x": 150,
+        "y": 440,
         "wires": [
             []
         ],

@@ -169,16 +169,8 @@ export class airtime_detailsComponent {
 
   sd_vbyqwlYUD9u6Q1n9(bh) {
     try {
-      const page = this.page; // console.log("new bh :", bh.currentQuote.input.newQuote)
+      const page = this.page;
       page.currentQuote = page.loggedInUser.balance;
-
-      // if (bh.currentQuote) {
-      //     console.log('value');
-      //     page.currentQuote = bh.currentQuote.input.newQuote;
-      //     console.log("new bh :", bh.currentQuote.input.newQuote);
-      // } else {
-      //     console.log('no value');
-      // }
 
       const date = new Date();
 
@@ -198,6 +190,7 @@ export class airtime_detailsComponent {
         amount: new FormControl(''),
         fromAccount: new FormControl('Easy Zero'),
         transactionDate: new FormControl(page.formattedDate),
+        email: new FormControl(page.loggedInUser.email),
       });
 
       page.networkProvider = [

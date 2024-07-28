@@ -78,6 +78,21 @@ export class limitsComponent {
       return this.errorHandler(bh, e, 'sd_hxe3t0gMk44EwbqG');
     }
   }
+
+  allowNumbers(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_mq93GNl3A4mX4nGV(bh);
+      //appendnew_next_allowNumbers
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ChP4sjsoHWI2LRXk');
+    }
+  }
   //appendnew_flow_limitsComponent_start
 
   sd_L71dMFp8ELSXvdR6(bh) {
@@ -316,6 +331,34 @@ export class limitsComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_0UNTamidNxDbi7ES');
+    }
+  }
+
+  sd_mq93GNl3A4mX4nGV(bh) {
+    try {
+      const page = this.page;
+      bh.allowedKeys = [
+        'Backspace',
+        'ArrowLeft',
+        'ArrowRight',
+        'Delete',
+        'Control',
+      ]; // Add any other allowed keys here
+      if (
+        bh.allowedKeys.includes(bh.input.event.key) ||
+        (bh.input.event.ctrlKey &&
+          (bh.input.event.key === 'v' || bh.input.event.key === 'c'))
+      ) {
+        return; // Allow these keys
+      }
+
+      if (!/^\d$/.test(bh.input.event.key)) {
+        bh.input.event.preventDefault(); // Prevent non-numeric keys
+      }
+      //appendnew_next_sd_mq93GNl3A4mX4nGV
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_mq93GNl3A4mX4nGV');
     }
   }
 
