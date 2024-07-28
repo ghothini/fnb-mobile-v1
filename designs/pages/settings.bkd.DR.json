@@ -1942,6 +1942,19 @@
                             "_value": "['/change-password']",
                             "_type": "kv",
                             "_attrDef": "c"
+                        },
+                        {
+                            "_key": "(click)",
+                            "_value": "setAction()",
+                            "_type": "kv",
+                            "_attrDef": "c",
+                            "objValue": {
+                                "nodeID": "sd_fC3fI2FD4bT9iFP5",
+                                "functionName": "setAction",
+                                "activeTree": "pages",
+                                "z": "sd_jIVXDidqQ8uyxAkI",
+                                "input": []
+                            }
                         }
                     ],
                     "c6ee2f50-2adf-77d9-b583-9f273d5d2cd1": {

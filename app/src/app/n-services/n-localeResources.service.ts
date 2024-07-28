@@ -38,7 +38,7 @@ export class NLocaleResource {
      * @param callback
      */
     private async _getLangLocalesConfig(lcid: string) {
-        const res = await fetch(`https://ghothini.github.io/test2/test2.json`);
+        const res = await fetch(`locales/locale_${lcid}.json`);
         const localeConfig = await res.json();
         return localeConfig;
     }
@@ -69,7 +69,7 @@ export class NLocaleResource {
      * @description sets the configured languages in locales editor
      */
     private async _fetchLocaleLangs() {
-        const res = await fetch('https://ghothini.github.io/test1/test1.json');
+        const res = await fetch('locales/locales.json');
         this.languages = await res.json();
     }
 }

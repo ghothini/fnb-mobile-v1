@@ -4,9 +4,13 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
-import { FormControl, FormGroup, Validators } from '@angular/forms'; //_splitter_
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
-import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -29,6 +33,7 @@ export class limitsComponent {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
+    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 
@@ -59,21 +64,6 @@ export class limitsComponent {
     }
   }
 
-  goBack(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_b0Qu37P5ojbtrECl(bh);
-      //appendnew_next_goBack
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_bZCvoXOCXM7qEgPz');
-    }
-  }
-
   changeLimits(form: any = undefined, ...others) {
     let bh: any = {};
     try {
@@ -82,7 +72,7 @@ export class limitsComponent {
         .constructFlowObject(this);
       bh.input = { form };
       bh.local = {};
-      bh = this.sd_ZPC7PjaNuuTiIJNA(bh);
+      bh = this.checkingInvalidFields(bh);
       //appendnew_next_changeLimits
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_hxe3t0gMk44EwbqG');
@@ -103,7 +93,10 @@ export class limitsComponent {
   sd_QmkAYlNdJ9mGSFYz(bh) {
     try {
       this.page.changeLimitsForm = undefined;
-      bh = this.sd_ZUexHrSTJi7SwpSG(bh);
+      this.page.ssdUrl = undefined;
+      this.page.showSpinner = false;
+      this.page.currentUser = undefined;
+      bh = this.sd_ZPC7PjaNuuTiIJNA(bh);
       //appendnew_next_sd_QmkAYlNdJ9mGSFYz
       return bh;
     } catch (e) {
@@ -111,31 +104,21 @@ export class limitsComponent {
     }
   }
 
-  sd_ZUexHrSTJi7SwpSG(bh) {
+  sd_ZPC7PjaNuuTiIJNA(bh) {
     try {
-      const page = this.page;
-      page.changeLimitsForm = new FormGroup({
-        transfers: new FormControl('', [Validators.required]),
-        payments: new FormControl('', [Validators.required]),
-        payAndClear: new FormControl('', [Validators.required]),
-        prepaid: new FormControl('', [Validators.required]),
-        sendMoney: new FormControl('', [Validators.required]),
-        vouchers: new FormControl('', [Validators.required]),
-        cardlessCashWithdrawal: new FormControl('', [Validators.required]),
-      });
-
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
       bh = this.sd_cwmv1n3H7vtrUgp9(bh);
-      //appendnew_next_sd_ZUexHrSTJi7SwpSG
+      //appendnew_next_sd_ZPC7PjaNuuTiIJNA
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_ZUexHrSTJi7SwpSG');
+      return this.errorHandler(bh, e, 'sd_ZPC7PjaNuuTiIJNA');
     }
   }
 
   sd_cwmv1n3H7vtrUgp9(bh) {
     try {
-      this.page.result = JSON.parse(sessionStorage.getItem('user'));
-      bh = this.sd_He707OrmkxeYVodm(bh);
+      this.page.currentUser = JSON.parse(sessionStorage.getItem('user'));
+      bh = this.getUsersLimits(bh);
       //appendnew_next_sd_cwmv1n3H7vtrUgp9
       return bh;
     } catch (e) {
@@ -143,30 +126,23 @@ export class limitsComponent {
     }
   }
 
-  sd_He707OrmkxeYVodm(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_igYQZYB0wwxjPJIx(bh);
-      //appendnew_next_sd_He707OrmkxeYVodm
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_He707OrmkxeYVodm');
-    }
-  }
-
-  sd_igYQZYB0wwxjPJIx(bh) {
+  getUsersLimits(bh) {
     try {
       const page = this.page;
-      bh.body = {
-        // email: page.userDetails.email,
-        // username: page.usernameForm.value.username,
-        // collection: 'users'
-      };
-
-      bh.url1 = page.ssdUrl + `get-limit/${page.result._id}`;
-
+      bh.url = page.ssdUrl + `get-limit/${page.currentUser.email}`;
+      page.showSpinner = true;
+      // Init form
+      page.changeLimitsForm = new FormGroup({
+        transfers: new FormControl('', Validators.required),
+        payments: new FormControl('', [Validators.required]),
+        payAndClear: new FormControl('', [Validators.required]),
+        prepaid: new FormControl('', [Validators.required]),
+        sendMoney: new FormControl('', [Validators.required]),
+        vouchers: new FormControl('', [Validators.required]),
+        cardlessCashWithdrawal: new FormControl('', [Validators.required]),
+      });
       bh = this.sd_8BLGEcNOEIvq4nwb(bh);
-      //appendnew_next_sd_igYQZYB0wwxjPJIx
+      //appendnew_next_getUsersLimits
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_igYQZYB0wwxjPJIx');
@@ -176,15 +152,15 @@ export class limitsComponent {
   async sd_8BLGEcNOEIvq4nwb(bh) {
     try {
       let requestOptions = {
-        url: bh.url1,
+        url: bh.url,
         method: 'get',
         responseType: 'json',
         headers: {},
         params: {},
         body: bh.body,
       };
-      this.page.data = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_gJ5z914BxWPfHOJf(bh);
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_ZUexHrSTJi7SwpSG(bh);
       //appendnew_next_sd_8BLGEcNOEIvq4nwb
       return bh;
     } catch (e) {
@@ -192,79 +168,62 @@ export class limitsComponent {
     }
   }
 
-  sd_gJ5z914BxWPfHOJf(bh) {
+  sd_ZUexHrSTJi7SwpSG(bh) {
     try {
       const page = this.page;
-
+      page.showSpinner = false;
       page.changeLimitsForm = new FormGroup({
-        transfers: new FormControl(page.data.transfers, Validators.required),
-        payments: new FormControl(page.data.payments, [Validators.required]),
-        payAndClear: new FormControl(page.data.payAndClear, [
+        transfers: new FormControl(page.result.transfers, Validators.required),
+        payments: new FormControl(page.result.payments, [Validators.required]),
+        payAndClear: new FormControl(page.result.payAndClear, [
           Validators.required,
         ]),
-        prepaid: new FormControl(page.data.prepaid, [Validators.required]),
-        sendMoney: new FormControl(page.data.sendMoney, [Validators.required]),
-        vouchers: new FormControl(page.data.vouchers, [Validators.required]),
+        prepaid: new FormControl(page.result.prepaid, [Validators.required]),
+        sendMoney: new FormControl(page.result.sendMoney, [
+          Validators.required,
+        ]),
+        vouchers: new FormControl(page.result.vouchers, [Validators.required]),
         cardlessCashWithdrawal: new FormControl(
-          page.data.cardlessCashWithdrawal,
+          page.result.cardlessCashWithdrawal,
           [Validators.required]
         ),
       });
-
-      bh = this.sd_MLZqsWOuCTHErd5S(bh);
-      //appendnew_next_sd_gJ5z914BxWPfHOJf
+      //appendnew_next_sd_ZUexHrSTJi7SwpSG
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_gJ5z914BxWPfHOJf');
+      return this.errorHandler(bh, e, 'sd_ZUexHrSTJi7SwpSG');
     }
   }
 
-  sd_MLZqsWOuCTHErd5S(bh) {
+  async checkingInvalidFields(bh) {
     try {
-      this.page.transfers = this.page.data.transfers;
-      this.page.payAndClear = this.page.data.payAndClear;
-      this.page.payments = this.page.data.payments;
-      this.page.prepaid = this.page.data.prepaid;
-      this.page.sendMoney = this.page.data.sendMoney;
-      this.page.vouchers = this.page.data.vouchers;
-      this.page.cardlessCashWithdrawal = this.page.data.cardlessCashWithdrawal;
-      //appendnew_next_sd_MLZqsWOuCTHErd5S
+      if (
+        this.sdService.operators['true'](
+          this.page.changeLimitsForm.invalid,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_0UNTamidNxDbi7ES(bh);
+      } else {
+        bh = await this.sd_1P36hwFlABCvZYmR(bh);
+      }
+
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_MLZqsWOuCTHErd5S');
-    }
-  }
-
-  async sd_b0Qu37P5ojbtrECl(bh) {
-    try {
-      const commonInstance: common = this.__page_injector__.get(common);
-
-      let outputVariables = await commonInstance.goBack();
-
-      //appendnew_next_sd_b0Qu37P5ojbtrECl
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_b0Qu37P5ojbtrECl');
-    }
-  }
-
-  sd_ZPC7PjaNuuTiIJNA(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_1P36hwFlABCvZYmR(bh);
-      //appendnew_next_sd_ZPC7PjaNuuTiIJNA
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_ZPC7PjaNuuTiIJNA');
+      return this.errorHandler(bh, e, 'sd_9PK2X8VQgEcrYuzL');
     }
   }
 
   sd_1P36hwFlABCvZYmR(bh) {
     try {
       const page = this.page;
+      page.showSpinner = true;
+      bh.url = `${page.ssdUrl}update-limits`;
+
       bh.input.form = {
-        email: page.data.email,
-        collection: 'users',
+        email: page.currentUser.email,
         cardlessCashWithdrawal: bh.input.form.value.cardlessCashWithdrawal,
         payAndClear: bh.input.form.value.payAndClear,
         payments: bh.input.form.value.payments,
@@ -273,14 +232,6 @@ export class limitsComponent {
         transfers: bh.input.form.value.transfers,
         vouchers: bh.input.form.value.vouchers,
       };
-
-      bh.input.form2 = {
-        collection: 'limits',
-      };
-
-      bh.url2 = `${page.ssdUrl}update-limits`;
-      bh.url3 = `${page.ssdUrl}get-limit/${page.data._id}`;
-
       bh = this.sd_5iTDLklc90d8NiC2(bh);
       //appendnew_next_sd_1P36hwFlABCvZYmR
       return bh;
@@ -292,7 +243,7 @@ export class limitsComponent {
   async sd_5iTDLklc90d8NiC2(bh) {
     try {
       let requestOptions = {
-        url: bh.url2,
+        url: bh.url,
         method: 'put',
         responseType: 'json',
         headers: {},
@@ -300,7 +251,7 @@ export class limitsComponent {
         body: bh.input.form,
       };
       this.page.data = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_XD8AoTvru87ILYsy(bh);
+      bh = this.sd_Gs1408wMiAnwWO4l(bh);
       //appendnew_next_sd_5iTDLklc90d8NiC2
       return bh;
     } catch (e) {
@@ -308,34 +259,29 @@ export class limitsComponent {
     }
   }
 
-  async sd_XD8AoTvru87ILYsy(bh) {
+  sd_Gs1408wMiAnwWO4l(bh) {
     try {
-      let requestOptions = {
-        url: bh.url3,
-        method: 'get',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: bh.input.form2,
-      };
-      bh.result = await this.sdService.nHttpRequest(requestOptions);
+      const page = this.page;
+      page.showSpinner = false;
       bh = this.sd_UxLBy8bqL5HenyXM(bh);
-      //appendnew_next_sd_XD8AoTvru87ILYsy
+      //appendnew_next_sd_Gs1408wMiAnwWO4l
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_XD8AoTvru87ILYsy');
+      return this.errorHandler(bh, e, 'sd_Gs1408wMiAnwWO4l');
     }
   }
 
   sd_UxLBy8bqL5HenyXM(bh) {
     try {
-      this.__page_injector__.get(MatSnackBar).open('Limits Changed', 'OK', {
-        duration: 4000,
-        direction: 'ltr',
-        horizontalPosition: 'center',
-        verticalPosition: 'bottom',
-      });
-      bh = this.sd_FuYXdmyecIa2TJMC(bh);
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Limits updated successfully!', 'OK', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_80Om8Q1LuwD37QXu(bh);
       //appendnew_next_sd_UxLBy8bqL5HenyXM
       return bh;
     } catch (e) {
@@ -343,19 +289,33 @@ export class limitsComponent {
     }
   }
 
-  async sd_FuYXdmyecIa2TJMC(bh) {
+  async sd_80Om8Q1LuwD37QXu(bh) {
     try {
-      const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/settings');
-      await this.__page_injector__
-        .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
-      //appendnew_next_sd_FuYXdmyecIa2TJMC
+      const commonInstance: common = this.__page_injector__.get(common);
+
+      let outputVariables = await commonInstance.goBack();
+
+      //appendnew_next_sd_80Om8Q1LuwD37QXu
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_FuYXdmyecIa2TJMC');
+      return this.errorHandler(bh, e, 'sd_80Om8Q1LuwD37QXu');
+    }
+  }
+
+  sd_0UNTamidNxDbi7ES(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('All fields are required', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_0UNTamidNxDbi7ES
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0UNTamidNxDbi7ES');
     }
   }
 

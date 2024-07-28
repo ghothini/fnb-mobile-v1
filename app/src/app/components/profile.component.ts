@@ -89,10 +89,21 @@ export class profileComponent {
 
   sd_4eAqkKdvjjOXSJWW(bh) {
     try {
+      bh = this.sd_hdNds2pTAjvRdIiH(bh);
       //appendnew_next_sd_4eAqkKdvjjOXSJWW
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_4eAqkKdvjjOXSJWW');
+    }
+  }
+
+  sd_hdNds2pTAjvRdIiH(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('My Profile'));
+      //appendnew_next_sd_hdNds2pTAjvRdIiH
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hdNds2pTAjvRdIiH');
     }
   }
 

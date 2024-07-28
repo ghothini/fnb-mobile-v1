@@ -23,7 +23,7 @@
         "y": 60,
         "wires": [
             [
-                "sd_dxrVY9Rzxi5uTvHQ"
+                "sd_GHFhBt0oZxdnQMSY"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -54,45 +54,42 @@
                     "type": "literal",
                     "value": "/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@]).{8,30}$/"
                 }
+            },
+            {
+                "textIp": "currentUser",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "ssdUrl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "showSpinner",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
             }
         ],
         "functionName": "sd_nOdVft6eatxx7Ukt",
         "category": "Function",
-        "x": 345,
+        "x": 245,
         "y": 60,
         "wires": [
             [
-                "sd_uRHW1CRPVztMBH4M"
+                "sd_sGlzf6ICld962W6M"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "usernameComponent",
         "generated": true
-    },
-    {
-        "id": "sd_yDGmXN7W9fMVyVhN",
-        "type": "PageStart",
-        "z": "sd_bHLkBtLZaWdcrwCz",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "Go Back",
-        "outputs": 1,
-        "inputVariables": [],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "goBack",
-        "category": "General",
-        "x": 85,
-        "y": 280,
-        "wires": [
-            [
-                "sd_w7y6dMI2jC8qrxyG"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "usernameComponent"
     },
     {
         "id": "sd_dxrVY9Rzxi5uTvHQ",
@@ -111,15 +108,15 @@
         "value": {},
         "resultMapping": {
             "type": "this.page",
-            "value": "userDetails"
+            "value": "currentUser"
         },
         "functionName": "sd_dxrVY9Rzxi5uTvHQ",
         "category": "Storage",
-        "x": 145,
+        "x": 445,
         "y": 60,
         "wires": [
             [
-                "sd_GHFhBt0oZxdnQMSY"
+                "sd_uRHW1CRPVztMBH4M"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -171,7 +168,7 @@
         "serviceDesignerType": "pages",
         "functionName": "sd_GHFhBt0oZxdnQMSY",
         "category": "Function",
-        "x": 245,
+        "x": 145,
         "y": 60,
         "wires": [
             [
@@ -190,54 +187,11 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.usernameForm = new FormGroup({\n    username: new FormControl('', [Validators.required, Validators.pattern(page.usernamePattern)]),\n}) \n\n\nconsole.log(page.usernameForm)\n\nconsole.log(\"userDetailss:\",page.userDetails)\nconsole.log(page.usernameForm)\n// page.parsedStorage = JSON.parse(page.loggedInUser)\n// console.log(\"parsed storage:\", page.parsedStorage)",
+        "script": "page.usernameForm = new FormGroup({\n    username: new FormControl(page.currentUser.username, [Validators.required]),\n})",
         "functionName": "sd_uRHW1CRPVztMBH4M",
         "category": "Function",
-        "x": 445,
+        "x": 545,
         "y": 60,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "usernameComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_w7y6dMI2jC8qrxyG",
-        "type": "PageCallService",
-        "z": "sd_bHLkBtLZaWdcrwCz",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 1,
-        "isValidNode": true,
-        "noerr": 0,
-        "service": {
-            "id": "sd_O7BgeFkazhosv8N2",
-            "type": "tab",
-            "createdDate": "2024-05-14T08:16:55.985Z",
-            "label": "common",
-            "disabled": false,
-            "info": "",
-            "functionSeq": 0,
-            "tabType": "client"
-        },
-        "flow": {
-            "flowId": "sd_jJRXnjTcMQmcijs6",
-            "flowName": "goBack"
-        },
-        "inputVariables": [],
-        "outputMapping": [],
-        "serviceImportPath": "app/sd-services/common",
-        "startName": "goBack",
-        "inputParams": [],
-        "accept_bh": false,
-        "accept_csd": true,
-        "functionName": "sd_w7y6dMI2jC8qrxyG",
-        "category": "General",
-        "x": 198,
-        "y": 278.1979217529297,
         "wires": [
             []
         ],
@@ -252,27 +206,18 @@
         "z": "sd_bHLkBtLZaWdcrwCz",
         "viewType": "pages",
         "nodeType": "start",
-        "name": "changeUsername",
+        "name": "Submit",
         "outputs": 1,
-        "inputVariables": [
-            {
-                "key": "form",
-                "defaultValue": {
-                    "type": "any",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
+        "inputVariables": [],
         "localVariables": [],
         "flow_type": "sync",
-        "functionName": "changeUsername",
+        "functionName": "submit",
         "category": "General",
         "x": 65,
         "y": 380,
         "wires": [
             [
-                "sd_sGlzf6ICld962W6M"
+                "sd_C2YdxHcp1LpP8prO"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -298,33 +243,11 @@
         ],
         "functionName": "sd_sGlzf6ICld962W6M",
         "category": "General",
-        "x": 185,
-        "y": 380,
+        "x": 345,
+        "y": 60,
         "wires": [
             [
-                "sd_CHyEx4ZQtCVvlWFH"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "usernameComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_CHyEx4ZQtCVvlWFH",
-        "type": "Script",
-        "z": "sd_bHLkBtLZaWdcrwCz",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "bh.body = {\n    email: page.userDetails.email,\n    username: page.usernameForm.value.username,\n    collection: 'users'\n};\n\n\nbh.url = page.ssdUrl + 'update';\nbh.url2 = page.ssdUrl + `get-user/${page.userDetails.email}`;\n\n\n",
-        "functionName": "sd_CHyEx4ZQtCVvlWFH",
-        "category": "Function",
-        "x": 265,
-        "y": 380,
-        "wires": [
-            [
-                "sd_wYISw7qqKxA6Xq8m"
+                "sd_dxrVY9Rzxi5uTvHQ"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -340,7 +263,6 @@
         "nodeType": "flow",
         "name": "",
         "method": "put",
-        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -348,10 +270,8 @@
             "mapVarValue": "url"
         },
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
-        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -367,41 +287,17 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
-        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_wYISw7qqKxA6Xq8m",
         "category": "HTTP",
-        "x": 345,
+        "x": 645,
         "y": 380,
         "wires": [
             [
-                "sd_fNhq50989haHDjT8"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "usernameComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_Qnq8xnGbHoHOLnWD",
-        "type": "Script",
-        "z": "sd_bHLkBtLZaWdcrwCz",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "console.log(\"y\",page.result)\n\nconsole.log(\"x\",page.data)\n\n",
-        "functionName": "sd_Qnq8xnGbHoHOLnWD",
-        "category": "Function",
-        "x": 525,
-        "y": 380,
-        "wires": [
-            [
-                "sd_PPlEqPGhsGPk0D3o"
+                "sd_kIQus7sqVt4JlcDL"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -415,7 +311,7 @@
         "z": "sd_bHLkBtLZaWdcrwCz",
         "viewType": "client-pages",
         "nodeType": "flow",
-        "name": "",
+        "name": "Update Current User",
         "operationType": "setItem",
         "storageType": "sessionStorage",
         "outputs": 1,
@@ -425,12 +321,12 @@
         },
         "value": {
             "type": "this.page",
-            "value": "data"
+            "value": "currentUser"
         },
         "resultMapping": {},
-        "functionName": "sd_PPlEqPGhsGPk0D3o",
+        "functionName": "updateCurrentUser",
         "category": "Storage",
-        "x": 605,
+        "x": 845,
         "y": 380,
         "wires": [
             [
@@ -451,7 +347,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "Username Changed"
+            "value": "Username changed successfully!"
         },
         "action": {
             "type": "str",
@@ -459,12 +355,10 @@
         },
         "duration": {
             "type": "num",
-            "value": "4000"
+            "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -472,7 +366,7 @@
         "direction": "ltr",
         "functionName": "sd_BdkXBLh5tBYukSLx",
         "category": "General",
-        "x": 700,
+        "x": 945,
         "y": 380,
         "wires": [
             []
@@ -483,53 +377,216 @@
         "generated": true
     },
     {
-        "id": "sd_fNhq50989haHDjT8",
-        "type": "HttpRequest",
+        "id": "sd_C2YdxHcp1LpP8prO",
+        "type": "Script",
+        "z": "sd_bHLkBtLZaWdcrwCz",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.isEdittedName = false;\nif (page.usernameForm.value.username !== page.currentUser.username) {\n    bh.isEdittedName = true;\n}",
+        "functionName": "sd_C2YdxHcp1LpP8prO",
+        "category": "Function",
+        "x": 165,
+        "y": 380,
+        "wires": [
+            [
+                "sd_4ZwmHMnhOLsTC6Gx"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "usernameComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_URdKdlcrBtv6d2Sn",
+        "type": "PageSwitch",
+        "z": "sd_bHLkBtLZaWdcrwCz",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "isEdittedName",
+        "propertyType": "bh",
+        "propertyGv": "bh.isEdittedName",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_URdKdlcrBtv6d2Sn",
+        "category": "Function",
+        "x": 405,
+        "y": 380,
+        "wires": [
+            [
+                "sd_CHyEx4ZQtCVvlWFH"
+            ],
+            [
+                "sd_gojr8id6OsIyxozo"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "usernameComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_gojr8id6OsIyxozo",
+        "type": "SnackBar",
         "z": "sd_bHLkBtLZaWdcrwCz",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "method": "get",
-        "methodMapping": "",
-        "methodMappingObj": {},
-        "urlMapping": "bh.url2",
-        "urlMappingObj": {
-            "mapVarType": "bh",
-            "mapVarValue": "url2"
+        "message": {
+            "type": "str",
+            "value": "Username is not unique!"
         },
-        "ret": "json",
-        "retMapping": "",
-        "retMappingObj": {},
-        "observe": "",
-        "observeMapping": "",
-        "observeMappingObj": {},
-        "reportProgress": false,
-        "withCreds": false,
-        "reqBody": "bh.body",
-        "reqBodyObj": {
-            "mapVarType": "bh",
-            "mapVarValue": "body"
+        "action": {
+            "type": "str",
+            "value": "Ok"
         },
-        "resultMapping": "this.page.data",
-        "resultMappingObj": {
-            "mapVarType": "this.page",
-            "mapVarValue": "data"
+        "duration": {
+            "type": "num",
+            "value": "3000"
         },
-        "headers": {},
-        "headersObj": [],
-        "headerMapping": "",
-        "headerMappingObj": {},
-        "params": {},
-        "paramsObj": [],
-        "paramMapping": "",
-        "paramMappingObj": {},
-        "functionName": "sd_fNhq50989haHDjT8",
-        "category": "HTTP",
-        "x": 425,
+        "horizontalPosition": "center",
+        "verticalPosition": "bottom",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_gojr8id6OsIyxozo",
+        "category": "General",
+        "x": 505,
+        "y": 460,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "usernameComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_4ZwmHMnhOLsTC6Gx",
+        "type": "PageSwitch",
+        "z": "sd_bHLkBtLZaWdcrwCz",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "usernameForm.invalid",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.usernameForm.invalid",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_4ZwmHMnhOLsTC6Gx",
+        "category": "Function",
+        "x": 265,
         "y": 380,
         "wires": [
             [
-                "sd_Qnq8xnGbHoHOLnWD"
+                "sd_URdKdlcrBtv6d2Sn"
+            ],
+            [
+                "sd_aKj8O2pj357xkldt"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "usernameComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_aKj8O2pj357xkldt",
+        "type": "SnackBar",
+        "z": "sd_bHLkBtLZaWdcrwCz",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Field is required!"
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "verticalPosition": "bottom",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_aKj8O2pj357xkldt",
+        "category": "General",
+        "x": 365,
+        "y": 480,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "usernameComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_CHyEx4ZQtCVvlWFH",
+        "type": "Script",
+        "z": "sd_bHLkBtLZaWdcrwCz",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.showSpinner = true;\nbh.url = page.ssdUrl + 'update';\nbh.body = {\n    email: page.currentUser.email,\n    username: page.usernameForm.value.username,\n    collection: 'users'\n};\n\n\n",
+        "functionName": "sd_CHyEx4ZQtCVvlWFH",
+        "category": "Function",
+        "x": 545,
+        "y": 380,
+        "wires": [
+            [
+                "sd_wYISw7qqKxA6Xq8m"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "usernameComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_kIQus7sqVt4JlcDL",
+        "type": "Script",
+        "z": "sd_bHLkBtLZaWdcrwCz",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.showSpinner = false;\npage.currentUser.username = page.usernameForm.value.username\n",
+        "functionName": "sd_kIQus7sqVt4JlcDL",
+        "category": "Function",
+        "x": 745,
+        "y": 380,
+        "wires": [
+            [
+                "sd_PPlEqPGhsGPk0D3o"
             ]
         ],
         "__n_excludedFromValidation__": {},

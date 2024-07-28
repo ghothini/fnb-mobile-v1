@@ -346,10 +346,21 @@ export class bankComponent {
   sd_27vHPFM3aNGZbRyw(bh) {
     try {
       this.page.loggedInUser = JSON.parse(sessionStorage.getItem('user'));
+      bh = this.sd_AaO5z7pkvysoIdfz(bh);
       //appendnew_next_sd_27vHPFM3aNGZbRyw
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_27vHPFM3aNGZbRyw');
+    }
+  }
+
+  sd_AaO5z7pkvysoIdfz(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Bank'));
+      //appendnew_next_sd_AaO5z7pkvysoIdfz
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AaO5z7pkvysoIdfz');
     }
   }
 

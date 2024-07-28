@@ -4,7 +4,12 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
-import { FormControl, FormGroup, Validators } from '@angular/forms'; //_splitter_
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -29,6 +34,7 @@ export class change_password2Component {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
+    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 
@@ -87,6 +93,21 @@ export class change_password2Component {
       return this.errorHandler(bh, e, 'sd_mRU5Me3WOJaqeJFO');
     }
   }
+
+  validateMaxInputLength(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_o7sUXJtiwRKaxo9s(bh);
+      //appendnew_next_validateMaxInputLength
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_cSSPFhKFkuLZaSz9');
+    }
+  }
   //appendnew_flow_change_password2Component_start
 
   async sd_NJLoRNdTFbFuMuGn(bh) {
@@ -127,7 +148,8 @@ export class change_password2Component {
     try {
       this.page.changepasswordForm2 = undefined;
       this.page.passwordPattern =
-        /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@]).{8,30}$/;
+        /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@]).{8,29}$/;
+      this.page.showSpinner = false;
       bh = this.sd_NZeG9pkqJCcwcdw5(bh);
       //appendnew_next_sd_QMsn55kIMtHvV9Dc
       return bh;
@@ -182,7 +204,7 @@ export class change_password2Component {
       ) {
         bh = this.sd_CZGqbJsH8ZD4VQXi(bh);
       } else {
-        bh = await this.sd_ocJa4sFCTFksJEyg(bh);
+        bh = await this.sd_4yzVYLxzwwULMUAY(bh);
       }
 
       return bh;
@@ -228,6 +250,7 @@ export class change_password2Component {
       const page = this.page;
       page.userDetails.password = bh.input.form.controls.password.value;
       page.userDetails.firstTimeLogin = false;
+      page.showSpinner = true;
 
       bh.url = page.ssdUrl + 'reset-password';
       bh.url2 = page.ssdUrl + `get-user/${page.userDetails.email}`;
@@ -270,11 +293,23 @@ export class change_password2Component {
         body: bh.input.body,
       };
       bh.results = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_hCAg2pzaW9i92uyW(bh);
+      bh = this.sd_nK9lnAjxklPxowhb(bh);
       //appendnew_next_sd_L3eStlk9GE2XLhky
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_L3eStlk9GE2XLhky');
+    }
+  }
+
+  sd_nK9lnAjxklPxowhb(bh) {
+    try {
+      const page = this.page;
+      page.showSpinner = false;
+      bh = this.sd_hCAg2pzaW9i92uyW(bh);
+      //appendnew_next_sd_nK9lnAjxklPxowhb
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nK9lnAjxklPxowhb');
     }
   }
 
@@ -340,18 +375,6 @@ export class change_password2Component {
     }
   }
 
-  sd_ocJa4sFCTFksJEyg(bh) {
-    try {
-      const page = this.page;
-      console.log('false');
-      bh = this.sd_4yzVYLxzwwULMUAY(bh);
-      //appendnew_next_sd_ocJa4sFCTFksJEyg
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_ocJa4sFCTFksJEyg');
-    }
-  }
-
   sd_4yzVYLxzwwULMUAY(bh) {
     try {
       this.__page_injector__
@@ -366,6 +389,29 @@ export class change_password2Component {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_4yzVYLxzwwULMUAY');
+    }
+  }
+
+  sd_o7sUXJtiwRKaxo9s(bh) {
+    try {
+      const page = this.page;
+      if (
+        page.changepasswordForm2.value.password.toString().length > 29 ||
+        page.changepasswordForm2.value.confirmPassword.toString().length > 29
+      ) {
+        page.changepasswordForm2.setValue({
+          password: page.changepasswordForm2.value.password
+            .toString()
+            .substr(0, 29),
+          confirmPassword: page.changepasswordForm2.value.confirmPassword
+            .toString()
+            .substr(0, 29),
+        });
+      }
+      //appendnew_next_sd_o7sUXJtiwRKaxo9s
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_o7sUXJtiwRKaxo9s');
     }
   }
 

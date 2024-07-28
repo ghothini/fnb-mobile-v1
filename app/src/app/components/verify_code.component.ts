@@ -133,6 +133,7 @@ export class verify_codeComponent {
     try {
       this.page.codeObject = { a: '', b: '', c: '', d: '' };
       this.page.passwordForm = undefined;
+      this.page.showSpinner = false;
       bh = this.sd_rrlkQXrIDUo9u0rB(bh);
       //appendnew_next_sd_JnOutHTCg72NGJIq
       return bh;
@@ -165,7 +166,7 @@ export class verify_codeComponent {
       const commonInstance: common = this.__page_injector__.get(common);
       this.page.code = commonInstance['random'];
       this.page.email = commonInstance['email'];
-      this.sd_u8On1OFZuKXRt8YO(bh);
+      bh = this.sd_BpMqN6E65hBQ3OTp(bh);
       //appendnew_next_sd_Ef2QxF9xdJ6GlLqn
       return bh;
     } catch (e) {
@@ -173,13 +174,13 @@ export class verify_codeComponent {
     }
   }
 
-  sd_u8On1OFZuKXRt8YO(bh) {
+  sd_BpMqN6E65hBQ3OTp(bh) {
     try {
-      console.log(new Date().toLocaleTimeString(), this.page.code);
-      //appendnew_next_sd_u8On1OFZuKXRt8YO
+      localStorage.setItem('selectedPage', JSON.stringify('Verification Code'));
+      //appendnew_next_sd_BpMqN6E65hBQ3OTp
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_u8On1OFZuKXRt8YO');
+      return this.errorHandler(bh, e, 'sd_BpMqN6E65hBQ3OTp');
     }
   }
 
@@ -234,7 +235,7 @@ export class verify_codeComponent {
           undefined
         )
       ) {
-        bh = this.sd_syhqL8DbCmWvp5qY(bh);
+        bh = this.sd_yYnwvUV5TR3cXsug(bh);
       } else {
         bh = await this.sd_07Za3yDeFoDhz1NB(bh);
       }
@@ -245,19 +246,60 @@ export class verify_codeComponent {
     }
   }
 
+  sd_yYnwvUV5TR3cXsug(bh) {
+    try {
+      const page = this.page;
+      bh.action = 'Forgot Password';
+      bh = this.sd_bVwUh6HpYceEc0qL(bh);
+      //appendnew_next_sd_yYnwvUV5TR3cXsug
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_yYnwvUV5TR3cXsug');
+    }
+  }
+
+  sd_bVwUh6HpYceEc0qL(bh) {
+    try {
+      sessionStorage.setItem('action', JSON.stringify(bh.action));
+      bh = this.sd_syhqL8DbCmWvp5qY(bh);
+      //appendnew_next_sd_bVwUh6HpYceEc0qL
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_bVwUh6HpYceEc0qL');
+    }
+  }
+
   async sd_syhqL8DbCmWvp5qY(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/change-password2');
+        this.sdService.getPathAndQParamsObj('/change-password');
       await this.__page_injector__
         .get(Router)
         .navigate([this.sdService.formatPathWithParams(path, undefined)], {
           queryParams: Object.assign(qprm, ''),
         });
+      bh = this.sd_8SYIRhH5NBwbV1cb(bh);
       //appendnew_next_sd_syhqL8DbCmWvp5qY
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_syhqL8DbCmWvp5qY');
+    }
+  }
+
+  sd_8SYIRhH5NBwbV1cb(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Successfully authenticated', 'OK', {
+          duration: 2000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_8SYIRhH5NBwbV1cb
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8SYIRhH5NBwbV1cb');
     }
   }
 
@@ -307,6 +349,7 @@ export class verify_codeComponent {
   sd_gTeUoaunEY4SEmNI(bh) {
     try {
       const page = this.page;
+      page.showSpinner = true;
       bh.body = {
         email: page.email,
         otp: page.random,
@@ -335,11 +378,23 @@ export class verify_codeComponent {
         body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_XPR8zTL16v7wobXG(bh);
+      bh = this.sd_8GvoEO58wXpxY8Ns(bh);
       //appendnew_next_sd_afKuwnXlNLvaV6aQ
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_afKuwnXlNLvaV6aQ');
+    }
+  }
+
+  sd_8GvoEO58wXpxY8Ns(bh) {
+    try {
+      const page = this.page;
+      page.showSpinner = false;
+      bh = this.sd_XPR8zTL16v7wobXG(bh);
+      //appendnew_next_sd_8GvoEO58wXpxY8Ns
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8GvoEO58wXpxY8Ns');
     }
   }
 
@@ -356,12 +411,14 @@ export class verify_codeComponent {
 
   sd_jhaRzdlpZkZv36Oc(bh) {
     try {
-      this.__page_injector__.get(MatSnackBar).open('Email Resent', 'OK', {
-        duration: 5000,
-        direction: 'ltr',
-        horizontalPosition: 'center',
-        verticalPosition: 'bottom',
-      });
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Email with OTP resent', 'OK', {
+          duration: 5000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
       this.sd_TlD2ZlPTBdAsgIdY(bh);
       //appendnew_next_sd_jhaRzdlpZkZv36Oc
       return bh;

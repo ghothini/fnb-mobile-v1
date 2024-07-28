@@ -407,5 +407,97 @@
         "generateNext": false,
         "serviceName": "common",
         "generated": true
+    },
+    {
+        "id": "sd_fBcbEqP7uTw4Uren",
+        "type": "Start",
+        "z": "sd_O7BgeFkazhosv8N2",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "Set Password Change Follow Up",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "action",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "setPasswordChangeFollowUp",
+        "category": "General",
+        "x": 105,
+        "y": 340,
+        "wires": [
+            [
+                "sd_1fpBSnGEOwIQ0dCy"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "common"
+    },
+    {
+        "id": "sd_1fpBSnGEOwIQ0dCy",
+        "type": "ServiceVariables",
+        "z": "sd_O7BgeFkazhosv8N2",
+        "viewType": "client-server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "isDepositAfterChange",
+                "typedIpValue": {
+                    "type": "bh.input",
+                    "value": "action"
+                }
+            }
+        ],
+        "functionName": "sd_1fpBSnGEOwIQ0dCy",
+        "category": "Function",
+        "x": 265,
+        "y": 340,
+        "wires": [
+            [
+                "sd_G8MDIPdcDdzpS8V1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "common",
+        "generated": true
+    },
+    {
+        "id": "sd_G8MDIPdcDdzpS8V1",
+        "type": "Log",
+        "z": "sd_O7BgeFkazhosv8N2",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "bh.input.isDepositAfterChange",
+        "functionName": "sd_G8MDIPdcDdzpS8V1",
+        "category": "General",
+        "x": 365,
+        "y": 340,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "bh.input",
+                "value": "isDepositAfterChange",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "common",
+        "generated": true
     }
 ]
