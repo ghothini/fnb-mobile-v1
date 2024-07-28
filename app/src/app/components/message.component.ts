@@ -74,10 +74,21 @@ export class messageComponent {
 
   sd_9JtbIKudyaPWMYDi(bh) {
     try {
+      bh = this.sd_04GhcBjpkaK8EiPp(bh);
       //appendnew_next_sd_9JtbIKudyaPWMYDi
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_9JtbIKudyaPWMYDi');
+    }
+  }
+
+  sd_04GhcBjpkaK8EiPp(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Message'));
+      //appendnew_next_sd_04GhcBjpkaK8EiPp
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_04GhcBjpkaK8EiPp');
     }
   }
 

@@ -46,7 +46,9 @@
         "x": 205,
         "y": 80,
         "wires": [
-            []
+            [
+                "sd_04GhcBjpkaK8EiPp"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -112,6 +114,37 @@
         "category": "General",
         "x": 185,
         "y": 220,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "messageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_04GhcBjpkaK8EiPp",
+        "type": "Storage",
+        "z": "sd_xhXuov1dDZlj38yI",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Message"
+        },
+        "resultMapping": {},
+        "functionName": "sd_04GhcBjpkaK8EiPp",
+        "category": "Storage",
+        "x": 305,
+        "y": 80,
         "wires": [
             []
         ],

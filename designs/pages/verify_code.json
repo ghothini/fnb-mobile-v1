@@ -203,35 +203,9 @@
         "y": 80,
         "wires": [
             [
-                "sd_u8On1OFZuKXRt8YO"
+                "sd_BpMqN6E65hBQ3OTp"
             ]
         ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "verify_codeComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_u8On1OFZuKXRt8YO",
-        "type": "Log",
-        "z": "sd_O5utXTlOeL3NSqi0",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 0,
-        "logObject": "this.page.code",
-        "functionName": "sd_u8On1OFZuKXRt8YO",
-        "category": "General",
-        "x": 485,
-        "y": 80,
-        "wires": [],
-        "__ssdTypeInputs__": {
-            "logObject": {
-                "type": "this.page",
-                "value": "code",
-                "constant": false
-            }
-        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "verify_codeComponent",
@@ -416,6 +390,13 @@
         "nodeType": "flow",
         "name": "",
         "path": "/change-password",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_syhqL8DbCmWvp5qY",
         "category": "Navigation",
         "x": 565,
@@ -942,7 +923,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.isDepositAfterChange = true;",
+        "script": "bh.action = 'Forgot Password';",
         "functionName": "sd_yYnwvUV5TR3cXsug",
         "category": "Function",
         "x": 365,
@@ -969,11 +950,11 @@
         "outputs": 1,
         "key": {
             "type": "str",
-            "value": "isDepositAfterChange"
+            "value": "action"
         },
         "value": {
             "type": "bh",
-            "value": "isDepositAfterChange"
+            "value": "action"
         },
         "resultMapping": {},
         "functionName": "sd_bVwUh6HpYceEc0qL",
@@ -984,6 +965,37 @@
             [
                 "sd_syhqL8DbCmWvp5qY"
             ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "verify_codeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_BpMqN6E65hBQ3OTp",
+        "type": "Storage",
+        "z": "sd_O5utXTlOeL3NSqi0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Verification Code"
+        },
+        "resultMapping": {},
+        "functionName": "sd_BpMqN6E65hBQ3OTp",
+        "category": "Storage",
+        "x": 465,
+        "y": 80,
+        "wires": [
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

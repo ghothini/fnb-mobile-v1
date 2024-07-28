@@ -1,10 +1,6 @@
 {
     "routes": [
         {
-            "path": "bank",
-            "component": "bankComponent"
-        },
-        {
             "path": "view-transactions",
             "component": "view_transactionsComponent"
         },
@@ -42,15 +38,33 @@
         },
         {
             "path": "home",
-            "component": "homeComponent"
-        },
-        {
-            "path": "message",
-            "component": "view_transactionsComponent"
-        },
-        {
-            "path": "profile",
-            "component": "profileComponent"
+            "component": "homeComponent",
+            "children": [
+                {
+                    "path": "bank",
+                    "component": "bankComponent"
+                },
+                {
+                    "path": "message",
+                    "component": "messageComponent"
+                },
+                {
+                    "path": "profile",
+                    "component": "profileComponent"
+                },
+                {
+                    "path": "login",
+                    "component": "loginComponent"
+                },
+                {
+                    "path": "forgot-password",
+                    "component": "forgot_passwordComponent"
+                },
+                {
+                    "path": "verify-code",
+                    "component": "verify_codeComponent"
+                }
+            ]
         },
         {
             "component": "personal_infoComponent",
@@ -81,10 +95,6 @@
             "component": "limitsComponent"
         },
         {
-            "path": "login",
-            "component": "loginComponent"
-        },
-        {
             "path": "deposit",
             "component": "deposit_ownComponent"
         },
@@ -95,14 +105,6 @@
         {
             "path": "menu-dialog",
             "component": "menu_dialogComponent"
-        },
-        {
-            "path": "forgot-password",
-            "component": "forgot_passwordComponent"
-        },
-        {
-            "path": "verify-code",
-            "component": "verify_codeComponent"
         },
         {
             "path": "coming-soon",
@@ -130,7 +132,7 @@
         },
         {
             "path": "''",
-            "redirectTo": "landing",
+            "redirectTo": "home",
             "pathMatch": "full",
             "default": true
         },

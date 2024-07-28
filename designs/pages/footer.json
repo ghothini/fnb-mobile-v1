@@ -19,15 +19,23 @@
         "name": "",
         "inputVariables": [],
         "localVariables": [],
-        "outputVariables": [],
+        "outputVariables": [
+            {
+                "key": "selectedPage",
+                "defaultValue": {
+                    "type": "any",
+                    "value": null
+                }
+            }
+        ],
         "pageVariables": [],
         "functionName": "sd_uxFh8suVjjtt5uuB",
         "category": "Lifecycle Events",
-        "x": 45,
+        "x": 85,
         "y": 80,
         "wires": [
             [
-                "sd_uG476h0mGQexMXjY"
+                "sd_jF8y0IaE8zFwZjJz"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -46,19 +54,21 @@
         "operation": "set",
         "globalVariables": [
             {
-                "textIp": "footerOptions",
+                "textIp": "footerTabs",
                 "typedIpValue": {
-                    "type": "bh",
-                    "value": "footerOptions"
+                    "type": "this.page",
+                    "value": ""
                 }
             }
         ],
         "functionName": "sd_jF8y0IaE8zFwZjJz",
         "category": "Function",
-        "x": 265,
+        "x": 205,
         "y": 80,
         "wires": [
-            []
+            [
+                "sd_uG476h0mGQexMXjY"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -72,15 +82,13 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.footerOptions = [\n    { label: 'Home', image: \"\", route: '/login' },\n    { label: 'Message', image: \"/Web/Images/message.PNG\", route: '/login' },\n    { label: 'Contact Us', image: \"/Web/Images/contact-us.PNG\", route: '/login' },\n    { label: 'My Offers', image: \"/Web/Images/my-offers.PNG\", route: '/login' } \n    ]",
+        "script": "page.footerTabs = [\n    { label: 'Home', image: \"Web/Image Icons/home.png\", route: '/home',title: 'FNB' },\n    { label: 'Bank', image: \"Web/Image Icons/credit-card.png\", route: 'home/bank',title: 'Bank' },\n    { label: 'Message', image: \"Web/Image Icons/messages.png\", route: 'home/message',title: 'Message' },\n    { label: 'Profile', image: \"Web/Image Icons/user.png\", route: 'home/profile',title: 'My Profile' }\n]",
         "functionName": "sd_uG476h0mGQexMXjY",
         "category": "Function",
-        "x": 145,
+        "x": 325,
         "y": 80,
         "wires": [
-            [
-                "sd_jF8y0IaE8zFwZjJz"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -118,8 +126,8 @@
         "flow_type": "sync",
         "functionName": "openTheDialog",
         "category": "General",
-        "x": 45,
-        "y": 220,
+        "x": 85,
+        "y": 180,
         "wires": [
             [
                 "sd_bad57GFHDwVmTSqh"
@@ -139,8 +147,8 @@
         "script": "bh.data = {\n    name: \"This is a sample dialog window\"\n}",
         "functionName": "sd_bad57GFHDwVmTSqh",
         "category": "Function",
-        "x": 145,
-        "y": 220,
+        "x": 205,
+        "y": 180,
         "wires": [
             [
                 "sd_owqwWGEntlJElkW9"
@@ -187,8 +195,8 @@
         "resultMapping": "this.page",
         "functionName": "sd_owqwWGEntlJElkW9",
         "category": "Dialog",
-        "x": 240,
-        "y": 220,
+        "x": 325,
+        "y": 180,
         "wires": [
             [],
             [],
@@ -302,6 +310,324 @@
                 "constant": false
             }
         },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "footerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_7brMOsgab8Q1kxhs",
+        "type": "PageStart",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Route user",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "tab",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "routeUser",
+        "category": "General",
+        "x": 85,
+        "y": 300,
+        "wires": [
+            [
+                "sd_nqfxKKcjBfmB0cZU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "footerComponent"
+    },
+    {
+        "id": "sd_nqfxKKcjBfmB0cZU",
+        "type": "UseDependency",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Router",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "router"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/router",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_nqfxKKcjBfmB0cZU",
+        "category": "Function",
+        "x": 180,
+        "y": 300,
+        "wires": [
+            [
+                "sd_Oq31DUbk2UL7SVC0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "footerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_3BFSF0XkWfbQqvMC",
+        "type": "Script",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.router.navigate([bh.input.tab.route])",
+        "functionName": "sd_3BFSF0XkWfbQqvMC",
+        "category": "Function",
+        "x": 725,
+        "y": 280,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "footerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_0pNOHVfzysx9Ph4d",
+        "type": "HostListener",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "outputs": 1,
+        "eventName": "\"selectedPage\"",
+        "functionName": "sd_0pNOHVfzysx9Ph4d",
+        "category": "Listener",
+        "x": 85,
+        "y": 400,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "eventName": {
+                "type": "str",
+                "value": "selectedPage",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "footerComponent"
+    },
+    {
+        "id": "sd_v5ItJqAwNaOWMZXB",
+        "type": "Storage",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "bh.input",
+            "value": "tab.title"
+        },
+        "resultMapping": {},
+        "functionName": "sd_v5ItJqAwNaOWMZXB",
+        "category": "Storage",
+        "x": 605,
+        "y": 280,
+        "wires": [
+            [
+                "sd_3BFSF0XkWfbQqvMC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "footerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Oq31DUbk2UL7SVC0",
+        "type": "Storage",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Get logged in user",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "currentUser"
+        },
+        "functionName": "getLoggedInUser",
+        "category": "Storage",
+        "x": 285,
+        "y": 300,
+        "wires": [
+            [
+                "sd_iU9pAgT2wOGiRKzA"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "footerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_iU9pAgT2wOGiRKzA",
+        "type": "PageSwitch",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "currentUser",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.currentUser",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_iU9pAgT2wOGiRKzA",
+        "category": "Function",
+        "x": 385,
+        "y": 300,
+        "wires": [
+            [
+                "sd_v5ItJqAwNaOWMZXB"
+            ],
+            [
+                "sd_zQWmzCK6TtKPd10B"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "footerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_NAnJYrZHHecXvzEv",
+        "type": "Navigation",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/login",
+        "functionName": "sd_NAnJYrZHHecXvzEv",
+        "category": "Navigation",
+        "x": 705,
+        "y": 400,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "footerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_dzQAwYyBzYnoooF2",
+        "type": "Storage",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Login"
+        },
+        "resultMapping": {},
+        "functionName": "sd_dzQAwYyBzYnoooF2",
+        "category": "Storage",
+        "x": 605,
+        "y": 400,
+        "wires": [
+            [
+                "sd_NAnJYrZHHecXvzEv"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "footerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_zQWmzCK6TtKPd10B",
+        "type": "PageSwitch",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Check if navigating home",
+        "property": "tab.title",
+        "propertyType": "bh.input",
+        "propertyGv": "bh.input.tab.title",
+        "rules": [
+            {
+                "t": "se",
+                "v": "FNB",
+                "vt": "str",
+                "gv": "\"FNB\""
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "checkIfNavigatingHome",
+        "category": "Function",
+        "x": 485,
+        "y": 380,
+        "wires": [
+            [
+                "sd_v5ItJqAwNaOWMZXB"
+            ],
+            [
+                "sd_dzQAwYyBzYnoooF2"
+            ]
+        ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "footerComponent",

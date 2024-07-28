@@ -166,7 +166,7 @@ export class verify_codeComponent {
       const commonInstance: common = this.__page_injector__.get(common);
       this.page.code = commonInstance['random'];
       this.page.email = commonInstance['email'];
-      this.sd_u8On1OFZuKXRt8YO(bh);
+      bh = this.sd_BpMqN6E65hBQ3OTp(bh);
       //appendnew_next_sd_Ef2QxF9xdJ6GlLqn
       return bh;
     } catch (e) {
@@ -174,13 +174,13 @@ export class verify_codeComponent {
     }
   }
 
-  sd_u8On1OFZuKXRt8YO(bh) {
+  sd_BpMqN6E65hBQ3OTp(bh) {
     try {
-      console.log(new Date().toLocaleTimeString(), this.page.code);
-      //appendnew_next_sd_u8On1OFZuKXRt8YO
+      localStorage.setItem('selectedPage', JSON.stringify('Verification Code'));
+      //appendnew_next_sd_BpMqN6E65hBQ3OTp
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_u8On1OFZuKXRt8YO');
+      return this.errorHandler(bh, e, 'sd_BpMqN6E65hBQ3OTp');
     }
   }
 
@@ -249,7 +249,7 @@ export class verify_codeComponent {
   sd_yYnwvUV5TR3cXsug(bh) {
     try {
       const page = this.page;
-      bh.isDepositAfterChange = true;
+      bh.action = 'Forgot Password';
       bh = this.sd_bVwUh6HpYceEc0qL(bh);
       //appendnew_next_sd_yYnwvUV5TR3cXsug
       return bh;
@@ -260,10 +260,7 @@ export class verify_codeComponent {
 
   sd_bVwUh6HpYceEc0qL(bh) {
     try {
-      sessionStorage.setItem(
-        'isDepositAfterChange',
-        JSON.stringify(bh.isDepositAfterChange)
-      );
+      sessionStorage.setItem('action', JSON.stringify(bh.action));
       bh = this.sd_syhqL8DbCmWvp5qY(bh);
       //appendnew_next_sd_bVwUh6HpYceEc0qL
       return bh;
@@ -278,7 +275,9 @@ export class verify_codeComponent {
         this.sdService.getPathAndQParamsObj('/change-password');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       bh = this.sd_8SYIRhH5NBwbV1cb(bh);
       //appendnew_next_sd_syhqL8DbCmWvp5qY
       return bh;

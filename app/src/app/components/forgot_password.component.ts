@@ -306,12 +306,10 @@ export class forgot_passwordComponent {
   async sd_rT7Iv9cm3h7pEb8y(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/verify-code');
+        this.sdService.getPathAndQParamsObj('/home/verify-code');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_rT7Iv9cm3h7pEb8y
       return bh;
     } catch (e) {

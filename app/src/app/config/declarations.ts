@@ -205,7 +205,6 @@ export const appProviders = [
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
-  { path: 'bank', component: bankComponent },
   { path: 'view-transactions', component: view_transactionsComponent },
   { path: 'qr-code-reader', component: qr_code_readerComponent },
   { path: 'search', component: searchComponent },
@@ -215,9 +214,18 @@ export const appRoutes = [
   { path: 'pay', component: payComponent },
   { path: 'cards', component: cardComponent },
   { path: 'landing', component: landingComponent },
-  { path: 'home', component: homeComponent },
-  { path: 'message', component: view_transactionsComponent },
-  { path: 'profile', component: profileComponent },
+  {
+    path: 'home',
+    component: homeComponent,
+    children: [
+      { path: 'bank', component: bankComponent },
+      { path: 'message', component: messageComponent },
+      { path: 'profile', component: profileComponent },
+      { path: 'login', component: loginComponent },
+      { path: 'forgot-password', component: forgot_passwordComponent },
+      { path: 'verify-code', component: verify_codeComponent },
+    ],
+  },
   { path: 'personal-info', component: personal_infoComponent },
   { path: 'settings', component: settingsComponent },
   { path: 'add-profile-pic', component: add_profile_picComponent },
@@ -225,12 +233,9 @@ export const appRoutes = [
   { path: 'username', component: usernameComponent },
   { path: 'change-password', component: change_passwordComponent },
   { path: 'limits', component: limitsComponent },
-  { path: 'login', component: loginComponent },
   { path: 'deposit', component: deposit_ownComponent },
   { path: 'confirm-limits', component: confirm_limitsComponent },
   { path: 'menu-dialog', component: menu_dialogComponent },
-  { path: 'forgot-password', component: forgot_passwordComponent },
-  { path: 'verify-code', component: verify_codeComponent },
   { path: 'coming-soon', component: coming_soonComponent },
   { path: 'change-password2', component: change_password2Component },
   { path: 'qr-code-manual', component: qr_code_readerComponent },
@@ -240,7 +245,7 @@ export const appRoutes = [
     component: airtimeAnother_detailsComponent,
   },
   { path: 'migrate', component: migrateComponent },
-  { path: '', redirectTo: 'landing', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

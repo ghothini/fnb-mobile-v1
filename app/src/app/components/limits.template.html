@@ -1,4 +1,7 @@
 <div fxLayout="column wrap" class="landing-full-width limits" fxLayoutAlign="start center" [fxShow]="true">
+  <div *ngIf="page.showSpinner" class="z-index-2 landing-fz-25 spinner-login absolute">
+    <mat-spinner></mat-spinner>
+  </div>
   <div fxLayout="row wrap" style="position: fixed; z-index: 2" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
     <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
                 <span class="material-symbols-outlined ">
@@ -12,67 +15,62 @@
                 </span></span></div>
   </div>
   <div fxLayout="row wrap" class="landing-full-width limits-tab" fxLayoutAlign="center stretch" [fxShow]="true"><mat-tab-group mat-align-tabs="start" class="limits-tabs"><mat-tab style="width: 50%; " label="Set limits">
-        <form [formGroup]="page.changeLimitsForm" style="width: 100%; height: 100%">
-          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;" fxLayoutGap="0.5em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-fz-18">
-              The limits below are for your Banking App profile. If you transact via any of the Digital channels (i.e Online Banking, Cellphone Banking and App), your remaining available limit across these channels will be adjusted accordingly. </label><label class="message-fz-18">
-              Please note: Below are the channel limits that are applied only if you have accounts that are transactional</label></div>
-          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;  height: 10%" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
-              Transfers</label>
-            <div style="height: 45%" class="landing-full-width">
-              <input required formControlName="transfers" type="number" style="width: 98%; height:100% ; border: 2px solid gray;
-    border-radius: 20px; font-size: 20px; padding-left: 12px">
-            </div><label class="limits-fz-16 limits-j-end message-margin-top-6px">
-              Max Unlimited</label>
+        <form [formGroup]="page.changeLimitsForm">
+          <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="column wrap" fxLayoutGap="0.5em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-fz-18">
+                The limits below are for your Banking App profile. If you transact via any of the Digital channels (i.e Online Banking, Cellphone Banking and App), your remaining available limit across these channels will be adjusted accordingly. </label><label class="message-fz-18">
+                Please note: Below are the channel limits that are applied only if you have accounts that are transactional</label></div>
+            <div fxLayout="column wrap" class="landing-full-width limits-row2" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
+                  Transfers (Max Unlimited)</label></div>
+              <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput type="number" [required]="true" formControlName="transfers">
+                <mat-error align="start" *ngIf="(page.changeLimitsForm.controls.transfers?.touched) &amp;&amp; (page.changeLimitsForm.controls.transfers?.errors?.required)">Transfers limit is <b>required</b></mat-error>
+              </mat-form-field>
+            </div>
+            <div fxLayout="column wrap" class="landing-full-width limits-row2" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
+                Payments (Max R1, 000, 000)</label>
+              <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput type="number" [required]="true" formControlName="payments">
+                <mat-error align="start" *ngIf="(page.changeLimitsForm.controls.payments?.touched) &amp;&amp; (page.changeLimitsForm.controls.payments?.errors?.required)">Payments limit is <b>required</b></mat-error>
+              </mat-form-field>
+            </div>
+            <div fxLayout="column wrap" class="landing-full-width limits-row2" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
+                Pay and Clear (Max R35, 000)</label>
+              <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput type="number" [required]="true" formControlName="payAndClear">
+                <mat-error align="start" *ngIf="(page.changeLimitsForm.controls.payAndClear?.touched) &amp;&amp; (page.changeLimitsForm.controls.payAndClear?.errors?.required)">Pay and Clear limit is <b>required</b></mat-error>
+              </mat-form-field>
+            </div>
+            <div fxLayout="column wrap" class="landing-full-width limits-row2" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
+                Prepaid (Max R10, 000)</label>
+              <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput type="number" [required]="true" formControlName="prepaid">
+                <mat-error align="start" *ngIf="(page.changeLimitsForm.controls.prepaid?.touched) &amp;&amp; (page.changeLimitsForm.controls.prepaid?.errors?.required)">Prepaid limit is <b>required</b></mat-error>
+              </mat-form-field>
+            </div>
+            <div fxLayout="column wrap" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
+                Send money (Max R5, 000)</label>
+              <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput type="number" [required]="true" formControlName="sendMoney">
+                <mat-error align="start" *ngIf="(page.changeLimitsForm.controls.sendMoney?.touched) &amp;&amp; (page.changeLimitsForm.controls.sendMoney?.errors?.required)">Send money limit is <b>required</b></mat-error>
+              </mat-form-field>
+            </div>
+            <div fxLayout="column wrap" class="landing-full-width limits-row2" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+                Vouchers (Max R5, 000)</label>
+              <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput type="number" [required]="true" formControlName="vouchers">
+                <mat-error align="start" *ngIf="(page.changeLimitsForm.controls.vouchers?.touched) &amp;&amp; (page.changeLimitsForm.controls.vouchers?.errors?.required)">Vouchers limit is <b>required</b></mat-error>
+              </mat-form-field>
+            </div>
+            <div fxLayout="column wrap" class="landing-full-width limits-row2" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
+                Cardless cash withdrawls (Max R3, 000)</label>
+              <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput type="number" [required]="true" formControlName="cardlessCashWithdrawal">
+                <mat-error align="start" *ngIf="(page.changeLimitsForm.controls.cardlessCashWithdrawal?.touched) &amp;&amp; (page.changeLimitsForm.controls.cardlessCashWithdrawal?.errors?.required)">Cardless cash withdrawal limit is <b>required</b></mat-error>
+              </mat-form-field>
+            </div><button mat-button class="bank-full-width btn" (click)="changeLimits(page.changeLimitsForm)">Next</button>
           </div>
-          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;  height: 10%" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
-              Payments:</label>
-            <div style="height: 45%" class="landing-full-width">
-              <input [value]="page.payments" required formControlName="payments" type="number" style="width: 98%; height:100% ; border: 2px solid gray;
-    border-radius: 20px; font-size: 20px; padding-left: 12px">
-            </div><label class="limits-fz-16 limits-j-end message-margin-top-6px">
-              Max R1, 000, 000</label>
-          </div>
-          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px; height: 10%" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
-              Pay and Clear(forms part of your payment limit)</label>
-            <div style="height: 45%" class="landing-full-width">
-              <input [value]="page.payAndClear" required formControlName="payAndClear" type="number" style="width: 98%; height:100% ; border: 2px solid gray;
-    border-radius: 20px; font-size: 20px; padding-left: 12px">
-            </div><label class="limits-fz-16 limits-j-end message-margin-top-6px">
-              Max R35, 000</label>
-          </div>
-          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;   height: 10%" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
-              Prepaid</label>
-            <div style="height: 45%" class="landing-full-width">
-              <input [value]="page.prepaid" required formControlName="prepaid" type="number" style="width: 98%; height:100% ; border: 2px solid gray;
-    border-radius: 20px; font-size: 20px; padding-left: 12px">
-            </div><label class="limits-fz-16 limits-j-end message-margin-top-6px">
-              Max R10, 000</label>
-          </div>
-          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;   height: 10%" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
-              Send money:</label>
-            <div style="height: 45%" class="landing-full-width">
-              <input [value]="page.sendMoney" required formControlName="sendMoney" type="number" style="width: 98%; height:100% ; border: 2px solid gray;
-    border-radius: 20px; font-size: 20px; padding-left: 12px">
-            </div><label class="limits-fz-16 limits-j-end message-margin-top-6px">
-              Max R5, 000</label>
-          </div>
-          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;   height: 10%" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-margin-top-6px message-fz-18">
-              Vouchers</label>
-            <div style="height: 45%" class="landing-full-width">
-              <input [value]="page.vouchers" required formControlName="vouchers" type="number" style="width: 98%; height:100% ; border: 2px solid gray;
-    border-radius: 20px; font-size: 20px; padding-left: 12px">
-            </div><label class="limits-fz-16 limits-j-end message-margin-top-6px">
-              Max R5, 000</label>
-          </div>
-          <div fxLayout="column wrap" style="padding-left: 7px; padding-right: 7px;  height: 10%" class="landing-full-width limits-row2" fxLayoutAlign="start stretch" [fxShow]="true"><label class="limits-fz-16 message-margin-top-6px">
-              Cardless cash withdrawls</label>
-            <div style="height: 45%" class="landing-full-width">
-              <input [value]="page.cardlessCashWithdrawal" required formControlName="cardlessCashWithdrawal" type="number" style="width: 98%; height:100% ; border: 2px solid gray;
-    border-radius: 20px; font-size: 20px; padding-left: 12px">
-            </div><label class="limits-j-end message-margin-top-6px">
-              Max R3, 000</label>
-          </div>
-          <div fxLayout="row wrap" class="landing-full-width limits-footer-btn" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="limits-btn" (click)="changeLimits(page.changeLimitsForm)">Next</button></div>
         </form>
       </mat-tab><mat-tab style="width: 50%;" label="View remaining">
         <div fxLayout="column wrap" style="gap: 0.5em;padding-left: 7px; padding-right: 7px;" fxLayoutGap="0.5em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-fz-18">

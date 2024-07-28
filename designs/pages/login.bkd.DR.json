@@ -296,7 +296,8 @@
         "15e138a7-a558-1b5f-e09b-8b4ed712d275": {
             "paletteKey": "FlexLayoutRow",
             "parentEditorKey": "eb272496-e056-6e10-5eee-aad09a472e6b",
-            "commentid": null,
+            "isCommented": "true",
+            "commentid": "1722166747447",
             "designerReference": [
                 {
                     "_key": "componentLabel",
@@ -361,7 +362,8 @@
             "a81cd7d6-5897-5413-cbc0-29d7dcf35fcb": {
                 "paletteKey": "FlexLayoutRow",
                 "parentEditorKey": "15e138a7-a558-1b5f-e09b-8b4ed712d275",
-                "commentid": null,
+                "isCommented": "true",
+                "commentid": "1722166747447",
                 "designerReference": [
                     {
                         "_key": "componentLabel",
@@ -439,7 +441,8 @@
                     "paletteKey": "Html5",
                     "parentEditorKey": "a81cd7d6-5897-5413-cbc0-29d7dcf35fcb",
                     "isAdvancedComponent": true,
-                    "commentid": null,
+                    "isCommented": "true",
+                    "commentid": "1722166747447",
                     "designerReference": [
                         {
                             "_key": "style",
@@ -626,7 +629,8 @@
                         "paletteKey": "html-editor",
                         "parentEditorKey": "c87a3c1a-e2d5-dfb8-e3f2-4c3c46be6196",
                         "isAdvancedChildComponent": true,
-                        "commentid": null,
+                        "isCommented": "true",
+                        "commentid": "1722166747447",
                         "designerReference": [
                             {
                                 "_key": "style",
@@ -654,7 +658,8 @@
                 "paletteKey": "Html5",
                 "parentEditorKey": "15e138a7-a558-1b5f-e09b-8b4ed712d275",
                 "isAdvancedComponent": true,
-                "commentid": null,
+                "isCommented": "true",
+                "commentid": "1722166747447",
                 "designerReference": [
                     {
                         "_key": "style",
@@ -844,7 +849,8 @@
                     "paletteKey": "html-editor",
                     "parentEditorKey": "5463665a-ff16-5fb0-bc06-a6d9eed4bfa8",
                     "isAdvancedChildComponent": true,
-                    "commentid": null,
+                    "isCommented": "true",
+                    "commentid": "1722166747447",
                     "designerReference": [
                         {
                             "_key": "style",
@@ -871,7 +877,8 @@
                 "paletteKey": "Html5",
                 "parentEditorKey": "15e138a7-a558-1b5f-e09b-8b4ed712d275",
                 "isAdvancedComponent": true,
-                "commentid": null,
+                "isCommented": "true",
+                "commentid": "1722166747447",
                 "designerReference": [
                     {
                         "_key": "style",
@@ -1060,7 +1067,8 @@
                     "paletteKey": "html-editor",
                     "parentEditorKey": "7298678e-bd45-2813-72ea-39d7ff4e7c8d",
                     "isAdvancedChildComponent": true,
-                    "commentid": null,
+                    "isCommented": "true",
+                    "commentid": "1722166747447",
                     "designerReference": [
                         {
                             "_key": "style",
@@ -1105,7 +1113,6 @@
                 {
                     "_key": "class",
                     "_value": [
-                        "my-profile-width-90-only",
                         "login-middle"
                     ],
                     "_type": "dav",
@@ -3073,7 +3080,6 @@
                                 {
                                     "_key": "class",
                                     "_value": [
-                                        "color-black",
                                         "btn",
                                         "bank-no-margin"
                                     ],
@@ -3149,6 +3155,9 @@
                                 {
                                     "_key": "class",
                                     "_value": [
+                                        "border-1px",
+                                        "bg-white",
+                                        "color-black",
                                         "change-psw-row2-button"
                                     ],
                                     "_type": "dav",
@@ -3193,7 +3202,7 @@
                                 },
                                 {
                                     "_key": "routerLink",
-                                    "_value": "/forgot-password",
+                                    "_value": "/home/forgot-password",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 }
