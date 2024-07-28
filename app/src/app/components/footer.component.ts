@@ -128,7 +128,7 @@ export class footerComponent {
         {
           label: 'Home',
           image: 'Web/Image Icons/home.png',
-          route: '/home',
+          route: '/home/dashboard',
           title: 'FNB',
         },
         {
@@ -210,7 +210,7 @@ export class footerComponent {
   async sd_iU9pAgT2wOGiRKzA(bh) {
     try {
       if (
-        this.sdService.operators['true'](
+        this.sdService.operators['nempty'](
           this.page.currentUser,
           undefined,
           undefined,
@@ -243,10 +243,21 @@ export class footerComponent {
     try {
       const page = this.page;
       page.router.navigate([bh.input.tab.route]);
+      this.sd_I9FkXAUixw9Iv21m(bh);
       //appendnew_next_sd_3BFSF0XkWfbQqvMC
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_3BFSF0XkWfbQqvMC');
+    }
+  }
+
+  sd_I9FkXAUixw9Iv21m(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), bh.input.tab.route);
+      //appendnew_next_sd_I9FkXAUixw9Iv21m
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_I9FkXAUixw9Iv21m');
     }
   }
 

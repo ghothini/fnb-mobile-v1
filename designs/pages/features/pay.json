@@ -64,7 +64,7 @@
         "script": "page.location.back()\n",
         "functionName": "sd_bmX0GiQp6NaZ3grS",
         "category": "Function",
-        "x": 300,
+        "x": 265,
         "y": 160,
         "wires": [
             []
@@ -167,7 +167,9 @@
         "x": 425,
         "y": 40,
         "wires": [
-            []
+            [
+                "sd_tFci8iV2ctBF5MIl"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -846,7 +848,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -856,6 +860,37 @@
         "category": "General",
         "x": 205,
         "y": 420,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "payComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_tFci8iV2ctBF5MIl",
+        "type": "Storage",
+        "z": "sd_EPI84HNraRNITcfQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Pay"
+        },
+        "resultMapping": {},
+        "functionName": "sd_tFci8iV2ctBF5MIl",
+        "category": "Storage",
+        "x": 525,
+        "y": 40,
         "wires": [
             []
         ],

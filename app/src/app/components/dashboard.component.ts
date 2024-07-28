@@ -3,7 +3,7 @@
 //CORE_REFERENCE_IMPORTS
 //append_imports_start
 
-import { Component, HostListener, Injector } from '@angular/core'; //_splitter_
+import { Component, Injector } from '@angular/core'; //_splitter_
 import { FormBuilder } from '@angular/forms'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -12,13 +12,13 @@ import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'
 //append_imports_end
 
 @Component({
-  selector: 'bh-home',
-  templateUrl: './home.template.html',
+  selector: 'bh-dashboard',
+  templateUrl: './dashboard.template.html',
   providers: [
     //appendnew_element_providers
   ],
 })
-export class homeComponent {
+export class dashboardComponent {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -36,7 +36,7 @@ export class homeComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_gH5WfDthUdGcHb7c(bh);
+      this.sd_xxqXuG4VkAiiWdc0(bh);
     }
   }
 
@@ -48,40 +48,13 @@ export class homeComponent {
     //append_listeners
   }
 
-  sd_gH5WfDthUdGcHb7c(bh) {
+  sd_xxqXuG4VkAiiWdc0(bh) {
     try {
-      bh = this.sd_HPCEU72OUka2rSv7(bh);
-      //appendnew_next_sd_gH5WfDthUdGcHb7c
+      bh = this.sd_kkha16Cbjcxn6R86(bh);
+      //appendnew_next_sd_xxqXuG4VkAiiWdc0
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_gH5WfDthUdGcHb7c');
-    }
-  }
-
-  showSelectedPage(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_za7KztW10VOhnMXd(bh);
-      //appendnew_next_showSelectedPage
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_mlH654RPOGXM8NmN');
-    }
-  }
-  @HostListener('selectedPage', ['$event']) sd_BhVfsCSseNIfFAnx(event) {
-    try {
-      var bh: any = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.$event = event;
-      bh = this.sd_pMGbUR85EDCTkByp(bh);
-      //appendnew_next_sd_BhVfsCSseNIfFAnx
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_BhVfsCSseNIfFAnx');
+      return this.errorHandler(bh, e, 'sd_xxqXuG4VkAiiWdc0');
     }
   }
 
@@ -93,41 +66,56 @@ export class homeComponent {
         .constructFlowObject(this);
       bh.input = { item };
       bh.local = {};
-      bh = this.sd_FXiHGCoDoYWNZVFr(bh);
       //appendnew_next_routeIfLoggedIn
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_zXVLVug1e2CUaR27');
+      return this.errorHandler(bh, e, 'sd_ARfLByDeE8NrVmIs');
     }
   }
-  //appendnew_flow_homeComponent_start
 
-  sd_HPCEU72OUka2rSv7(bh) {
+  sd_KjzeE70Ez6bEInTQ(item: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { item };
+      bh.local = {};
+      bh = this.sd_QmUaDv0zGm3GijbH(bh);
+      //appendnew_next_sd_KjzeE70Ez6bEInTQ
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_KjzeE70Ez6bEInTQ');
+    }
+  }
+  //appendnew_flow_dashboardComponent_start
+
+  sd_kkha16Cbjcxn6R86(bh) {
     try {
       this.page.currentUser = undefined;
+      this.page.landingOptions = undefined;
       bh = this.getLoggedInUser(bh);
-      //appendnew_next_sd_HPCEU72OUka2rSv7
+      //appendnew_next_sd_kkha16Cbjcxn6R86
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_HPCEU72OUka2rSv7');
+      return this.errorHandler(bh, e, 'sd_kkha16Cbjcxn6R86');
     }
   }
 
   getLoggedInUser(bh) {
     try {
       this.page.currentUser = JSON.parse(sessionStorage.getItem('user'));
-      bh = this.sd_RN0Fcj9LXAhFI8bC(bh);
+      bh = this.sd_ozZVMhqLorMV5vbk(bh);
       //appendnew_next_getLoggedInUser
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_RCWYVeR5ogOMqr3z');
+      return this.errorHandler(bh, e, 'sd_i88N6Cd6vBRru8sA');
     }
   }
 
-  sd_RN0Fcj9LXAhFI8bC(bh) {
+  sd_ozZVMhqLorMV5vbk(bh) {
     try {
       const page = this.page;
       if (page.currentUser) {
-        bh.landingOptions = [
+        page.landingOptions = [
           {
             label: 'Message',
             image: '/Web/Images/message.PNG',
@@ -207,7 +195,7 @@ export class homeComponent {
           },
         ];
       } else {
-        bh.landingOptions = [
+        page.landingOptions = [
           {
             label: 'Login',
             image: '/Web/Images/login2.PNG',
@@ -302,108 +290,25 @@ export class homeComponent {
           },
         ];
       }
-      bh = this.sd_pF2ZSp3hIF8bjLzf(bh);
-      //appendnew_next_sd_RN0Fcj9LXAhFI8bC
+      this.sd_767Y5ld5PXlkUG1M(bh);
+      //appendnew_next_sd_ozZVMhqLorMV5vbk
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_RN0Fcj9LXAhFI8bC');
+      return this.errorHandler(bh, e, 'sd_ozZVMhqLorMV5vbk');
     }
   }
 
-  sd_pF2ZSp3hIF8bjLzf(bh) {
+  sd_767Y5ld5PXlkUG1M(bh) {
     try {
-      this.page.landingOptions = bh.landingOptions;
-      this.page.term = undefined;
-      this.page.selectedPage = undefined;
-      this.page.currentUser = undefined;
-      bh = this.sd_EO337v58B4yyVHBs(bh);
-      //appendnew_next_sd_pF2ZSp3hIF8bjLzf
+      console.log(new Date().toLocaleTimeString(), this.page.currentUser);
+      //appendnew_next_sd_767Y5ld5PXlkUG1M
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_pF2ZSp3hIF8bjLzf');
+      return this.errorHandler(bh, e, 'sd_767Y5ld5PXlkUG1M');
     }
   }
 
-  sd_EO337v58B4yyVHBs(bh) {
-    try {
-      localStorage.setItem('selectedPage', JSON.stringify('FNB'));
-      bh = this.sd_3BoD2LG7Djkdt95O(bh);
-      //appendnew_next_sd_EO337v58B4yyVHBs
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_EO337v58B4yyVHBs');
-    }
-  }
-
-  sd_3BoD2LG7Djkdt95O(bh) {
-    try {
-      const page = this.page;
-      setInterval(() => {
-        page.selectedPage = JSON.parse(localStorage.getItem('selectedPage'));
-      }, 250);
-      bh = this.sd_23OWtAZAhXWQMroe(bh);
-      //appendnew_next_sd_3BoD2LG7Djkdt95O
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_3BoD2LG7Djkdt95O');
-    }
-  }
-
-  sd_23OWtAZAhXWQMroe(bh) {
-    try {
-      localStorage.setItem('selectedPage', JSON.stringify('FNB'));
-      //appendnew_next_sd_23OWtAZAhXWQMroe
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_23OWtAZAhXWQMroe');
-    }
-  }
-
-  sd_za7KztW10VOhnMXd(bh) {
-    try {
-      const page = this.page;
-      bh.ts = 'testing';
-      this.sd_pVJK6s8EwHcgBvTA(bh);
-      //appendnew_next_sd_za7KztW10VOhnMXd
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_za7KztW10VOhnMXd');
-    }
-  }
-
-  sd_pVJK6s8EwHcgBvTA(bh) {
-    try {
-      console.log(new Date().toLocaleTimeString(), bh.ts);
-      //appendnew_next_sd_pVJK6s8EwHcgBvTA
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_pVJK6s8EwHcgBvTA');
-    }
-  }
-
-  sd_pMGbUR85EDCTkByp(bh) {
-    try {
-      const page = this.page;
-      bh.ts = 'testing';
-      this.sd_vZuLRUtjOXY9T74H(bh);
-      //appendnew_next_sd_pMGbUR85EDCTkByp
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_pMGbUR85EDCTkByp');
-    }
-  }
-
-  sd_vZuLRUtjOXY9T74H(bh) {
-    try {
-      console.log(new Date().toLocaleTimeString(), bh.ts);
-      //appendnew_next_sd_vZuLRUtjOXY9T74H
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_vZuLRUtjOXY9T74H');
-    }
-  }
-
-  async sd_FXiHGCoDoYWNZVFr(bh) {
+  async sd_QmUaDv0zGm3GijbH(bh) {
     try {
       if (
         this.sdService.operators['true'](
@@ -413,18 +318,18 @@ export class homeComponent {
           undefined
         )
       ) {
-        bh = this.sd_HCRzY3l5E8vLVyEi(bh);
+        bh = this.sd_4ZcpuFRVTDSY0D47(bh);
       } else {
-        bh = await this.sd_TZOSFnFze3NXRMdq(bh);
+        bh = await this.sd_pq1F2spNqyRjEOTK(bh);
       }
 
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_FXiHGCoDoYWNZVFr');
+      return this.errorHandler(bh, e, 'sd_QmUaDv0zGm3GijbH');
     }
   }
 
-  async sd_HCRzY3l5E8vLVyEi(bh) {
+  async sd_4ZcpuFRVTDSY0D47(bh) {
     try {
       const { paramObj: qprm, path: path } =
         this.sdService.getPathAndQParamsObj(bh.input.item.route);
@@ -433,37 +338,35 @@ export class homeComponent {
         .navigate([this.sdService.formatPathWithParams(path, undefined)], {
           queryParams: Object.assign(qprm, ''),
         });
-      //appendnew_next_sd_HCRzY3l5E8vLVyEi
+      //appendnew_next_sd_4ZcpuFRVTDSY0D47
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_HCRzY3l5E8vLVyEi');
+      return this.errorHandler(bh, e, 'sd_4ZcpuFRVTDSY0D47');
     }
   }
 
-  sd_TZOSFnFze3NXRMdq(bh) {
+  sd_pq1F2spNqyRjEOTK(bh) {
     try {
       localStorage.setItem('selectedPage', JSON.stringify('Login'));
-      bh = this.sd_xgNjZ6CIYGS0caSI(bh);
-      //appendnew_next_sd_TZOSFnFze3NXRMdq
+      bh = this.sd_j3k7gZUaXc1aYpzN(bh);
+      //appendnew_next_sd_pq1F2spNqyRjEOTK
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_TZOSFnFze3NXRMdq');
+      return this.errorHandler(bh, e, 'sd_pq1F2spNqyRjEOTK');
     }
   }
 
-  async sd_xgNjZ6CIYGS0caSI(bh) {
+  async sd_j3k7gZUaXc1aYpzN(bh) {
     try {
       const { paramObj: qprm, path: path } =
         this.sdService.getPathAndQParamsObj('/home/login');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
-      //appendnew_next_sd_xgNjZ6CIYGS0caSI
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_j3k7gZUaXc1aYpzN
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_xgNjZ6CIYGS0caSI');
+      return this.errorHandler(bh, e, 'sd_j3k7gZUaXc1aYpzN');
     }
   }
 
@@ -483,5 +386,5 @@ export class homeComponent {
     bh.errorSource = src;
     throw e;
   }
-  //appendnew_flow_homeComponent_Catch
+  //appendnew_flow_dashboardComponent_Catch
 }

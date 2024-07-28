@@ -211,10 +211,21 @@ export class change_passwordComponent {
       }
 
       console.log('stoargeee:', page.userDetails);
+      bh = this.sd_V2OpJMukE8Ti748s(bh);
       //appendnew_next_sd_gCGmtS3KI3uFKwe4
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_gCGmtS3KI3uFKwe4');
+    }
+  }
+
+  sd_V2OpJMukE8Ti748s(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Change Password'));
+      //appendnew_next_sd_V2OpJMukE8Ti748s
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_V2OpJMukE8Ti748s');
     }
   }
 
@@ -648,12 +659,10 @@ export class change_passwordComponent {
   async sendUserBackToLogin(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/login');
+        this.sdService.getPathAndQParamsObj('/home/login');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sendUserBackToLogin
       return bh;
     } catch (e) {
@@ -743,7 +752,7 @@ export class change_passwordComponent {
   async sendUserToDeposit(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/deposit');
+        this.sdService.getPathAndQParamsObj('/home/deposit');
       await this.__page_injector__
         .get(Router)
         .navigate([this.sdService.formatPathWithParams(path, undefined)]);

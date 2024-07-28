@@ -985,7 +985,6 @@ $my-profile-green: #00a9ac;
 
 .change-psw-bottom{
     height: 92%;
-    width: 90%;
 }
 
 .change-psw-row1{
@@ -1088,6 +1087,14 @@ bh-limits{
     font-size: 18px;
     background-color: #00a9ac;
     color: white;
+}
+
+.btn-black {
+    width: 100% !important;
+    border-radius: 30px !important;
+    font-size: 18px;
+    color: white !important;
+    background-color: black !important;
 }
 
 .img-icon {

@@ -82,7 +82,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.footerTabs = [\n    { label: 'Home', image: \"Web/Image Icons/home.png\", route: '/home',title: 'FNB' },\n    { label: 'Bank', image: \"Web/Image Icons/credit-card.png\", route: 'home/bank',title: 'Bank' },\n    { label: 'Message', image: \"Web/Image Icons/messages.png\", route: 'home/message',title: 'Message' },\n    { label: 'Profile', image: \"Web/Image Icons/user.png\", route: 'home/profile',title: 'My Profile' }\n]",
+        "script": "page.footerTabs = [\n    { label: 'Home', image: \"Web/Image Icons/home.png\", route: '/home/dashboard',title: 'FNB' },\n    { label: 'Bank', image: \"Web/Image Icons/credit-card.png\", route: 'home/bank',title: 'Bank' },\n    { label: 'Message', image: \"Web/Image Icons/messages.png\", route: 'home/message',title: 'Message' },\n    { label: 'Profile', image: \"Web/Image Icons/user.png\", route: 'home/profile',title: 'My Profile' }\n]",
         "functionName": "sd_uG476h0mGQexMXjY",
         "category": "Function",
         "x": 325,
@@ -401,7 +401,9 @@
         "x": 725,
         "y": 280,
         "wires": [
-            []
+            [
+                "sd_I9FkXAUixw9Iv21m"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -513,7 +515,7 @@
         "propertyGv": "this.page.currentUser",
         "rules": [
             {
-                "t": "true"
+                "t": "nempty"
             },
             {
                 "t": "else"
@@ -628,6 +630,32 @@
                 "sd_dzQAwYyBzYnoooF2"
             ]
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "footerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_I9FkXAUixw9Iv21m",
+        "type": "Log",
+        "z": "sd_8wT6eeWtqANSsuWR",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "bh.input.tab.route",
+        "functionName": "sd_I9FkXAUixw9Iv21m",
+        "category": "General",
+        "x": 840,
+        "y": 280,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "bh.input",
+                "value": "tab.route",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "footerComponent",

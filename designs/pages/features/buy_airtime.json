@@ -364,7 +364,7 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "/airtime-details",
+        "path": "/home/airtime-details",
         "functionName": "sd_6zQvR1COL7ks0Uhe",
         "category": "Navigation",
         "x": 180,
@@ -408,14 +408,7 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "/airtimeAnother-details",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
+        "path": "/home/someone_airtime",
         "functionName": "sd_vPRi09XZbOaMOagK",
         "category": "Navigation",
         "x": 160,
@@ -450,6 +443,39 @@
         "functionName": "sd_24vDLIgEl1Ye1BkQ",
         "category": "Storage",
         "x": 305,
+        "y": 40,
+        "wires": [
+            [
+                "sd_e2SgpViYCKMaTDdq"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_airtimeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_e2SgpViYCKMaTDdq",
+        "type": "Storage",
+        "z": "sd_bMbO2PhrGXVJB4Gr",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Airtime & Bundles"
+        },
+        "resultMapping": {},
+        "functionName": "sd_e2SgpViYCKMaTDdq",
+        "category": "Storage",
+        "x": 405,
         "y": 40,
         "wires": [
             []

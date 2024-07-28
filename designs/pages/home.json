@@ -348,72 +348,6 @@
         "generated": true
     },
     {
-        "id": "sd_woetTvqXZ3w5YcgC",
-        "type": "PageStart",
-        "z": "sd_WYT8Hivn6E01YBpO",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "Route if logged in",
-        "outputs": 1,
-        "inputVariables": [
-            {
-                "key": "item",
-                "defaultValue": {
-                    "type": "any",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "routeIfLoggedIn",
-        "category": "General",
-        "x": 65,
-        "y": 380,
-        "wires": [
-            [
-                "sd_9VdaBCcQfHd0Yuzm"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "homeComponent"
-    },
-    {
-        "id": "sd_VVCZsbA3shYu72Xs",
-        "type": "Storage",
-        "z": "sd_WYT8Hivn6E01YBpO",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "operationType": "setItem",
-        "storageType": "localStorage",
-        "outputs": 1,
-        "key": {
-            "type": "str",
-            "value": "selectedPage"
-        },
-        "value": {
-            "type": "str",
-            "value": "Login"
-        },
-        "resultMapping": {},
-        "functionName": "sd_VVCZsbA3shYu72Xs",
-        "category": "Storage",
-        "x": 305,
-        "y": 460,
-        "wires": [
-            [
-                "sd_pEqAuZJOE57IrHVd"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "homeComponent",
-        "generated": true
-    },
-    {
         "id": "sd_HPCEU72OUka2rSv7",
         "type": "PageVariables",
         "z": "sd_WYT8Hivn6E01YBpO",
@@ -447,7 +381,104 @@
         "generated": true
     },
     {
-        "id": "sd_9VdaBCcQfHd0Yuzm",
+        "id": "sd_23OWtAZAhXWQMroe",
+        "type": "Storage",
+        "z": "sd_WYT8Hivn6E01YBpO",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "FNB"
+        },
+        "resultMapping": {},
+        "functionName": "sd_23OWtAZAhXWQMroe",
+        "category": "Storage",
+        "x": 705,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_zXVLVug1e2CUaR27",
+        "type": "PageStart",
+        "z": "sd_WYT8Hivn6E01YBpO",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Route if logged in",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "item",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "routeIfLoggedIn",
+        "category": "General",
+        "x": 65,
+        "y": 380,
+        "wires": [
+            [
+                "sd_FXiHGCoDoYWNZVFr"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_TZOSFnFze3NXRMdq",
+        "type": "Storage",
+        "z": "sd_WYT8Hivn6E01YBpO",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Login"
+        },
+        "resultMapping": {},
+        "functionName": "sd_TZOSFnFze3NXRMdq",
+        "category": "Storage",
+        "x": 305,
+        "y": 460,
+        "wires": [
+            [
+                "sd_xgNjZ6CIYGS0caSI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_FXiHGCoDoYWNZVFr",
         "type": "PageSwitch",
         "z": "sd_WYT8Hivn6E01YBpO",
         "viewType": "common",
@@ -467,16 +498,16 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "functionName": "sd_9VdaBCcQfHd0Yuzm",
+        "functionName": "sd_FXiHGCoDoYWNZVFr",
         "category": "Function",
         "x": 165,
         "y": 380,
         "wires": [
             [
-                "sd_7h1N1DtKW2Z1nvBf"
+                "sd_HCRzY3l5E8vLVyEi"
             ],
             [
-                "sd_VVCZsbA3shYu72Xs"
+                "sd_TZOSFnFze3NXRMdq"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -485,14 +516,21 @@
         "generated": true
     },
     {
-        "id": "sd_pEqAuZJOE57IrHVd",
+        "id": "sd_xgNjZ6CIYGS0caSI",
         "type": "Navigation",
         "z": "sd_WYT8Hivn6E01YBpO",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
         "path": "/home/login",
-        "functionName": "sd_pEqAuZJOE57IrHVd",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_xgNjZ6CIYGS0caSI",
         "category": "Navigation",
         "x": 405,
         "y": 460,
@@ -505,51 +543,27 @@
         "generated": true
     },
     {
-        "id": "sd_7h1N1DtKW2Z1nvBf",
+        "id": "sd_HCRzY3l5E8vLVyEi",
         "type": "Navigation",
         "z": "sd_WYT8Hivn6E01YBpO",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
+        "path": "",
         "pathMap": {
             "type": "bh.input",
             "value": "item.route"
         },
-        "functionName": "sd_7h1N1DtKW2Z1nvBf",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_HCRzY3l5E8vLVyEi",
         "category": "Navigation",
         "x": 305,
         "y": 360,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "homeComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_23OWtAZAhXWQMroe",
-        "type": "Storage",
-        "z": "sd_WYT8Hivn6E01YBpO",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "operationType": "setItem",
-        "storageType": "localStorage",
-        "outputs": 1,
-        "key": {
-            "type": "str",
-            "value": "selectedPage"
-        },
-        "value": {
-            "type": "str",
-            "value": "Forgot Password"
-        },
-        "resultMapping": {},
-        "functionName": "sd_23OWtAZAhXWQMroe",
-        "category": "Storage",
-        "x": 705,
-        "y": 80,
         "wires": [
             []
         ],

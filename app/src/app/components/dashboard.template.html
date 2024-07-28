@@ -1,0 +1,30 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="landing-banner" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="Web/Images/landing-banner.PNG" style="width:100%; height: 100%"></div>
+  <div fxLayout="column wrap" class="add-profile-pic-ff-roboto landing-middle" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" class="landing-width-90 landing-height-95" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" class="landing-search-tab" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput [(ngModel)]="page.term" name="term" placeholder="How can we help you" [required]="false">
+            <mat-icon matPrefix>search</mat-icon>
+          </mat-form-field>
+          <div *ngFor="let item of page.landingOptions |filter:page.term">
+            <p>
+              {{item.name}}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="landing-card-tabs" fxLayoutAlign="space-between space-between" [fxShow]="true">
+        <div fxLayout="column wrap" class="landing-card-tab" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let item of page.landingOptions |filter:page.term; let i = index;">
+          <div fxLayout="row wrap" class="landing-top-icon" fxLayoutAlign="center center" [fxShow]="true" (click)="sd_KjzeE70Ez6bEInTQ(item)"><img imgSrc="{{item.image}}" style="width:50%; height: 50%"></div>
+          <div fxLayout="row wrap" class="landing-bottom-text" fxLayoutAlign="center center" [fxShow]="true">
+            <div class="landing-text-center">
+              {{item.label}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

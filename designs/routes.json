@@ -1,10 +1,6 @@
 {
     "routes": [
         {
-            "path": "view-transactions",
-            "component": "view_transactionsComponent"
-        },
-        {
             "path": "qr-code-reader",
             "component": "qr_code_readerComponent"
         },
@@ -17,24 +13,8 @@
             "component": "buy_airtimeComponent"
         },
         {
-            "path": "electricity",
-            "component": "buy_electricityComponent"
-        },
-        {
-            "path": "eWallet",
-            "component": "ewalletComponent"
-        },
-        {
-            "path": "pay",
-            "component": "payComponent"
-        },
-        {
             "path": "cards",
             "component": "cardComponent"
-        },
-        {
-            "path": "landing",
-            "component": "landingComponent"
         },
         {
             "path": "home",
@@ -63,6 +43,50 @@
                 {
                     "path": "verify-code",
                     "component": "verify_codeComponent"
+                },
+                {
+                    "path": "change-password",
+                    "component": "change_passwordComponent"
+                },
+                {
+                    "path": "deposit",
+                    "component": "deposit_ownComponent"
+                },
+                {
+                    "path": "airtime",
+                    "component": "buy_airtimeComponent"
+                },
+                {
+                    "path": "airtime-details",
+                    "component": "airtime_detailsComponent"
+                },
+                {
+                    "path": "someone_airtime",
+                    "component": "airtimeAnother_detailsComponent"
+                },
+                {
+                    "path": "pay",
+                    "component": "payComponent"
+                },
+                {
+                    "path": "eWallet",
+                    "component": "ewalletComponent"
+                },
+                {
+                    "path": "electricity",
+                    "component": "buy_electricityComponent"
+                },
+                {
+                    "path": "cards",
+                    "component": "cardComponent"
+                },
+                {
+                    "path": "view-transactions",
+                    "component": "view_transactionsComponent"
+                },
+                {
+                    "path": "dashboard",
+                    "component": "dashboardComponent"
                 }
             ]
         },
@@ -87,16 +111,8 @@
             "component": "usernameComponent"
         },
         {
-            "path": "change-password",
-            "component": "change_passwordComponent"
-        },
-        {
             "path": "limits",
             "component": "limitsComponent"
-        },
-        {
-            "path": "deposit",
-            "component": "deposit_ownComponent"
         },
         {
             "component": "confirm_limitsComponent",
@@ -111,20 +127,8 @@
             "component": "coming_soonComponent"
         },
         {
-            "path": "change-password2",
-            "component": "change_password2Component"
-        },
-        {
             "path": "qr-code-manual",
             "component": "qr_code_readerComponent"
-        },
-        {
-            "path": "airtime-details",
-            "component": "airtime_detailsComponent"
-        },
-        {
-            "path": "airtimeAnother-details",
-            "component": "airtimeAnother_detailsComponent"
         },
         {
             "path": "migrate",

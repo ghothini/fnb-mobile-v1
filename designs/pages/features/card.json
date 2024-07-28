@@ -214,6 +214,39 @@
         "x": 320,
         "y": 40,
         "wires": [
+            [
+                "sd_Hli0ejxPC2yFdlpz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "cardComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Hli0ejxPC2yFdlpz",
+        "type": "Storage",
+        "z": "sd_vfyfaZUquOcdXWt1",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Cards"
+        },
+        "resultMapping": {},
+        "functionName": "sd_Hli0ejxPC2yFdlpz",
+        "category": "Storage",
+        "x": 425,
+        "y": 40,
+        "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},

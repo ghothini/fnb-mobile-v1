@@ -101,10 +101,21 @@ export class cardComponent {
   sd_Ej8lIcjd5rnLva0T(bh) {
     try {
       this.page.loggedInUser = JSON.parse(sessionStorage.getItem('user'));
+      bh = this.sd_Hli0ejxPC2yFdlpz(bh);
       //appendnew_next_sd_Ej8lIcjd5rnLva0T
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_Ej8lIcjd5rnLva0T');
+    }
+  }
+
+  sd_Hli0ejxPC2yFdlpz(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Cards'));
+      //appendnew_next_sd_Hli0ejxPC2yFdlpz
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Hli0ejxPC2yFdlpz');
     }
   }
 

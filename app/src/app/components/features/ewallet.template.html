@@ -2,29 +2,11 @@
   <div *ngIf="page.showSpinner" class="spinner-login absolute">
     <mat-spinner></mat-spinner>
   </div>
-  <div fxLayout="row wrap" class="bank-padding-5px" fxLayoutAlign="space-between center" [fxShow]="true">
-    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
-      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true"><span class="bank-no-margin">
-                <span class="material-symbols-outlined pointer" (click)="goBack()">
-                arrow_back
-            </span></span>
-        <p>
-          eWallet</p>
-      </div>
-    </div>
-    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
-      <div>
-        <span class="material-symbols-outlined pointer" (click)="goBack()">
-                close
-            </span>
-      </div>
-    </div>
-  </div>
   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
     <p>
       <strong>From</strong>
     </p>
-  </div><mat-card class="bank-padding-10px bank-border-box bank-full-width bank-border-radius-10px">
+  </div><mat-card class="bank-border-box bank-full-width bank-border-radius-10px">
     <mat-card-content>
       <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="Web/Images/card.png" class="bank-image"></div>
@@ -80,5 +62,5 @@
       </div>
     </div>
   </form>
-  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="height-45 bank-top-110px bank-purchase bank-relative" (click)="send()">Send</button></div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="m-t-1em btn-black" (click)="send()">Send</button></div>
 </div>

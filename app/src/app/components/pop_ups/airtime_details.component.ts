@@ -206,10 +206,21 @@ export class airtime_detailsComponent {
         { value: 'pune-2', viewValue: 'Pune' },
       ];
 
+      bh = this.sd_0i3zveMmxZuWJXDM(bh);
       //appendnew_next_sd_vbyqwlYUD9u6Q1n9
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_vbyqwlYUD9u6Q1n9');
+    }
+  }
+
+  sd_0i3zveMmxZuWJXDM(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Purchase Details'));
+      //appendnew_next_sd_0i3zveMmxZuWJXDM
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0i3zveMmxZuWJXDM');
     }
   }
 
@@ -229,26 +240,19 @@ export class airtime_detailsComponent {
     }
   }
 
-  sd_UUGfx0MQZvTUB7Of(bh) {
+  async sd_UUGfx0MQZvTUB7Of(bh) {
     try {
       if (
-        this.sdService.operators['eq'](
-          this.page.airtimeForm.status,
-          'VALID',
+        this.sdService.operators['true'](
+          this.page.airtimeForm.invalid,
           undefined,
-          undefined
-        )
-      ) {
-        bh = this.sd_4ROZjjy39sOjCcZW(bh);
-      } else if (
-        this.sdService.operators['eq'](
-          this.page.airtimeForm.status,
-          'INVALID',
           undefined,
           undefined
         )
       ) {
         bh = this.sd_qgJ9pa3hSx043E7R(bh);
+      } else {
+        bh = await this.sd_4ROZjjy39sOjCcZW(bh);
       }
 
       return bh;
@@ -432,12 +436,10 @@ export class airtime_detailsComponent {
   async sd_hKRqPgBx5eOz9254(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/airtime');
+        this.sdService.getPathAndQParamsObj('/home/airtime');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_hKRqPgBx5eOz9254
       return bh;
     } catch (e) {
@@ -462,12 +464,14 @@ export class airtime_detailsComponent {
 
   sd_qgJ9pa3hSx043E7R(bh) {
     try {
-      this.__page_injector__.get(MatSnackBar).open('INVALID', 'Ok', {
-        duration: 3000,
-        direction: 'ltr',
-        horizontalPosition: 'center',
-        verticalPosition: 'bottom',
-      });
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('All fields are required', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
       //appendnew_next_sd_qgJ9pa3hSx043E7R
       return bh;
     } catch (e) {

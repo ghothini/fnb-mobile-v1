@@ -1,39 +1,4 @@
-<div fxLayout="column wrap" class="bank-full-width bank-padding-10px" fxLayoutAlign="start stretch" [fxShow]="true">
-  <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
-    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
-          <div>
-            <span class="material-symbols-outlined bank-pointer" (click)="goBack()">
-                arrow_back
-            </span>
-          </div>
-        </div>
-        <div fxLayout="column wrap" class="bank-no-margin" fxLayoutAlign="center center" [fxShow]="true">
-          <p>
-            Accounts</p>
-        </div>
-      </div>
-    </div>
-    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
-          <div>
-            <span class="material-symbols-outlined" [routerLink]="[&apos;/coming-soon&apos;]">
-                search
-            </span>
-          </div>
-        </div>
-        <div fxLayout="column wrap" class="bank-no-margin" fxLayoutAlign="center center" [fxShow]="true">
-          <div>
-            <span class="material-symbols-outlined pointer" (click)="goBack()">
-                close
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
   <div fxLayout="row wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true"><mat-tab-group mat-align-tabs="start" class="bank-full-width"><mat-tab label="Transaction History">
         <div fxLayout="column wrap" class="bank-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">

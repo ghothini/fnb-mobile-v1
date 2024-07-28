@@ -76,7 +76,9 @@
         "x": 405,
         "y": 40,
         "wires": [
-            []
+            [
+                "sd_0i3zveMmxZuWJXDM"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -309,14 +311,7 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "/airtime",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
+        "path": "/home/airtime",
         "functionName": "sd_hKRqPgBx5eOz9254",
         "category": "Navigation",
         "x": 1145,
@@ -689,21 +684,15 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "property": "airtimeForm.status",
+        "property": "airtimeForm.invalid",
         "propertyType": "this.page",
-        "propertyGv": "this.page.airtimeForm.status",
+        "propertyGv": "this.page.airtimeForm.invalid",
         "rules": [
             {
-                "t": "eq",
-                "v": "VALID",
-                "vt": "str",
-                "gv": "\"VALID\""
+                "t": "else"
             },
             {
-                "t": "eq",
-                "v": "INVALID",
-                "vt": "str",
-                "gv": "\"INVALID\""
+                "t": "true"
             }
         ],
         "checkall": "false",
@@ -735,7 +724,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "INVALID"
+            "value": "All fields are required"
         },
         "action": {
             "type": "str",
@@ -746,9 +735,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -756,7 +743,7 @@
         "direction": "ltr",
         "functionName": "sd_qgJ9pa3hSx043E7R",
         "category": "General",
-        "x": 225,
+        "x": 245,
         "y": 280,
         "wires": [
             []
@@ -932,6 +919,37 @@
         "category": "Function",
         "x": 170,
         "y": 800,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "airtime_detailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_0i3zveMmxZuWJXDM",
+        "type": "Storage",
+        "z": "sd_KllidtGkgXUKHnHN",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Purchase Details"
+        },
+        "resultMapping": {},
+        "functionName": "sd_0i3zveMmxZuWJXDM",
+        "category": "Storage",
+        "x": 505,
+        "y": 40,
         "wires": [
             []
         ],

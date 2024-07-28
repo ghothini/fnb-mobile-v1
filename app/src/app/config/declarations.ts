@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-dashboardComponent
+import { dashboardComponent } from '../components/dashboard.component';
 //CORE_REFERENCE_IMPORT-migrateComponent
 import { migrateComponent } from '../components/migrate.component';
 //CORE_REFERENCE_IMPORT-change_password2Component
@@ -114,6 +116,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dashboardComponent
+  dashboardComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-migrateComponent
   migrateComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-change_password2Component
@@ -205,15 +209,10 @@ export const appProviders = [
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
-  { path: 'view-transactions', component: view_transactionsComponent },
   { path: 'qr-code-reader', component: qr_code_readerComponent },
   { path: 'search', component: searchComponent },
   { path: 'airtime', component: buy_airtimeComponent },
-  { path: 'electricity', component: buy_electricityComponent },
-  { path: 'eWallet', component: ewalletComponent },
-  { path: 'pay', component: payComponent },
   { path: 'cards', component: cardComponent },
-  { path: 'landing', component: landingComponent },
   {
     path: 'home',
     component: homeComponent,
@@ -224,6 +223,17 @@ export const appRoutes = [
       { path: 'login', component: loginComponent },
       { path: 'forgot-password', component: forgot_passwordComponent },
       { path: 'verify-code', component: verify_codeComponent },
+      { path: 'change-password', component: change_passwordComponent },
+      { path: 'deposit', component: deposit_ownComponent },
+      { path: 'airtime', component: buy_airtimeComponent },
+      { path: 'airtime-details', component: airtime_detailsComponent },
+      { path: 'someone_airtime', component: airtimeAnother_detailsComponent },
+      { path: 'pay', component: payComponent },
+      { path: 'eWallet', component: ewalletComponent },
+      { path: 'electricity', component: buy_electricityComponent },
+      { path: 'cards', component: cardComponent },
+      { path: 'view-transactions', component: view_transactionsComponent },
+      { path: 'dashboard', component: dashboardComponent },
     ],
   },
   { path: 'personal-info', component: personal_infoComponent },
@@ -231,19 +241,11 @@ export const appRoutes = [
   { path: 'add-profile-pic', component: add_profile_picComponent },
   { path: 'id-documents', component: id_documentsComponent },
   { path: 'username', component: usernameComponent },
-  { path: 'change-password', component: change_passwordComponent },
   { path: 'limits', component: limitsComponent },
-  { path: 'deposit', component: deposit_ownComponent },
   { path: 'confirm-limits', component: confirm_limitsComponent },
   { path: 'menu-dialog', component: menu_dialogComponent },
   { path: 'coming-soon', component: coming_soonComponent },
-  { path: 'change-password2', component: change_password2Component },
   { path: 'qr-code-manual', component: qr_code_readerComponent },
-  { path: 'airtime-details', component: airtime_detailsComponent },
-  {
-    path: 'airtimeAnother-details',
-    component: airtimeAnother_detailsComponent,
-  },
   { path: 'migrate', component: migrateComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },

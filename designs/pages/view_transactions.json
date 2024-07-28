@@ -509,6 +509,39 @@
         "x": 920,
         "y": 40,
         "wires": [
+            [
+                "sd_rxCpdeVmg7uYl6Mi"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_rxCpdeVmg7uYl6Mi",
+        "type": "Storage",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Accounts"
+        },
+        "resultMapping": {},
+        "functionName": "sd_rxCpdeVmg7uYl6Mi",
+        "category": "Storage",
+        "x": 1005,
+        "y": 40,
+        "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},

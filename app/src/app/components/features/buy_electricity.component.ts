@@ -165,10 +165,21 @@ export class buy_electricityComponent {
         transDate: new FormControl(bh.date),
       });
 
+      bh = this.sd_ymWB7xEZphueRVg9(bh);
       //appendnew_next_sd_zz43ZgH2Icyxac5u
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_zz43ZgH2Icyxac5u');
+    }
+  }
+
+  sd_ymWB7xEZphueRVg9(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Electricity'));
+      //appendnew_next_sd_ymWB7xEZphueRVg9
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ymWB7xEZphueRVg9');
     }
   }
 

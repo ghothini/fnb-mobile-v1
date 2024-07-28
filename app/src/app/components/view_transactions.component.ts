@@ -248,10 +248,21 @@ export class view_transactionsComponent {
 
       page.newArr = newArray;
       console.log('newArray', page.newArr);
+      bh = this.sd_rxCpdeVmg7uYl6Mi(bh);
       //appendnew_next_sd_QXMibve5VdwFRL9r
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_QXMibve5VdwFRL9r');
+    }
+  }
+
+  sd_rxCpdeVmg7uYl6Mi(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Accounts'));
+      //appendnew_next_sd_rxCpdeVmg7uYl6Mi
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_rxCpdeVmg7uYl6Mi');
     }
   }
 

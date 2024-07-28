@@ -226,6 +226,7 @@
         "nodeType": "flow",
         "name": "send_ewallet",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -233,8 +234,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -250,9 +253,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sendEwallet",
         "category": "HTTP",
@@ -298,6 +303,7 @@
         "nodeType": "flow",
         "name": "update",
         "method": "put",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url2",
         "urlMappingObj": {
@@ -305,8 +311,10 @@
             "mapVarValue": "url2"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -322,9 +330,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "update",
         "category": "HTTP",
@@ -360,7 +370,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -426,7 +438,9 @@
         "x": 465,
         "y": 60,
         "wires": [
-            []
+            [
+                "sd_UC6Yc7vmTzhFhAbG"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -827,7 +841,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -837,6 +853,37 @@
         "category": "General",
         "x": 225,
         "y": 420,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_UC6Yc7vmTzhFhAbG",
+        "type": "Storage",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "eWallet"
+        },
+        "resultMapping": {},
+        "functionName": "sd_UC6Yc7vmTzhFhAbG",
+        "category": "Storage",
+        "x": 565,
+        "y": 60,
         "wires": [
             []
         ],

@@ -193,10 +193,21 @@ export class airtimeAnother_detailsComponent {
         { value: 'pune-2', viewValue: 'Pune' },
       ];
 
+      bh = this.sd_CGHc3pbnJjTzQ7el(bh);
       //appendnew_next_sd_rJRe6FEsisjK0BOC
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_rJRe6FEsisjK0BOC');
+    }
+  }
+
+  sd_CGHc3pbnJjTzQ7el(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Purchase Details'));
+      //appendnew_next_sd_CGHc3pbnJjTzQ7el
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_CGHc3pbnJjTzQ7el');
     }
   }
 

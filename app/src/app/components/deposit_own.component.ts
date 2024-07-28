@@ -4,7 +4,7 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
-import { FormControl, FormGroup } from '@angular/forms'; //_splitter_
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -28,6 +28,7 @@ export class deposit_ownComponent {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
+    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 
@@ -147,10 +148,21 @@ export class deposit_ownComponent {
       });
       page.loggedInUser.balance = '';
       console.log('page', page);
+      bh = this.sd_0KOgYHYosKfSej99(bh);
       //appendnew_next_sd_SCwW4nHklebIcI9W
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_n1swxNd5XPSBN52k');
+    }
+  }
+
+  sd_0KOgYHYosKfSej99(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Deposit'));
+      //appendnew_next_sd_0KOgYHYosKfSej99
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0KOgYHYosKfSej99');
     }
   }
 
@@ -277,12 +289,10 @@ export class deposit_ownComponent {
   async sd_D4TSF2KvJlb00H4k(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/bank');
+        this.sdService.getPathAndQParamsObj('/home/bank');
       this.page.loggedInUser = await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_D4TSF2KvJlb00H4k
       return bh;
     } catch (e) {

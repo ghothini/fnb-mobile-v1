@@ -251,7 +251,9 @@
         "x": 465,
         "y": 40,
         "wires": [
-            []
+            [
+                "sd_ymWB7xEZphueRVg9"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -545,6 +547,7 @@
         "nodeType": "flow",
         "name": "update",
         "method": "put",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url_update",
         "urlMappingObj": {
@@ -552,8 +555,10 @@
             "mapVarValue": "url_update"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -569,9 +574,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "update",
         "category": "HTTP",
@@ -649,7 +656,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -771,7 +780,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -986,6 +997,37 @@
         "category": "Function",
         "x": 465,
         "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ymWB7xEZphueRVg9",
+        "type": "Storage",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Electricity"
+        },
+        "resultMapping": {},
+        "functionName": "sd_ymWB7xEZphueRVg9",
+        "category": "Storage",
+        "x": 565,
+        "y": 40,
         "wires": [
             []
         ],
