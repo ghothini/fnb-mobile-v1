@@ -423,12 +423,10 @@ export class buy_electricityComponent {
   async sd_21gHL2xhMj3IYVca(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/bank');
+        this.sdService.getPathAndQParamsObj('/home/bank');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_21gHL2xhMj3IYVca
       return bh;
     } catch (e) {

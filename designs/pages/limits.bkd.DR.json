@@ -417,14 +417,15 @@
                     },
                     {
                         "_key": "(click)",
-                        "_value": "goBack()",
+                        "_value": "__serviceInvoker__.invoke('sd_O7BgeFkazhosv8N2', 'goBack')",
                         "_type": "kv",
                         "_attrDef": "c",
                         "objValue": {
-                            "nodeID": "sd_vmAiai4cGLhN1Y3r",
+                            "nodeID": "sd_jJRXnjTcMQmcijs6",
                             "functionName": "goBack",
-                            "activeTree": "pages",
-                            "z": "sd_xhXuov1dDZlj38yI",
+                            "activeTree": "services",
+                            "z": "sd_O7BgeFkazhosv8N2",
+                            "serviceId": "sd_O7BgeFkazhosv8N2",
                             "input": []
                         }
                     }

@@ -248,7 +248,6 @@ export class view_transactionsComponent {
         return page.loggedInUser.email == user.email;
       });
       page.airtimeArr = bh.airtime;
-      console.log('airtime ==>', page.airtimeArr);
 
       bh.eWallet = page.ewallet.filter((user: any) => {
         return page.loggedInUser.email == user.email;

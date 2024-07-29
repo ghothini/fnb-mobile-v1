@@ -410,12 +410,10 @@ export class payComponent {
   async sd_te8Ame92IoqQehLd(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/bank');
+        this.sdService.getPathAndQParamsObj('/home/bank');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_te8Ame92IoqQehLd
       return bh;
     } catch (e) {
