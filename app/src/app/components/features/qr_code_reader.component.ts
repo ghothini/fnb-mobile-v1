@@ -183,7 +183,6 @@ export class qr_code_readerComponent {
         email: page.user.email,
         balance: bh.difference,
         collection: 'users',
-        amount: bh.scanned.amount,
       };
 
       bh = this.sd_m7lT5x0dyAM3txcJ(bh);

@@ -218,7 +218,7 @@ export const appRoutes = [
     component: homeComponent,
     children: [
       { path: 'bank', component: bankComponent },
-      { path: 'message', component: messageComponent },
+      { path: 'messages', component: view_transactionsComponent },
       { path: 'profile', component: profileComponent },
       { path: 'login', component: loginComponent },
       { path: 'forgot-password', component: forgot_passwordComponent },
@@ -238,6 +238,7 @@ export const appRoutes = [
       { path: 'personal-info', component: personal_infoComponent },
       { path: 'username', component: usernameComponent },
       { path: 'limits', component: limitsComponent },
+      { path: 'coming-soon', component: coming_soonComponent },
     ],
   },
   { path: 'add-profile-pic', component: add_profile_picComponent },

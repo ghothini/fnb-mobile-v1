@@ -74,10 +74,21 @@ export class coming_soonComponent {
 
   sd_u5WgrKOEBJuzHou5(bh) {
     try {
+      bh = this.sd_3b6Y5LdnOEN9Y9SY(bh);
       //appendnew_next_sd_u5WgrKOEBJuzHou5
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_u5WgrKOEBJuzHou5');
+    }
+  }
+
+  sd_3b6Y5LdnOEN9Y9SY(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Coming Soon'));
+      //appendnew_next_sd_3b6Y5LdnOEN9Y9SY
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3b6Y5LdnOEN9Y9SY');
     }
   }
 

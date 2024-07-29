@@ -367,12 +367,10 @@ export class bankComponent {
   async sd_5BJxjFHynhFcApHB(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/coming-soon');
+        this.sdService.getPathAndQParamsObj('/home/coming-soon');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_5BJxjFHynhFcApHB
       return bh;
     } catch (e) {
