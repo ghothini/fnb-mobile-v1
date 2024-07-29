@@ -195,12 +195,10 @@ export class bankComponent {
   async sd_lzbhoAkaARC0iBfx(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/view-transactions');
+        this.sdService.getPathAndQParamsObj('/home/view-transactions');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_lzbhoAkaARC0iBfx
       return bh;
     } catch (e) {
@@ -243,7 +241,7 @@ export class bankComponent {
   async sd_kGLL3bXWMEQMJJhl(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/airtime');
+        this.sdService.getPathAndQParamsObj('/home/airtime');
       await this.__page_injector__
         .get(Router)
         .navigate([this.sdService.formatPathWithParams(path, undefined)], {
@@ -259,7 +257,7 @@ export class bankComponent {
   async sd_xpqupbZrQoVdJQAu(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/electricity');
+        this.sdService.getPathAndQParamsObj('/home/electricity');
       await this.__page_injector__
         .get(Router)
         .navigate([this.sdService.formatPathWithParams(path, undefined)], {
@@ -275,7 +273,7 @@ export class bankComponent {
   async sd_SgsNGx1cZnLcpg5l(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/eWallet');
+        this.sdService.getPathAndQParamsObj('/home/eWallet');
       await this.__page_injector__
         .get(Router)
         .navigate([this.sdService.formatPathWithParams(path, undefined)], {
@@ -291,7 +289,7 @@ export class bankComponent {
   async sd_tDYSVNbUXDNJl3OU(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/pay');
+        this.sdService.getPathAndQParamsObj('/home/pay');
       await this.__page_injector__
         .get(Router)
         .navigate([this.sdService.formatPathWithParams(path, undefined)], {
@@ -307,12 +305,10 @@ export class bankComponent {
   async sd_4gY2NKIDRROAm3qN(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/cards');
+        this.sdService.getPathAndQParamsObj('/home/cards');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_4gY2NKIDRROAm3qN
       return bh;
     } catch (e) {

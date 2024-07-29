@@ -1,16 +1,4 @@
 <div fxLayout="column wrap" class="landing-full-width personal-info" fxLayoutAlign="start stretch" [fxShow]="true">
-  <div fxLayout="row wrap" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
-    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
-                <span class="material-symbols-outlined ">
-                arrow_back
-            </span></span></div><label class="message-fz-21 message-margin-left-1em">
-      Personal info</label><span class="message-flex-1">
-                </span>
-    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true"><span>
-                <span class="material-symbols-outlined">
-                close
-                </span></span></div>
-  </div>
   <div fxLayout="column wrap" class="landing-full-height personal-info-bottom" fxLayoutGap="0.5em" fxLayoutAlign="start stretch" [fxShow]="true">
     <div fxLayout="column wrap" class="landing-full-width personal-info-middle-top-row" fxLayoutAlign="start stretch" [fxShow]="true">
       <div fxLayout="row wrap" class="landing-full-width personal-info-middle-top-row1" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
@@ -19,7 +7,7 @@
             {{page.userDetails.name}} {{page.userDetails.surname}}</label><label style="color: #919397" class="message-fz-20">
             {{page.userDetails.idNum}}</label></div>
       </div>
-      <div fxLayout="row wrap" class="personal-info-middle-top-row2" fxLayoutAlign="center start" [fxShow]="true"><button mat-raised-button routerLink="/add-profile-pic" class="message-fz-18 personal-info-update-picture" [disabled]="true">Update profile picture</button></div>
+      <div fxLayout="row wrap" class="personal-info-middle-top-row2" fxLayoutAlign="center start" [fxShow]="true"><button mat-raised-button routerLink="/add-profile-pic" class="bank-full-width btn" [disabled]="true">Update profile picture</button></div>
     </div>
     <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/coming-soon&apos;]">
       <div fxLayout="row wrap" class="personal-info-icon-round message-height-90 personal-middle-row-left" fxLayoutAlign="center center" [fxShow]="true">

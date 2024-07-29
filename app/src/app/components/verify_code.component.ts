@@ -272,12 +272,10 @@ export class verify_codeComponent {
   async sd_syhqL8DbCmWvp5qY(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/change-password');
+        this.sdService.getPathAndQParamsObj('/home/change-password');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       bh = this.sd_8SYIRhH5NBwbV1cb(bh);
       //appendnew_next_sd_syhqL8DbCmWvp5qY
       return bh;

@@ -251,7 +251,9 @@
         "x": 465,
         "y": 40,
         "wires": [
-            []
+            [
+                "sd_ymWB7xEZphueRVg9"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -778,7 +780,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -1015,6 +1019,37 @@
         "category": "Function",
         "x": 285,
         "y": 260,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ymWB7xEZphueRVg9",
+        "type": "Storage",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Electricity"
+        },
+        "resultMapping": {},
+        "functionName": "sd_ymWB7xEZphueRVg9",
+        "category": "Storage",
+        "x": 565,
+        "y": 40,
         "wires": [
             []
         ],

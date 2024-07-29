@@ -1,7 +1,7 @@
 <div fxLayout="column wrap" class="landing-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
   <div fxLayout="column wrap" class="my-profile-middle" fxLayoutAlign="center center" [fxShow]="true">
     <div fxLayout="column wrap" class="landing-full-height" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="row wrap" class="my-profile-margin-top-1em my-profile-row" fxLayoutAlign="space-between center" [fxShow]="true" [routerLink]="[&apos;/personal-info&apos;]">
+      <div fxLayout="row wrap" class="my-profile-margin-top-1em my-profile-row" fxLayoutAlign="space-between center" [fxShow]="true" [routerLink]="[&apos;/home/personal-info&apos;]">
         <div fxLayout="row wrap" class="my-profile-margin-10 my-profile-round my-profile-row1" fxLayoutAlign="center center" [fxShow]="true">
           <div>
             <span class="material-symbols-outlined my-profile-fz-30 my-profile-green-text">account_box</span>
@@ -14,7 +14,7 @@
               Update your details safely</label></div>
         </div>
       </div>
-      <div fxLayout="row wrap" class="my-profile-row" fxLayoutAlign="space-between center" [fxShow]="true" [routerLink]="[&apos;/settings&apos;]">
+      <div fxLayout="row wrap" class="my-profile-row" fxLayoutAlign="space-between center" [fxShow]="true" [routerLink]="[&apos;/home/settings&apos;]">
         <div fxLayout="row wrap" class="my-profile-margin-10 my-profile-round my-profile-row1" fxLayoutAlign="center center" [fxShow]="true">
           <div>
             <span class="material-symbols-outlined my-profile-fz-30 my-profile-green-text">settings</span>
@@ -42,7 +42,7 @@ transfer_within_a_station
               Transfer from FNB to Capitec</label></div>
         </div>
       </div>
-      <div fxLayout="row wrap" class="my-profile-row" fxLayoutAlign="space-between center" [fxShow]="true" [routerLink]="[&apos;/landing&apos;]" (click)="logout()">
+      <div fxLayout="row wrap" class="my-profile-row" fxLayoutAlign="space-between center" [fxShow]="true" [routerLink]="[&apos;/home/dashboard&apos;]" (click)="logout()">
         <div fxLayout="row wrap" class="my-profile-margin-10 my-profile-round my-profile-row1" fxLayoutAlign="center center" [fxShow]="true">
           <div>
             <span class="material-symbols-outlined my-profile-fz-30 message-text-orange">logout</span>

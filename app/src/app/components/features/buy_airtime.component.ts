@@ -117,10 +117,21 @@ export class buy_airtimeComponent {
   sd_24vDLIgEl1Ye1BkQ(bh) {
     try {
       this.page.user = JSON.parse(sessionStorage.getItem('user'));
+      bh = this.sd_e2SgpViYCKMaTDdq(bh);
       //appendnew_next_sd_24vDLIgEl1Ye1BkQ
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_24vDLIgEl1Ye1BkQ');
+    }
+  }
+
+  sd_e2SgpViYCKMaTDdq(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Airtime & Bundles'));
+      //appendnew_next_sd_e2SgpViYCKMaTDdq
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_e2SgpViYCKMaTDdq');
     }
   }
 
@@ -140,7 +151,7 @@ export class buy_airtimeComponent {
   async sd_6zQvR1COL7ks0Uhe(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/airtime-details');
+        this.sdService.getPathAndQParamsObj('/home/airtime-details');
       await this.__page_injector__
         .get(Router)
         .navigate([this.sdService.formatPathWithParams(path, undefined)]);
@@ -154,12 +165,10 @@ export class buy_airtimeComponent {
   async sd_vPRi09XZbOaMOagK(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/airtimeAnother-details');
+        this.sdService.getPathAndQParamsObj('/home/someone_airtime');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_vPRi09XZbOaMOagK
       return bh;
     } catch (e) {

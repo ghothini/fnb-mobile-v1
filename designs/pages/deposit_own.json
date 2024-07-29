@@ -157,7 +157,9 @@
         "x": 565,
         "y": 100,
         "wires": [
-            []
+            [
+                "sd_0KOgYHYosKfSej99"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -338,13 +340,7 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "/bank",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
+        "path": "/home/bank",
         "resultMapping": {
             "type": "this.page",
             "value": "loggedInUser"
@@ -624,6 +620,37 @@
         "category": "Function",
         "x": 225,
         "y": 520,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_0KOgYHYosKfSej99",
+        "type": "Storage",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Deposit"
+        },
+        "resultMapping": {},
+        "functionName": "sd_0KOgYHYosKfSej99",
+        "category": "Storage",
+        "x": 665,
+        "y": 100,
         "wires": [
             []
         ],

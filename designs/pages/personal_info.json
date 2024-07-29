@@ -46,7 +46,9 @@
         "x": 345,
         "y": 80,
         "wires": [
-            []
+            [
+                "sd_fpZRiMYPHB3E3DNS"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -169,6 +171,37 @@
             [
                 "sd_rQOfEXAMOUzol1j5"
             ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "personal_infoComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_fpZRiMYPHB3E3DNS",
+        "type": "Storage",
+        "z": "sd_qZ45hTZbEWoSgzLO",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Personal Info"
+        },
+        "resultMapping": {},
+        "functionName": "sd_fpZRiMYPHB3E3DNS",
+        "category": "Storage",
+        "x": 445,
+        "y": 80,
+        "wires": [
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

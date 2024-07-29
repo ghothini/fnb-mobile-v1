@@ -58,7 +58,9 @@
         "x": 145,
         "y": 40,
         "wires": [
-            []
+            [
+                "sd_ptwq7KqqUOghlfsh"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -201,6 +203,37 @@
         "category": "Storage",
         "x": 265,
         "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "settingsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ptwq7KqqUOghlfsh",
+        "type": "Storage",
+        "z": "sd_jIVXDidqQ8uyxAkI",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Settings"
+        },
+        "resultMapping": {},
+        "functionName": "sd_ptwq7KqqUOghlfsh",
+        "category": "Storage",
+        "x": 245,
+        "y": 40,
         "wires": [
             []
         ],

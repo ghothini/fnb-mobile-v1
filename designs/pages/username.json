@@ -193,7 +193,9 @@
         "x": 545,
         "y": 60,
         "wires": [
-            []
+            [
+                "sd_kSC8KQFpXeN9jj3L"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -263,6 +265,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "put",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -270,8 +273,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -287,9 +292,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_wYISw7qqKxA6Xq8m",
         "category": "HTTP",
@@ -358,7 +365,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -369,7 +378,9 @@
         "x": 945,
         "y": 380,
         "wires": [
-            []
+            [
+                "sd_RH7aa9B2bzYwq49a"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -456,7 +467,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -532,7 +545,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -588,6 +603,57 @@
             [
                 "sd_PPlEqPGhsGPk0D3o"
             ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "usernameComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_kSC8KQFpXeN9jj3L",
+        "type": "Storage",
+        "z": "sd_bHLkBtLZaWdcrwCz",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "My Username"
+        },
+        "resultMapping": {},
+        "functionName": "sd_kSC8KQFpXeN9jj3L",
+        "category": "Storage",
+        "x": 645,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "usernameComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_RH7aa9B2bzYwq49a",
+        "type": "Navigation",
+        "z": "sd_bHLkBtLZaWdcrwCz",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/settings",
+        "functionName": "sd_RH7aa9B2bzYwq49a",
+        "category": "Navigation",
+        "x": 1045,
+        "y": 380,
+        "wires": [
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

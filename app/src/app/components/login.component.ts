@@ -521,7 +521,7 @@ export class loginComponent {
   async sd_2U4d5CqtIFcteErr(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/change-password');
+        this.sdService.getPathAndQParamsObj('/home/change-password');
       await this.__page_injector__
         .get(Router)
         .navigate([this.sdService.formatPathWithParams(path, undefined)]);
@@ -553,7 +553,7 @@ export class loginComponent {
   async sd_w7pLMcccCEh0xCaL(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/');
+        this.sdService.getPathAndQParamsObj('/home/bank');
       await this.__page_injector__
         .get(Router)
         .navigate([this.sdService.formatPathWithParams(path, undefined)]);

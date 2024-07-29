@@ -438,7 +438,9 @@
         "x": 465,
         "y": 60,
         "wires": [
-            []
+            [
+                "sd_UC6Yc7vmTzhFhAbG"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -851,6 +853,37 @@
         "category": "General",
         "x": 225,
         "y": 420,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ewalletComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_UC6Yc7vmTzhFhAbG",
+        "type": "Storage",
+        "z": "sd_lgtChNQJf2qX02UG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "eWallet"
+        },
+        "resultMapping": {},
+        "functionName": "sd_UC6Yc7vmTzhFhAbG",
+        "category": "Storage",
+        "x": 565,
+        "y": 60,
         "wires": [
             []
         ],

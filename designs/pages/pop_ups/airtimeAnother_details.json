@@ -76,7 +76,9 @@
         "x": 405,
         "y": 60,
         "wires": [
-            []
+            [
+                "sd_CGHc3pbnJjTzQ7el"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -249,7 +251,7 @@
         "y": 260,
         "wires": [
             [
-                "sd_iWPIIAG2PTP4F2rF"
+                "sd_uSvAU4XSF5ERlRwS"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -263,7 +265,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log('airtimeForm', page.airtimeForm.value)\n\npage.loggedInUser.balance = page.loggedInUser.balance - page.airtimeForm.value.amount;\n\nconsole.log('page', page)",
+        "script": "page.showSpinner = true;\npage.loggedInUser.balance = page.loggedInUser.balance - page.airtimeForm.value.amount;",
         "functionName": "sd_fUudOu6qnSN7CIJc",
         "category": "Function",
         "x": 385,
@@ -318,14 +320,7 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "/bank",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
+        "path": "/home/airtime",
         "functionName": "sd_jQfO12W4pPzDwVAg",
         "category": "Navigation",
         "x": 1285,
@@ -521,9 +516,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -531,7 +524,7 @@
         "direction": "ltr",
         "functionName": "sd_3kYbKQMbfceW6u51",
         "category": "General",
-        "x": 1205,
+        "x": 1185,
         "y": 140,
         "wires": [
             [
@@ -630,9 +623,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -676,8 +667,8 @@
         "outputs": 2,
         "functionName": "sd_LL8fJw3h4l2Q1sMn",
         "category": "Function",
-        "x": 305,
-        "y": 180,
+        "x": 285,
+        "y": 200,
         "wires": [
             [
                 "sd_fUudOu6qnSN7CIJc"
@@ -698,21 +689,15 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "property": "airtimeForm.status",
+        "property": "airtimeForm.invalid",
         "propertyType": "this.page",
-        "propertyGv": "this.page.airtimeForm.status",
+        "propertyGv": "this.page.airtimeForm.invalid",
         "rules": [
             {
-                "t": "eq",
-                "v": "VALID",
-                "vt": "str",
-                "gv": "\"VALID\""
+                "t": "else"
             },
             {
-                "t": "eq",
-                "v": "INVALID",
-                "vt": "str",
-                "gv": "\"INVALID\""
+                "t": "true"
             }
         ],
         "checkall": "false",
@@ -720,7 +705,7 @@
         "outputs": 2,
         "functionName": "sd_uSvAU4XSF5ERlRwS",
         "category": "Function",
-        "x": 225,
+        "x": 165,
         "y": 260,
         "wires": [
             [
@@ -744,7 +729,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "Please fill in the fields"
+            "value": "All fields are required"
         },
         "action": {
             "type": "str",
@@ -755,9 +740,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -769,28 +752,6 @@
         "y": 320,
         "wires": [
             []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "airtimeAnother_detailsComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_iWPIIAG2PTP4F2rF",
-        "type": "Script",
-        "z": "sd_NebjxnLYDwkz9Qzy",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "console.log(\"FORM DATA==>\", page.airtimeForm)\n\npage.showSpinner = true;",
-        "functionName": "sd_iWPIIAG2PTP4F2rF",
-        "category": "Function",
-        "x": 145,
-        "y": 260,
-        "wires": [
-            [
-                "sd_uSvAU4XSF5ERlRwS"
-            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -954,6 +915,37 @@
             [
                 "sd_G6LgCezreEDe39ZL"
             ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "airtimeAnother_detailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_CGHc3pbnJjTzQ7el",
+        "type": "Storage",
+        "z": "sd_NebjxnLYDwkz9Qzy",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Purchase Details"
+        },
+        "resultMapping": {},
+        "functionName": "sd_CGHc3pbnJjTzQ7el",
+        "category": "Storage",
+        "x": 505,
+        "y": 60,
+        "wires": [
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

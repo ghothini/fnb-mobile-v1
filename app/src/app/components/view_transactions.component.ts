@@ -289,10 +289,21 @@ export class view_transactionsComponent {
       this.page.scanArr = bh.scan;
       this.page.payArr = bh.pay;
       this.page.eWalletArr = bh.eWallet;
+      bh = this.sd_rxCpdeVmg7uYl6Mi(bh);
       //appendnew_next_sd_4oYRr5H41YvEZUZT
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_4oYRr5H41YvEZUZT');
+    }
+  }
+
+  sd_rxCpdeVmg7uYl6Mi(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Accounts'));
+      //appendnew_next_sd_rxCpdeVmg7uYl6Mi
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_rxCpdeVmg7uYl6Mi');
     }
   }
 

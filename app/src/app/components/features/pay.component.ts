@@ -173,10 +173,21 @@ export class payComponent {
         transactionDate: new FormControl(page.formattedDate),
       });
 
+      bh = this.sd_tFci8iV2ctBF5MIl(bh);
       //appendnew_next_sd_5nGehRQGAKuqGXV3
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_5nGehRQGAKuqGXV3');
+    }
+  }
+
+  sd_tFci8iV2ctBF5MIl(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Pay'));
+      //appendnew_next_sd_tFci8iV2ctBF5MIl
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_tFci8iV2ctBF5MIl');
     }
   }
 

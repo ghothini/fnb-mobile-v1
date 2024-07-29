@@ -168,10 +168,21 @@ export class ewalletComponent {
         transactionDate: new FormControl(page.formattedDate),
       });
 
+      bh = this.sd_UC6Yc7vmTzhFhAbG(bh);
       //appendnew_next_sd_ejUFnfZNlysDod57
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_ejUFnfZNlysDod57');
+    }
+  }
+
+  sd_UC6Yc7vmTzhFhAbG(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('eWallet'));
+      //appendnew_next_sd_UC6Yc7vmTzhFhAbG
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UC6Yc7vmTzhFhAbG');
     }
   }
 

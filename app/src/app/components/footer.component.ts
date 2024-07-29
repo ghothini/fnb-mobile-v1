@@ -3,13 +3,7 @@
 //CORE_REFERENCE_IMPORTS
 //append_imports_start
 
-import {
-  Component,
-  EventEmitter,
-  HostListener,
-  Injector,
-  Output,
-} from '@angular/core'; //_splitter_
+import { Component, EventEmitter, Injector, Output } from '@angular/core'; //_splitter_
 import { MatDialog } from '@angular/material/dialog'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { menu_dialogComponent } from 'app/components/menu_dialog.component'; //_splitter_
@@ -96,18 +90,6 @@ export class footerComponent {
       return this.errorHandler(bh, e, 'sd_7brMOsgab8Q1kxhs');
     }
   }
-  @HostListener('selectedPage', ['$event']) sd_0pNOHVfzysx9Ph4d(event) {
-    try {
-      var bh: any = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.$event = event;
-      //appendnew_next_sd_0pNOHVfzysx9Ph4d
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_0pNOHVfzysx9Ph4d');
-    }
-  }
-
   //appendnew_flow_footerComponent_start
 
   sd_jF8y0IaE8zFwZjJz(bh) {
@@ -128,7 +110,7 @@ export class footerComponent {
         {
           label: 'Home',
           image: 'Web/Image Icons/home.png',
-          route: '/home',
+          route: '/home/dashboard',
           title: 'FNB',
         },
         {
@@ -210,7 +192,7 @@ export class footerComponent {
   async sd_iU9pAgT2wOGiRKzA(bh) {
     try {
       if (
-        this.sdService.operators['true'](
+        this.sdService.operators['nempty'](
           this.page.currentUser,
           undefined,
           undefined,
@@ -288,7 +270,9 @@ export class footerComponent {
         this.sdService.getPathAndQParamsObj('/home/login');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_NAnJYrZHHecXvzEv
       return bh;
     } catch (e) {

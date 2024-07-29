@@ -136,8 +136,9 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "limitsComponent"
+        "generateNext": false,
+        "serviceName": "limitsComponent",
+        "generated": true
     },
     {
         "id": "sd_8BLGEcNOEIvq4nwb",
@@ -260,11 +261,14 @@
         "x": 985,
         "y": 60,
         "wires": [
-            []
+            [
+                "sd_A5ST0emUMMg1dhct"
+            ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "limitsComponent"
+        "generateNext": false,
+        "serviceName": "limitsComponent",
+        "generated": true
     },
     {
         "id": "sd_L71dMFp8ELSXvdR6",
@@ -497,7 +501,9 @@
         "x": 765,
         "y": 60,
         "wires": [
-            []
+            [
+                "sd_gJ5z914BxWPfHOJf"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -734,6 +740,37 @@
         "category": "Function",
         "x": 150,
         "y": 440,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "limitsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_A5ST0emUMMg1dhct",
+        "type": "Storage",
+        "z": "sd_dfQ2vHZYHyt5Ymfr",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Limits"
+        },
+        "resultMapping": {},
+        "functionName": "sd_A5ST0emUMMg1dhct",
+        "category": "Storage",
+        "x": 1085,
+        "y": 60,
         "wires": [
             []
         ],
