@@ -119,28 +119,6 @@
         "generated": true
     },
     {
-        "id": "sd_gJ5z914BxWPfHOJf",
-        "type": "Script",
-        "z": "sd_dfQ2vHZYHyt5Ymfr",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "\n\npage.changeLimitsForm = new FormGroup ({\n    transfers: new FormControl(page.data.transfers, Validators.required),\n    payments: new FormControl(page.data.payments, [Validators.required]),\n    payAndClear: new FormControl(page.data.payAndClear, [Validators.required]),\n    prepaid: new FormControl(page.data.prepaid, [Validators.required]),\n    sendMoney: new FormControl(page.data.sendMoney, [Validators.required]),\n    vouchers: new FormControl(page.data.vouchers, [Validators.required]),\n    cardlessCashWithdrawal: new FormControl(page.data.cardlessCashWithdrawal, [Validators.required]),\n})\n\n\n",
-        "functionName": "sd_gJ5z914BxWPfHOJf",
-        "category": "Function",
-        "x": 865,
-        "y": 60,
-        "wires": [
-            [
-                "sd_MLZqsWOuCTHErd5S"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "limitsComponent",
-        "generated": true
-    },
-    {
         "id": "sd_8BLGEcNOEIvq4nwb",
         "type": "HttpRequest",
         "z": "sd_dfQ2vHZYHyt5Ymfr",
@@ -188,81 +166,6 @@
         "wires": [
             [
                 "sd_ZUexHrSTJi7SwpSG"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "limitsComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_MLZqsWOuCTHErd5S",
-        "type": "PageVariables",
-        "z": "sd_dfQ2vHZYHyt5Ymfr",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
-        "inputs": 1,
-        "outputs": 1,
-        "operation": "set",
-        "globalVariables": [
-            {
-                "textIp": "transfers",
-                "typedIpValue": {
-                    "type": "this.page",
-                    "value": "data.transfers"
-                }
-            },
-            {
-                "textIp": "payAndClear",
-                "typedIpValue": {
-                    "type": "this.page",
-                    "value": "data.payAndClear"
-                }
-            },
-            {
-                "textIp": "payments",
-                "typedIpValue": {
-                    "type": "this.page",
-                    "value": "data.payments"
-                }
-            },
-            {
-                "textIp": "prepaid",
-                "typedIpValue": {
-                    "type": "this.page",
-                    "value": "data.prepaid"
-                }
-            },
-            {
-                "textIp": "sendMoney",
-                "typedIpValue": {
-                    "type": "this.page",
-                    "value": "data.sendMoney"
-                }
-            },
-            {
-                "textIp": "vouchers",
-                "typedIpValue": {
-                    "type": "this.page",
-                    "value": "data.vouchers"
-                }
-            },
-            {
-                "textIp": "cardlessCashWithdrawal",
-                "typedIpValue": {
-                    "type": "this.page",
-                    "value": "data.cardlessCashWithdrawal"
-                }
-            }
-        ],
-        "functionName": "sd_MLZqsWOuCTHErd5S",
-        "category": "Function",
-        "x": 985,
-        "y": 60,
-        "wires": [
-            [
-                "sd_A5ST0emUMMg1dhct"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -502,7 +405,7 @@
         "y": 60,
         "wires": [
             [
-                "sd_gJ5z914BxWPfHOJf"
+                "sd_A5ST0emUMMg1dhct"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -769,7 +672,7 @@
         "resultMapping": {},
         "functionName": "sd_A5ST0emUMMg1dhct",
         "category": "Storage",
-        "x": 1085,
+        "x": 865,
         "y": 60,
         "wires": [
             []

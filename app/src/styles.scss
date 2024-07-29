@@ -1014,9 +1014,8 @@ $my-profile-green: #00a9ac;
 }
 
 bh-limits{
-    height: 140vh;
+    // height: 140vh;
     display: flex;
-
 }
 .limits{
     height: 100%;
@@ -1026,23 +1025,18 @@ bh-limits{
 
 .limits-tab{
     width: 100% !important;
-    top: 8%;
-    position: absolute;
-    max-height: 140% !important;
-    height: 136vh;
 
     .limits-tabs{
         // width: 90%;
         height: 100%;
-        
 
         .mat-tab-label{
-        width: 50% !important;
-        height: 35px;
+        // width: 50% !important;
+        // height: 35px;
     }
 
     .mat-tab-label .mat-tab-label-content{
-        font-size: 18px;
+        font-size: 19px;
     }
 
     .mat-tab-body-wrapper {
@@ -1128,7 +1122,6 @@ bh-limits{
 }
 
 .limits-row-right{
-    height: 7%;
     width: 100%;
 }
 

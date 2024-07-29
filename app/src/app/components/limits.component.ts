@@ -203,55 +203,11 @@ export class limitsComponent {
           [Validators.required]
         ),
       });
-      bh = this.sd_gJ5z914BxWPfHOJf(bh);
+      bh = this.sd_A5ST0emUMMg1dhct(bh);
       //appendnew_next_sd_ZUexHrSTJi7SwpSG
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_ZUexHrSTJi7SwpSG');
-    }
-  }
-
-  sd_gJ5z914BxWPfHOJf(bh) {
-    try {
-      const page = this.page;
-
-      page.changeLimitsForm = new FormGroup({
-        transfers: new FormControl(page.data.transfers, Validators.required),
-        payments: new FormControl(page.data.payments, [Validators.required]),
-        payAndClear: new FormControl(page.data.payAndClear, [
-          Validators.required,
-        ]),
-        prepaid: new FormControl(page.data.prepaid, [Validators.required]),
-        sendMoney: new FormControl(page.data.sendMoney, [Validators.required]),
-        vouchers: new FormControl(page.data.vouchers, [Validators.required]),
-        cardlessCashWithdrawal: new FormControl(
-          page.data.cardlessCashWithdrawal,
-          [Validators.required]
-        ),
-      });
-
-      bh = this.sd_MLZqsWOuCTHErd5S(bh);
-      //appendnew_next_sd_gJ5z914BxWPfHOJf
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_gJ5z914BxWPfHOJf');
-    }
-  }
-
-  sd_MLZqsWOuCTHErd5S(bh) {
-    try {
-      this.page.transfers = this.page.data.transfers;
-      this.page.payAndClear = this.page.data.payAndClear;
-      this.page.payments = this.page.data.payments;
-      this.page.prepaid = this.page.data.prepaid;
-      this.page.sendMoney = this.page.data.sendMoney;
-      this.page.vouchers = this.page.data.vouchers;
-      this.page.cardlessCashWithdrawal = this.page.data.cardlessCashWithdrawal;
-      bh = this.sd_A5ST0emUMMg1dhct(bh);
-      //appendnew_next_sd_MLZqsWOuCTHErd5S
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_MLZqsWOuCTHErd5S');
     }
   }
 
