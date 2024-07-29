@@ -198,7 +198,9 @@ export class bankComponent {
         this.sdService.getPathAndQParamsObj('/home/view-transactions');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_lzbhoAkaARC0iBfx
       return bh;
     } catch (e) {
@@ -308,7 +310,9 @@ export class bankComponent {
         this.sdService.getPathAndQParamsObj('/home/cards');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_4gY2NKIDRROAm3qN
       return bh;
     } catch (e) {
@@ -366,7 +370,9 @@ export class bankComponent {
         this.sdService.getPathAndQParamsObj('/coming-soon');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_5BJxjFHynhFcApHB
       return bh;
     } catch (e) {

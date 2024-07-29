@@ -13,7 +13,7 @@
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
           <div>
             <p class="bank-no-margin">Easy Zero</p>
-            <p class="bank-no-margin"><strong>{{page.loggedInUser.balance}}</strong></p>
+            <p class="bank-no-margin"><strong>{{page.loggedInUser.balance | amountSeparator}}</strong></p>
             <p class="bank-no-margin"><small>Available</small></p>
           </div>
         </div>

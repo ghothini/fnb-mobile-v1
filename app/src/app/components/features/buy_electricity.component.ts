@@ -426,7 +426,9 @@ export class buy_electricityComponent {
         this.sdService.getPathAndQParamsObj('/home/bank');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_21gHL2xhMj3IYVca
       return bh;
     } catch (e) {
