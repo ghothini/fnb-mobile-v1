@@ -10,7 +10,7 @@
         </div>
         <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
           <div (click)="goToTransactions()" class="bank-amount bank-flex bank-center-center">
-            R{{page.loggedInUser.balance}}</div>
+            R{{page.loggedInUser.balance | amountSeparator}}</div>
         </div>
       </div>
     </mat-card-content>

@@ -1083,7 +1083,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "<p class=\"bank-no-margin\">Easy Zero</p>\r\n            <p class=\"bank-no-margin\"><strong>{{page.loggedInUser.balance}}</strong></p>\r\n            <p class=\"bank-no-margin\"><small>Available</small></p>",
+                                        "_value": "<p class=\"bank-no-margin\">Easy Zero</p>\r\n            <p class=\"bank-no-margin\"><strong>{{page.loggedInUser.balance | amountSeparator}}</strong></p>\r\n            <p class=\"bank-no-margin\"><small>Available</small></p>",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }

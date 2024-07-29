@@ -4,11 +4,12 @@ import { appDeclarations, appBootstrap, appProviders } from './config/declaratio
 import { appImportModules } from './config/import-modules';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgxScannerQrcodeModule} from 'ngx-scanner-qrcode';
+import { AmountSeparatorPipe } from './pipes/amount-separator.pipe';
 
 
 
 @NgModule({
-  declarations: [...appDeclarations],
+  declarations: [...appDeclarations, AmountSeparatorPipe],
   imports: [...appImportModules, Ng2SearchPipeModule, NgxScannerQrcodeModule,],
   providers: [...appProviders],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

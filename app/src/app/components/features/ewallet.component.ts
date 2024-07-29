@@ -406,7 +406,9 @@ export class ewalletComponent {
         this.sdService.getPathAndQParamsObj('/home/bank');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_wBaHh0763j38xP64
       return bh;
     } catch (e) {
