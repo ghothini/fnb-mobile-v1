@@ -271,7 +271,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = page.ssdURL + \"scan-payment\"\nbh.url_update = page.ssdURL + \"update\"\nbh.url_user = page.ssdURL + \"get-users\"\n\nbh.difference = page.user.balance - bh.scanned.amount\n\nbh.body = {\n    email: page.user.email,\n    balance : bh.difference,\n    collection : \"users\",\n    amount: bh.scanned.amount\n}\n\n\n",
+        "script": "bh.url = page.ssdURL + \"scan-payment\"\nbh.url_update = page.ssdURL + \"update\"\nbh.url_user = page.ssdURL + \"get-users\"\n\nbh.difference = page.user.balance - bh.scanned.amount\n\nbh.body = {\n    email: page.user.email,\n    balance : bh.difference,\n    collection : \"users\",\n}\n\n\n",
         "functionName": "sd_hjj29cqmNZyDSYRA",
         "category": "Function",
         "x": 365,
@@ -312,7 +312,7 @@
         "outputs": 2,
         "functionName": "sd_m7lT5x0dyAM3txcJ",
         "category": "Function",
-        "x": 440,
+        "x": 445,
         "y": 300,
         "wires": [
             [
@@ -636,7 +636,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""

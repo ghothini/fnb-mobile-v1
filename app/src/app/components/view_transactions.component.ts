@@ -298,7 +298,7 @@ export class view_transactionsComponent {
 
   sd_rxCpdeVmg7uYl6Mi(bh) {
     try {
-      localStorage.setItem('selectedPage', JSON.stringify('Accounts'));
+      localStorage.setItem('selectedPage', JSON.stringify('Messages'));
       //appendnew_next_sd_rxCpdeVmg7uYl6Mi
       return bh;
     } catch (e) {

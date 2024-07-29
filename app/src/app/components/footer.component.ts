@@ -110,7 +110,7 @@ export class footerComponent {
         {
           label: 'Home',
           image: 'Web/Image Icons/home.png',
-          route: '/home/dashboard',
+          route: '/home',
           title: 'FNB',
         },
         {
@@ -122,8 +122,8 @@ export class footerComponent {
         {
           label: 'Message',
           image: 'Web/Image Icons/messages.png',
-          route: 'home/message',
-          title: 'Message',
+          route: 'home/messages',
+          title: 'Messages',
         },
         {
           label: 'Profile',

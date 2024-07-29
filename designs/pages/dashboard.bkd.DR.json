@@ -813,7 +813,6 @@
                                 "paletteKey": "html-editor",
                                 "parentEditorKey": "7e95f5a2-967b-d7b2-418a-ccc98fd13135",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -1314,12 +1313,12 @@
                                 },
                                 {
                                     "_key": "(click)",
-                                    "_value": "sd_KjzeE70Ez6bEInTQ(item)",
+                                    "_value": "routeIfLoggedIn(item)",
                                     "_type": "kv",
                                     "_attrDef": "c",
                                     "objValue": {
-                                        "nodeID": "sd_KjzeE70Ez6bEInTQ",
-                                        "functionName": "sd_KjzeE70Ez6bEInTQ",
+                                        "nodeID": "sd_ARfLByDeE8NrVmIs",
+                                        "functionName": "routeIfLoggedIn",
                                         "activeTree": "pages",
                                         "z": "sd_1EXvdDl8BCVjn3QH",
                                         "input": [

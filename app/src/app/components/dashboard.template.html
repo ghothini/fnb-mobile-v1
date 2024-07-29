@@ -17,7 +17,7 @@
       </div>
       <div fxLayout="row wrap" class="landing-card-tabs" fxLayoutAlign="space-between space-between" [fxShow]="true">
         <div fxLayout="column wrap" class="landing-card-tab" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let item of page.landingOptions |filter:page.term; let i = index;">
-          <div fxLayout="row wrap" class="landing-top-icon" fxLayoutAlign="center center" [fxShow]="true" (click)="sd_KjzeE70Ez6bEInTQ(item)"><img imgSrc="{{item.image}}" style="width:50%; height: 50%"></div>
+          <div fxLayout="row wrap" class="landing-top-icon" fxLayoutAlign="center center" [fxShow]="true" (click)="routeIfLoggedIn(item)"><img imgSrc="{{item.image}}" style="width:50%; height: 50%"></div>
           <div fxLayout="row wrap" class="landing-bottom-text" fxLayoutAlign="center center" [fxShow]="true">
             <div class="landing-text-center">
               {{item.label}}

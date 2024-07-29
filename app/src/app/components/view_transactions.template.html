@@ -108,14 +108,12 @@
             </div>
             <div fxLayout="column wrap" fxLayoutAlign="start end" [fxShow]="true">
               <p class="bank-dark-grey bank-no-margin">
-                {{page.loggedInUser.accountNumber}}
+                {{page.loggedInUser._id}}
               </p>
               <p class="bank-dark-grey bank-no-margin">
-                {{page.loggedInUser.balance}}
-              </p>
+                R{{page.loggedInUser.balance | amountSeparator}}</p>
               <p class="bank-dark-grey bank-no-margin">
-                {{page.loggedInUser.balance}}
-              </p>
+                R{{page.loggedInUser.balance | amountSeparator}}</p>
             </div>
           </div>
         </div>

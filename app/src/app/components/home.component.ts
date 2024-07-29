@@ -4,7 +4,6 @@
 //append_imports_start
 
 import { Component, HostListener, Injector } from '@angular/core'; //_splitter_
-import { FormBuilder } from '@angular/forms'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -27,7 +26,6 @@ export class homeComponent {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
-    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 
@@ -131,79 +129,83 @@ export class homeComponent {
           {
             label: 'Message',
             image: '/Web/Images/message.PNG',
-            route: '/view-transactions',
+            route: '/home/messages',
           },
           {
             label: 'Contact Us',
             image: '/Web/Images/contact-us.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'My Offers',
             image: '/Web/Images/my-offers.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'Product Shop',
             image: '/Web/Images/product-shop.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
-          { label: 'Pay', image: '/Web/Images/pay.PNG', route: '/pay' },
-          { label: 'Buy', image: '/Web/Images/buy.PNG', route: '/buy' },
+          { label: 'Pay', image: '/Web/Images/pay.PNG', route: '/home/pay' },
+          {
+            label: 'Buy',
+            image: '/Web/Images/buy.PNG',
+            route: '/home/airtime',
+          },
           {
             label: 'Transfer',
             image: '/Web/Images/transfer.PNG',
-            route: '/pay',
+            route: '/home/pay',
           },
           {
             label: 'Forex',
             image: '/Web/Images/forex.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'Insure',
             image: '/Web/Images/insure.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'Invest',
             image: '/Web/Images/invest.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'nav>>Energy',
             image: '/Web/Images/nav-energy.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'nav-igate life',
             image: '/Web/Images/navigate.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'eBucks',
             image: '/Web/Images/ebucks.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'Secure chat',
             image: '/Web/Images/secure.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'Cards',
             image: '/Web/Images/cards.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'GuardMe',
             image: '/Web/Images/guard.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'Security centre',
             image: '/Web/Images/security.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
         ];
       } else {

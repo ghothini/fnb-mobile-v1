@@ -66,24 +66,10 @@ export class dashboardComponent {
         .constructFlowObject(this);
       bh.input = { item };
       bh.local = {};
+      bh = this.sd_4ZcpuFRVTDSY0D47(bh);
       //appendnew_next_routeIfLoggedIn
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_ARfLByDeE8NrVmIs');
-    }
-  }
-
-  sd_KjzeE70Ez6bEInTQ(item: any = undefined, ...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = { item };
-      bh.local = {};
-      bh = this.sd_QmUaDv0zGm3GijbH(bh);
-      //appendnew_next_sd_KjzeE70Ez6bEInTQ
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_KjzeE70Ez6bEInTQ');
     }
   }
   //appendnew_flow_dashboardComponent_start
@@ -119,79 +105,83 @@ export class dashboardComponent {
           {
             label: 'Message',
             image: '/Web/Images/message.PNG',
-            route: '/view-transactions',
+            route: '/home/messages',
           },
           {
             label: 'Contact Us',
             image: '/Web/Images/contact-us.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'My Offers',
             image: '/Web/Images/my-offers.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'Product Shop',
             image: '/Web/Images/product-shop.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
-          { label: 'Pay', image: '/Web/Images/pay.PNG', route: '/pay' },
-          { label: 'Buy', image: '/Web/Images/buy.PNG', route: '/buy' },
+          { label: 'Pay', image: '/Web/Images/pay.PNG', route: '/home/pay' },
+          {
+            label: 'Buy',
+            image: '/Web/Images/buy.PNG',
+            route: '/home/airtime',
+          },
           {
             label: 'Transfer',
             image: '/Web/Images/transfer.PNG',
-            route: '/pay',
+            route: '/home/coming-soon',
           },
           {
             label: 'Forex',
             image: '/Web/Images/forex.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'Insure',
             image: '/Web/Images/insure.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'Invest',
             image: '/Web/Images/invest.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'nav>>Energy',
             image: '/Web/Images/nav-energy.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'nav-igate life',
             image: '/Web/Images/navigate.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'eBucks',
             image: '/Web/Images/ebucks.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'Secure chat',
             image: '/Web/Images/secure.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'Cards',
             image: '/Web/Images/cards.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'GuardMe',
             image: '/Web/Images/guard.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
           {
             label: 'Security centre',
             image: '/Web/Images/security.PNG',
-            route: '/coming-soon',
+            route: '/home/coming-soon',
           },
         ];
       } else {
@@ -308,65 +298,17 @@ export class dashboardComponent {
     }
   }
 
-  async sd_QmUaDv0zGm3GijbH(bh) {
-    try {
-      if (
-        this.sdService.operators['true'](
-          this.page.currentUser,
-          undefined,
-          undefined,
-          undefined
-        )
-      ) {
-        bh = this.sd_4ZcpuFRVTDSY0D47(bh);
-      } else {
-        bh = await this.sd_pq1F2spNqyRjEOTK(bh);
-      }
-
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_QmUaDv0zGm3GijbH');
-    }
-  }
-
   async sd_4ZcpuFRVTDSY0D47(bh) {
     try {
       const { paramObj: qprm, path: path } =
         this.sdService.getPathAndQParamsObj(bh.input.item.route);
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_4ZcpuFRVTDSY0D47
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_4ZcpuFRVTDSY0D47');
-    }
-  }
-
-  sd_pq1F2spNqyRjEOTK(bh) {
-    try {
-      localStorage.setItem('selectedPage', JSON.stringify('Login'));
-      bh = this.sd_j3k7gZUaXc1aYpzN(bh);
-      //appendnew_next_sd_pq1F2spNqyRjEOTK
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_pq1F2spNqyRjEOTK');
-    }
-  }
-
-  async sd_j3k7gZUaXc1aYpzN(bh) {
-    try {
-      const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/home/login');
-      await this.__page_injector__
-        .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
-      //appendnew_next_sd_j3k7gZUaXc1aYpzN
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_j3k7gZUaXc1aYpzN');
     }
   }
 

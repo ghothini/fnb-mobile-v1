@@ -62,7 +62,7 @@
                 <strong>Savings Account</strong>
                 <p class="bank-no-margin">Light up your world and Buy electricity on the App!</p><br>
                 <div class="bank-end-center bank-flex">
-                  <button mat-flat-button class="bank-apply" [routerLink]="[&apos;/coming-soon&apos;]">Apply</button>
+                  <button mat-flat-button class="bank-apply" [routerLink]="[&apos;/home/coming-soon&apos;]">Apply</button>
                 </div>
               </div>
             </div>
@@ -102,7 +102,7 @@
                 <strong>Voucher</strong>
                 <p class="bank-no-margin">Light up your world and Buy electricity on the App!</p><br>
                 <div class="bank-end-center bank-flex">
-                  <button mat-flat-button class="bank-apply" [routerLink]="[&apos;/coming-soon&apos;]">Apply</button>
+                  <button mat-flat-button class="bank-apply" (click)="comingSoon()">Apply</button>
                 </div>
               </div>
             </div>
@@ -170,7 +170,7 @@
             <p class="bank-no-margin">
               Just for you</p>
           </div>
-          <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button routerLink="/coming-soon" class="bank-view">View</button></div>
+          <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button class="bank-view" (click)="comingSoon()">View</button></div>
         </div>
       </mat-card-content>
     </mat-card></div>
