@@ -3807,7 +3807,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<!-- <img src=\"../../assets/Web/Images//happy-woman-using-mobile.jpg\" alt=\"Slide 1\" class=\"bank-img\"> -->\r\n<div class=\"bank-author-info bank-padding-5px\">\r\n                    <strong>Savings Account</strong>\r\n                    <p class=\"bank-no-margin\">Light up your world and Buy electricity on the App!</p><br>\r\n                    <div class=\"bank-end-center bank-flex\">\r\n                        <button mat-flat-button class=\"bank-apply\" [routerLink] = ['/coming-soon']>Apply</button>\r\n                    </div>",
+                                            "_value": "<!-- <img src=\"../../assets/Web/Images//happy-woman-using-mobile.jpg\" alt=\"Slide 1\" class=\"bank-img\"> -->\r\n<div class=\"bank-author-info bank-padding-5px\">\r\n                    <strong>Savings Account</strong>\r\n                    <p class=\"bank-no-margin\">Light up your world and Buy electricity on the App!</p><br>\r\n                    <div class=\"bank-end-center bank-flex\">\r\n                        <button mat-flat-button class=\"bank-apply\" [routerLink] = ['/home/coming-soon']>Apply</button>\r\n                    </div>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -4943,7 +4943,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<div class=\"bank-author-info bank-padding-5px\">\r\n                    <strong>Voucher</strong>\r\n                    <p class=\"bank-no-margin\">Light up your world and Buy electricity on the App!</p><br>\r\n                    <div class=\"bank-end-center bank-flex\">\r\n                        <button mat-flat-button class=\"bank-apply\" [routerLink] = ['/coming-soon']>Apply</button>\r\n                    </div>",
+                                            "_value": "<div class=\"bank-author-info bank-padding-5px\">\r\n                    <strong>Voucher</strong>\r\n                    <p class=\"bank-no-margin\">Light up your world and Buy electricity on the App!</p><br>\r\n                    <div class=\"bank-end-center bank-flex\">\r\n                        <button mat-flat-button class=\"bank-apply\" (click)=\"comingSoon()\">Apply</button>\r\n                    </div>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -8554,9 +8554,16 @@
                                     },
                                     {
                                         "_key": "(click)",
-                                        "_value": "",
+                                        "_value": "comingSoon()",
                                         "_type": "kv",
-                                        "_attrDef": "p"
+                                        "_attrDef": "p",
+                                        "objValue": {
+                                            "nodeID": "sd_zn2HZBfrmk2g6yAl",
+                                            "functionName": "comingSoon",
+                                            "activeTree": "pages",
+                                            "z": "sd_OnCLyxjiMYoKcuBV",
+                                            "input": []
+                                        }
                                     },
                                     {
                                         "_key": "[disabled]",
@@ -8578,7 +8585,7 @@
                                     },
                                     {
                                         "_key": "routerLink",
-                                        "_value": "/coming-soon",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     }

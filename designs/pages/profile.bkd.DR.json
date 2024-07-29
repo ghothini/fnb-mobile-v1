@@ -2206,7 +2206,7 @@
                         },
                         {
                             "_key": "[routerLink]",
-                            "_value": "['/coming-soon']",
+                            "_value": "['/home/coming-soon']",
                             "_type": "kv",
                             "_attrDef": "c"
                         }
@@ -3890,32 +3890,6 @@
                                         {
                                             "_key": "html",
                                             "_value": "Log off",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        }
-                                    ]
-                                },
-                                "39ca4197-1783-33b7-f998-3fb75c4c211b": {
-                                    "paletteKey": "html-editor",
-                                    "parentEditorKey": "3225dd50-1e29-1cd4-ea57-0337627e0eef",
-                                    "isAdvancedChildComponent": true,
-                                    "commentid": null,
-                                    "designerReference": [
-                                        {
-                                            "_key": "style",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "class",
-                                            "_value": "",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "html",
-                                            "_value": "",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }

@@ -7008,7 +7008,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "{{page.loggedInUser.accountNumber}}",
+                                                "_value": "{{page.loggedInUser._id}}",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }
@@ -7225,7 +7225,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "{{page.loggedInUser.balance}}",
+                                                "_value": "R{{page.loggedInUser.balance | amountSeparator}}",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }
@@ -7442,7 +7442,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "{{page.loggedInUser.balance}}",
+                                                "_value": "R{{page.loggedInUser.balance | amountSeparator}}",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }

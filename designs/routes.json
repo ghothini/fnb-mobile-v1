@@ -25,8 +25,8 @@
                     "component": "bankComponent"
                 },
                 {
-                    "path": "message",
-                    "component": "messageComponent"
+                    "path": "messages",
+                    "component": "view_transactionsComponent"
                 },
                 {
                     "path": "profile",
@@ -103,6 +103,10 @@
                 {
                     "path": "limits",
                     "component": "limitsComponent"
+                },
+                {
+                    "path": "coming-soon",
+                    "component": "coming_soonComponent"
                 }
             ]
         },

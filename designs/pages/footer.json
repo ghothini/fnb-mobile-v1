@@ -82,7 +82,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.footerTabs = [\n    { label: 'Home', image: \"Web/Image Icons/home.png\", route: '/home/dashboard',title: 'FNB' },\n    { label: 'Bank', image: \"Web/Image Icons/credit-card.png\", route: 'home/bank',title: 'Bank' },\n    { label: 'Message', image: \"Web/Image Icons/messages.png\", route: 'home/message',title: 'Message' },\n    { label: 'Profile', image: \"Web/Image Icons/user.png\", route: 'home/profile',title: 'My Profile' }\n]",
+        "script": "page.footerTabs = [\n    { label: 'Home', image: \"Web/Image Icons/home.png\", route: '/home',title: 'FNB' },\n    { label: 'Bank', image: \"Web/Image Icons/credit-card.png\", route: 'home/bank',title: 'Bank' },\n    { label: 'Message', image: \"Web/Image Icons/messages.png\", route: 'home/messages',title: 'Messages' },\n    { label: 'Profile', image: \"Web/Image Icons/user.png\", route: 'home/profile',title: 'My Profile' }\n]",
         "functionName": "sd_uG476h0mGQexMXjY",
         "category": "Function",
         "x": 325,

@@ -19,8 +19,8 @@
         "name": "",
         "functionName": "sd_rCryj0d3w1AcXYk1",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 45,
+        "y": 40,
         "wires": [
             [
                 "sd_u5WgrKOEBJuzHou5"
@@ -43,10 +43,12 @@
         "globalVariables": [],
         "functionName": "sd_u5WgrKOEBJuzHou5",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 145,
+        "y": 40,
         "wires": [
-            []
+            [
+                "sd_3b6Y5LdnOEN9Y9SY"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -112,6 +114,37 @@
         "category": "General",
         "x": 185,
         "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "coming_soonComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_3b6Y5LdnOEN9Y9SY",
+        "type": "Storage",
+        "z": "sd_5LfjUB7qBjaoyPIC",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Coming Soon"
+        },
+        "resultMapping": {},
+        "functionName": "sd_3b6Y5LdnOEN9Y9SY",
+        "category": "Storage",
+        "x": 245,
+        "y": 40,
         "wires": [
             []
         ],

@@ -37,7 +37,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "if (page.currentUser) {\n  page.landingOptions = [\n    { label: 'Message', image: \"/Web/Images/message.PNG\", route: '/view-transactions' },\n    { label: 'Contact Us', image: \"/Web/Images/contact-us.PNG\", route: '/coming-soon' },\n    { label: 'My Offers', image: \"/Web/Images/my-offers.PNG\", route: '/coming-soon' },\n    { label: 'Product Shop', image: \"/Web/Images/product-shop.PNG\", route: '/coming-soon' },\n    { label: 'Pay', image: \"/Web/Images/pay.PNG\", route: '/pay' },\n    { label: 'Buy', image: \"/Web/Images/buy.PNG\", route: '/buy' },\n    { label: 'Transfer', image: \"/Web/Images/transfer.PNG\", route: '/pay' },\n    { label: 'Forex', image: \"/Web/Images/forex.PNG\", route: '/coming-soon' },\n    { label: 'Insure', image: \"/Web/Images/insure.PNG\", route: '/coming-soon' },\n    { label: 'Invest', image: \"/Web/Images/invest.PNG\", route: '/coming-soon' },\n    { label: 'nav>>Energy', image: \"/Web/Images/nav-energy.PNG\", route: '/coming-soon' },\n    { label: 'nav-igate life', image: \"/Web/Images/navigate.PNG\", route: '/coming-soon' },\n    { label: 'eBucks', image: \"/Web/Images/ebucks.PNG\", route: '/coming-soon' },\n    { label: 'Secure chat', image: \"/Web/Images/secure.PNG\", route: '/coming-soon' },\n    { label: 'Cards', image: \"/Web/Images/cards.PNG\", route: '/coming-soon' },\n    { label: 'GuardMe', image: \"/Web/Images/guard.PNG\", route: '/coming-soon' },\n    { label: 'Security centre', image: \"/Web/Images/security.PNG\", route: '/coming-soon' }\n  ]\n} else {\n  page.landingOptions = [\n    { label: 'Login', image: \"/Web/Images/login2.PNG\", route: '/home/login' },\n    { label: 'Message', image: \"/Web/Images/message.PNG\", route: '/home/login' },\n    { label: 'Contact Us', image: \"/Web/Images/contact-us.PNG\", route: '/home/login' },\n    { label: 'My Offers', image: \"/Web/Images/my-offers.PNG\", route: '/home/login' },\n    { label: 'Product Shop', image: \"/Web/Images/product-shop.PNG\", route: '/home/login' },\n    { label: 'Pay', image: \"/Web/Images/pay.PNG\", route: '/home/login' },\n    { label: 'Buy', image: \"/Web/Images/buy.PNG\", route: '/home/login' },\n    { label: 'Transfer', image: \"/Web/Images/transfer.PNG\", route: '/home/login' },\n    { label: 'Forex', image: \"/Web/Images/forex.PNG\", route: '/home/login' },\n    { label: 'Insure', image: \"/Web/Images/insure.PNG\", route: '/home/login' },\n    { label: 'Invest', image: \"/Web/Images/invest.PNG\", route: '/home/login' },\n    { label: 'nav>>Energy', image: \"/Web/Images/nav-energy.PNG\", route: '/home/login' },\n    { label: 'nav-igate life', image: \"/Web/Images/navigate.PNG\", route: '/home/login' },\n    { label: 'eBucks', image: \"/Web/Images/ebucks.PNG\", route: '/home/login' },\n    { label: 'Secure chat', image: \"/Web/Images/secure.PNG\", route: '/home/login' },\n    { label: 'Cards', image: \"/Web/Images/cards.PNG\", route: '/home/login' },\n    { label: 'GuardMe', image: \"/Web/Images/guard.PNG\", route: '/home/login' },\n    { label: 'Security centre', image: \"/Web/Images/security.PNG\", route: '/home/login' },\n    { label: 'eBucks', image: \"/Web/Images/ebucks.PNG\", route: '/home/login' },\n    { label: 'Secure chat', image: \"/Web/Images/secure.PNG\", route: '/home/login' },\n  ]\n}",
+        "script": "if (page.currentUser) {\n  page.landingOptions = [\n    { label: 'Message', image: \"/Web/Images/message.PNG\", route: '/home/messages' },\n    { label: 'Contact Us', image: \"/Web/Images/contact-us.PNG\", route: '/home/coming-soon' },\n    { label: 'My Offers', image: \"/Web/Images/my-offers.PNG\", route: '/home/coming-soon' },\n    { label: 'Product Shop', image: \"/Web/Images/product-shop.PNG\", route: '/home/coming-soon' },\n    { label: 'Pay', image: \"/Web/Images/pay.PNG\", route: '/home/pay' },\n    { label: 'Buy', image: \"/Web/Images/buy.PNG\", route: '/home/airtime' },\n    { label: 'Transfer', image: \"/Web/Images/transfer.PNG\", route: '/home/coming-soon' },\n    { label: 'Forex', image: \"/Web/Images/forex.PNG\", route: '/home/coming-soon' },\n    { label: 'Insure', image: \"/Web/Images/insure.PNG\", route: '/home/coming-soon' },\n    { label: 'Invest', image: \"/Web/Images/invest.PNG\", route: '/home/coming-soon' },\n    { label: 'nav>>Energy', image: \"/Web/Images/nav-energy.PNG\", route: '/home/coming-soon' },\n    { label: 'nav-igate life', image: \"/Web/Images/navigate.PNG\", route: '/home/coming-soon' },\n    { label: 'eBucks', image: \"/Web/Images/ebucks.PNG\", route: '/home/coming-soon' },\n    { label: 'Secure chat', image: \"/Web/Images/secure.PNG\", route: '/home/coming-soon' },\n    { label: 'Cards', image: \"/Web/Images/cards.PNG\", route: '/home/coming-soon' },\n    { label: 'GuardMe', image: \"/Web/Images/guard.PNG\", route: '/home/coming-soon' },\n    { label: 'Security centre', image: \"/Web/Images/security.PNG\", route: '/home/coming-soon' }\n  ]\n} else {\n  page.landingOptions = [\n    { label: 'Login', image: \"/Web/Images/login2.PNG\", route: '/home/login' },\n    { label: 'Message', image: \"/Web/Images/message.PNG\", route: '/home/login' },\n    { label: 'Contact Us', image: \"/Web/Images/contact-us.PNG\", route: '/home/login' },\n    { label: 'My Offers', image: \"/Web/Images/my-offers.PNG\", route: '/home/login' },\n    { label: 'Product Shop', image: \"/Web/Images/product-shop.PNG\", route: '/home/login' },\n    { label: 'Pay', image: \"/Web/Images/pay.PNG\", route: '/home/login' },\n    { label: 'Buy', image: \"/Web/Images/buy.PNG\", route: '/home/login' },\n    { label: 'Transfer', image: \"/Web/Images/transfer.PNG\", route: '/home/login' },\n    { label: 'Forex', image: \"/Web/Images/forex.PNG\", route: '/home/login' },\n    { label: 'Insure', image: \"/Web/Images/insure.PNG\", route: '/home/login' },\n    { label: 'Invest', image: \"/Web/Images/invest.PNG\", route: '/home/login' },\n    { label: 'nav>>Energy', image: \"/Web/Images/nav-energy.PNG\", route: '/home/login' },\n    { label: 'nav-igate life', image: \"/Web/Images/navigate.PNG\", route: '/home/login' },\n    { label: 'eBucks', image: \"/Web/Images/ebucks.PNG\", route: '/home/login' },\n    { label: 'Secure chat', image: \"/Web/Images/secure.PNG\", route: '/home/login' },\n    { label: 'Cards', image: \"/Web/Images/cards.PNG\", route: '/home/login' },\n    { label: 'GuardMe', image: \"/Web/Images/guard.PNG\", route: '/home/login' },\n    { label: 'Security centre', image: \"/Web/Images/security.PNG\", route: '/home/login' },\n    { label: 'eBucks', image: \"/Web/Images/ebucks.PNG\", route: '/home/login' },\n    { label: 'Secure chat', image: \"/Web/Images/secure.PNG\", route: '/home/login' },\n  ]\n}",
         "functionName": "sd_ozZVMhqLorMV5vbk",
         "category": "Function",
         "x": 365,
@@ -136,8 +136,8 @@
         "logObject": "this.page.currentUser",
         "functionName": "sd_767Y5ld5PXlkUG1M",
         "category": "General",
-        "x": 505,
-        "y": 60,
+        "x": 465,
+        "y": 40,
         "wires": [],
         "__ssdTypeInputs__": {
             "logObject": {
@@ -173,105 +173,16 @@
         "flow_type": "sync",
         "functionName": "routeIfLoggedIn",
         "category": "General",
-        "x": 85,
-        "y": 200,
+        "x": 65,
+        "y": 160,
         "wires": [
-            []
+            [
+                "sd_4ZcpuFRVTDSY0D47"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
         "serviceName": "dashboardComponent"
-    },
-    {
-        "id": "sd_pq1F2spNqyRjEOTK",
-        "type": "Storage",
-        "z": "sd_1EXvdDl8BCVjn3QH",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "operationType": "setItem",
-        "storageType": "localStorage",
-        "outputs": 1,
-        "key": {
-            "type": "str",
-            "value": "selectedPage"
-        },
-        "value": {
-            "type": "str",
-            "value": "Login"
-        },
-        "resultMapping": {},
-        "functionName": "sd_pq1F2spNqyRjEOTK",
-        "category": "Storage",
-        "x": 325,
-        "y": 280,
-        "wires": [
-            [
-                "sd_j3k7gZUaXc1aYpzN"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "dashboardComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_QmUaDv0zGm3GijbH",
-        "type": "PageSwitch",
-        "z": "sd_1EXvdDl8BCVjn3QH",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "property": "currentUser",
-        "propertyType": "this.page",
-        "propertyGv": "this.page.currentUser",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "functionName": "sd_QmUaDv0zGm3GijbH",
-        "category": "Function",
-        "x": 185,
-        "y": 200,
-        "wires": [
-            [
-                "sd_4ZcpuFRVTDSY0D47"
-            ],
-            [
-                "sd_pq1F2spNqyRjEOTK"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "dashboardComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_j3k7gZUaXc1aYpzN",
-        "type": "Navigation",
-        "z": "sd_1EXvdDl8BCVjn3QH",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "path": "/home/login",
-        "functionName": "sd_j3k7gZUaXc1aYpzN",
-        "category": "Navigation",
-        "x": 425,
-        "y": 280,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "dashboardComponent",
-        "generated": true
     },
     {
         "id": "sd_4ZcpuFRVTDSY0D47",
@@ -280,21 +191,14 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "",
         "pathMap": {
             "type": "bh.input",
             "value": "item.route"
         },
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
         "functionName": "sd_4ZcpuFRVTDSY0D47",
         "category": "Navigation",
-        "x": 325,
-        "y": 180,
+        "x": 165,
+        "y": 160,
         "wires": [
             []
         ],
@@ -302,38 +206,5 @@
         "generateNext": false,
         "serviceName": "dashboardComponent",
         "generated": true
-    },
-    {
-        "id": "sd_KjzeE70Ez6bEInTQ",
-        "type": "PageStart",
-        "z": "sd_1EXvdDl8BCVjn3QH",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "",
-        "outputs": 1,
-        "inputVariables": [
-            {
-                "key": "item",
-                "defaultValue": {
-                    "type": "any",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "sd_KjzeE70Ez6bEInTQ",
-        "category": "General",
-        "x": 85,
-        "y": 300,
-        "wires": [
-            [
-                "sd_QmUaDv0zGm3GijbH"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "dashboardComponent"
     }
 ]
