@@ -176,7 +176,7 @@
         "flow_type": "sync",
         "functionName": "submit",
         "category": "General",
-        "x": 45,
+        "x": 25,
         "y": 160,
         "wires": [
             [
@@ -745,7 +745,7 @@
         "outputs": 2,
         "functionName": "sd_KBRZtw4iiZARs8GS",
         "category": "Function",
-        "x": 205,
+        "x": 185,
         "y": 160,
         "wires": [
             [
@@ -790,10 +790,12 @@
         "direction": "ltr",
         "functionName": "sd_PgTZ58JiDkGAIVFP",
         "category": "General",
-        "x": 285,
-        "y": 240,
+        "x": 205,
+        "y": 260,
         "wires": [
-            []
+            [
+                "sd_125ExBii1ZdSTOZ6"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -810,7 +812,7 @@
         "script": "page.showSpinner = true",
         "functionName": "sd_3FuyYvLatFAEaCYY",
         "category": "Function",
-        "x": 125,
+        "x": 105,
         "y": 160,
         "wires": [
             [
@@ -997,6 +999,26 @@
         "category": "Function",
         "x": 465,
         "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_125ExBii1ZdSTOZ6",
+        "type": "Script",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.showSpinner = false;",
+        "functionName": "sd_125ExBii1ZdSTOZ6",
+        "category": "Function",
+        "x": 285,
+        "y": 260,
         "wires": [
             []
         ],

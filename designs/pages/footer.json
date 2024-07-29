@@ -401,41 +401,12 @@
         "x": 725,
         "y": 280,
         "wires": [
-            [
-                "sd_I9FkXAUixw9Iv21m"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "footerComponent",
         "generated": true
-    },
-    {
-        "id": "sd_0pNOHVfzysx9Ph4d",
-        "type": "HostListener",
-        "z": "sd_8wT6eeWtqANSsuWR",
-        "viewType": "common",
-        "nodeType": "start",
-        "name": "",
-        "outputs": 1,
-        "eventName": "\"selectedPage\"",
-        "functionName": "sd_0pNOHVfzysx9Ph4d",
-        "category": "Listener",
-        "x": 85,
-        "y": 400,
-        "wires": [
-            []
-        ],
-        "__ssdTypeInputs__": {
-            "eventName": {
-                "type": "str",
-                "value": "selectedPage",
-                "constant": false
-            }
-        },
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "footerComponent"
     },
     {
         "id": "sd_v5ItJqAwNaOWMZXB",
@@ -549,6 +520,13 @@
         "nodeType": "flow",
         "name": "",
         "path": "/home/login",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_NAnJYrZHHecXvzEv",
         "category": "Navigation",
         "x": 705,
@@ -630,32 +608,6 @@
                 "sd_dzQAwYyBzYnoooF2"
             ]
         ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "footerComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_I9FkXAUixw9Iv21m",
-        "type": "Log",
-        "z": "sd_8wT6eeWtqANSsuWR",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 0,
-        "logObject": "bh.input.tab.route",
-        "functionName": "sd_I9FkXAUixw9Iv21m",
-        "category": "General",
-        "x": 840,
-        "y": 280,
-        "wires": [],
-        "__ssdTypeInputs__": {
-            "logObject": {
-                "type": "bh.input",
-                "value": "tab.route",
-                "constant": false
-            }
-        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "footerComponent",

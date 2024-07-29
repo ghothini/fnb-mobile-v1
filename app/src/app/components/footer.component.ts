@@ -3,13 +3,7 @@
 //CORE_REFERENCE_IMPORTS
 //append_imports_start
 
-import {
-  Component,
-  EventEmitter,
-  HostListener,
-  Injector,
-  Output,
-} from '@angular/core'; //_splitter_
+import { Component, EventEmitter, Injector, Output } from '@angular/core'; //_splitter_
 import { MatDialog } from '@angular/material/dialog'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { menu_dialogComponent } from 'app/components/menu_dialog.component'; //_splitter_
@@ -96,18 +90,6 @@ export class footerComponent {
       return this.errorHandler(bh, e, 'sd_7brMOsgab8Q1kxhs');
     }
   }
-  @HostListener('selectedPage', ['$event']) sd_0pNOHVfzysx9Ph4d(event) {
-    try {
-      var bh: any = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.$event = event;
-      //appendnew_next_sd_0pNOHVfzysx9Ph4d
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_0pNOHVfzysx9Ph4d');
-    }
-  }
-
   //appendnew_flow_footerComponent_start
 
   sd_jF8y0IaE8zFwZjJz(bh) {
@@ -243,21 +225,10 @@ export class footerComponent {
     try {
       const page = this.page;
       page.router.navigate([bh.input.tab.route]);
-      this.sd_I9FkXAUixw9Iv21m(bh);
       //appendnew_next_sd_3BFSF0XkWfbQqvMC
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_3BFSF0XkWfbQqvMC');
-    }
-  }
-
-  sd_I9FkXAUixw9Iv21m(bh) {
-    try {
-      console.log(new Date().toLocaleTimeString(), bh.input.tab.route);
-      //appendnew_next_sd_I9FkXAUixw9Iv21m
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_I9FkXAUixw9Iv21m');
     }
   }
 
@@ -299,7 +270,9 @@ export class footerComponent {
         this.sdService.getPathAndQParamsObj('/home/login');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_NAnJYrZHHecXvzEv
       return bh;
     } catch (e) {

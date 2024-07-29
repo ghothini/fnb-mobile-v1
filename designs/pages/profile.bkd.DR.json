@@ -252,7 +252,7 @@
                         },
                         {
                             "_key": "[routerLink]",
-                            "_value": "['/personal-info']",
+                            "_value": "['/home/personal-info']",
                             "_type": "kv",
                             "_attrDef": "c"
                         }
@@ -1229,7 +1229,7 @@
                         },
                         {
                             "_key": "[routerLink]",
-                            "_value": "['/settings']",
+                            "_value": "['/home/settings']",
                             "_type": "kv",
                             "_attrDef": "c"
                         }

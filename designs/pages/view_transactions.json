@@ -23,37 +23,12 @@
         "y": 40,
         "wires": [
             [
-                "sd_3oH2r6rOuBE5VSlL"
+                "sd_kf5vK3nhsEfEJS6b"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
         "serviceName": "view_transactionsComponent"
-    },
-    {
-        "id": "sd_3oH2r6rOuBE5VSlL",
-        "type": "PageVariables",
-        "z": "sd_kp9oBTcqwP8tLzjP",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
-        "inputs": 1,
-        "outputs": 1,
-        "operation": "set",
-        "globalVariables": [],
-        "functionName": "sd_3oH2r6rOuBE5VSlL",
-        "category": "Function",
-        "x": 125,
-        "y": 40,
-        "wires": [
-            [
-                "sd_GFUVMLwhBkIKvPjv"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "view_transactionsComponent",
-        "generated": true
     },
     {
         "id": "sd_Sr7vn4Z7hXrVNx77",
@@ -196,7 +171,7 @@
         "z": "sd_kp9oBTcqwP8tLzjP",
         "viewType": "client-pages",
         "nodeType": "flow",
-        "name": "",
+        "name": "getAirtime",
         "method": "get",
         "methodMapping": "",
         "methodMappingObj": {},
@@ -231,9 +206,9 @@
         "paramsObj": [],
         "paramMapping": "",
         "paramMappingObj": {},
-        "functionName": "sd_NO1swfx7Djl88TaU",
+        "functionName": "getAirtime",
         "category": "HTTP",
-        "x": 505,
+        "x": 485,
         "y": 40,
         "wires": [
             [
@@ -257,7 +232,7 @@
             {
                 "flowVar": {
                     "type": "this.page",
-                    "value": "ssdUrl"
+                    "value": "ssdURL"
                 },
                 "envProperty": "ssdURL"
             }
@@ -283,7 +258,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url =`${page.ssdUrl}get-airtime/${page.loggedInUser.email}`\nbh.url2 =`${page.ssdUrl}get-electricity/${page.loggedInUser.email}`\nbh.url3 =`${page.ssdUrl}get-ewallet/${page.loggedInUser.email}`\nbh.url4 =`${page.ssdUrl}get-pay/${page.loggedInUser.email}`\n\n\n",
+        "script": "bh.url = page.ssdURL + `get-airtime/${page.loggedInUser.email}`\nbh.url2 =  page.ssdURL + `get-electricity/${page.loggedInUser.email}`\nbh.url3 = page.ssdURL + `get-ewallet/${page.loggedInUser.email}`\nbh.url4 = page.ssdURL + `get-pay/${page.loggedInUser.email}`\nbh.url5 = page.ssdURL + `get-scan/${page.loggedInUser.email}`\n\nbh.body = {\n    \"email\": page.loggedInUser.email\n}\n\npage.showSpinner = true;\n\n\n",
         "functionName": "sd_UtIdsMpnbEzdy33G",
         "category": "Function",
         "x": 405,
@@ -304,7 +279,7 @@
         "z": "sd_kp9oBTcqwP8tLzjP",
         "viewType": "client-pages",
         "nodeType": "flow",
-        "name": "",
+        "name": "getElectricity",
         "method": "get",
         "methodMapping": "",
         "methodMappingObj": {},
@@ -321,10 +296,10 @@
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
-        "reqBody": "",
+        "reqBody": "bh.body",
         "reqBodyObj": {
-            "mapVarType": "this.page",
-            "mapVarValue": ""
+            "mapVarType": "bh",
+            "mapVarValue": "body"
         },
         "resultMapping": "this.page.electricity",
         "resultMappingObj": {
@@ -339,9 +314,9 @@
         "paramsObj": [],
         "paramMapping": "",
         "paramMappingObj": {},
-        "functionName": "sd_ywShD8cOBT5apeHm",
+        "functionName": "getElectricity",
         "category": "HTTP",
-        "x": 605,
+        "x": 565,
         "y": 40,
         "wires": [
             [
@@ -359,7 +334,7 @@
         "z": "sd_kp9oBTcqwP8tLzjP",
         "viewType": "client-pages",
         "nodeType": "flow",
-        "name": "",
+        "name": "getEwallet",
         "method": "get",
         "methodMapping": "",
         "methodMappingObj": {},
@@ -394,9 +369,9 @@
         "paramsObj": [],
         "paramMapping": "",
         "paramMappingObj": {},
-        "functionName": "sd_lNXTuv9JhUg8NEh8",
+        "functionName": "getEwallet",
         "category": "HTTP",
-        "x": 705,
+        "x": 645,
         "y": 40,
         "wires": [
             [
@@ -414,7 +389,7 @@
         "z": "sd_kp9oBTcqwP8tLzjP",
         "viewType": "client-pages",
         "nodeType": "flow",
-        "name": "",
+        "name": "getPay",
         "method": "get",
         "methodMapping": "",
         "methodMappingObj": {},
@@ -431,10 +406,10 @@
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
-        "reqBody": "",
+        "reqBody": "bh.body",
         "reqBodyObj": {
-            "mapVarType": "this.page",
-            "mapVarValue": ""
+            "mapVarType": "bh",
+            "mapVarValue": "body"
         },
         "resultMapping": "this.page.pay",
         "resultMappingObj": {
@@ -449,13 +424,13 @@
         "paramsObj": [],
         "paramMapping": "",
         "paramMappingObj": {},
-        "functionName": "sd_Yu8yEAuVIKQrq9PN",
+        "functionName": "getPay",
         "category": "HTTP",
-        "x": 805,
+        "x": 725,
         "y": 40,
         "wires": [
             [
-                "sd_QXMibve5VdwFRL9r"
+                "sd_iGTVKxedK2f0tho1"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -503,10 +478,126 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.transctions = [...page.airtime, ...page.electricity, ...page.ewallet, ...page.pay]\n\nconst newArray = page.transctions.map(transaction => {\n    let description;\n    if (transaction.bundleType) {\n        description = `Airtime purchase for ${transaction.cell} on ${transaction.networkProvider}`;\n    } else if (transaction.meterNumber) {\n        description = `Electricity purchase for meter number ${transaction.meterNumber}`;\n    } else if (transaction.cellNumber) {\n        description = `Transaction for cell number ${transaction.cellNumber}`;\n    } else if (transaction.cardNumber) {\n        description = `Money sent to ${transaction.recipientName} with reference ${transaction.ownRef}`;\n    }\n\n    return {\n        transactionDate: transaction.transactionDate,\n        amount: transaction.amount,\n        description: description\n    };\n});\nnewArray.sort((a, b) => {\n     page.dateA = new Date(a.transactionDate);\n    page.dateB = new Date(b.transactionDate);\n    return page.dateB - page.dateA;\n});\n\npage.newArr = newArray\nconsole.log('newArray', page.newArr);",
+        "script": "page.showSpinner = false;\n\nbh.airtime = page.airtime.filter((user:any) => {\n    return page.loggedInUser.email == user.email\n})\npage.airtimeArr = bh.airtime\nconsole.log(\"airtime ==>\", page.airtimeArr)\n\nbh.eWallet = page.ewallet.filter((user:any) => {\n    return page.loggedInUser.email == user.email\n})\npage.eWalletArr = bh.eWallet\nconsole.log(\"eWallet ==>\", page.eWalletArr)\n\n\nbh.electricity = page.electricity.filter((user:any) => {\n    return page.loggedInUser.email == user.email\n})\n page.electricityArr = bh.electricity\nconsole.log(\"electricity ==>\", page.electricityArr)\n\n\n bh.pay = page.pay.filter((user:any) => {\n    return page.loggedInUser.email == user.email\n})\n page.payArr = bh.pay\nconsole.log(\"pay ==>\", page.payArr)\n\n\n  bh.scan = page.scan.filter((user:any) => {\n    return page.loggedInUser.email == user.email\n})\n page.scanArr = bh.scan\nconsole.log(\"scan ==>\", page.scanArr)\n",
         "functionName": "sd_QXMibve5VdwFRL9r",
         "category": "Function",
-        "x": 920,
+        "x": 885,
+        "y": 40,
+        "wires": [
+            [
+                "sd_4oYRr5H41YvEZUZT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_iGTVKxedK2f0tho1",
+        "type": "HttpRequest",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "getScan",
+        "method": "get",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url5",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url5"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": ""
+        },
+        "resultMapping": "this.page.scan",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "scan"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "getScan",
+        "category": "HTTP",
+        "x": 805,
+        "y": 40,
+        "wires": [
+            [
+                "sd_QXMibve5VdwFRL9r"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_4oYRr5H41YvEZUZT",
+        "type": "PageVariables",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "electricityArr",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "electricity"
+                }
+            },
+            {
+                "textIp": "airtimeArr",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "airtime"
+                }
+            },
+            {
+                "textIp": "scanArr",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "scan"
+                }
+            },
+            {
+                "textIp": "payArr",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "pay"
+                }
+            },
+            {
+                "textIp": "eWalletArr",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "eWallet"
+                }
+            }
+        ],
+        "functionName": "sd_4oYRr5H41YvEZUZT",
+        "category": "Function",
+        "x": 965,
         "y": 40,
         "wires": [
             [
@@ -539,10 +630,43 @@
         "resultMapping": {},
         "functionName": "sd_rxCpdeVmg7uYl6Mi",
         "category": "Storage",
-        "x": 1005,
+        "x": 1045,
         "y": 40,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_kf5vK3nhsEfEJS6b",
+        "type": "PageVariables",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "showSpinner",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            }
+        ],
+        "functionName": "sd_kf5vK3nhsEfEJS6b",
+        "category": "Function",
+        "x": 140,
+        "y": 40,
+        "wires": [
+            [
+                "sd_GFUVMLwhBkIKvPjv"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

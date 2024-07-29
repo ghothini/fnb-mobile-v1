@@ -417,7 +417,6 @@
                 "0aee3e08-7e6e-94bc-71aa-fc5da0464c57": {
                     "paletteKey": "FlexLayoutRow",
                     "parentEditorKey": "6feb0815-1271-34fb-5fd3-d0a542ffb31a",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -479,7 +478,6 @@
                     "edb8e4e1-1311-365a-f2d5-a1295a7f6f0b": {
                         "paletteKey": "FlexLayoutCol",
                         "parentEditorKey": "0aee3e08-7e6e-94bc-71aa-fc5da0464c57",
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -544,7 +542,6 @@
                             "paletteKey": "Html5",
                             "parentEditorKey": "edb8e4e1-1311-365a-f2d5-a1295a7f6f0b",
                             "isAdvancedComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -735,7 +732,6 @@
                                 "paletteKey": "html-editor",
                                 "parentEditorKey": "fc29ce51-884d-05fe-6bcd-5e671d0ee03d",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -763,7 +759,6 @@
                             "paletteKey": "Html5",
                             "parentEditorKey": "edb8e4e1-1311-365a-f2d5-a1295a7f6f0b",
                             "isAdvancedComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -953,7 +948,6 @@
                                 "paletteKey": "html-editor",
                                 "parentEditorKey": "8b927e88-d98e-a08d-34ed-256467477bb2",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {

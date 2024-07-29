@@ -78,6 +78,21 @@ export class limitsComponent {
       return this.errorHandler(bh, e, 'sd_hxe3t0gMk44EwbqG');
     }
   }
+
+  allowNumbers(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_mq93GNl3A4mX4nGV(bh);
+      //appendnew_next_allowNumbers
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ChP4sjsoHWI2LRXk');
+    }
+  }
   //appendnew_flow_limitsComponent_start
 
   sd_L71dMFp8ELSXvdR6(bh) {
@@ -188,10 +203,65 @@ export class limitsComponent {
           [Validators.required]
         ),
       });
+      bh = this.sd_gJ5z914BxWPfHOJf(bh);
       //appendnew_next_sd_ZUexHrSTJi7SwpSG
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_ZUexHrSTJi7SwpSG');
+    }
+  }
+
+  sd_gJ5z914BxWPfHOJf(bh) {
+    try {
+      const page = this.page;
+
+      page.changeLimitsForm = new FormGroup({
+        transfers: new FormControl(page.data.transfers, Validators.required),
+        payments: new FormControl(page.data.payments, [Validators.required]),
+        payAndClear: new FormControl(page.data.payAndClear, [
+          Validators.required,
+        ]),
+        prepaid: new FormControl(page.data.prepaid, [Validators.required]),
+        sendMoney: new FormControl(page.data.sendMoney, [Validators.required]),
+        vouchers: new FormControl(page.data.vouchers, [Validators.required]),
+        cardlessCashWithdrawal: new FormControl(
+          page.data.cardlessCashWithdrawal,
+          [Validators.required]
+        ),
+      });
+
+      bh = this.sd_MLZqsWOuCTHErd5S(bh);
+      //appendnew_next_sd_gJ5z914BxWPfHOJf
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_gJ5z914BxWPfHOJf');
+    }
+  }
+
+  sd_MLZqsWOuCTHErd5S(bh) {
+    try {
+      this.page.transfers = this.page.data.transfers;
+      this.page.payAndClear = this.page.data.payAndClear;
+      this.page.payments = this.page.data.payments;
+      this.page.prepaid = this.page.data.prepaid;
+      this.page.sendMoney = this.page.data.sendMoney;
+      this.page.vouchers = this.page.data.vouchers;
+      this.page.cardlessCashWithdrawal = this.page.data.cardlessCashWithdrawal;
+      bh = this.sd_A5ST0emUMMg1dhct(bh);
+      //appendnew_next_sd_MLZqsWOuCTHErd5S
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_MLZqsWOuCTHErd5S');
+    }
+  }
+
+  sd_A5ST0emUMMg1dhct(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Limits'));
+      //appendnew_next_sd_A5ST0emUMMg1dhct
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_A5ST0emUMMg1dhct');
     }
   }
 
@@ -316,6 +386,34 @@ export class limitsComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_0UNTamidNxDbi7ES');
+    }
+  }
+
+  sd_mq93GNl3A4mX4nGV(bh) {
+    try {
+      const page = this.page;
+      bh.allowedKeys = [
+        'Backspace',
+        'ArrowLeft',
+        'ArrowRight',
+        'Delete',
+        'Control',
+      ]; // Add any other allowed keys here
+      if (
+        bh.allowedKeys.includes(bh.input.event.key) ||
+        (bh.input.event.ctrlKey &&
+          (bh.input.event.key === 'v' || bh.input.event.key === 'c'))
+      ) {
+        return; // Allow these keys
+      }
+
+      if (!/^\d$/.test(bh.input.event.key)) {
+        bh.input.event.preventDefault(); // Prevent non-numeric keys
+      }
+      //appendnew_next_sd_mq93GNl3A4mX4nGV
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_mq93GNl3A4mX4nGV');
     }
   }
 

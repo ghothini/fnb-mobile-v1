@@ -1,18 +1,84 @@
 <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div *ngIf="page.showSpinner" class="spinner-login absolute">
+    <mat-spinner></mat-spinner>
+  </div>
   <div fxLayout="row wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true"><mat-tab-group mat-align-tabs="start" class="bank-full-width"><mat-tab label="Transaction History">
         <div fxLayout="column wrap" class="bank-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
             <p class="bank-margin-top-10px bank-primary bank-no-margin">
               Older</p>
-          </div><mat-card *ngFor="let item of page.newArr" class="bank-padding-5px bank-margin-left-1px bank-margin-right-1px bank-border-radius-10px">
+          </div><mat-card *ngFor="let item of page.scanArr" class="bank-padding-5px bank-margin-left-1px bank-margin-right-1px bank-border-radius-10px">
             <mat-card-content>
               <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
                 <div fxLayout="column wrap" fxLayoutAlign="center start" [fxShow]="true">
                   <p class="bank-no-margin">
-                    {{item.description}}
-                  </p>
+                    Scanned at {{item.itenName}} for {{item.transType}}</p>
                   <p class="bank-no-margin">
-                    {{item.transactionDate}}
+                    {{item.transDate | date}}
+                  </p>
+                </div>
+                <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+                  <p>
+                    -R{{item.amount}}</p>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card><mat-card *ngFor="let item of page.payArr" class="bank-padding-5px bank-margin-left-1px bank-margin-right-1px bank-border-radius-10px">
+            <mat-card-content>
+              <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+                <div fxLayout="column wrap" fxLayoutAlign="center start" [fxShow]="true">
+                  <p class="bank-no-margin">
+                    Paid {{item.recipientName}} on card number {{item.cardNumber}}</p>
+                  <p class="bank-no-margin">
+                    {{item.transactionDate | date}}
+                  </p>
+                </div>
+                <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+                  <p>
+                    -R{{item.amount}}</p>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card><mat-card *ngFor="let item of page.eWalletArr" class="bank-padding-5px bank-margin-left-1px bank-margin-right-1px bank-border-radius-10px">
+            <mat-card-content>
+              <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+                <div fxLayout="column wrap" fxLayoutAlign="center start" [fxShow]="true">
+                  <p class="bank-no-margin">
+                    Sent eWallet to {{item.cellNumber}}</p>
+                  <p class="bank-no-margin">
+                    {{item.transactionDate | date}}
+                  </p>
+                </div>
+                <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+                  <p>
+                    -R{{item.amount}}</p>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card><mat-card *ngFor="let item of page.electricityArr" class="bank-padding-5px bank-margin-left-1px bank-margin-right-1px bank-border-radius-10px">
+            <mat-card-content>
+              <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+                <div fxLayout="column wrap" fxLayoutAlign="center start" [fxShow]="true">
+                  <p class="bank-no-margin">
+                    Purchased {{item.transType}} for {{item.meterNumber}}</p>
+                  <p class="bank-no-margin">
+                    {{item.transDate | date}}
+                  </p>
+                </div>
+                <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+                  <p>
+                    -R{{item.amount}}</p>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card><mat-card *ngFor="let item of page.airtimeArr" class="bank-padding-5px bank-margin-left-1px bank-margin-right-1px bank-border-radius-10px">
+            <mat-card-content>
+              <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+                <div fxLayout="column wrap" fxLayoutAlign="center start" [fxShow]="true">
+                  <p class="bank-no-margin">
+                    Purchased {{item.bundleType}} for {{item.networkProvider}}</p>
+                  <p class="bank-no-margin">
+                    {{item.transactionDate | date}}
                   </p>
                 </div>
                 <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">

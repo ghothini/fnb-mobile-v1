@@ -873,8 +873,8 @@ $my-profile-green: #00a9ac;
 .personal-info-icon-round{
     border-radius: 50%;
     border: 2px solid rgba(128, 128, 128, 0.283);
-    width: 16%;
-    height: 66%;
+    // width: 16%;
+    // height: 66%;
 }
 
 .personal-info-fz-28{
@@ -1244,4 +1244,9 @@ padding-bottom: 0em !important;
 
 video.origin-video {
     height: 78vh !important;
+}
+
+.mat-checkbox-checked .mat-checkbox-background,
+.mat-checkbox-indeterminate .mat-checkbox-background {
+  background-color: $primary !important;
 }

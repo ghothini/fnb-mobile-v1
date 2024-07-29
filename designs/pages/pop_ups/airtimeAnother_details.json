@@ -70,7 +70,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\npage.currentQuote = page.loggedInUser.balance;\n\n// if (bh.currentQuote) {\n//     console.log('value');\n//     page.currentQuote = bh.currentQuote.input.newQuote;\n//     console.log(\"new bh :\", bh.currentQuote.input.newQuote);\n// } else {\n//     console.log('no value');\n// }\n\nconsole.log('page', page)\n\nconst date = new Date();\n\nconst day = date.getDate();\nconst month = date.toLocaleString('default', { month: 'long' });\nconst year = date.getFullYear();\nconst hours = String(date.getHours()).padStart(2, '0');\nconst minutes = String(date.getMinutes()).padStart(2, '0');\n\npage.formattedDate = `${day} ${month} ${year} ${hours}:${minutes}`;\n\npage.airtimeForm = new FormGroup({\n    customer: new FormControl (page.loggedInUser.name),\n    cell: new FormControl (''),\n    networkProvider: new FormControl(''),\n    bundleType: new FormControl('Airtime'),\n    amount: new FormControl(''),\n    fromAccount: new FormControl('Easy Zero'),\n    transactionDate: new FormControl(page.formattedDate)\n})\n\npage.networkProvider = [\n    {value: 'delhi-0', viewValue: 'Delhi'},\n   {value: 'mumbai-1', viewValue: 'Mumbai'},\n   {value: 'pune-2', viewValue: 'Pune'}\n    ]\n",
+        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\npage.currentQuote = page.loggedInUser.balance;\n\n// if (bh.currentQuote) {\n//     console.log('value');\n//     page.currentQuote = bh.currentQuote.input.newQuote;\n//     console.log(\"new bh :\", bh.currentQuote.input.newQuote);\n// } else {\n//     console.log('no value');\n// }\n\nconsole.log('page', page)\n\nconst date = new Date();\n\nconst day = date.getDate();\nconst month = date.toLocaleString('default', { month: 'long' });\nconst year = date.getFullYear();\nconst hours = String(date.getHours()).padStart(2, '0');\nconst minutes = String(date.getMinutes()).padStart(2, '0');\n\npage.formattedDate = `${day} ${month} ${year} ${hours}:${minutes}`;\n\npage.airtimeForm = new FormGroup({\n    customer: new FormControl (page.loggedInUser.name),\n    cell: new FormControl (''),\n    networkProvider: new FormControl(''),\n    bundleType: new FormControl('Airtime'),\n    amount: new FormControl(''),\n    fromAccount: new FormControl('Easy Zero'),\n    email: new FormControl(page.loggedInUser.email),\n    transactionDate: new FormControl(page.formattedDate)\n})\n\npage.networkProvider = [\n    {value: 'delhi-0', viewValue: 'Delhi'},\n   {value: 'mumbai-1', viewValue: 'Mumbai'},\n   {value: 'pune-2', viewValue: 'Pune'}\n    ]\n",
         "functionName": "sd_rJRe6FEsisjK0BOC",
         "category": "Function",
         "x": 405,
@@ -251,7 +251,7 @@
         "y": 260,
         "wires": [
             [
-                "sd_iWPIIAG2PTP4F2rF"
+                "sd_uSvAU4XSF5ERlRwS"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -265,7 +265,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log('airtimeForm', page.airtimeForm.value)\n\npage.loggedInUser.balance = page.loggedInUser.balance - page.airtimeForm.value.amount;\n\nconsole.log('page', page)",
+        "script": "page.showSpinner = true;\npage.loggedInUser.balance = page.loggedInUser.balance - page.airtimeForm.value.amount;",
         "functionName": "sd_fUudOu6qnSN7CIJc",
         "category": "Function",
         "x": 385,
@@ -320,14 +320,7 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "/bank",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
+        "path": "/home/airtime",
         "functionName": "sd_jQfO12W4pPzDwVAg",
         "category": "Navigation",
         "x": 1285,
@@ -523,9 +516,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -533,7 +524,7 @@
         "direction": "ltr",
         "functionName": "sd_3kYbKQMbfceW6u51",
         "category": "General",
-        "x": 1205,
+        "x": 1185,
         "y": 140,
         "wires": [
             [
@@ -632,9 +623,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -678,8 +667,8 @@
         "outputs": 2,
         "functionName": "sd_LL8fJw3h4l2Q1sMn",
         "category": "Function",
-        "x": 305,
-        "y": 180,
+        "x": 285,
+        "y": 200,
         "wires": [
             [
                 "sd_fUudOu6qnSN7CIJc"
@@ -700,21 +689,15 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "property": "airtimeForm.status",
+        "property": "airtimeForm.invalid",
         "propertyType": "this.page",
-        "propertyGv": "this.page.airtimeForm.status",
+        "propertyGv": "this.page.airtimeForm.invalid",
         "rules": [
             {
-                "t": "eq",
-                "v": "VALID",
-                "vt": "str",
-                "gv": "\"VALID\""
+                "t": "else"
             },
             {
-                "t": "eq",
-                "v": "INVALID",
-                "vt": "str",
-                "gv": "\"INVALID\""
+                "t": "true"
             }
         ],
         "checkall": "false",
@@ -722,7 +705,7 @@
         "outputs": 2,
         "functionName": "sd_uSvAU4XSF5ERlRwS",
         "category": "Function",
-        "x": 225,
+        "x": 165,
         "y": 260,
         "wires": [
             [
@@ -746,7 +729,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "Please fill in the fields"
+            "value": "All fields are required"
         },
         "action": {
             "type": "str",
@@ -757,9 +740,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -771,28 +752,6 @@
         "y": 320,
         "wires": [
             []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "airtimeAnother_detailsComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_iWPIIAG2PTP4F2rF",
-        "type": "Script",
-        "z": "sd_NebjxnLYDwkz9Qzy",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "console.log(\"FORM DATA==>\", page.airtimeForm)\n\npage.showSpinner = true;",
-        "functionName": "sd_iWPIIAG2PTP4F2rF",
-        "category": "Function",
-        "x": 145,
-        "y": 260,
-        "wires": [
-            [
-                "sd_uSvAU4XSF5ERlRwS"
-            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

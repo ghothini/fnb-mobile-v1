@@ -90,10 +90,21 @@ export class settingsComponent {
   sd_k2GpdPpd19NLOqet(bh) {
     try {
       this.page.currentUser = undefined;
+      bh = this.sd_ptwq7KqqUOghlfsh(bh);
       //appendnew_next_sd_k2GpdPpd19NLOqet
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_k2GpdPpd19NLOqet');
+    }
+  }
+
+  sd_ptwq7KqqUOghlfsh(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Settings'));
+      //appendnew_next_sd_ptwq7KqqUOghlfsh
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ptwq7KqqUOghlfsh');
     }
   }
 

@@ -2757,6 +2757,22 @@
                                             "_value": "transfers",
                                             "_type": "kv",
                                             "_attrDef": "c"
+                                        },
+                                        {
+                                            "_key": "(keydown)",
+                                            "_value": "allowNumbers($event)",
+                                            "_type": "kv",
+                                            "_attrDef": "c",
+                                            "_customAttributeFlag": "flowpicker",
+                                            "objValue": {
+                                                "nodeID": "sd_ChP4sjsoHWI2LRXk",
+                                                "functionName": "allowNumbers",
+                                                "activeTree": "pages",
+                                                "z": "sd_dfQ2vHZYHyt5Ymfr",
+                                                "input": [
+                                                    "$event"
+                                                ]
+                                            }
                                         }
                                     ]
                                 }
@@ -3225,6 +3241,22 @@
                                             "_value": "payments",
                                             "_type": "kv",
                                             "_attrDef": "c"
+                                        },
+                                        {
+                                            "_key": "(keydown)",
+                                            "_value": "allowNumbers($event)",
+                                            "_type": "kv",
+                                            "_attrDef": "c",
+                                            "_customAttributeFlag": "flowpicker",
+                                            "objValue": {
+                                                "nodeID": "sd_ChP4sjsoHWI2LRXk",
+                                                "functionName": "allowNumbers",
+                                                "activeTree": "pages",
+                                                "z": "sd_dfQ2vHZYHyt5Ymfr",
+                                                "input": [
+                                                    "$event"
+                                                ]
+                                            }
                                         }
                                     ]
                                 }
@@ -3693,6 +3725,22 @@
                                             "_value": "payAndClear",
                                             "_type": "kv",
                                             "_attrDef": "c"
+                                        },
+                                        {
+                                            "_key": "(keydown)",
+                                            "_value": "allowNumbers($event)",
+                                            "_type": "kv",
+                                            "_attrDef": "c",
+                                            "_customAttributeFlag": "flowpicker",
+                                            "objValue": {
+                                                "nodeID": "sd_ChP4sjsoHWI2LRXk",
+                                                "functionName": "allowNumbers",
+                                                "activeTree": "pages",
+                                                "z": "sd_dfQ2vHZYHyt5Ymfr",
+                                                "input": [
+                                                    "$event"
+                                                ]
+                                            }
                                         }
                                     ]
                                 }
@@ -4161,6 +4209,22 @@
                                             "_value": "prepaid",
                                             "_type": "kv",
                                             "_attrDef": "c"
+                                        },
+                                        {
+                                            "_key": "(keydown)",
+                                            "_value": "allowNumbers($event)",
+                                            "_type": "kv",
+                                            "_attrDef": "c",
+                                            "_customAttributeFlag": "flowpicker",
+                                            "objValue": {
+                                                "nodeID": "sd_ChP4sjsoHWI2LRXk",
+                                                "functionName": "allowNumbers",
+                                                "activeTree": "pages",
+                                                "z": "sd_dfQ2vHZYHyt5Ymfr",
+                                                "input": [
+                                                    "$event"
+                                                ]
+                                            }
                                         }
                                     ]
                                 }
@@ -4629,6 +4693,22 @@
                                             "_value": "sendMoney",
                                             "_type": "kv",
                                             "_attrDef": "c"
+                                        },
+                                        {
+                                            "_key": "(keydown)",
+                                            "_value": "allowNumbers($event)",
+                                            "_type": "kv",
+                                            "_attrDef": "c",
+                                            "_customAttributeFlag": "flowpicker",
+                                            "objValue": {
+                                                "nodeID": "sd_ChP4sjsoHWI2LRXk",
+                                                "functionName": "allowNumbers",
+                                                "activeTree": "pages",
+                                                "z": "sd_dfQ2vHZYHyt5Ymfr",
+                                                "input": [
+                                                    "$event"
+                                                ]
+                                            }
                                         }
                                     ]
                                 }
@@ -5094,6 +5174,22 @@
                                             "_value": "vouchers",
                                             "_type": "kv",
                                             "_attrDef": "c"
+                                        },
+                                        {
+                                            "_key": "(keydown)",
+                                            "_value": "allowNumbers($event)",
+                                            "_type": "kv",
+                                            "_attrDef": "c",
+                                            "_customAttributeFlag": "flowpicker",
+                                            "objValue": {
+                                                "nodeID": "sd_ChP4sjsoHWI2LRXk",
+                                                "functionName": "allowNumbers",
+                                                "activeTree": "pages",
+                                                "z": "sd_dfQ2vHZYHyt5Ymfr",
+                                                "input": [
+                                                    "$event"
+                                                ]
+                                            }
                                         }
                                     ]
                                 }
@@ -5562,6 +5658,22 @@
                                             "_value": "cardlessCashWithdrawal",
                                             "_type": "kv",
                                             "_attrDef": "c"
+                                        },
+                                        {
+                                            "_key": "(keydown)",
+                                            "_value": "allowNumbers($event)",
+                                            "_type": "kv",
+                                            "_attrDef": "c",
+                                            "_customAttributeFlag": "flowpicker",
+                                            "objValue": {
+                                                "nodeID": "sd_ChP4sjsoHWI2LRXk",
+                                                "functionName": "allowNumbers",
+                                                "activeTree": "pages",
+                                                "z": "sd_dfQ2vHZYHyt5Ymfr",
+                                                "input": [
+                                                    "$event"
+                                                ]
+                                            }
                                         }
                                     ]
                                 }

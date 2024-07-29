@@ -11,6 +11,7 @@ import {
   Validators,
 } from '@angular/forms'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -135,10 +136,21 @@ export class usernameComponent {
           Validators.required,
         ]),
       });
+      bh = this.sd_kSC8KQFpXeN9jj3L(bh);
       //appendnew_next_sd_uRHW1CRPVztMBH4M
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_uRHW1CRPVztMBH4M');
+    }
+  }
+
+  sd_kSC8KQFpXeN9jj3L(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('My Username'));
+      //appendnew_next_sd_kSC8KQFpXeN9jj3L
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kSC8KQFpXeN9jj3L');
     }
   }
 
@@ -272,10 +284,25 @@ export class usernameComponent {
           horizontalPosition: 'center',
           verticalPosition: 'bottom',
         });
+      bh = this.sd_RH7aa9B2bzYwq49a(bh);
       //appendnew_next_sd_BdkXBLh5tBYukSLx
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_BdkXBLh5tBYukSLx');
+    }
+  }
+
+  async sd_RH7aa9B2bzYwq49a(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/home/settings');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_RH7aa9B2bzYwq49a
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_RH7aa9B2bzYwq49a');
     }
   }
 

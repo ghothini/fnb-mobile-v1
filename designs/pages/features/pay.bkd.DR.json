@@ -2660,7 +2660,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "<input type=\"text\" formControlName = 'recipientName' class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\">",
+                                    "_value": "<input type=\"text\" formControlName = 'recipientName' class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\" required>",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -4328,7 +4328,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "<input type=\"text\" formControlName = 'ownRef' class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\">",
+                                    "_value": "<input type=\"text\" formControlName = 'ownRef' class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\" required>",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -4884,7 +4884,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "<input type=\"text\" formControlName = 'recipientRef' class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\">",
+                                    "_value": "<input type=\"text\" formControlName = 'recipientRef' class=\"bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px\" required>",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }

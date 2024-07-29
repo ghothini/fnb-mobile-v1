@@ -584,5 +584,49 @@
         "generateNext": false,
         "serviceName": "bankComponent",
         "generated": true
+    },
+    {
+        "id": "sd_zn2HZBfrmk2g6yAl",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "coming soon",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "comingSoon",
+        "category": "General",
+        "x": 380,
+        "y": 540,
+        "wires": [
+            [
+                "sd_5BJxjFHynhFcApHB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_5BJxjFHynhFcApHB",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/coming-soon",
+        "functionName": "sd_5BJxjFHynhFcApHB",
+        "category": "Navigation",
+        "x": 460,
+        "y": 540,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
     }
 ]

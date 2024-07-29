@@ -96,10 +96,21 @@ export class personal_infoComponent {
 
   sd_rQOfEXAMOUzol1j5(bh) {
     try {
+      bh = this.sd_fpZRiMYPHB3E3DNS(bh);
       //appendnew_next_sd_rQOfEXAMOUzol1j5
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_rQOfEXAMOUzol1j5');
+    }
+  }
+
+  sd_fpZRiMYPHB3E3DNS(bh) {
+    try {
+      localStorage.setItem('selectedPage', JSON.stringify('Personal Info'));
+      //appendnew_next_sd_fpZRiMYPHB3E3DNS
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_fpZRiMYPHB3E3DNS');
     }
   }
 

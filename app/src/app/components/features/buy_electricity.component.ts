@@ -473,10 +473,22 @@ export class buy_electricityComponent {
           horizontalPosition: 'center',
           verticalPosition: 'bottom',
         });
+      bh = this.sd_125ExBii1ZdSTOZ6(bh);
       //appendnew_next_sd_PgTZ58JiDkGAIVFP
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_PgTZ58JiDkGAIVFP');
+    }
+  }
+
+  sd_125ExBii1ZdSTOZ6(bh) {
+    try {
+      const page = this.page;
+      page.showSpinner = false;
+      //appendnew_next_sd_125ExBii1ZdSTOZ6
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_125ExBii1ZdSTOZ6');
     }
   }
 

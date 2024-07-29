@@ -82,7 +82,7 @@ export class airtimeAnother_detailsComponent {
         .constructFlowObject(this);
       bh.input = { form };
       bh.local = {};
-      bh = this.sd_iWPIIAG2PTP4F2rF(bh);
+      bh = this.sd_uSvAU4XSF5ERlRwS(bh);
       //appendnew_next_buy
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_Aoh8QiXBxIq3gyFE');
@@ -184,6 +184,7 @@ export class airtimeAnother_detailsComponent {
         bundleType: new FormControl('Airtime'),
         amount: new FormControl(''),
         fromAccount: new FormControl('Easy Zero'),
+        email: new FormControl(page.loggedInUser.email),
         transactionDate: new FormControl(page.formattedDate),
       });
 
@@ -227,40 +228,19 @@ export class airtimeAnother_detailsComponent {
     }
   }
 
-  sd_iWPIIAG2PTP4F2rF(bh) {
-    try {
-      const page = this.page;
-      console.log('FORM DATA==>', page.airtimeForm);
-
-      page.showSpinner = true;
-      bh = this.sd_uSvAU4XSF5ERlRwS(bh);
-      //appendnew_next_sd_iWPIIAG2PTP4F2rF
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_iWPIIAG2PTP4F2rF');
-    }
-  }
-
-  sd_uSvAU4XSF5ERlRwS(bh) {
+  async sd_uSvAU4XSF5ERlRwS(bh) {
     try {
       if (
-        this.sdService.operators['eq'](
-          this.page.airtimeForm.status,
-          'VALID',
+        this.sdService.operators['true'](
+          this.page.airtimeForm.invalid,
           undefined,
-          undefined
-        )
-      ) {
-        bh = this.sd_LL8fJw3h4l2Q1sMn(bh);
-      } else if (
-        this.sdService.operators['eq'](
-          this.page.airtimeForm.status,
-          'INVALID',
           undefined,
           undefined
         )
       ) {
         bh = this.sd_J0ZcqFWP8tjcHkKO(bh);
+      } else {
+        bh = await this.sd_LL8fJw3h4l2Q1sMn(bh);
       }
 
       return bh;
@@ -293,12 +273,9 @@ export class airtimeAnother_detailsComponent {
   sd_fUudOu6qnSN7CIJc(bh) {
     try {
       const page = this.page;
-      console.log('airtimeForm', page.airtimeForm.value);
-
+      page.showSpinner = true;
       page.loggedInUser.balance =
         page.loggedInUser.balance - page.airtimeForm.value.amount;
-
-      console.log('page', page);
       bh = this.sd_6J0ILSu31spNrBsr(bh);
       //appendnew_next_sd_fUudOu6qnSN7CIJc
       return bh;
@@ -457,12 +434,10 @@ export class airtimeAnother_detailsComponent {
   async sd_jQfO12W4pPzDwVAg(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/bank');
+        this.sdService.getPathAndQParamsObj('/home/airtime');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_jQfO12W4pPzDwVAg
       return bh;
     } catch (e) {
@@ -489,7 +464,7 @@ export class airtimeAnother_detailsComponent {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('Please fill in the fields', 'Ok', {
+        .open('All fields are required', 'Ok', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',

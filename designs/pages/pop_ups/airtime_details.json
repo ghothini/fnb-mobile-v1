@@ -70,7 +70,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\npage.currentQuote = page.loggedInUser.balance;\n\n// if (bh.currentQuote) {\n//     console.log('value');\n//     page.currentQuote = bh.currentQuote.input.newQuote;\n//     console.log(\"new bh :\", bh.currentQuote.input.newQuote);\n// } else {\n//     console.log('no value');\n// }\n\n\nconst date = new Date();\n\nconst day = date.getDate();\nconst month = date.toLocaleString('default', { month: 'long' });\nconst year = date.getFullYear();\nconst hours = String(date.getHours()).padStart(2, '0');\nconst minutes = String(date.getMinutes()).padStart(2, '0');\n\npage.formattedDate = `${day} ${month} ${year} ${hours}:${minutes}`;\n\npage.airtimeForm = new FormGroup({\n    customer: new FormControl (page.loggedInUser.name),\n    cell: new FormControl (page.loggedInUser.cell),\n    networkProvider: new FormControl(''),\n    bundleType: new FormControl('Airtime'),\n    amount: new FormControl(''),\n    fromAccount: new FormControl('Easy Zero'),\n    transactionDate: new FormControl(page.formattedDate)\n})\n\npage.networkProvider = [\n    {value: 'delhi-0', viewValue: 'Delhi'},\n   {value: 'mumbai-1', viewValue: 'Mumbai'},\n   {value: 'pune-2', viewValue: 'Pune'}\n    ]\n",
+        "script": "page.currentQuote = page.loggedInUser.balance;\n\n\nconst date = new Date();\n\nconst day = date.getDate();\nconst month = date.toLocaleString('default', { month: 'long' });\nconst year = date.getFullYear();\nconst hours = String(date.getHours()).padStart(2, '0');\nconst minutes = String(date.getMinutes()).padStart(2, '0');\n\npage.formattedDate = `${day} ${month} ${year} ${hours}:${minutes}`;\n\npage.airtimeForm = new FormGroup({\n    customer: new FormControl (page.loggedInUser.name),\n    cell: new FormControl (page.loggedInUser.cell),\n    networkProvider: new FormControl(''),\n    bundleType: new FormControl('Airtime'),\n    amount: new FormControl(''),\n    fromAccount: new FormControl('Easy Zero'),\n    transactionDate: new FormControl(page.formattedDate),\n    email: new FormControl(page.loggedInUser.email)\n})\n\npage.networkProvider = [\n    {value: 'delhi-0', viewValue: 'Delhi'},\n   {value: 'mumbai-1', viewValue: 'Mumbai'},\n   {value: 'pune-2', viewValue: 'Pune'}\n    ]\n",
         "functionName": "sd_vbyqwlYUD9u6Q1n9",
         "category": "Function",
         "x": 405,
@@ -735,7 +735,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""

@@ -87,16 +87,24 @@
                 {
                     "path": "dashboard",
                     "component": "dashboardComponent"
+                },
+                {
+                    "path": "settings",
+                    "component": "settingsComponent"
+                },
+                {
+                    "path": "personal-info",
+                    "component": "personal_infoComponent"
+                },
+                {
+                    "path": "username",
+                    "component": "usernameComponent"
+                },
+                {
+                    "path": "limits",
+                    "component": "limitsComponent"
                 }
             ]
-        },
-        {
-            "component": "personal_infoComponent",
-            "path": "personal-info"
-        },
-        {
-            "path": "settings",
-            "component": "settingsComponent"
         },
         {
             "path": "add-profile-pic",
@@ -105,10 +113,6 @@
         {
             "path": "id-documents",
             "component": "id_documentsComponent"
-        },
-        {
-            "path": "username",
-            "component": "usernameComponent"
         },
         {
             "path": "limits",
