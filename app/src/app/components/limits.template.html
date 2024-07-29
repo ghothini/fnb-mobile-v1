@@ -2,18 +2,6 @@
   <div *ngIf="page.showSpinner" class="z-index-2 landing-fz-25 spinner-login absolute">
     <mat-spinner></mat-spinner>
   </div>
-  <div fxLayout="row wrap" style="position: fixed; z-index: 2" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
-    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="__serviceInvoker__.invoke(&apos;sd_O7BgeFkazhosv8N2&apos;, &apos;goBack&apos;)"><span>
-                <span class="material-symbols-outlined ">
-                arrow_back
-            </span></span></div><label class="message-fz-21 message-margin-left-1em">
-      Limits</label><span class="message-flex-1">
-                </span>
-    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true"><span>
-                <span class="material-symbols-outlined">
-                search
-                </span></span></div>
-  </div>
   <div fxLayout="row wrap" class="landing-full-width limits-tab" fxLayoutAlign="center stretch" [fxShow]="true"><mat-tab-group mat-align-tabs="start" class="limits-tabs"><mat-tab style="width: 50%; " label="Set limits">
         <form [formGroup]="page.changeLimitsForm">
           <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
