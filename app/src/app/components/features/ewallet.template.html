@@ -42,25 +42,27 @@
       </div>
     </mat-card-content>
   </mat-card>
-  <form [formGroup]="page.ewalletForm">
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-        <p>
-          Amount:</p>
-        <div class="bank-full-width">
-          <input type="number" formControlName="amount" class="bank-padding-10px height-45 bank-border-box bank-no-margin bank-input bank-border-radius-10px" required (keydown)="allowNumbers($event)">
+  <form [formGroup]="page.ewalletForm" class="m-t-1em">
+    <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            Amount</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput type="number" [required]="true" formControlName="amount" (keydown)="allowNumbers($event)">
+            <mat-error align="start" *ngIf="(page.ewalletForm.controls.amount?.touched) &amp;&amp; (page.ewalletForm.controls.amount?.errors?.required)">Amount is <b>required </b></mat-error>
+          </mat-form-field>
         </div>
       </div>
-    </div>
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-        <p>
-          Cellphone Number</p>
-        <div class="bank-full-width">
-          <input type="number" formControlName="cellNumber" class="bank-padding-10px height-45 bank-border-box bank-no-margin bank-input bank-border-radius-10px" (keydown)="allowNumbers($event)" required>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            Cellphone Number</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput type="number" [required]="true" formControlName="cellNumber" (keydown)="allowNumbers($event)">
+            <mat-error align="start" *ngIf="(page.ewalletForm.controls.cellNumber?.touched) &amp;&amp; (page.ewalletForm.controls.cellNumber?.errors?.required)">Cellphone is <b>required </b></mat-error>
+          </mat-form-field>
         </div>
       </div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="btn-black" (click)="send()">Send</button></div>
     </div>
   </form>
-  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="m-t-1em btn-black" (click)="send()">Send</button></div>
 </div>

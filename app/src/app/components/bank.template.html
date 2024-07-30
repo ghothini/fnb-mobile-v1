@@ -1,9 +1,8 @@
 <div fxLayout="column wrap" class="bank-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true"><mat-card class="bank-gap-05em bank-border-radius-10px">
     <mat-card-content>
       <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
-        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-          <h4 class="bank-no-margin">
-            Easy Zero</h4>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label class="label-text bank-no-margin">
+            Easy Zero</label>
           <p class="bank-no-margin">
             {{page.loggedInUser.accountNumber}}
           </p>
@@ -110,10 +109,8 @@
         </div>
       </mat-card-content>
     </mat-card></div>
-  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-    <h4>
-      Buy</h4>
-  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label class="label-text">
+      Buy</label></div>
   <div fxLayout="row " class="bank-full-width" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
     <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card (click)="goToAirtime()" class="bank-border-box bank-flex bank-center-center bank-border-radius-10px bank-pointer bank-card">
         <mat-card-content><span>
@@ -174,10 +171,8 @@
         </div>
       </mat-card-content>
     </mat-card></div>
-  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-    <h4>
-      Banking</h4>
-  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label class="label-text">
+      Banking</label></div>
   <div fxLayout="row " class="bank-full-width" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
     <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card (click)="goToEwallet()" class="bank-border-box bank-flex bank-center-center bank-border-radius-10px bank-pointer bank-card">
         <mat-card-content><span>

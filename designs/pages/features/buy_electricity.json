@@ -656,9 +656,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -726,18 +724,15 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "property": "electricityForm.status",
+        "property": "electricityForm.invalid",
         "propertyType": "this.page",
-        "propertyGv": "this.page.electricityForm.status",
+        "propertyGv": "this.page.electricityForm.invalid",
         "rules": [
             {
-                "t": "eq",
-                "v": "VALID",
-                "vt": "str",
-                "gv": "\"VALID\""
+                "t": "else"
             },
             {
-                "t": "else"
+                "t": "true"
             }
         ],
         "checkall": "false",
@@ -769,7 +764,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "Please fill in the empty fields"
+            "value": "All fields are required"
         },
         "action": {
             "type": "str",
@@ -780,9 +775,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""

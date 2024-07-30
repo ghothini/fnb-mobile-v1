@@ -5,7 +5,12 @@
 
 import { Location } from '@angular/common'; //_splitter_
 import { Component, Injector } from '@angular/core'; //_splitter_
-import { FormControl, FormGroup } from '@angular/forms'; //_splitter_
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -29,6 +34,7 @@ export class ewalletComponent {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
+    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 
@@ -163,8 +169,8 @@ export class ewalletComponent {
       page.ewalletForm = new FormGroup({
         firstName: new FormControl(page.loggedInUser.name),
         email: new FormControl(page.loggedInUser.email),
-        amount: new FormControl(''),
-        cellNumber: new FormControl(''),
+        amount: new FormControl('', Validators.required),
+        cellNumber: new FormControl('', Validators.required),
         transactionDate: new FormControl(page.formattedDate),
       });
 

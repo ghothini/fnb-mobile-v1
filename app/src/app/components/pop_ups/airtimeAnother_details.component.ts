@@ -4,7 +4,12 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
-import { FormControl, FormGroup } from '@angular/forms'; //_splitter_
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -29,6 +34,7 @@ export class airtimeAnother_detailsComponent {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
+    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 
@@ -179,10 +185,10 @@ export class airtimeAnother_detailsComponent {
 
       page.airtimeForm = new FormGroup({
         customer: new FormControl(page.loggedInUser.name),
-        cell: new FormControl(''),
-        networkProvider: new FormControl(''),
+        cell: new FormControl('', Validators.required),
+        networkProvider: new FormControl('', Validators.required),
         bundleType: new FormControl('Airtime'),
-        amount: new FormControl(''),
+        amount: new FormControl('', Validators.required),
         fromAccount: new FormControl('Easy Zero'),
         email: new FormControl(page.loggedInUser.email),
         transactionDate: new FormControl(page.formattedDate),
@@ -437,7 +443,9 @@ export class airtimeAnother_detailsComponent {
         this.sdService.getPathAndQParamsObj('/home/airtime');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_jQfO12W4pPzDwVAg
       return bh;
     } catch (e) {

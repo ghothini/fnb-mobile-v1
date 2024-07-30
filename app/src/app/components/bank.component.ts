@@ -370,7 +370,9 @@ export class bankComponent {
         this.sdService.getPathAndQParamsObj('/home/coming-soon');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_5BJxjFHynhFcApHB
       return bh;
     } catch (e) {
