@@ -258,6 +258,7 @@
                                 {
                                     "_key": "class",
                                     "_value": [
+                                        "label-text",
                                         "bank-no-margin"
                                     ],
                                     "_type": "dav",
@@ -265,14 +266,14 @@
                                 },
                                 {
                                     "_key": "htmlElement",
-                                    "_value": "h4",
+                                    "_value": "label",
                                     "_type": "dav",
                                     "_attrDef": "p",
                                     "_useAsLabel": true
                                 },
                                 {
                                     "_key": "tagType",
-                                    "_value": "h4",
+                                    "_value": "label",
                                     "_type": "a",
                                     "_attrDef": "p",
                                     "_visibility": false
@@ -5030,20 +5031,22 @@
                     },
                     {
                         "_key": "class",
-                        "_value": "",
+                        "_value": [
+                            "label-text"
+                        ],
                         "_type": "dav",
                         "_attrDef": "p"
                     },
                     {
                         "_key": "htmlElement",
-                        "_value": "h4",
+                        "_value": "label",
                         "_type": "dav",
                         "_attrDef": "p",
                         "_useAsLabel": true
                     },
                     {
                         "_key": "tagType",
-                        "_value": "h4",
+                        "_value": "label",
                         "_type": "a",
                         "_attrDef": "p",
                         "_visibility": false
@@ -8671,20 +8674,22 @@
                     },
                     {
                         "_key": "class",
-                        "_value": "",
+                        "_value": [
+                            "label-text"
+                        ],
                         "_type": "dav",
                         "_attrDef": "p"
                     },
                     {
                         "_key": "htmlElement",
-                        "_value": "h4",
+                        "_value": "label",
                         "_type": "dav",
                         "_attrDef": "p",
                         "_useAsLabel": true
                     },
                     {
                         "_key": "tagType",
-                        "_value": "h4",
+                        "_value": "label",
                         "_type": "a",
                         "_attrDef": "p",
                         "_visibility": false

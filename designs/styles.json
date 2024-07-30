@@ -223,6 +223,7 @@
         "verify-code-row1",
         "verify-code-input",
         "migrate",
+        "label-text",
         "f-size-18px",
         "f-weight-400",
         "text-center",

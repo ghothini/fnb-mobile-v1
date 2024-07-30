@@ -44,31 +44,33 @@
       </div>
     </mat-card-content>
   </mat-card>
-  <form [formGroup]="page.electricityForm">
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-        <p>
-          Meter Number</p>
-        <div class="bank-full-width">
-          <input type="number" formControlName="meterNumber" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" maxlength="11" (keydown)="allowNumbers($event)">
+  <form [formGroup]="page.electricityForm" class="m-t-1em">
+    <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            Meter Number</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput type="number" [required]="true" formControlName="meterNumber" (keydown)="allowNumbers($event)">
+            <mat-error align="start" *ngIf="(page.electricityForm.controls.meterNumber?.touched) &amp;&amp; (page.electricityForm.controls.meterNumber?.errors?.required)">Meter number is <b>required </b></mat-error>
+          </mat-form-field>
         </div>
       </div>
-    </div>
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-        <p>
-          Recharge Amount</p>
-        <div class="bank-full-width">
-          <input type="number" formControlName="amount" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" (keydown)="allowNumbers($event)">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            Recharge Amount</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput type="number" [required]="true" formControlName="amount" (keydown)="allowNumbers($event)">
+            <mat-error align="start" *ngIf="(page.electricityForm.controls.amount?.touched) &amp;&amp; (page.electricityForm.controls.amount?.errors?.required)">Amount is <b>required </b></mat-error>
+          </mat-form-field>
         </div>
       </div>
-    </div>
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-        <p>
-          Cellphone Number</p>
-        <div class="bank-full-width">
-          <input type="number" formControlName="cellphone" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" (keydown)="allowNumbers($event)">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            Cellphone Number</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput type="number" [required]="true" formControlName="cellphone" (keydown)="allowNumbers($event)">
+            <mat-error align="start" *ngIf="(page.electricityForm.controls.cellphone?.touched) &amp;&amp; (page.electricityForm.controls.cellphone?.errors?.required)">Cellphone is <b>required </b></mat-error>
+          </mat-form-field>
         </div>
       </div>
     </div>

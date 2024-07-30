@@ -12,46 +12,40 @@
         </div>
       </div>
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-          <p class="bank-no-margin">
-            Mobile network</p>
-          <div class="bank-full-width">
-            <select required formControlName="networkProvider" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px">
-              <option value="Vodacom">Vodacom</option>
-              <option value="MTN">MTN</option>
-              <option value="Telkom">Telkom</option>
-              <option value="Cell-C">Cell-C</option>
-            </select>
-          </div>
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            Mobile network</label><mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+            <mat-label></mat-label>
+            <mat-select formControlName="networkProvider" placeholder="Select" [required]="false">
+              <mat-option [value]="&apos;Vodacom&apos;" disabled="false">Vodacom</mat-option><mat-option [value]="&apos;MTN&apos;" disabled="false">MTN</mat-option><mat-option [value]="&apos;Telkom&apos;" disabled="false">Telkom</mat-option><mat-option [value]="&apos;Cell-C&apos;" disabled="false">Cell-C</mat-option>
+            </mat-select>
+            <mat-error align="start" *ngIf="(page.airtimeForm.controls.networkProvider?.touched) &amp;&amp; (page.airtimeForm.controls.networkProvider?.errors?.required)">Network provider is <b>required </b></mat-error>
+          </mat-form-field></div>
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            Bundle type</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput type="text" [required]="true" formControlName="bundleType" readonly="true">
+
+          </mat-form-field>
         </div>
       </div>
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-          <p class="bank-no-margin">
-            Bundle type</p>
-          <div class="bank-full-width">
-            <input type="text" formControlName="bundleType" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" readonly>
-          </div>
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            Amount</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput type="number" [required]="true" formControlName="amount" (keydown)="allowNumbers($event)">
+            <mat-error align="start" *ngIf="(page.airtimeForm.controls.amount?.touched) &amp;&amp; (page.airtimeForm.controls.amount?.errors?.required)">Amount is <b>required </b></mat-error>
+          </mat-form-field>
         </div>
       </div>
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-          <p class="bank-no-margin">
-            Amount
-          </p>
-          <div class="bank-full-width">
-            <input type="number" formControlName="amount" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" (keydown)="allowNumbers($event)">
-          </div>
-        </div>
-      </div>
-      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-          <p class="bank-no-margin">
-            From Account
-          </p>
-          <div style="color:black;" class="bank-full-width">
-            <input type="text" formControlName="fromAccount" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" readonly>
-          </div>
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            From Account</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput type="text" [required]="true" formControlName="fromAccount" readonly="true">
+
+          </mat-form-field>
         </div>
       </div>
     </div>

@@ -5,7 +5,12 @@
 
 import { Location } from '@angular/common'; //_splitter_
 import { Component, Injector } from '@angular/core'; //_splitter_
-import { FormControl, FormGroup, Validators } from '@angular/forms'; //_splitter_
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -29,6 +34,7 @@ export class buy_electricityComponent {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
+    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 
@@ -221,16 +227,16 @@ export class buy_electricityComponent {
   async sd_KBRZtw4iiZARs8GS(bh) {
     try {
       if (
-        this.sdService.operators['eq'](
-          this.page.electricityForm.status,
-          'VALID',
+        this.sdService.operators['true'](
+          this.page.electricityForm.invalid,
+          undefined,
           undefined,
           undefined
         )
       ) {
-        bh = this.sd_7cVyguTzWL9kbtS0(bh);
+        bh = this.sd_PgTZ58JiDkGAIVFP(bh);
       } else {
-        bh = await this.sd_PgTZ58JiDkGAIVFP(bh);
+        bh = await this.sd_7cVyguTzWL9kbtS0(bh);
       }
 
       return bh;
@@ -467,7 +473,7 @@ export class buy_electricityComponent {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('Please fill in the empty fields', 'OK', {
+        .open('All fields are required', 'OK', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',

@@ -5,7 +5,12 @@
 
 import { Location } from '@angular/common'; //_splitter_
 import { Component, Injector } from '@angular/core'; //_splitter_
-import { FormControl, FormGroup } from '@angular/forms'; //_splitter_
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -29,6 +34,7 @@ export class payComponent {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
+    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 
@@ -163,13 +169,13 @@ export class payComponent {
 
       page.payForm = new FormGroup({
         customer: new FormControl(page.loggedInUser.name),
-        recipientName: new FormControl(''),
+        recipientName: new FormControl('', Validators.required),
         cardNumber: new FormControl(page.loggedInUser.accountNumber),
-        amount: new FormControl(''),
-        ownRef: new FormControl(''),
+        amount: new FormControl('', Validators.required),
+        ownRef: new FormControl('', Validators.required),
         recipientRef: new FormControl(''),
         email: new FormControl(page.loggedInUser.email),
-        sendProof: new FormControl(''),
+        sendProof: new FormControl('', Validators.required),
         transactionDate: new FormControl(page.formattedDate),
       });
 

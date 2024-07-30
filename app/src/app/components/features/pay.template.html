@@ -43,58 +43,58 @@
     </mat-card-content>
   </mat-card>
   <form [formGroup]="page.payForm">
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-        <p>
-          Recipient name</p>
-        <div class="bank-full-width">
-          <input type="text" formControlName="recipientName" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" required>
+    <div fxLayout="column wrap" class="m-t-1em" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            Recipient name</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput type="text" [required]="true" formControlName="recipientName">
+            <mat-error align="start" *ngIf="(page.payForm.controls.recipientName?.touched) &amp;&amp; (page.payForm.controls.recipientName?.errors?.required)">Recipient name is <b>required </b></mat-error>
+          </mat-form-field>
         </div>
       </div>
-    </div>
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-        <p>
-          Card Number</p>
-        <div class="bank-full-width">
-          <input type="text" formControlName="cardNumber" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" required (keydown)="allowNumbers($event)">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            Card Number</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput type="number" [required]="true" formControlName="cardNumber" (keydown)="allowNumbers($event)">
+            <mat-error align="start" *ngIf="(page.payForm.controls.cardNumber?.touched) &amp;&amp; (page.payForm.controls.cardNumber?.errors?.required)">Card number is <b>required </b></mat-error>
+          </mat-form-field>
         </div>
       </div>
-    </div>
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-        <p>
-          Amount</p>
-        <div class="bank-full-width">
-          <input type="number" formControlName="amount" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" required (keydown)="allowNumbers($event)">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            Amount</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput type="number" [required]="true" formControlName="amount" (keydown)="allowNumbers($event)">
+            <mat-error align="start" *ngIf="(page.payForm.controls.amount?.touched) &amp;&amp; (page.payForm.controls.amount?.errors?.required)">Amount is <b>required </b></mat-error>
+          </mat-form-field>
         </div>
       </div>
-    </div>
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-        <p>
-          Own ref</p>
-        <div class="bank-full-width">
-          <input type="text" formControlName="ownRef" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" required>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            Own ref</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput type="text" [required]="true" formControlName="ownRef">
+            <mat-error align="start" *ngIf="(page.payForm.controls.ownRef?.touched) &amp;&amp; (page.payForm.controls.ownRef?.errors?.required)">Own ref is <b>required </b></mat-error>
+          </mat-form-field>
         </div>
       </div>
-    </div>
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-        <p>
-          Recipient ref</p>
-        <div class="bank-full-width">
-          <input type="text" formControlName="recipientRef" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px" required>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            Recipient ref</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput type="text" [required]="true" formControlName="recipientRef">
+            <mat-error align="start" *ngIf="(page.payForm.controls.recipientRef?.touched) &amp;&amp; (page.payForm.controls.recipientRef?.errors?.required)">Recipient ref is <b>required </b></mat-error>
+          </mat-form-field>
         </div>
       </div>
-    </div>
-    <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
-      <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
-        <p>
-          Send proof of payment?</p>
+      <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><label class="message-fz-18">
+            Send proof of payment?</label></div>
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-checkbox [required]="false" formControlName="sendProof"></mat-checkbox></div>
       </div>
-      <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-checkbox [required]="false" formControlName="sendProof"></mat-checkbox></div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="m-b-1em btn-black" (click)="submit()">Continue</button></div>
     </div>
   </form>
-  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="m-b-1em btn-black" (click)="submit()">Continue</button></div>
 </div>
