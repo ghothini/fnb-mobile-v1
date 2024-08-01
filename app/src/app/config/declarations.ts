@@ -16,6 +16,14 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-confirm_recipientComponent
+import { confirm_recipientComponent } from '../components/confirm_recipient.component';
+//CORE_REFERENCE_IMPORT-recipient_dataComponent
+import { recipient_dataComponent } from '../components/recipient_data.component';
+//CORE_REFERENCE_IMPORT-pay_recipientComponent
+import { pay_recipientComponent } from '../components/pay_recipient.component';
+//CORE_REFERENCE_IMPORT-add_recipientComponent
+import { add_recipientComponent } from '../components/add_recipient.component';
 //CORE_REFERENCE_IMPORT-dashboardComponent
 import { dashboardComponent } from '../components/dashboard.component';
 //CORE_REFERENCE_IMPORT-migrateComponent
@@ -116,6 +124,14 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-confirm_recipientComponent
+  confirm_recipientComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-recipient_dataComponent
+  recipient_dataComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-pay_recipientComponent
+  pay_recipientComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-add_recipientComponent
+  add_recipientComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dashboardComponent
   dashboardComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-migrateComponent
@@ -239,6 +255,10 @@ export const appRoutes = [
       { path: 'username', component: usernameComponent },
       { path: 'limits', component: limitsComponent },
       { path: 'coming-soon', component: coming_soonComponent },
+      { path: 'pay_beneficiary', component: pay_recipientComponent },
+      { path: 'add_recipient', component: add_recipientComponent },
+      { path: 'recipient_data', component: recipient_dataComponent },
+      { path: 'confirm_recipient', component: confirm_recipientComponent },
     ],
   },
   { path: 'add-profile-pic', component: add_profile_picComponent },

@@ -1,0 +1,27 @@
+<div fxLayout="column wrap" class="vh-80" fxLayoutAlign="space-between stretch" [fxShow]="true">
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div *ngIf="page.showSpinner" class="spinner-login absolute">
+      <mat-spinner></mat-spinner>
+    </div>
+    <div>
+      <h2 class="recipients margin-bottom-none">YOU ARE ABOUT TO</h2>
+      <span class="font-weight-400 font-size-larger"> Add {{page.result.name}} as a recipient <br>
+<b>From Acc</b>: Easy Zero <br>
+<b>Acc No</b>: {{page.result.accountNumber}} <br>
+<b>Bank</b>: CAPITEC Bank <br>
+<b>Own Ref</b>: {{page.result.ownRef}} <br>
+<b> Recipient Ref</b>: {{page.result.recipientRef}} <br>
+ <br>
+ <br>
+
+ Please <b>Confirm</b>
+ </span>
+
+    </div>
+  </div>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.pay">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.confirmed"><button mat-raised-button class="btn-white m-t-1em" (click)="pay()">Pay now</button></div>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="m-t-1em btn-black" (click)="finish()">Finish</button></div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.confirm"><button mat-raised-button class="m-t-1em btn-black" (click)="addBeneficiary()">Continue</button></div>
+</div>

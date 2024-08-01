@@ -1,0 +1,34 @@
+<div fxLayout="column wrap" class="vh-80" fxLayoutAlign="space-between stretch" [fxShow]="true">
+  <div *ngIf="page.showSpinner" class="spinner-login absolute">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" fxLayoutGap="1.5em" fxLayoutAlign="start center" [fxShow]="true">
+      <div fxLayout="column wrap" class="add" fxLayoutAlign="start stretch" [fxShow]="true" (click)="addRecipient()">
+        <div>
+          <span class="material-symbols-outlined">
+add_circle
+</span>
+        </div>
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div>
+          <h2 class="beneficiaryText">Add Beneficiary/Bill</h2>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div class="bank-full-width">
+        <h2 class="recipients margin-bottom-none"> RECIPIENTS </h2>
+        <hr class="full-width green-bg height-1px">
+      </div>
+    </div>
+    <div fxLayout="row wrap" class="bank-margin-top-10px border-bottom-grey" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let item of page.beneficiary" (click)="pay(item)">
+      <div>
+        <b class="benName">{{item.name}}</b> <br>
+        Recipient Not Paid
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="m-t-1em btn-black" (click)="viewLimits()">View limits</button></div>
+</div>

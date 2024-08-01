@@ -1,12 +1,17 @@
 {
     "classes": [
         "color-black",
+        "color-orange",
+        "orange-bg",
+        "green-bg",
         "border-1px",
+        "border-bottom-grey",
         "bg-white",
         "space-between-ce",
         "spinner-login",
         "relative",
         "absolute",
+        "margin-bottom-none",
         "m-b-05em",
         "m-b-1em",
         "m-t-1em",
@@ -17,6 +22,7 @@
         "bank-dark-grey",
         "bank-light-grey-bg",
         "height-45",
+        "height-1px",
         "height-87",
         "bank-flex",
         "bank-space-between-center",
@@ -25,6 +31,7 @@
         "bank-full-width",
         "full-dvh",
         "bank-full-height",
+        "vh-80",
         "bank-height-100px",
         "bank-height-500px",
         "bank-no-padding",
@@ -103,6 +110,8 @@
         "landing-full-width",
         "landing-full-height",
         "footer",
+        "font-size-larger",
+        "font-weight-400",
         "footer-mat-toolbar",
         "footer-menu-tab",
         "menu-tab",
@@ -209,6 +218,7 @@
         "login-middle",
         "btn",
         "btn-black",
+        "btn-white",
         "img-icon",
         "login-btn",
         "login-forgot-btn",
@@ -237,6 +247,11 @@
         "origin-video",
         "mat-checkbox-checked",
         "mat-checkbox-background",
-        "mat-checkbox-indeterminate"
+        "mat-checkbox-indeterminate",
+        "add",
+        "material-symbols-outlined",
+        "beneficiaryText",
+        "recipients",
+        "benName"
     ]
 }
