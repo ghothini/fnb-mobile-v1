@@ -1,0 +1,70 @@
+<div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div *ngIf="page.showSpinner" class="spinner-login absolute">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <p>
+      <strong>Account</strong>
+    </p>
+  </div><mat-card class="bank-padding-10px bank-border-box bank-full-width bank-border-radius-10px">
+    <mat-card-content>
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="Web/Images/card.png" class="bank-image"></div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div>
+            <p class="bank-no-margin">Easy Zero</p>
+            <p class="bank-no-margin"><strong>{{page.user.balance | amountSeparator}}</strong></p>
+            <p class="bank-no-margin"><small>Available</small></p>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <p>
+      <strong>Recipient</strong>
+    </p>
+  </div><mat-card class="bank-padding-10px bank-border-box bank-full-width bank-border-radius-10px">
+    <mat-card-content>
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div class="bank-flex bank-center-center bank-image2">
+            <span class="material-symbols-outlined">
+                lightbulb
+            </span>
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div>
+            <p class="bank-no-margin">BANK</p>
+            <p class="bank-no-margin"><strong>{{page.recipient.accountNumber}}</strong></p>
+            <p class="bank-no-margin"><small>Branch Code 470010</small></p>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <form #addForm="ngForm" class="m-t-1em">
+    <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-fz-18">
+            Own Ref:</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput [(ngModel)]="page.recipient.ownRef" name="ownRef" type="text" placeholder="e.g Dineo" [required]="true">
+            <mat-error align="start" *ngIf="(page.recipient.ownRef?.touched) &amp;&amp; (page.recipient.ownRef?.errors?.required)">Own Ref is <b>required </b></mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100%" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.disabledOldPasswordField"><label class="message-fz-18">
+            Recipient ref:</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput [(ngModel)]="page.recipient.recipientRef" name="recipientRef" type="text" placeholder="e.g Nicholas" [required]="true">
+            <mat-error align="start" *ngIf="(page.recipient.recipientRef?.touched) &amp;&amp; (page.recipient.recipientRef?.errors?.required)">Recipient Ref is <b>required </b></mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="m-t-1em btn-black" (click)="submit(addForm)">Continue</button></div>
+  </form>
+</div>

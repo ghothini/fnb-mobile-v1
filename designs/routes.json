@@ -107,6 +107,22 @@
                 {
                     "path": "coming-soon",
                     "component": "coming_soonComponent"
+                },
+                {
+                    "path": "pay_beneficiary",
+                    "component": "pay_recipientComponent"
+                },
+                {
+                    "path": "add_recipient",
+                    "component": "add_recipientComponent"
+                },
+                {
+                    "path": "recipient_data",
+                    "component": "recipient_dataComponent"
+                },
+                {
+                    "path": "confirm_recipient",
+                    "component": "confirm_recipientComponent"
                 }
             ]
         },

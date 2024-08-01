@@ -8,6 +8,7 @@ $primary:#009997;
 $light-grey: #cecece;
 $dark-grey: #b0b0b0;
 $bg-light: #fdfdfd;
+$fnb-orange: #f2981d;
 
 body {
     font-family:"Roboto", sans-serif;
@@ -18,8 +19,26 @@ body {
     color: #000000 !important;
 }
 
+.color-orange {
+    color: $fnb-orange;
+}
+
+.orange-bg {
+    background-color: $fnb-orange;
+}
+
+.green-bg {
+    background-color: $primary;
+}
+
+//borders
+
 .border-1px {
     border: 1px solid !important;
+}
+
+.border-bottom-grey {
+    border-bottom: 1px solid lightgrey !important;
 }
 
 .bg-white {
@@ -54,6 +73,11 @@ body {
 
 .absolute {
     position: absolute !important;
+}
+//margin
+
+.margin-bottom-none {
+    margin-bottom: 0;
 }
 
 .m-b-05em {
@@ -99,6 +123,10 @@ body {
     height: 45px;
 }
 
+.height-1px {
+    height: 1px;
+}
+
 .height-87{
     height: 87%;
 }
@@ -138,6 +166,10 @@ body {
 
 .bank-full-height {
     height: 100%;
+}
+
+.vh-80 {
+    height: 75vh;
 }
 
 .bank-height-100px {
@@ -575,6 +607,16 @@ bh-footer{
 
 .footer{
     // width: 100%;
+}
+
+//font
+.font-size-larger {
+    font-size: larger;
+    font-weight: 400;
+}
+
+.font-weight-400 {
+    font-weight: 400;
 }
 
 .footer-mat-toolbar{
@@ -1091,6 +1133,14 @@ bh-limits{
     background-color: black !important;
 }
 
+.btn-white {
+    width: 100% !important;
+    border-radius: 30px !important;
+    font-size: 18px;
+    color: black !important;
+    background-color: white !important;
+}
+
 .img-icon {
     height: 30px;
 }
@@ -1247,4 +1297,30 @@ video.origin-video {
 .mat-checkbox-checked .mat-checkbox-background,
 .mat-checkbox-indeterminate .mat-checkbox-background {
   background-color: $primary !important;
+}
+
+.add {
+    .material-symbols-outlined {
+        cursor: pointer;
+        font-size: 60px;
+        font-weight: lighter;
+        color: $fnb-orange !important;
+    }
+}
+
+.beneficiaryText {
+    font-weight: 300;
+    font-size: x-large;
+    margin: 0;
+}
+
+.recipients {
+    color: $primary;
+    font-weight: 400;
+    font-size: x-large
+}
+
+.benName {
+    font-size: x-large;
+    font-weight: 400;
 }

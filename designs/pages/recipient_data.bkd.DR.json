@@ -1,5 +1,5 @@
 {
-    "703d5cde-07ab-f4e7-3420-ee03f12e42f5": {
+    "a3e9fdc0-3bf3-660a-c7f4-18e2e2743508": {
         "paletteKey": "FlexLayoutCol",
         "commentid": null,
         "designerReference": [
@@ -61,9 +61,9 @@
                 "_attrDef": "p"
             }
         ],
-        "1b59c24d-05d5-395d-532a-c0ee2ac2430a": {
+        "3369f7be-b50d-a7b7-1a08-8dc1bba57422": {
             "paletteKey": "Html5",
-            "parentEditorKey": "703d5cde-07ab-f4e7-3420-ee03f12e42f5",
+            "parentEditorKey": "a3e9fdc0-3bf3-660a-c7f4-18e2e2743508",
             "isAdvancedComponent": true,
             "commentid": null,
             "designerReference": [
@@ -257,9 +257,9 @@
                     "_attrDef": "c"
                 }
             ],
-            "2518280a-331f-9902-4ca0-18d641ffee6d": {
+            "ddc07308-a39e-1549-7111-328dd32303b0": {
                 "paletteKey": "html-editor",
-                "parentEditorKey": "1b59c24d-05d5-395d-532a-c0ee2ac2430a",
+                "parentEditorKey": "3369f7be-b50d-a7b7-1a08-8dc1bba57422",
                 "isAdvancedChildComponent": true,
                 "commentid": null,
                 "designerReference": [
@@ -284,9 +284,9 @@
                 ]
             }
         },
-        "f3460631-bfbb-b26d-68c1-1f6fed6d988b": {
+        "aaff9c5b-5b0b-da36-8629-885c265187fb": {
             "paletteKey": "FlexLayoutRow",
-            "parentEditorKey": "703d5cde-07ab-f4e7-3420-ee03f12e42f5",
+            "parentEditorKey": "a3e9fdc0-3bf3-660a-c7f4-18e2e2743508",
             "commentid": null,
             "designerReference": [
                 {
@@ -345,9 +345,9 @@
                     "_attrDef": "p"
                 }
             ],
-            "450b7ce4-fbda-a01e-ede1-41de00fd389c": {
+            "3e7ddc35-d5e1-e07a-c527-de31c750a1ee": {
                 "paletteKey": "Html5",
-                "parentEditorKey": "f3460631-bfbb-b26d-68c1-1f6fed6d988b",
+                "parentEditorKey": "aaff9c5b-5b0b-da36-8629-885c265187fb",
                 "isAdvancedComponent": true,
                 "commentid": null,
                 "designerReference": [
@@ -532,9 +532,9 @@
                         "_visibility": false
                     }
                 ],
-                "3f1fb810-7a69-6359-7f85-787d5838d720": {
+                "6042e63d-9ba9-7122-291e-745b3fe64f40": {
                     "paletteKey": "html-editor",
-                    "parentEditorKey": "450b7ce4-fbda-a01e-ede1-41de00fd389c",
+                    "parentEditorKey": "3e7ddc35-d5e1-e07a-c527-de31c750a1ee",
                     "isAdvancedChildComponent": true,
                     "commentid": null,
                     "designerReference": [
@@ -552,7 +552,7 @@
                         },
                         {
                             "_key": "html",
-                            "_value": "<strong>From</strong>",
+                            "_value": "<strong>Account</strong>",
                             "_type": "a",
                             "_attrDef": "p"
                         }
@@ -560,9 +560,9 @@
                 }
             }
         },
-        "44c818cb-fad7-5fa3-3084-289669bb22da": {
+        "68b7f98c-ffcf-d73e-72f4-1c42fd94c975": {
             "paletteKey": "ad-card",
-            "parentEditorKey": "703d5cde-07ab-f4e7-3420-ee03f12e42f5",
+            "parentEditorKey": "a3e9fdc0-3bf3-660a-c7f4-18e2e2743508",
             "isAdvancedComponent": true,
             "commentid": null,
             "designerReference": [
@@ -597,9 +597,9 @@
                     "_attrDef": "p"
                 }
             ],
-            "d0b17724-dd47-185b-1a13-6557598612e9": {
+            "ce7d8b6b-f4dd-df49-ba72-aaf64c7319d3": {
                 "paletteKey": "ng-card-content",
-                "parentEditorKey": "44c818cb-fad7-5fa3-3084-289669bb22da",
+                "parentEditorKey": "68b7f98c-ffcf-d73e-72f4-1c42fd94c975",
                 "isAdvancedChildComponent": true,
                 "commentid": null,
                 "designerReference": [
@@ -622,9 +622,9 @@
                         "_attrDef": "p"
                     }
                 ],
-                "132d5d9c-8372-d0c6-ad97-d1e0d3f1efb0": {
+                "dcb91226-d221-ab13-7281-b59f7c41a500": {
                     "paletteKey": "FlexLayoutRow",
-                    "parentEditorKey": "d0b17724-dd47-185b-1a13-6557598612e9",
+                    "parentEditorKey": "ce7d8b6b-f4dd-df49-ba72-aaf64c7319d3",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -683,9 +683,9 @@
                             "_attrDef": "p"
                         }
                     ],
-                    "206640dd-3a8e-2b75-11b7-e592f74bfd1e": {
+                    "5406b4ed-8f5c-34b8-7294-7ca9f09c6953": {
                         "paletteKey": "FlexLayoutCol",
-                        "parentEditorKey": "132d5d9c-8372-d0c6-ad97-d1e0d3f1efb0",
+                        "parentEditorKey": "dcb91226-d221-ab13-7281-b59f7c41a500",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -744,9 +744,9 @@
                                 "_attrDef": "p"
                             }
                         ],
-                        "a3a28760-9e58-b62b-3a65-e107725b670e": {
+                        "581c7525-ed7d-b2df-67c3-831f2c148430": {
                             "paletteKey": "NG-image",
-                            "parentEditorKey": "206640dd-3a8e-2b75-11b7-e592f74bfd1e",
+                            "parentEditorKey": "5406b4ed-8f5c-34b8-7294-7ca9f09c6953",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -815,9 +815,9 @@
                             ]
                         }
                     },
-                    "b01cb4ac-06e5-5d46-e793-5a6447e3d8ad": {
+                    "3bc585a1-2b4b-f77f-3fd3-b8f923ff2f2c": {
                         "paletteKey": "FlexLayoutCol",
-                        "parentEditorKey": "132d5d9c-8372-d0c6-ad97-d1e0d3f1efb0",
+                        "parentEditorKey": "dcb91226-d221-ab13-7281-b59f7c41a500",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -876,9 +876,9 @@
                                 "_attrDef": "p"
                             }
                         ],
-                        "edecb51f-391a-d5a0-d433-d9d2ea22495e": {
+                        "6962c680-ff93-e81d-8f29-a1265377c58b": {
                             "paletteKey": "Html5",
-                            "parentEditorKey": "b01cb4ac-06e5-5d46-e793-5a6447e3d8ad",
+                            "parentEditorKey": "3bc585a1-2b4b-f77f-3fd3-b8f923ff2f2c",
                             "isAdvancedComponent": true,
                             "commentid": null,
                             "designerReference": [
@@ -1063,9 +1063,9 @@
                                     "_visibility": false
                                 }
                             ],
-                            "d9590811-248d-63c3-56b0-edfa3e545ef1": {
+                            "34d7a4cb-847c-9ab1-e528-4692dddd6409": {
                                 "paletteKey": "html-editor",
-                                "parentEditorKey": "edecb51f-391a-d5a0-d433-d9d2ea22495e",
+                                "parentEditorKey": "6962c680-ff93-e81d-8f29-a1265377c58b",
                                 "isAdvancedChildComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -1083,7 +1083,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "<p class=\"bank-no-margin\">Easy Zero</p>\r\n            <p class=\"bank-no-margin\"><strong>{{page.loggedInUser.balance | amountSeparator}}</strong></p>\r\n            <p class=\"bank-no-margin\"><small>Available</small></p>",
+                                        "_value": "<p class=\"bank-no-margin\">Easy Zero</p>\r\n            <p class=\"bank-no-margin\"><strong>{{page.user.balance | amountSeparator}}</strong></p>\r\n            <p class=\"bank-no-margin\"><small>Available</small></p>",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -1094,9 +1094,9 @@
                 }
             }
         },
-        "2a374d09-45e0-2cea-f332-eca79d38738a": {
+        "32d27a17-15a0-a9a0-ea82-9069048c9459": {
             "paletteKey": "FlexLayoutRow",
-            "parentEditorKey": "703d5cde-07ab-f4e7-3420-ee03f12e42f5",
+            "parentEditorKey": "a3e9fdc0-3bf3-660a-c7f4-18e2e2743508",
             "commentid": null,
             "designerReference": [
                 {
@@ -1155,9 +1155,9 @@
                     "_attrDef": "p"
                 }
             ],
-            "a68d9dea-17ec-d20d-ad2f-857da84dcca8": {
+            "01465dd5-00a8-029b-8274-b449d0aa5766": {
                 "paletteKey": "Html5",
-                "parentEditorKey": "2a374d09-45e0-2cea-f332-eca79d38738a",
+                "parentEditorKey": "32d27a17-15a0-a9a0-ea82-9069048c9459",
                 "isAdvancedComponent": true,
                 "commentid": null,
                 "designerReference": [
@@ -1342,9 +1342,9 @@
                         "_visibility": false
                     }
                 ],
-                "b452e4e0-e1fc-5954-9edf-094fc7a1c2d5": {
+                "543bb0a1-9766-49ee-119d-5456e9c9c290": {
                     "paletteKey": "html-editor",
-                    "parentEditorKey": "a68d9dea-17ec-d20d-ad2f-857da84dcca8",
+                    "parentEditorKey": "01465dd5-00a8-029b-8274-b449d0aa5766",
                     "isAdvancedChildComponent": true,
                     "commentid": null,
                     "designerReference": [
@@ -1362,7 +1362,7 @@
                         },
                         {
                             "_key": "html",
-                            "_value": "<strong>Type</strong>",
+                            "_value": "<strong>Recipient</strong>",
                             "_type": "a",
                             "_attrDef": "p"
                         }
@@ -1370,9 +1370,9 @@
                 }
             }
         },
-        "9d075890-c715-04cc-a34c-b2dfdffe6bd9": {
+        "45ab26a5-54bc-b3e6-8c36-de09a8648b35": {
             "paletteKey": "ad-card",
-            "parentEditorKey": "703d5cde-07ab-f4e7-3420-ee03f12e42f5",
+            "parentEditorKey": "a3e9fdc0-3bf3-660a-c7f4-18e2e2743508",
             "isAdvancedComponent": true,
             "commentid": null,
             "designerReference": [
@@ -1407,9 +1407,9 @@
                     "_attrDef": "p"
                 }
             ],
-            "13fb5923-01df-917d-1cf2-93ce94041a54": {
+            "bbd08f0f-765b-0012-d1d7-a44826f98e74": {
                 "paletteKey": "ng-card-content",
-                "parentEditorKey": "9d075890-c715-04cc-a34c-b2dfdffe6bd9",
+                "parentEditorKey": "45ab26a5-54bc-b3e6-8c36-de09a8648b35",
                 "isAdvancedChildComponent": true,
                 "commentid": null,
                 "designerReference": [
@@ -1432,9 +1432,9 @@
                         "_attrDef": "p"
                     }
                 ],
-                "2adb187b-8209-b860-71a8-e81249726e79": {
+                "df08155a-9edc-3071-9c6f-59de04cd6c0c": {
                     "paletteKey": "FlexLayoutRow",
-                    "parentEditorKey": "13fb5923-01df-917d-1cf2-93ce94041a54",
+                    "parentEditorKey": "bbd08f0f-765b-0012-d1d7-a44826f98e74",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1493,9 +1493,9 @@
                             "_attrDef": "p"
                         }
                     ],
-                    "7172a7d1-ffe9-b428-8e1b-8053ce3a9b7b": {
+                    "60aa0d6a-c142-f002-da64-ea68c90be862": {
                         "paletteKey": "FlexLayoutCol",
-                        "parentEditorKey": "2adb187b-8209-b860-71a8-e81249726e79",
+                        "parentEditorKey": "df08155a-9edc-3071-9c6f-59de04cd6c0c",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -1554,9 +1554,9 @@
                                 "_attrDef": "p"
                             }
                         ],
-                        "2c057b32-a01d-0046-7526-433dfac85782": {
+                        "a65562c5-a5ca-d5a0-9ca9-2c63918cb0df": {
                             "paletteKey": "Html5",
-                            "parentEditorKey": "7172a7d1-ffe9-b428-8e1b-8053ce3a9b7b",
+                            "parentEditorKey": "60aa0d6a-c142-f002-da64-ea68c90be862",
                             "isAdvancedComponent": true,
                             "commentid": null,
                             "designerReference": [
@@ -1745,9 +1745,9 @@
                                     "_visibility": false
                                 }
                             ],
-                            "6cc93334-54a2-863d-9bba-1b7af8d6c464": {
+                            "b1c5e231-91b4-c00b-f13a-3d09137120ed": {
                                 "paletteKey": "html-editor",
-                                "parentEditorKey": "2c057b32-a01d-0046-7526-433dfac85782",
+                                "parentEditorKey": "a65562c5-a5ca-d5a0-9ca9-2c63918cb0df",
                                 "isAdvancedChildComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -1773,9 +1773,9 @@
                             }
                         }
                     },
-                    "83d26d88-2d58-92cd-6923-242e05cf9779": {
+                    "c855cf5e-e6b1-27a5-c6c1-737309c923b0": {
                         "paletteKey": "FlexLayoutCol",
-                        "parentEditorKey": "2adb187b-8209-b860-71a8-e81249726e79",
+                        "parentEditorKey": "df08155a-9edc-3071-9c6f-59de04cd6c0c",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -1834,9 +1834,9 @@
                                 "_attrDef": "p"
                             }
                         ],
-                        "ff3243f2-cbac-48e4-7f5f-357ed6e9cf33": {
+                        "f0dba05e-ea31-eb38-c392-4a7443a3407f": {
                             "paletteKey": "Html5",
-                            "parentEditorKey": "83d26d88-2d58-92cd-6923-242e05cf9779",
+                            "parentEditorKey": "c855cf5e-e6b1-27a5-c6c1-737309c923b0",
                             "isAdvancedComponent": true,
                             "commentid": null,
                             "designerReference": [
@@ -2021,9 +2021,9 @@
                                     "_visibility": false
                                 }
                             ],
-                            "07c57683-e21f-3f24-fca8-bdb341e29a72": {
+                            "60b36025-4eb7-ff1e-ba5d-d257569d939f": {
                                 "paletteKey": "html-editor",
-                                "parentEditorKey": "ff3243f2-cbac-48e4-7f5f-357ed6e9cf33",
+                                "parentEditorKey": "f0dba05e-ea31-eb38-c392-4a7443a3407f",
                                 "isAdvancedChildComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -2041,7 +2041,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "<p class=\"bank-no-margin\">Flexi Amount</p>\r\n            <p class=\"bank-no-margin\"><strong>R20-R9999</strong></p>\r\n            <p class=\"bank-no-margin\"><small>Voucher</small></p>",
+                                        "_value": "<p class=\"bank-no-margin\">BANK</p>\r\n            <p class=\"bank-no-margin\"><strong>{{page.recipient.accountNumber}}</strong></p>\r\n            <p class=\"bank-no-margin\"><small>Branch Code 470010</small></p>",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -2052,9 +2052,9 @@
                 }
             }
         },
-        "585eb4ab-33a7-1025-c47c-b8ea8c346810": {
+        "4eeb04ee-2998-c7a4-9074-a3bd0e983a3c": {
             "paletteKey": "NG-Form",
-            "parentEditorKey": "703d5cde-07ab-f4e7-3420-ee03f12e42f5",
+            "parentEditorKey": "a3e9fdc0-3bf3-660a-c7f4-18e2e2743508",
             "commentid": null,
             "designerReference": [
                 {
@@ -2109,15 +2109,15 @@
                     "_attrDef": "p"
                 },
                 {
-                    "_key": "[formGroup]",
-                    "_value": "page.electricityForm",
+                    "_key": "#addForm",
+                    "_value": "ngForm",
                     "_type": "kv",
                     "_attrDef": "c"
                 }
             ],
-            "236c30cd-e519-384f-b594-53260282da71": {
+            "a5091d06-4bbc-f1da-674b-9074c12ed229": {
                 "paletteKey": "FlexLayoutCol",
-                "parentEditorKey": "585eb4ab-33a7-1025-c47c-b8ea8c346810",
+                "parentEditorKey": "4eeb04ee-2998-c7a4-9074-a3bd0e983a3c",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -2176,9 +2176,9 @@
                         "_attrDef": "p"
                     }
                 ],
-                "2e137ca2-93bc-398e-ffa0-075234b4e875": {
+                "3a5ee958-2fef-4a67-6129-ae5070867026": {
                     "paletteKey": "FlexLayoutRow",
-                    "parentEditorKey": "236c30cd-e519-384f-b594-53260282da71",
+                    "parentEditorKey": "a5091d06-4bbc-f1da-674b-9074c12ed229",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -2237,9 +2237,9 @@
                             "_attrDef": "p"
                         }
                     ],
-                    "6bc33fac-9d92-b296-5d89-604fca198b88": {
+                    "1faf4739-60c6-3416-d3f6-e1993fb20304": {
                         "paletteKey": "FlexLayoutCol",
-                        "parentEditorKey": "2e137ca2-93bc-398e-ffa0-075234b4e875",
+                        "parentEditorKey": "3a5ee958-2fef-4a67-6129-ae5070867026",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -2296,17 +2296,11 @@
                                 "_value": "true",
                                 "_type": "kv",
                                 "_attrDef": "p"
-                            },
-                            {
-                                "_key": "*ngIf",
-                                "_value": "!page.disabledOldPasswordField",
-                                "_type": "kv",
-                                "_attrDef": "c"
                             }
                         ],
-                        "811fdeab-3fab-a51c-a985-2d5dd5aa2c2c": {
+                        "ec303180-65df-877c-e6c9-85919eb9d958": {
                             "paletteKey": "Html5",
-                            "parentEditorKey": "6bc33fac-9d92-b296-5d89-604fca198b88",
+                            "parentEditorKey": "1faf4739-60c6-3416-d3f6-e1993fb20304",
                             "isAdvancedComponent": true,
                             "commentid": null,
                             "designerReference": [
@@ -2493,9 +2487,9 @@
                                     "_visibility": false
                                 }
                             ],
-                            "39a1fd92-c98e-8355-0d86-c4af3ba51384": {
+                            "047cfd76-c2be-6b02-c675-fbdb9a459ccb": {
                                 "paletteKey": "html-editor",
-                                "parentEditorKey": "811fdeab-3fab-a51c-a985-2d5dd5aa2c2c",
+                                "parentEditorKey": "ec303180-65df-877c-e6c9-85919eb9d958",
                                 "isAdvancedChildComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -2513,16 +2507,16 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "Meter Number",
+                                        "_value": "Own Ref:",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
                                 ]
                             }
                         },
-                        "d436c036-f751-9020-0269-9f9c96abae57": {
+                        "c709cf80-abaf-01ee-d76a-bf9e2c06983c": {
                             "paletteKey": "NG-Input",
-                            "parentEditorKey": "6bc33fac-9d92-b296-5d89-604fca198b88",
+                            "parentEditorKey": "1faf4739-60c6-3416-d3f6-e1993fb20304",
                             "isAdvancedComponent": true,
                             "commentid": null,
                             "designerReference": [
@@ -2542,7 +2536,7 @@
                                 },
                                 {
                                     "_key": "placeholder",
-                                    "_value": "",
+                                    "_value": "e.g Dineo",
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "_useAsLabel": true
@@ -2567,7 +2561,7 @@
                                 },
                                 {
                                     "_key": "[(ngModel)]",
-                                    "_value": "",
+                                    "_value": "page.recipient.ownRef",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -2579,13 +2573,13 @@
                                 },
                                 {
                                     "_key": "name",
-                                    "_value": "",
+                                    "_value": "ownRef",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "type",
-                                    "_value": "number",
+                                    "_value": "text",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -2630,8 +2624,8 @@
                                     "_key": "matError",
                                     "_value": [
                                         {
-                                            "input1": "(page.electricityForm.controls.meterNumber?.touched) && (page.electricityForm.controls.meterNumber?.errors?.required)",
-                                            "input2": "Meter number is <b>required </b>",
+                                            "input1": "(page.recipient.ownRef?.touched) && (page.recipient.ownRef?.errors?.required)",
+                                            "input2": "Own Ref is <b>required </b>",
                                             "toggle": {
                                                 "toggleData": [],
                                                 "selected": "start"
@@ -2697,36 +2691,14 @@
                                     "_type": "a",
                                     "_attrDef": "p",
                                     "_visibility": true
-                                },
-                                {
-                                    "_key": "formControlName",
-                                    "_value": "meterNumber",
-                                    "_type": "kv",
-                                    "_attrDef": "c"
-                                },
-                                {
-                                    "_key": "(keydown)",
-                                    "_value": "allowNumbers($event)",
-                                    "_type": "kv",
-                                    "_attrDef": "c",
-                                    "_customAttributeFlag": "flowpicker",
-                                    "objValue": {
-                                        "nodeID": "sd_pa0RfEjLU5Ic3COL",
-                                        "functionName": "allowNumbers",
-                                        "activeTree": "pages",
-                                        "z": "sd_zfSgx6DaziJIt7ws",
-                                        "input": [
-                                            "$event"
-                                        ]
-                                    }
                                 }
                             ]
                         }
                     }
                 },
-                "92c7d728-4f11-8038-b854-8a3b227aade1": {
+                "cb7a29b0-1af3-8802-0a75-a1efe441df17": {
                     "paletteKey": "FlexLayoutRow",
-                    "parentEditorKey": "236c30cd-e519-384f-b594-53260282da71",
+                    "parentEditorKey": "a5091d06-4bbc-f1da-674b-9074c12ed229",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -2785,9 +2757,9 @@
                             "_attrDef": "p"
                         }
                     ],
-                    "c90f3ba8-21eb-515d-669a-e2b6d7945472": {
+                    "ff33e2d7-a1aa-0edb-b936-c24f97f77f51": {
                         "paletteKey": "FlexLayoutCol",
-                        "parentEditorKey": "92c7d728-4f11-8038-b854-8a3b227aade1",
+                        "parentEditorKey": "cb7a29b0-1af3-8802-0a75-a1efe441df17",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -2852,9 +2824,9 @@
                                 "_attrDef": "c"
                             }
                         ],
-                        "098d726a-8f42-62f7-96d8-efa6884f5e6f": {
+                        "6d64771b-896b-9001-e676-6157f37d715a": {
                             "paletteKey": "Html5",
-                            "parentEditorKey": "c90f3ba8-21eb-515d-669a-e2b6d7945472",
+                            "parentEditorKey": "ff33e2d7-a1aa-0edb-b936-c24f97f77f51",
                             "isAdvancedComponent": true,
                             "commentid": null,
                             "designerReference": [
@@ -3041,9 +3013,9 @@
                                     "_visibility": false
                                 }
                             ],
-                            "6614d785-b98b-1628-73ce-eb7f4744541e": {
+                            "d22286c7-b946-e2fd-8325-68955dd8f1e7": {
                                 "paletteKey": "html-editor",
-                                "parentEditorKey": "098d726a-8f42-62f7-96d8-efa6884f5e6f",
+                                "parentEditorKey": "6d64771b-896b-9001-e676-6157f37d715a",
                                 "isAdvancedChildComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -3061,16 +3033,16 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "Recharge Amount",
+                                        "_value": "Recipient ref:",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
                                 ]
                             }
                         },
-                        "dbef943d-9bf6-6c52-4e75-3d33f5ad57f4": {
+                        "1a08ed42-3853-8d65-455c-a84e96d6d31a": {
                             "paletteKey": "NG-Input",
-                            "parentEditorKey": "c90f3ba8-21eb-515d-669a-e2b6d7945472",
+                            "parentEditorKey": "ff33e2d7-a1aa-0edb-b936-c24f97f77f51",
                             "isAdvancedComponent": true,
                             "commentid": null,
                             "designerReference": [
@@ -3090,7 +3062,7 @@
                                 },
                                 {
                                     "_key": "placeholder",
-                                    "_value": "",
+                                    "_value": "e.g Nicholas",
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "_useAsLabel": true
@@ -3115,7 +3087,7 @@
                                 },
                                 {
                                     "_key": "[(ngModel)]",
-                                    "_value": "",
+                                    "_value": "page.recipient.recipientRef",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -3127,13 +3099,13 @@
                                 },
                                 {
                                     "_key": "name",
-                                    "_value": "",
+                                    "_value": "recipientRef",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "type",
-                                    "_value": "number",
+                                    "_value": "text",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -3178,8 +3150,8 @@
                                     "_key": "matError",
                                     "_value": [
                                         {
-                                            "input1": "(page.electricityForm.controls.amount?.touched) && (page.electricityForm.controls.amount?.errors?.required)",
-                                            "input2": "Amount is <b>required </b>",
+                                            "input1": "(page.recipient.recipientRef?.touched) && (page.recipient.recipientRef?.errors?.required)",
+                                            "input2": "Recipient Ref is <b>required </b>",
                                             "toggle": {
                                                 "toggleData": [],
                                                 "selected": "start"
@@ -3245,585 +3217,15 @@
                                     "_type": "a",
                                     "_attrDef": "p",
                                     "_visibility": true
-                                },
-                                {
-                                    "_key": "formControlName",
-                                    "_value": "amount",
-                                    "_type": "kv",
-                                    "_attrDef": "c"
-                                },
-                                {
-                                    "_key": "(keydown)",
-                                    "_value": "allowNumbers($event)",
-                                    "_type": "kv",
-                                    "_attrDef": "c",
-                                    "_customAttributeFlag": "flowpicker",
-                                    "objValue": {
-                                        "nodeID": "sd_pa0RfEjLU5Ic3COL",
-                                        "functionName": "allowNumbers",
-                                        "activeTree": "pages",
-                                        "z": "sd_zfSgx6DaziJIt7ws",
-                                        "input": [
-                                            "$event"
-                                        ]
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                },
-                "7140e5ba-621e-999f-0aef-d8dace33a4dc": {
-                    "paletteKey": "FlexLayoutRow",
-                    "parentEditorKey": "236c30cd-e519-384f-b594-53260282da71",
-                    "commentid": null,
-                    "designerReference": [
-                        {
-                            "_key": "componentLabel",
-                            "_value": "Row",
-                            "_type": "kv",
-                            "_attrDef": "p",
-                            "_useAsLabel": true
-                        },
-                        {
-                            "_key": "style",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "class",
-                            "_value": [],
-                            "_type": "dav",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "fxFlex",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "fxLayoutGap",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "wrap",
-                            "_value": "wrap",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "layoutAlign",
-                            "_value": "start",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "pLayoutAlign",
-                            "_value": "stretch",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "[fxShow]",
-                            "_value": "true",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        }
-                    ],
-                    "14c4a91e-e1e8-374e-2075-144a855664c9": {
-                        "paletteKey": "FlexLayoutCol",
-                        "parentEditorKey": "7140e5ba-621e-999f-0aef-d8dace33a4dc",
-                        "commentid": null,
-                        "designerReference": [
-                            {
-                                "_key": "componentLabel",
-                                "_value": "Column",
-                                "_type": "kv",
-                                "_attrDef": "p",
-                                "_useAsLabel": true
-                            },
-                            {
-                                "_key": "style",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "class",
-                                "_value": "",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "fxFlex",
-                                "_value": "100%",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "fxLayoutGap",
-                                "_value": ".2em",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "wrap",
-                                "_value": "wrap",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "layoutAlign",
-                                "_value": "start",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "pLayoutAlign",
-                                "_value": "stretch",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "[fxShow]",
-                                "_value": "true",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "*ngIf",
-                                "_value": "!page.disabledOldPasswordField",
-                                "_type": "kv",
-                                "_attrDef": "c"
-                            }
-                        ],
-                        "fd93c7c6-975e-2936-c2c4-7621c922e71a": {
-                            "paletteKey": "Html5",
-                            "parentEditorKey": "14c4a91e-e1e8-374e-2075-144a855664c9",
-                            "isAdvancedComponent": true,
-                            "commentid": null,
-                            "designerReference": [
-                                {
-                                    "_key": "style",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "class",
-                                    "_value": [
-                                        "message-fz-18"
-                                    ],
-                                    "_type": "dav",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "htmlElement",
-                                    "_value": "label",
-                                    "_type": "dav",
-                                    "_attrDef": "p",
-                                    "_useAsLabel": true
-                                },
-                                {
-                                    "_key": "tagType",
-                                    "_value": "label",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "name",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "sandbox",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "src",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "srcdoc",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "width",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "[autoplay]",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "[loop]",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "data",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "audioSource",
-                                    "_value": [],
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "videoSource",
-                                    "_value": [],
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "audioDatasource",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "audioSrc",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "audioType",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "videoDatasource",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "videoSrc",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "videoType",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "(audioplay)",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "(videoplay)",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "(audiopause)",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "(videopause)",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "(audioended)",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                },
-                                {
-                                    "_key": "(videoended)",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_visibility": false
-                                }
-                            ],
-                            "16b4ab19-5f3d-42e9-9466-6ec202cd8563": {
-                                "paletteKey": "html-editor",
-                                "parentEditorKey": "fd93c7c6-975e-2936-c2c4-7621c922e71a",
-                                "isAdvancedChildComponent": true,
-                                "commentid": null,
-                                "designerReference": [
-                                    {
-                                        "_key": "style",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "class",
-                                        "_value": "",
-                                        "_type": "dav",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "html",
-                                        "_value": "Cellphone Number",
-                                        "_type": "a",
-                                        "_attrDef": "p"
-                                    }
-                                ]
-                            }
-                        },
-                        "7f78d2fd-87d5-41ce-cec7-553ea675bf8c": {
-                            "paletteKey": "NG-Input",
-                            "parentEditorKey": "14c4a91e-e1e8-374e-2075-144a855664c9",
-                            "isAdvancedComponent": true,
-                            "commentid": null,
-                            "designerReference": [
-                                {
-                                    "_key": "style",
-                                    "_value": "  ",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "class",
-                                    "_value": [
-                                        "bank-full-width"
-                                    ],
-                                    "_type": "dav",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "placeholder",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_useAsLabel": true
-                                },
-                                {
-                                    "_key": "value",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "[appearance]",
-                                    "_value": "'fill'",
-                                    "_type": "a",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "[required]",
-                                    "_value": "true",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "[(ngModel)]",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "color",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "name",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "type",
-                                    "_value": "number",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "[formControl]",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "readonly",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "[disabled]",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "id",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "[floatLabel]",
-                                    "_value": "'auto'",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "[hideRequiredMarker]",
-                                    "_value": "false",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_complexity": "advanced"
-                                },
-                                {
-                                    "_key": "matError",
-                                    "_value": [
-                                        {
-                                            "input1": "(page.electricityForm.controls.cellphone?.touched) && (page.electricityForm.controls.cellphone?.errors?.required)",
-                                            "input2": "Cellphone is <b>required </b>",
-                                            "toggle": {
-                                                "toggleData": [],
-                                                "selected": "start"
-                                            }
-                                        }
-                                    ],
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": true
-                                },
-                                {
-                                    "_key": "inputHint",
-                                    "_value": [],
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": true
-                                },
-                                {
-                                    "_key": "Label",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": true
-                                },
-                                {
-                                    "_key": "Suffix Icon",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": true
-                                },
-                                {
-                                    "_key": "(suffixIconClick)",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": true
-                                },
-                                {
-                                    "_key": "Prefix Icon",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": true
-                                },
-                                {
-                                    "_key": "(prefixIconClick)",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": true
-                                },
-                                {
-                                    "_key": "Prefix",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": true
-                                },
-                                {
-                                    "_key": "Suffix",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_visibility": true
-                                },
-                                {
-                                    "_key": "formControlName",
-                                    "_value": "cellphone",
-                                    "_type": "kv",
-                                    "_attrDef": "c"
-                                },
-                                {
-                                    "_key": "(keydown)",
-                                    "_value": "allowNumbers($event)",
-                                    "_type": "kv",
-                                    "_attrDef": "c",
-                                    "_customAttributeFlag": "flowpicker",
-                                    "objValue": {
-                                        "nodeID": "sd_pa0RfEjLU5Ic3COL",
-                                        "functionName": "allowNumbers",
-                                        "activeTree": "pages",
-                                        "z": "sd_zfSgx6DaziJIt7ws",
-                                        "input": [
-                                            "$event"
-                                        ]
-                                    }
                                 }
                             ]
                         }
                     }
                 }
             },
-            "e46d1b0e-d4e2-1796-ec06-f3a4cc6a4d73": {
+            "41ff91e5-061c-a0fe-969b-37ad3e2d227d": {
                 "paletteKey": "FlexLayoutRow",
-                "parentEditorKey": "585eb4ab-33a7-1025-c47c-b8ea8c346810",
+                "parentEditorKey": "4eeb04ee-2998-c7a4-9074-a3bd0e983a3c",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -3882,9 +3284,9 @@
                         "_attrDef": "p"
                     }
                 ],
-                "2eb29d94-4385-9bfc-a7ff-4f0062c4eb58": {
+                "c1a96133-e5ba-f9aa-e4be-e01be5b0fecc": {
                     "paletteKey": "NG-RaisedButton",
-                    "parentEditorKey": "e46d1b0e-d4e2-1796-ec06-f3a4cc6a4d73",
+                    "parentEditorKey": "41ff91e5-061c-a0fe-969b-37ad3e2d227d",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -3904,7 +3306,7 @@
                         },
                         {
                             "_key": "buttonname",
-                            "_value": "Purchase",
+                            "_value": "Continue",
                             "_type": "a",
                             "_attrDef": "p",
                             "_useAsLabel": true
@@ -3917,16 +3319,16 @@
                         },
                         {
                             "_key": "(click)",
-                            "_value": "submit(electricityForm)",
+                            "_value": "submit(addForm)",
                             "_type": "kv",
                             "_attrDef": "p",
                             "objValue": {
-                                "nodeID": "sd_QJljhIzH0nQatkB8",
+                                "nodeID": "sd_Ta0Cq4svpsccYeSU",
                                 "functionName": "submit",
                                 "activeTree": "pages",
-                                "z": "sd_zfSgx6DaziJIt7ws",
+                                "z": "sd_cGXuqzTYzV3moXlz",
                                 "input": [
-                                    "electricityForm"
+                                    "addForm"
                                 ]
                             }
                         },

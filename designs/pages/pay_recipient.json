@@ -1,0 +1,522 @@
+[
+    {
+        "id": "sd_crd1keRDJ1c0Edgj",
+        "type": "tab",
+        "createdDate": "2024-07-31T13:11:28.565Z",
+        "label": "pay_recipient",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "pay_recipientComponent"
+    },
+    {
+        "id": "sd_TqrbAEHGml5qG4Ir",
+        "type": "OnInit",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_TqrbAEHGml5qG4Ir",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_IGUe37GzsytwXOZB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "pay_recipientComponent"
+    },
+    {
+        "id": "sd_IGUe37GzsytwXOZB",
+        "type": "PageVariables",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "showSpinner",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "beneficiary",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_IGUe37GzsytwXOZB",
+        "category": "Function",
+        "x": 125,
+        "y": 40,
+        "wires": [
+            [
+                "sd_ueIDshDGqCGuKaO6"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_recipientComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ueIDshDGqCGuKaO6",
+        "type": "Storage",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Pay"
+        },
+        "resultMapping": {},
+        "functionName": "sd_ueIDshDGqCGuKaO6",
+        "category": "Storage",
+        "x": 205,
+        "y": 40,
+        "wires": [
+            [
+                "sd_4QNH8oMwWf8TnkCj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_recipientComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_KHQanxO7Ldk1uXuS",
+        "type": "PageStart",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "view limits",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "viewLimits",
+        "category": "General",
+        "x": 60,
+        "y": 180,
+        "wires": [
+            [
+                "sd_hvJESq01Mk3VLe0P"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "pay_recipientComponent"
+    },
+    {
+        "id": "sd_hvJESq01Mk3VLe0P",
+        "type": "Navigation",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/limits",
+        "functionName": "sd_hvJESq01Mk3VLe0P",
+        "category": "Navigation",
+        "x": 140,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_recipientComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_hcC59gINMABoyJ7B",
+        "type": "PageStart",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "add recipient",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "addRecipient",
+        "category": "General",
+        "x": 60,
+        "y": 260,
+        "wires": [
+            [
+                "sd_zVzjTVddQu0HwTVs"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "pay_recipientComponent"
+    },
+    {
+        "id": "sd_zVzjTVddQu0HwTVs",
+        "type": "Navigation",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/add_recipient",
+        "functionName": "sd_zVzjTVddQu0HwTVs",
+        "category": "Navigation",
+        "x": 145,
+        "y": 260,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_recipientComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_IZWSBXSSBykC5QBs",
+        "type": "PageStart",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "get recipients",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getRecipients",
+        "category": "General",
+        "x": 60,
+        "y": 360,
+        "wires": [
+            [
+                "sd_Dw1WTFmKeNXwtEaH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "pay_recipientComponent"
+    },
+    {
+        "id": "sd_Dw1WTFmKeNXwtEaH",
+        "type": "Script",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.showSpinner = true;",
+        "functionName": "sd_Dw1WTFmKeNXwtEaH",
+        "category": "Function",
+        "x": 160,
+        "y": 360,
+        "wires": [
+            [
+                "sd_IJSgy2TwJ7C4GXrS"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_recipientComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_IJSgy2TwJ7C4GXrS",
+        "type": "Environment",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdURL"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_IJSgy2TwJ7C4GXrS",
+        "category": "General",
+        "x": 240,
+        "y": 360,
+        "wires": [
+            [
+                "sd_ACm0fUpAXUliJFYn"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_recipientComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ACm0fUpAXUliJFYn",
+        "type": "Script",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = page.ssdURL + \"get-beneficiaries\"",
+        "functionName": "sd_ACm0fUpAXUliJFYn",
+        "category": "Function",
+        "x": 325,
+        "y": 360,
+        "wires": [
+            [
+                "sd_Ushpwhe5mPnsICNs"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_recipientComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Ushpwhe5mPnsICNs",
+        "type": "HttpRequest",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": ""
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_Ushpwhe5mPnsICNs",
+        "category": "HTTP",
+        "x": 400,
+        "y": 360,
+        "wires": [
+            [
+                "sd_y8wXXnP9FMyd6Xmp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_recipientComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_y8wXXnP9FMyd6Xmp",
+        "type": "Script",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.showSpinner = false;\npage.beneficiary = page.result.filter((user:any) =>{\n  return  page.user.email == user.email\n})\n\n// console.log(\"filter ==>\", page.result)",
+        "functionName": "sd_y8wXXnP9FMyd6Xmp",
+        "category": "Function",
+        "x": 485,
+        "y": 360,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_recipientComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_A5HQ46YJqsJsgP6w",
+        "type": "PageCallService",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_crd1keRDJ1c0Edgj",
+            "type": "tab",
+            "createdDate": "2024-07-31T13:11:28.565Z",
+            "label": "pay_recipient",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_IZWSBXSSBykC5QBs",
+            "flowName": "getRecipients"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./",
+        "startName": "getRecipients",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_A5HQ46YJqsJsgP6w",
+        "category": "General",
+        "x": 365,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_recipientComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_4QNH8oMwWf8TnkCj",
+        "type": "Storage",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "user"
+        },
+        "functionName": "sd_4QNH8oMwWf8TnkCj",
+        "category": "Storage",
+        "x": 285,
+        "y": 40,
+        "wires": [
+            [
+                "sd_A5HQ46YJqsJsgP6w",
+                "sd_41Bhf2YtqOIh3DEA"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_recipientComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_41Bhf2YtqOIh3DEA",
+        "type": "Log",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "this.page.user",
+        "functionName": "sd_41Bhf2YtqOIh3DEA",
+        "category": "General",
+        "x": 400,
+        "y": 120,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "this.page",
+                "value": "user",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_recipientComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_z0MSUO3k2vmNvprJ",
+        "type": "PageStart",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "pay",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "index",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "pay",
+        "category": "General",
+        "x": 80,
+        "y": 480,
+        "wires": [
+            [
+                "sd_jfq63OKHjdbtPtQW"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "pay_recipientComponent"
+    },
+    {
+        "id": "sd_jfq63OKHjdbtPtQW",
+        "type": "Log",
+        "z": "sd_crd1keRDJ1c0Edgj",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "bh.input.index",
+        "functionName": "sd_jfq63OKHjdbtPtQW",
+        "category": "General",
+        "x": 160,
+        "y": 500,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "bh.input",
+                "value": "index",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_recipientComponent",
+        "generated": true
+    }
+]

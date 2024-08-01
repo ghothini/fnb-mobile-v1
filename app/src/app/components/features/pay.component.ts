@@ -16,6 +16,7 @@ import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { common } from 'app/sd-services/common'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -113,7 +114,7 @@ export class payComponent {
 
   sd_ZhlDKIJRRL4nzAgh(bh) {
     try {
-      bh = this.sd_Z07RwCfbca3o40KI(bh);
+      bh = this.sd_4l1ZiLuAS20xY6WW(bh);
       //appendnew_next_sd_ZhlDKIJRRL4nzAgh
       return bh;
     } catch (e) {
@@ -121,10 +122,26 @@ export class payComponent {
     }
   }
 
+  async sd_4l1ZiLuAS20xY6WW(bh) {
+    try {
+      const commonInstance: common = this.__page_injector__.get(common);
+
+      let outputVariables = await commonInstance.getVariable();
+      bh.result = outputVariables.local.data;
+
+      bh = this.sd_Z07RwCfbca3o40KI(bh);
+      //appendnew_next_sd_4l1ZiLuAS20xY6WW
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_4l1ZiLuAS20xY6WW');
+    }
+  }
+
   sd_Z07RwCfbca3o40KI(bh) {
     try {
       this.page.quote = undefined;
       this.page.showSpinner = false;
+      this.page.result = bh.result;
       bh = this.sd_94UUEejAMkL5eMjJ(bh);
       //appendnew_next_sd_Z07RwCfbca3o40KI
       return bh;
@@ -149,14 +166,6 @@ export class payComponent {
       const page = this.page; // console.log("new bh :", bh.currentQuote.input.newQuote)
       page.currentQuote = page.loggedInUser.balance;
 
-      // if (bh.currentQuote) {
-      //     console.log('value');
-      //     page.currentQuote = bh.currentQuote.input.newQuote;
-      //     console.log("new bh :", bh.currentQuote.input.newQuote);
-      // } else {
-      //     console.log('no value');
-      // }
-
       const date = new Date();
 
       const day = date.getDate();
@@ -169,14 +178,15 @@ export class payComponent {
 
       page.payForm = new FormGroup({
         customer: new FormControl(page.loggedInUser.name),
-        recipientName: new FormControl('', Validators.required),
+        recipientName: new FormControl(page.result.recipient.name),
         cardNumber: new FormControl(page.loggedInUser.accountNumber),
         amount: new FormControl('', Validators.required),
         ownRef: new FormControl('', Validators.required),
         recipientRef: new FormControl(''),
         email: new FormControl(page.loggedInUser.email),
         sendProof: new FormControl('', Validators.required),
-        transactionDate: new FormControl(page.formattedDate),
+        transDate: new FormControl(page.formattedDate),
+        transType: new FormControl('Pay'),
       });
 
       bh = this.sd_tFci8iV2ctBF5MIl(bh);

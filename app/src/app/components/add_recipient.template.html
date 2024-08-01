@@ -1,0 +1,29 @@
+<div fxLayout="column wrap" class="vh-80" fxLayoutAlign="space-between stretch" [fxShow]="true">
+  <div *ngIf="page.showSpinner" class="spinner-login absolute">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div fxLayout="row wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div class="margin-bottom-1em">
+        <h2 class="recipients margin-bottom-none"> ENTER RECIPIENT DETAILS</h2>
+      </div>
+      <form #addForm="ngForm" class="bank-full-width">
+        <div fxLayout="column wrap" class="bank-full-width margin-bottom-1em" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-fz-18">
+            Name:</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput [(ngModel)]="page.recipient.name" name="name" type="text" placeholder="e.g Nicholas" [required]="true" readonly="false">
+
+          </mat-form-field>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-fz-18">
+            Acc No:</label>
+          <mat-form-field style="  " class="bank-full-width" [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput [(ngModel)]="page.recipient.accountNumber" name="accountNumber" type="text" placeholder="e.g 1607232233" [required]="true" (keydown)="allowNumbers($event)" readonly="false">
+
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="m-t-1em btn-black" (click)="submit(addForm)">Continue</button></div>
+</div>

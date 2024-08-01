@@ -138,11 +138,18 @@
                     "type": "literal",
                     "value": "false"
                 }
+            },
+            {
+                "textIp": "result",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "result"
+                }
             }
         ],
         "functionName": "sd_Z07RwCfbca3o40KI",
         "category": "Function",
-        "x": 245,
+        "x": 305,
         "y": 40,
         "wires": [
             [
@@ -161,10 +168,10 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\npage.currentQuote = page.loggedInUser.balance;\n\n// if (bh.currentQuote) {\n//     console.log('value');\n//     page.currentQuote = bh.currentQuote.input.newQuote;\n//     console.log(\"new bh :\", bh.currentQuote.input.newQuote);\n// } else {\n//     console.log('no value');\n// }\n\nconst date = new Date();\n\nconst day = date.getDate();\nconst month = date.toLocaleString('default', { month: 'long' });\nconst year = date.getFullYear();\nconst hours = String(date.getHours()).padStart(2, '0');\nconst minutes = String(date.getMinutes()).padStart(2, '0');\n\npage.formattedDate = `${day} ${month} ${year} ${hours}:${minutes}`;\n\npage.payForm = new FormGroup({\n    customer: new FormControl(page.loggedInUser.name),\n    recipientName:  new FormControl('',Validators.required),\n    cardNumber: new FormControl(page.loggedInUser.accountNumber),\n    amount: new FormControl('',Validators.required),\n    ownRef: new FormControl('',Validators.required),\n    recipientRef:  new FormControl(''),\n    email: new FormControl(page.loggedInUser.email),\n    sendProof:  new FormControl('',Validators.required),\n    transactionDate: new FormControl(page.formattedDate)\n})\n",
+        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\npage.currentQuote = page.loggedInUser.balance;\n\nconst date = new Date();\n\nconst day = date.getDate();\nconst month = date.toLocaleString('default', { month: 'long' });\nconst year = date.getFullYear();\nconst hours = String(date.getHours()).padStart(2, '0');\nconst minutes = String(date.getMinutes()).padStart(2, '0');\n\npage.formattedDate = `${day} ${month} ${year} ${hours}:${minutes}`;\n\npage.payForm = new FormGroup({\n    customer: new FormControl(page.loggedInUser.name),\n    recipientName:  new FormControl(page.result.recipient.name),\n    cardNumber: new FormControl(page.loggedInUser.accountNumber),\n    amount: new FormControl('',Validators.required),\n    ownRef: new FormControl('',Validators.required),\n    recipientRef:  new FormControl(''),\n    email: new FormControl(page.loggedInUser.email),\n    sendProof:  new FormControl('',Validators.required),\n    transDate: new FormControl(page.formattedDate),\n    transType: new FormControl(\"Pay\")\n})\n",
         "functionName": "sd_5nGehRQGAKuqGXV3",
         "category": "Function",
-        "x": 425,
+        "x": 465,
         "y": 40,
         "wires": [
             [
@@ -197,7 +204,7 @@
         },
         "functionName": "sd_94UUEejAMkL5eMjJ",
         "category": "Storage",
-        "x": 325,
+        "x": 385,
         "y": 40,
         "wires": [
             [
@@ -257,7 +264,7 @@
         "y": 40,
         "wires": [
             [
-                "sd_Z07RwCfbca3o40KI"
+                "sd_4l1ZiLuAS20xY6WW"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -889,10 +896,64 @@
         "resultMapping": {},
         "functionName": "sd_tFci8iV2ctBF5MIl",
         "category": "Storage",
-        "x": 525,
+        "x": 565,
         "y": 40,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "payComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_4l1ZiLuAS20xY6WW",
+        "type": "PageCallService",
+        "z": "sd_EPI84HNraRNITcfQ",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_O7BgeFkazhosv8N2",
+            "type": "tab",
+            "createdDate": "2024-05-14T08:16:55.985Z",
+            "label": "common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ID9xmnst2f0l3dYn",
+            "flowName": "getVariable"
+        },
+        "inputVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "data",
+                "valueType": "bh",
+                "value": "result",
+                "mapVarName": "data",
+                "localVar": "bh.result"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/common",
+        "startName": "getVariable",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_4l1ZiLuAS20xY6WW",
+        "category": "General",
+        "x": 225,
+        "y": 40,
+        "wires": [
+            [
+                "sd_Z07RwCfbca3o40KI"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

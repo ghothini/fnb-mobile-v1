@@ -1,0 +1,442 @@
+[
+    {
+        "id": "sd_cGXuqzTYzV3moXlz",
+        "type": "tab",
+        "createdDate": "2024-08-01T01:47:14.976Z",
+        "label": "recipient_data",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "recipient_dataComponent"
+    },
+    {
+        "id": "sd_Y2LAyt8yFnpn3ujo",
+        "type": "OnInit",
+        "z": "sd_cGXuqzTYzV3moXlz",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_Y2LAyt8yFnpn3ujo",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_FW7bwhhjuc5SamHg"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "recipient_dataComponent"
+    },
+    {
+        "id": "sd_FW7bwhhjuc5SamHg",
+        "type": "PageVariables",
+        "z": "sd_cGXuqzTYzV3moXlz",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "showSpinner",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            }
+        ],
+        "functionName": "sd_FW7bwhhjuc5SamHg",
+        "category": "Function",
+        "x": 185,
+        "y": 40,
+        "wires": [
+            [
+                "sd_W4BKtSs0gYOZhgpG"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "recipient_dataComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_W4BKtSs0gYOZhgpG",
+        "type": "Storage",
+        "z": "sd_cGXuqzTYzV3moXlz",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedPage"
+        },
+        "value": {
+            "type": "str",
+            "value": "Add Recipient"
+        },
+        "resultMapping": {},
+        "functionName": "sd_W4BKtSs0gYOZhgpG",
+        "category": "Storage",
+        "x": 265,
+        "y": 40,
+        "wires": [
+            [
+                "sd_1eHmIx3IPRpwZ2sL"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "recipient_dataComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_1eHmIx3IPRpwZ2sL",
+        "type": "Storage",
+        "z": "sd_cGXuqzTYzV3moXlz",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "user"
+        },
+        "functionName": "sd_1eHmIx3IPRpwZ2sL",
+        "category": "Storage",
+        "x": 345,
+        "y": 40,
+        "wires": [
+            [
+                "sd_at6S5CLXdzz5SBXd"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "recipient_dataComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_at6S5CLXdzz5SBXd",
+        "type": "PageCallService",
+        "z": "sd_cGXuqzTYzV3moXlz",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_O7BgeFkazhosv8N2",
+            "type": "tab",
+            "createdDate": "2024-05-14T08:16:55.985Z",
+            "label": "common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ID9xmnst2f0l3dYn",
+            "flowName": "getVariable"
+        },
+        "inputVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "data",
+                "valueType": "bh",
+                "value": "result",
+                "mapVarName": "data",
+                "localVar": "bh.result"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/common",
+        "startName": "getVariable",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_at6S5CLXdzz5SBXd",
+        "category": "General",
+        "x": 420,
+        "y": 40,
+        "wires": [
+            [
+                "sd_fMI7OaBugQF68gev"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "recipient_dataComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_fMI7OaBugQF68gev",
+        "type": "Script",
+        "z": "sd_cGXuqzTYzV3moXlz",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.recipient = {\n    ownRef: '',\n    recipientRef: '',\n    accountNumber: bh.result.accountNumber,\n    name: bh.result.name,\n    email: page.user.email\n}",
+        "functionName": "sd_fMI7OaBugQF68gev",
+        "category": "Function",
+        "x": 520,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "recipient_dataComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Ta0Cq4svpsccYeSU",
+        "type": "PageStart",
+        "z": "sd_cGXuqzTYzV3moXlz",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "submit",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "form",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "submit",
+        "category": "General",
+        "x": 45,
+        "y": 200,
+        "wires": [
+            [
+                "sd_6GKm3o8AvrFiX6zp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "recipient_dataComponent"
+    },
+    {
+        "id": "sd_6GKm3o8AvrFiX6zp",
+        "type": "PageSwitch",
+        "z": "sd_cGXuqzTYzV3moXlz",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "form.valid",
+        "propertyType": "bh.input",
+        "propertyGv": "bh.input.form.valid",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_6GKm3o8AvrFiX6zp",
+        "category": "Function",
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "sd_Wy7rzDqnxE0lgbcM"
+            ],
+            [
+                "sd_4nxQgdFO5PT3Y4S0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "recipient_dataComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_4nxQgdFO5PT3Y4S0",
+        "type": "SnackBar",
+        "z": "sd_cGXuqzTYzV3moXlz",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Fill in all fields"
+        },
+        "action": {
+            "type": "str",
+            "value": ""
+        },
+        "duration": {
+            "type": "num",
+            "value": ""
+        },
+        "horizontalPosition": "center",
+        "verticalPosition": "bottom",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_4nxQgdFO5PT3Y4S0",
+        "category": "General",
+        "x": 205,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "recipient_dataComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Wy7rzDqnxE0lgbcM",
+        "type": "Script",
+        "z": "sd_cGXuqzTYzV3moXlz",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.showSpinner = true;",
+        "functionName": "sd_Wy7rzDqnxE0lgbcM",
+        "category": "Function",
+        "x": 205,
+        "y": 160,
+        "wires": [
+            [
+                "sd_nRTD1AQalJPu0XkV"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "recipient_dataComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_nRTD1AQalJPu0XkV",
+        "type": "PageCallService",
+        "z": "sd_cGXuqzTYzV3moXlz",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_O7BgeFkazhosv8N2",
+            "type": "tab",
+            "createdDate": "2024-05-14T08:16:55.985Z",
+            "label": "common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ezuMhbJnHtjdl14d",
+            "flowName": "setVariable"
+        },
+        "inputVariables": [
+            {
+                "key": "data",
+                "map": true,
+                "valueType": "this.page",
+                "value": "recipient"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "data",
+                "valueType": "bh",
+                "value": "result",
+                "mapVarName": "data",
+                "localVar": "bh.result"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/common",
+        "startName": "setVariable",
+        "inputParams": [
+            "this.page.recipient"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_nRTD1AQalJPu0XkV",
+        "category": "General",
+        "x": 300,
+        "y": 160,
+        "wires": [
+            [
+                "sd_ivykFOjnkTcDZkxa"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "recipient_dataComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ivykFOjnkTcDZkxa",
+        "type": "Script",
+        "z": "sd_cGXuqzTYzV3moXlz",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.showSpinner = false;",
+        "functionName": "sd_ivykFOjnkTcDZkxa",
+        "category": "Function",
+        "x": 385,
+        "y": 160,
+        "wires": [
+            [
+                "sd_noz2LxSMwpU8JeFX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "recipient_dataComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_noz2LxSMwpU8JeFX",
+        "type": "Navigation",
+        "z": "sd_cGXuqzTYzV3moXlz",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/confirm_recipient",
+        "functionName": "sd_noz2LxSMwpU8JeFX",
+        "category": "Navigation",
+        "x": 480,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "recipient_dataComponent",
+        "generated": true
+    }
+]

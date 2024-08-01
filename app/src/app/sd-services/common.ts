@@ -21,6 +21,7 @@ export class common {
   public email: any;
   public currentQuote: any;
   public isDepositAfterChange: any;
+  public data: any;
 
   constructor(
     private sdService: SDBaseService,
@@ -157,6 +158,58 @@ export class common {
       return await this.errorHandler(bh, e, 'sd_fBcbEqP7uTw4Uren');
     }
   }
+
+  async setVariable(data: any = undefined, ...others) {
+    let bh: any = {
+      input: {
+        data,
+      },
+      local: {},
+    };
+    try {
+      bh = this.sdService.__constructDefault(bh);
+
+      bh = await this.sd_pl1x9eiI6pyoz5tG(bh);
+      //appendnew_next_setVariable
+      return (
+        // formatting output variables
+        {
+          input: {
+            data: bh.input.data,
+          },
+          local: {},
+        }
+      );
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_ezuMhbJnHtjdl14d');
+    }
+  }
+
+  async getVariable(...others) {
+    let bh: any = {
+      input: {},
+      local: {
+        data: undefined,
+      },
+    };
+    try {
+      bh = this.sdService.__constructDefault(bh);
+
+      bh = await this.sd_TqMbG6UAczM03Ygf(bh);
+      //appendnew_next_getVariable
+      return (
+        // formatting output variables
+        {
+          input: {},
+          local: {
+            data: bh.local.data,
+          },
+        }
+      );
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_ID9xmnst2f0l3dYn');
+    }
+  }
   //appendnew_flow_common_start
 
   async sd_ZMlcqDyLVVUnwQuz(bh) {
@@ -282,6 +335,26 @@ export class common {
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_G8MDIPdcDdzpS8V1');
+    }
+  }
+
+  async sd_pl1x9eiI6pyoz5tG(bh) {
+    try {
+      this.data = bh.input.data;
+      //appendnew_next_sd_pl1x9eiI6pyoz5tG
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_pl1x9eiI6pyoz5tG');
+    }
+  }
+
+  async sd_TqMbG6UAczM03Ygf(bh) {
+    try {
+      bh.local.data = this.data;
+      //appendnew_next_sd_TqMbG6UAczM03Ygf
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_TqMbG6UAczM03Ygf');
     }
   }
 
